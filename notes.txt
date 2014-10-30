@@ -1,0 +1,28 @@
+Classes:
+    recipe:
+        name
+        has_many: link(s)
+           (or for now - links, text)
+        has_many: ingredient_quantities
+        has_many: instructions
+        has_many: tags
+        breakdown: text
+        thoughts: text
+        
+    ingredient:
+        name: string
+
+    ingredient_quantity:
+        belongs_to: recipe
+        belongs_to: ingredient
+        quantity: string
+    
+    tags:
+    
+    categories:
+        (or could be another form of tagging?)
+
+    instructions:
+        belongs_to: recipe
+        step_num: int
+        description: text
