@@ -7,3 +7,11 @@
   <strong>Description:</strong>
   <%= @recipe.description %>
 </p>
+<p>
+	<strong>Links:</strong>
+	<% @recipe.links.each do |link| %>
+		<%= link.link %>
+	<% end %>
+</p>
+<%= link_to 'All Recipes', recipes_path %>
+ | <%= link_to 'Edit', edit_recipe_path(@recipe) %>

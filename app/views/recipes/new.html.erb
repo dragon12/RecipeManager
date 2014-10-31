@@ -1,15 +1,4 @@
-<%= form_for :recipe, url: recipes_path do |f| %>
-  <p>
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </p>
- 
-  <p>
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
-  </p>
- 
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
+<h1>New Recipe</h1>
+
+<%= render 'form' %>
+<%= link_to 'All Recipes', recipes_path %>
