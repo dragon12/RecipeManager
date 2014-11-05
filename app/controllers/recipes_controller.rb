@@ -12,13 +12,15 @@ class RecipesController < ApplicationController
   end
   
   def update
+    render plain: params[:recipe].inspect
+    
     @recipe = Recipe.find(params[:id])
- 
-    if @recipe.update(recipe_params)
-      redirect_to @recipe
-    else
-      render 'edit'
-    end
+ @recipe.update(recipe_params)
+    #if @recipe.update(recipe_params)
+    #  redirect_to @recipe
+    #else
+     # render 'edit'
+    #end
   end
   
   def destroy
