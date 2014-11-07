@@ -1,4 +1,8 @@
-<ul>
-	<%= f.text_field :quantity %>
+ <p>
+	Quantity: <%= f.text_field :quantity %>
+	<%= f.fields_for :ingredient do |ingredient_fields| %>
+	  Name: <%= ingredient_fields.text_field :name %>
+	<% end %>
+	
   	<%= f.link_to_remove "Remove" %>
-</ul>
+ </p>

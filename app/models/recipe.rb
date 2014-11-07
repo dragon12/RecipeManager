@@ -40,7 +40,7 @@ class Recipe < ActiveRecord::Base
       # .. in which case we wouldn't add it to ingredient quantities directly
       iq = IngredientQuantity.new
       iq.ingredient = i
-      #iq.recipe = self
+      iq.quantity = ingredient_quantity_values[:quantity]
       
       ingredient_quantities << iq
       logger.info "iq is now: #{iq.inspect}"
