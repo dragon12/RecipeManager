@@ -1,7 +1,6 @@
 class Recipe < ActiveRecord::Base
   has_many :ingredient_quantities
   accepts_nested_attributes_for :ingredient_quantities, 
-                    reject_if: lambda { |a| a[:quantity].blank? },
                     allow_destroy: true
                     
   has_many :ingredients, through: :ingredient_quantities
@@ -17,7 +16,7 @@ class Recipe < ActiveRecord::Base
                     reject_if: lambda { |a| a[:url].blank? },
                     allow_destroy: true
   
-  validates_presence_of :name, :description
+  validates_presence_of :description, :ingredient_quantities
   
   validates :name, presence: true,
                    length: { minimum: 5 }
@@ -32,8 +31,18 @@ class Recipe < ActiveRecord::Base
       
       ingredient_attribs = ingredient_quantity_values[:ingredient]
       logger.info "ingredient_attribs = #{ingredient_attribs}"
+      
+      next if ingredient_quantity_values[:_destroy] == "1"
+       
       logger.info "ingredient name = #{ingredient_attribs[:name]}"
-      i = Ingredient.find_or_create_by(name: ingredient_attribs["name"])
+      
+      begin
+        i = Ingredient.find_or_create_by!(name: ingredient_attribs["name"])
+      rescue => e
+        logger.info "failed to do stuff: #{e.message}"
+        self.errors.add(:base, e.message)
+      end
+        
       logger.info "i is now: #{i.inspect}"
       
       #for use in case of existing recipe: iq = IngredientQuantity.where()
@@ -41,12 +50,10 @@ class Recipe < ActiveRecord::Base
       iq = IngredientQuantity.new
       iq.ingredient = i
       iq.quantity = ingredient_quantity_values[:quantity]
-      
       ingredient_quantities << iq
       logger.info "iq is now: #{iq.inspect}"
      
     end
-    
   end
   
   private
