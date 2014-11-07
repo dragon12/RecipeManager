@@ -5,6 +5,7 @@ class Recipe < ActiveRecord::Base
                     allow_destroy: true
                     
   has_many :ingredients, through: :ingredient_quantities
+  accepts_nested_attributes_for :ingredients               
                     
   has_many :instructions
   accepts_nested_attributes_for :instructions, 
@@ -29,9 +30,12 @@ class Recipe < ActiveRecord::Base
       #find the ingredient in question
       logger.info "this: #{ingredient_quantity_values}"
       
-      i = Ingredient.find_or_create_by(name: ingredient_quantity_values[:quantity])
+      ingredient_attribs = ingredient_quantity_values[:ingredient]
+      logger.info "ingredient_attribs = #{ingredient_attribs}"
+      logger.info "ingredient name = #{ingredient_attribs[:name]}"
+      i = Ingredient.find_or_create_by(name: ingredient_attribs["name"])
       logger.info "i is now: #{i.inspect}"
-      #i = Ingredient.find_or_create_by(name: ingredient_quantity_values[:ingredient_name])
+      
       #for use in case of existing recipe: iq = IngredientQuantity.where()
       # .. in which case we wouldn't add it to ingredient quantities directly
       iq = IngredientQuantity.new

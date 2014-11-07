@@ -24,9 +24,18 @@ Links:
 	<p><%= f.link_to_add "Add a link", :links %></p>
 
 Ingredients:
- <%= f.fields_for :ingredient_quantities %>
- 
-  <p><%= f.link_to_add "Add an ingredient", :ingredient_quantities %></p>
+ <%= f.fields_for :ingredient_quantities do |ingredient_quantity_fields| %>
+ <p>
+	Quantity: <%= ingredient_quantity_fields.text_field :quantity %>
+	<%= ingredient_quantity_fields.fields_for :ingredient do |ingredient_fields| %>
+	  Name: <%= ingredient_fields.text_field :name %>
+	<% end %>
+	
+  	<%= f.link_to_remove "Remove" %>
+ </p>
+ <% end %> <!-- end f.fields_for -->
+ <p><%= f.link_to_add "Add an ingredient", :ingredient_quantities %></p>
+
 
 Instructions:
  <%= f.fields_for :instructions %>
