@@ -1,17 +1,18 @@
 class Recipe < ActiveRecord::Base
-  has_many :ingredient_quantities
+  has_many :ingredient_quantities, dependent: :destroy
   accepts_nested_attributes_for :ingredient_quantities, 
-                    allow_destroy: true
+                    allow_destroy: true,
+                    reject_if: lambda { |a| a[:quantity].blank? or a[:ingredient].blank? }
                     
   has_many :ingredients, through: :ingredient_quantities
   accepts_nested_attributes_for :ingredients               
                     
-  has_many :instructions
+  has_many :instructions, dependent: :destroy
   accepts_nested_attributes_for :instructions, 
                     reject_if: lambda { |a| a[:details].blank? },
                     allow_destroy: true
   
-  has_many :links
+  has_many :links, dependent: :destroy
   accepts_nested_attributes_for :links, 
                     reject_if: lambda { |a| a[:url].blank? },
                     allow_destroy: true
@@ -21,6 +22,10 @@ class Recipe < ActiveRecord::Base
   validates :name, presence: true,
                    length: { minimum: 5 }
 
+  validate do
+    logger.info "in validate now"
+  end
+  
   def ingredient_quantities_attributes=(hash)
     logger.info "setting ingredient quantities: #{hash.inspect}"
     logger.info "this recipe id is #{self.id}"
