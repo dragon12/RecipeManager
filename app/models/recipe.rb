@@ -34,15 +34,23 @@ class Recipe < ActiveRecord::Base
       #find the ingredient in question
       logger.info "this: #{ingredient_quantity_values}"
       
-      ingredient_attribs = ingredient_quantity_values[:ingredient]
-      logger.info "ingredient_attribs = #{ingredient_attribs}"
+      if ingredient_quantity_values.has_key?("ingredient_name")
+        ingredient_name = ingredient_quantity_values["ingredient_name"]
+      else
+        ingredient_name = ingredient_quantity_values[:ingredient_attributes]["name"]
+      end
       
-      next if ingredient_quantity_values[:_destroy] == "1"
+      if ingredient_quantity_values[:_destroy] == "1"
+        if ingredient_quantity_values.has_key?("id")
+          self.ingredient_quantities.delete(ingredient_quantity_values["id"])
+        end
+        next
+      end
        
-      logger.info "ingredient name = #{ingredient_attribs[:name]}"
+      logger.info "ingredient name = #{ingredient_name}"
       
       begin
-        i = Ingredient.find_or_create_by!(name: ingredient_attribs["name"])
+        i = Ingredient.find_or_create_by!(name: ingredient_name)
       rescue => e
         logger.info "failed to do stuff: #{e.message}"
         self.errors.add(:base, e.message)
@@ -52,7 +60,12 @@ class Recipe < ActiveRecord::Base
       
       #for use in case of existing recipe: iq = IngredientQuantity.where()
       # .. in which case we wouldn't add it to ingredient quantities directly
-      iq = IngredientQuantity.new
+      if ingredient_quantity_values.has_key?("id")
+        iq = IngredientQuantity.find(ingredient_quantity_values["id"])
+      else
+        iq = IngredientQuantity.new
+      end
+      
       iq.ingredient = i
       iq.quantity = ingredient_quantity_values[:quantity]
       ingredient_quantities << iq

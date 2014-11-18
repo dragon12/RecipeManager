@@ -12,15 +12,15 @@ class RecipesController < ApplicationController
   end
   
   def update
-    render plain: params[:recipe].inspect
+#    render plain: params[:recipe].inspect
     
     @recipe = Recipe.find(params[:id])
- @recipe.update(recipe_params)
-    #if @recipe.update(recipe_params)
-    #  redirect_to @recipe
-    #else
-     # render 'edit'
-    #end
+# @recipe.update(recipe_params)
+    if @recipe.update(recipe_params)
+      redirect_to @recipe
+    else
+      render 'edit'
+    end
   end
   
   def destroy
@@ -57,7 +57,9 @@ class RecipesController < ApplicationController
                 ingredient_quantities_attributes: [
                       :id, 
                       :quantity, 
-                      {:ingredient => [:name]}, 
+                      :ingredient_name,
+                      {:ingredient => [:name, :id]},
+                      {:ingredient_attributes => [:name, :id]},
                       :_destroy]
                 )
     
