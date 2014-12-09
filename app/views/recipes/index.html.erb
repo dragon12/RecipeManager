@@ -1,6 +1,25 @@
 <h1>Listing recipes</h1>
  
+ <p>
  <%= link_to 'New recipe', new_recipe_path %>
+ </p>
+ 
+ <p>
+ <%= form_tag(recipes_path, :method => "get", id: "search-by-name-form") do %>
+  Filter by Name:
+  <%= text_field_tag :search_by_name, params[:search_by_name], placeholder: "Search Recipes by Name" %>
+  <%= submit_tag "Search", :name => nil %>
+ <% end %>
+
+ <%= form_tag(recipes_path, :method => "get", id: "search-by-ingredient-form") do %>
+  Filter by Ingredient:
+  <%= text_field_tag :search_by_ingredient, params[:search_by_ingredient], placeholder: "Search Recipes by Ingredient" %>
+  <%= submit_tag "Search", :name => nil %>
+ <% end %>
+
+ <%= link_to 'Clear Filters', recipes_path %>
+ </p>
+ 
  
 <table>
   <tr>

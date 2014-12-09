@@ -26,6 +26,14 @@ class Recipe < ActiveRecord::Base
     logger.info "in validate now"
   end
   
+  def self.search_by_name(query)
+    where("name like ?", "%#{query}%") 
+  end
+  
+  def self.search_by_ingredient(query)
+    joins(:ingredients).where("ingredients.name like ?", "%#{query}%")
+  end
+
   def ingredient_quantities_attributes=(hash)
     logger.info "setting ingredient quantities: #{hash.inspect}"
     logger.info "this recipe id is #{self.id}"
