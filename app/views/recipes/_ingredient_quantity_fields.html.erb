@@ -8,7 +8,8 @@
     <% end %>
    -->
 
-	<%= f.collection_select(:ingredient_id, Ingredient.all, :id, :name) %>
+	Ingredient: <%= f.collection_select(:ingredient_id, Ingredient.order("name"), :id, :name) %>
 	
+	 
   	<%= f.link_to_remove "Remove" %>
  </p>

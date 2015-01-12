@@ -8,6 +8,14 @@ class IngredientQuantity < ActiveRecord::Base
   #validates :ingredient, :presence => true
   #validates :recipe, :presence => true
   
+  def ingredient_name
+    ingredient.try(:name)
+  end
+ 
+  def ingredient_name=(name)
+    self.ingredient = Ingredient.find_or_create_by_name(name) if name.present?
+  end
+
   validates :quantity, presence: true,
                  length: { minimum: 1 }
 end
