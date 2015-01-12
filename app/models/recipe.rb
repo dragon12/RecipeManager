@@ -42,10 +42,13 @@ class Recipe < ActiveRecord::Base
       #find the ingredient in question
       logger.info "this: #{ingredient_quantity_values}"
       
+      ingredient_id = 0;
       if ingredient_quantity_values.has_key?("ingredient_name")
-        ingredient_name = ingredient_quantity_values["ingredient_name"]
+        #ingredient_name = ingredient_quantity_values["ingredient_name"]
+        ingredient_id = Ingredient.find!(name: ingredient_quantity_values["ingredient_name"]).id
       else
-        ingredient_name = ingredient_quantity_values[:ingredient_attributes]["name"]
+        #ingredient_name = ingredient_quantity_values[:ingredient_attributes]["name"]
+        ingredient_id = ingredient_quantity_values["ingredient_id"]
       end
       
       if ingredient_quantity_values[:_destroy] == "1"
@@ -54,16 +57,19 @@ class Recipe < ActiveRecord::Base
         end
         next
       end
-       
-      logger.info "ingredient name = #{ingredient_name}"
+      logger.info "ingredient id = #{ingredient_id}"
       
+      i = Ingredient.find(ingredient_id)   
+      logger.info "ingredient name = #{i.name}"
+
+=begin     
       begin
         i = Ingredient.find_or_create_by!(name: ingredient_name)
       rescue => e
         logger.info "failed to do stuff: #{e.message}"
         self.errors.add(:base, e.message)
       end
-        
+=end  
       logger.info "i is now: #{i.inspect}"
       
       #for use in case of existing recipe: iq = IngredientQuantity.where()

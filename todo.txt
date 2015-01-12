@@ -1,3 +1,10 @@
+NEXT:
+    tidy up some of the behind-the-scenes things now that selectbox is working
+    make an add-ingredient popup? Or at least a link to an ingredient-addition page
+    some way of ordering or numbering instructions
+    add an 'alternatives' set of things
+    More attributes to ingredient-quantity - like preparation
+
 
 EDIT:
     method textboxes need to be wider
