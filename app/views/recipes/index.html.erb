@@ -1,6 +1,7 @@
 <h1>Listing recipes</h1>
  
  <p>
+ <%= link_to 'Ingredient List', ingredients_path %><br/>
  <%= link_to 'New recipe', new_recipe_path %>
  </p>
  
@@ -21,7 +22,7 @@
  </p>
  
  
-<table>
+<table class='gridtable'>
   <tr>
     <th>Name</th>
     <th>Description</th>
@@ -29,9 +30,8 @@
  
   <% @recipes.each do |recipe| %>
     <tr>
-      <td><%= recipe.name %></td>
+      <td><%= link_to recipe.name, recipe_path(recipe) %></td>
       <td><%= recipe.description %></td>
-      <td><%= link_to 'Show', recipe_path(recipe) %></td>
       <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
       <td><%= link_to 'Delete', recipe_path(recipe),
                     method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -1,4 +1,7 @@
-<h1>Listing Ingredients</h1>
+<h1>Ingredients</h1>
+ <p>
+ <%= link_to 'Recipes', recipes_path %><br/>
+ </p>
  
  <% if @ingredient.errors.any? %>
   <div id="error_explanation">
@@ -20,21 +23,22 @@
     
 <%= form_for @ingredient do |f| %>
   <p>
-    <%= f.label :name %> <%= f.text_field :name %> <%= f.submit %>
+    <%= f.text_field :name %> <%= f.submit %>
   </p>
 <% end %>
 
  
-<table>
+<table class='gridtable'>
   <tr>
     <th>Name</th>
-    <th>Recipe Count</th>
+    <th>Recipes</th>
   </tr>
  
   <% @ingredients.each do |ingredient| %>
     <tr>
       <td><%= ingredient.name %></td>
-      <td><%= ingredient.recipes.count %></td>
+      <td><%= link_to ingredient.recipes.count,
+      			recipes_path(:search_by_ingredient => ingredient.name)%></td>
       <td><%= link_to 'Edit', ingredient_path(ingredient) %></td>
       <td><%= link_to 'Delete', ingredient_path(ingredient),
                     method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -17,12 +17,22 @@
 </p>
 
 <p>
-	<strong>Ingredients:</strong>
-	<ul>
+	<table class='gridtable'>
+		<caption>Ingredients</caption>
+		<thead>
+			<tr>
+				<th>Quantity</th>
+				<th>Name</th>
+			<tr>
+		</thead>
+			
 	<% @recipe.ingredient_quantities.each do |ingredient_quantity| %>
-		<li><%= ingredient_quantity.ingredient.name %>: <%= ingredient_quantity.quantity %></li>
+		<tr>
+			<td><%= ingredient_quantity.quantity %></td>
+			<td><%= ingredient_quantity.ingredient.name %></td>
+		</tr>
 	<% end %>
-	</ul>
+	</table>
 </p>
 
 <p>

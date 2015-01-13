@@ -9,6 +9,7 @@ NEXT:
 ingredient stuff:
     - get edit ingredient working
     - tweak behaviour of create/update ingredient - failure to delete shouldn't result in editable
+    - display recipes containing specified ingredient
 
 
 EDIT:
