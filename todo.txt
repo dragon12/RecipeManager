@@ -2,8 +2,13 @@ NEXT:
     tidy up some of the behind-the-scenes things now that selectbox is working
     make an add-ingredient popup? Or at least a link to an ingredient-addition page
     some way of ordering or numbering instructions
-    add an 'alternatives' set of things
+    add an 'alternatives' set of things - possibly same model as Links
     More attributes to ingredient-quantity - like preparation
+
+
+ingredient stuff:
+    - get edit ingredient working
+    - tweak behaviour of create/update ingredient - failure to delete shouldn't result in editable
 
 
 EDIT:
