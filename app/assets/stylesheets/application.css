@@ -41,3 +41,12 @@ table.gridtable td {
   border-color: #666666;
   background-color: #ffffff;
 }
+
+table.gridtable textarea{
+	border: none;
+    width: 100%;
+    -webkit-box-sizing: border-box; /* <=iOS4, <= Android  2.3 */
+       -moz-box-sizing: border-box; /* FF1+ */
+            box-sizing: border-box; /* Chrome, IE8, Opera, Safari 5.1*/
+     
+}

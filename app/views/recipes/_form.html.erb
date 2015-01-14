@@ -33,11 +33,20 @@ Ingredients:
 
 
 Instructions:
- <%= f.fields_for :instructions %>
+<table class='gridtable' id="instructions">
+	<caption>Instructions</caption>
+	<thead>
+		<tr>
+			<th style="width:50px">Step</th>
+			<th style="width:300px">Instruction</th>
+		</tr>
+	</thead>
+ <%= f.fields_for :instructions, :wrapper => false %>
+</table>
+<%= f.link_to_add "Add an instruction", 
+  					:instructions,
+  					:data => { :target => "#instructions" } %></p>
  
-  <p><%= f.link_to_add "Add an instruction", :instructions %></p>
- 
-  <p>
     <%= f.submit %>
   </p>
 <% end %>
