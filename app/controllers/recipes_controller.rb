@@ -59,7 +59,11 @@ class RecipesController < ApplicationController
       ret_params = params.require(:recipe)
         .permit(:name, :description, :_destroy,
                 links_attributes: [:id, :url, :_destroy],
-                instructions_attributes: [:id, :details, :_destroy],
+                instructions_attributes: [
+                  :id,
+                  :step_number, 
+                  :details, 
+                  :_destroy],
                 ingredient_quantities_attributes: [
                       :id, 
                       :quantity, 

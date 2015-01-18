@@ -11,7 +11,7 @@
 	<strong>Links:</strong><br/>
 	<ul class="navigation">
 	<% @recipe.links.each do |link| %>
-		<li><a href="<%= link.url %>" /></li>
+		<li><a href="<%= link.url %>"><%= link.url %></a></li>
 	<% end %>
 	</ul>
 </p>
@@ -36,12 +36,22 @@
 </p>
 
 <p>
-	<strong>Instructions:</strong>
-	<ol>
+	<table class='gridtable'>
+	<caption>Instructions</caption>
+	<thead>
+		<tr>
+			<th>Step #</th>
+			<th>Instruction</th>
+		<tr>
+	</thead>
+		
 	<% @recipe.instructions.each do |instruction| %>
-		<li><%= instruction.details %></li>
+	<tr>
+		<td><%= instruction.step_number %></td>
+		<td><%= instruction.details %></td>
+	</tr>
 	<% end %>
-	</ol>
+	</table>
 </p>
 
 <%= link_to 'All Recipes', recipes_path %>

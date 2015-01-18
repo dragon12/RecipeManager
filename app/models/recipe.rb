@@ -7,7 +7,8 @@ class Recipe < ActiveRecord::Base
   has_many :ingredients, through: :ingredient_quantities
   accepts_nested_attributes_for :ingredients               
                     
-  has_many :instructions, dependent: :destroy
+  has_many :instructions, -> { order(:step_number) },
+            dependent: :destroy
   accepts_nested_attributes_for :instructions, 
                     reject_if: lambda { |a| a[:details].blank? },
                     allow_destroy: true

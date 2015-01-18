@@ -1,10 +1,10 @@
 
-    some way of ordering or numbering instructions
-
     add an 'alternatives' set of things
         - comment and link field (both optional)
 
     More attributes to ingredient-quantity - like preparation
+
+    recipe list page shows number of ingredients and instructions
 
 NEXT:
     tidy up some of the behind-the-scenes things now that selectbox is working
