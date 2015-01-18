@@ -1,4 +1,4 @@
-#!/usr/bin/env ruby1.9.1
+#!/home/ger/.rvm/rubies/ruby-1.9.3-p551/bin/ruby
 begin
   load File.expand_path("../spring", __FILE__)
 rescue LoadError
