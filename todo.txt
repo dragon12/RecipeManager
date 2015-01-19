@@ -1,17 +1,26 @@
+New Recipe:
+    - description box needs a border
+    - get rid of the debug header stuff
 
+All recipes page:
+    - tidy filter fields
+    - better place for 'new recipe' and 'ingredient list' links
+    - for each recipe show the #ingredients/steps
+
+Show recipe:
+    - tidy links
+
+Edit recipe:
+    - tidy the debug header
+    - box for Description
+    - there appear to be two 'Remove' links underneath an empty 'Links' section
+    - no 'Remove' link for Ingredients
+    - better place for the 'All Recipes' link
+    - better place for the 'Add an <>' links, possibly in the header (?)
+    - Put the recipe name in the title, h1 tags etc
+
+Model:
     add an 'alternatives' set of things
         - comment and link field (both optional)
 
-    More attributes to ingredient-quantity - like preparation
-
-    recipe list page shows number of ingredients and instructions
-
-NEXT:
-    tidy up some of the behind-the-scenes things now that selectbox is working
-    make an add-ingredient popup? Or at least a link to an ingredient-addition page
-
-
-EDIT:
-    method textboxes need to be wider
-    textboxes wrapping to next line when filled in
 
