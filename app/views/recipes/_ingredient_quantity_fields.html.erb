@@ -1,14 +1,7 @@
- <p>
-	Quantity: <%= f.text_field :quantity %>
-	<!--
-	<% if f.object.ingredient_id.nil? %>
-	 Name: <textarea id=<%="recipe_ingredient_quantities_attributes_new_ingredient_quantities_name"%>
-	        name="recipe[ingredient_quantities_attributes][new_ingredient_quantities][ingredient_name]"
-	        />
-    <% end %>
-   -->
-
-	Ingredient: <%= f.collection_select(:ingredient_id, Ingredient.order("name"), :id, :name) %>
+ <tr class="fields">
+ 	<td><%= f.text_field :quantity %></td>
+	<td><%= f.collection_select(:ingredient_id, Ingredient.order("name"), :id, :name) %></td>
+	<td><%= f.text_field :preparation %></td>
 	
 	 
   	<%= f.link_to_remove "Remove" %>

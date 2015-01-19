@@ -27,12 +27,27 @@ Links:
 	<%= f.fields_for :links %>
 	<p><%= f.link_to_add "Add a link", :links %></p>
 
-Ingredients:
- <%= f.fields_for :ingredient_quantities %>
- <p><%= f.link_to_add "Add an ingredient", :ingredient_quantities %></p>
 
+<table class='gridtable' id="ingredients">
+	<caption>Ingredients</caption>
+	<thead>
+		<tr>
+			<th style="width:50px">Quantity</th>
+			<th style="width:100px">Ingredient</th>
+			<th style="width:200px">Preparation</th>
+		</tr>
+	</thead>
+ <%= f.fields_for :ingredient_quantities, :wrapper => false %>
+</table>
+<p>
+	
+	<%= f.link_to_add "Add an Ingredient", 
+  					:ingredient_quantities,
+  					:data => { :target => "#ingredients" } %>
+ 
+   
+</p>
 
-Instructions:
 <table class='gridtable' id="instructions">
 	<caption>Instructions</caption>
 	<thead>
@@ -43,10 +58,12 @@ Instructions:
 	</thead>
  <%= f.fields_for :instructions, :wrapper => false %>
 </table>
+	<p>
 <%= f.link_to_add "Add an instruction", 
   					:instructions,
-  					:data => { :target => "#instructions" } %></p>
+  					:data => { :target => "#instructions" } %>
+	</p>
  
     <%= f.submit %>
-  </p>
+ 
 <% end %>

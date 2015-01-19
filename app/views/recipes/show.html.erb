@@ -1,19 +1,23 @@
-<p>
-  <strong>Name:</strong>
-  <%= @recipe.name %>
-</p>
+<head>
+	<title>
+		<%= @recipe.name %>
+	</title>
+ </head>
  
+<h1><%= @recipe.name %></h1>
 <p>
   <strong>Description:</strong>
   <%= @recipe.description %>
 </p>
 <p>
+	<div id="related_links">
 	<strong>Links:</strong><br/>
 	<ul class="navigation">
 	<% @recipe.links.each do |link| %>
 		<li><a href="<%= link.url %>"><%= link.url %></a></li>
 	<% end %>
 	</ul>
+	</div>
 </p>
 
 <p>
@@ -22,14 +26,18 @@
 		<thead>
 			<tr>
 				<th>Quantity</th>
-				<th>Name</th>
+				<th>Ingredient</th>
 			<tr>
 		</thead>
 			
 	<% @recipe.ingredient_quantities.each do |ingredient_quantity| %>
 		<tr>
 			<td><%= ingredient_quantity.quantity %></td>
-			<td><%= ingredient_quantity.ingredient.name %></td>
+			<td><%= ingredient_quantity.ingredient.name -%>
+				<% if ingredient_quantity.preparation && !ingredient_quantity.preparation.empty?%>
+, <%= ingredient_quantity.preparation %>
+				<%end%>
+			</td>
 		</tr>
 	<% end %>
 	</table>

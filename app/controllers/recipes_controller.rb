@@ -67,6 +67,7 @@ class RecipesController < ApplicationController
                 ingredient_quantities_attributes: [
                       :id, 
                       :quantity, 
+                      :preparation,
                       :ingredient_name,
                       :ingredient_id,
                       {:ingredient => [:name, :id]},

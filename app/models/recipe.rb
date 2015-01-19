@@ -83,6 +83,7 @@ class Recipe < ActiveRecord::Base
       
       iq.ingredient = i
       iq.quantity = ingredient_quantity_values[:quantity]
+      iq.preparation = ingredient_quantity_values[:preparation]
       ingredient_quantities << iq
       logger.info "iq is now: #{iq.inspect}"
      
