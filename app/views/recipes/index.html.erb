@@ -26,12 +26,16 @@
   <tr>
     <th>Name</th>
     <th>Description</th>
+    <th># Ingredients</th>
+    <th># Instructions</th>
   </tr>
  
   <% @recipes.each do |recipe| %>
     <tr>
       <td><%= link_to recipe.name, recipe_path(recipe) %></td>
       <td><%= recipe.description %></td>
+      <td><%= recipe.ingredients.size %></td>
+      <td><%= recipe.instructions.size %></td>
       <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
       <td><%= link_to 'Delete', recipe_path(recipe),
                     method: :delete, data: { confirm: 'Are you sure?' } %></td>

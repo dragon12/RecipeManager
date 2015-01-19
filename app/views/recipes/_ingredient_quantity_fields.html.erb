@@ -2,7 +2,5 @@
  	<td><%= f.text_field :quantity %></td>
 	<td><%= f.collection_select(:ingredient_id, Ingredient.order("name"), :id, :name) %></td>
 	<td><%= f.text_field :preparation %></td>
-	
-	 
-  	<%= f.link_to_remove "Remove" %>
+	<td><%= f.link_to_remove "Remove", :data => {:target => "#ingredients"} %></td>
  </p>

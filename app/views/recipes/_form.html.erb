@@ -11,8 +11,8 @@
   </div>
   <% end %>
   
-  <%= @recipe.inspect %>
-  <%= @recipe.ingredient_quantities.inspect %>
+  <%#= @recipe.inspect %>
+  <%#= @recipe.ingredient_quantities.inspect %>
   
   <p>
     <%= f.label :name %><br>
@@ -38,15 +38,14 @@ Links:
 		</tr>
 	</thead>
  <%= f.fields_for :ingredient_quantities, :wrapper => false %>
-</table>
-<p>
-	
+	<tr>
+		<td colspan="3">
 	<%= f.link_to_add "Add an Ingredient", 
   					:ingredient_quantities,
   					:data => { :target => "#ingredients" } %>
- 
-   
-</p>
+  		</td>
+  	</tr>
+</table>
 
 <table class='gridtable' id="instructions">
 	<caption>Instructions</caption>
@@ -57,13 +56,19 @@ Links:
 		</tr>
 	</thead>
  <%= f.fields_for :instructions, :wrapper => false %>
-</table>
-	<p>
+
+<tr>
+	<td colspan="2">
 <%= f.link_to_add "Add an instruction", 
   					:instructions,
   					:data => { :target => "#instructions" } %>
-	</p>
+	</td>
+</tr>
+
+</table>
  
+ <br/>
+ <p>
     <%= f.submit %>
- 
+ </p>
 <% end %>
