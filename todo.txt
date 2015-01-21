@@ -1,3 +1,8 @@
+More advanced user authentication for modifictions!
+    either:
+        https://github.com/binarylogic/authlogic
+        devise
+
 New Recipe:
     - description box needs a border
     - get rid of the debug header stuff

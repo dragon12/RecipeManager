@@ -1,4 +1,21 @@
 class RecipesController < ApplicationController
+   http_basic_authenticate_with name: "gers", 
+                                password: "myrecipes", 
+                                except: [:index, :show]
+  
+  #before_filter :authenticate, except: [:index, :show]
+
+  #def authenticate
+  #  authenticate_or_request_with_http_basic do |username, password|
+  #    @authenticated = username == "foo" && password == "bar"
+  #  end
+  #end
+#
+#  def authenticated?
+#    @authenticated
+#  end
+#  helper_method :authenticated?
+  
   def index
     if params[:search_by_name]
       @recipes = Recipe.search_by_name(params[:search_by_name]).order("created_at DESC")
