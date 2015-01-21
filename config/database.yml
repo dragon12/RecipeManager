@@ -27,5 +27,11 @@ test:
   password:
 
 production:
-  <<: *default
-  database: production
+  adapter: postgresql 
+  pool: 5
+  timeout: 5000
+  encoding: utf8
+  database: gerardsw_recipes
+  username: MYUSERNAME
+  password: MYPASSWORD
+

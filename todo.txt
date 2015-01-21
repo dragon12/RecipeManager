@@ -10,6 +10,7 @@ New Recipe:
 All recipes page:
     - tidy filter fields
     - better place for 'new recipe' and 'ingredient list' links
+    - filter by specific ingredient as well as freeform (i.e. select box)
 
 Show recipe:
     - tidy links
@@ -17,9 +18,14 @@ Show recipe:
 Edit recipe:
     - box for Description
     - better place for the 'All Recipes' link
+    - ingredient field needs to be as wide as the widest ingredient
+    - 'add an ingredient' link should stay below the last, or above the first
+    - step number should auto-populate
 
 Model:
     add an 'alternatives' set of things
         - comment and link field (both optional)
-
+    category of recipe, and/or tags
+    sections of ingredients/method - i.e subrecipes?
+    thoughts or breakdown etc
 
