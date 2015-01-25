@@ -13,9 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20150118174413) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "ingredient_quantities", force: true do |t|
     t.string   "quantity"
     t.integer  "ingredient_id", null: false

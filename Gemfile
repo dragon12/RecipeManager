@@ -2,14 +2,17 @@ source 'https://rubygems.org'
 
 ruby '1.9.3'
 
-# for heroku?
-gem 'rails_12factor'
+# for heroku
+group :production do
+    gem 'rails_12factor'
+end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.0'
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3'
-gem 'pg', '0.18.1'
+#gem 'pg', '0.18.1'
+gem 'mysql'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'

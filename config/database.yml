@@ -5,7 +5,7 @@
 #   gem 'sqlite3'
 #
 default: &default
-  adapter: postgresql 
+  adapter: mysql 
   pool: 5
   timeout: 5000
   encoding: utf8
@@ -14,7 +14,7 @@ default: &default
 development:
   <<: *default
   database: development
-  username: ger
+  username: root
   password:
 
 # Warning: The database defined as "test" will be erased and
@@ -23,7 +23,7 @@ development:
 test:
   <<: *default
   database: test
-  username: ger
+  username: root
   password:
 
 production:
