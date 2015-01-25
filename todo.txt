@@ -1,11 +1,10 @@
-More advanced user authentication for modifictions!
+More advanced user authentication for modifications!
     either:
         https://github.com/binarylogic/authlogic
         devise
 
 New Recipe:
     - description box needs a border
-    - get rid of the debug header stuff
 
 All recipes page:
     - tidy filter fields
@@ -19,6 +18,7 @@ Edit recipe:
     - box for Description
     - better place for the 'All Recipes' link
     - ingredient field needs to be as wide as the widest ingredient
+	- text boxes should be big enough to show all text (i.e. method)
     - 'add an ingredient' link should stay below the last, or above the first
     - step number should auto-populate
 
