@@ -1,3 +1,6 @@
+Database stuff:
+    set up script to download prod database and upload it into local
+
 More advanced user authentication for modifications!
     either:
         https://github.com/binarylogic/authlogic
