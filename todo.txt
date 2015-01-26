@@ -4,7 +4,6 @@ Edit recipe:
     - better place for the 'All Recipes' link
     - ingredient field needs to be as wide as the widest ingredient
 	- text boxes should be big enough to show all text (i.e. method)
-    - step number should auto-populate
 
 New Recipe:
     - description box needs a border
@@ -24,8 +23,17 @@ Model:
     sections of ingredients/method - i.e subrecipes?
     thoughts or breakdown etc
 
-More advanced user authentication for modifications!
-    either:
-        https://github.com/binarylogic/authlogic
-        devise
+COMPLEX STUFF
+    More advanced user authentication for modifications!
+        either:
+            https://github.com/binarylogic/authlogic
+            devise
+
+    Edit recipe:
+        - step number should auto-populate
+            - ideally wouldn't be there at all and would be draggable, but
+              this proves tricky! Eventually maybe move to some kind of ajax
+              sortable model, but that's for a later date
+            - it's non-trivial to auto-populate the step number, no obvious
+               way of getting it to work with the dynamic addition of fields
 
