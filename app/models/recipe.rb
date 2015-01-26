@@ -53,7 +53,7 @@ class Recipe < ActiveRecord::Base
       end
       
       if ingredient_quantity_values[:_destroy] == "1"
-        if ingredient_quantity_values.has_key?("id")
+        unless ingredient_quantity_values["id"].blank?
           self.ingredient_quantities.delete(ingredient_quantity_values["id"])
         end
         next
@@ -75,7 +75,7 @@ class Recipe < ActiveRecord::Base
       
       #for use in case of existing recipe: iq = IngredientQuantity.where()
       # .. in which case we wouldn't add it to ingredient quantities directly
-      if ingredient_quantity_values.has_key?("id")
+      unless ingredient_quantity_values["id"].blank?
         iq = IngredientQuantity.find(ingredient_quantity_values["id"])
       else
         iq = IngredientQuantity.new

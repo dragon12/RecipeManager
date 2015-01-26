@@ -4,7 +4,6 @@ Edit recipe:
     - better place for the 'All Recipes' link
     - ingredient field needs to be as wide as the widest ingredient
 	- text boxes should be big enough to show all text (i.e. method)
-    - 'add an ingredient' link should stay below the last, or above the first
     - step number should auto-populate
 
 New Recipe:
