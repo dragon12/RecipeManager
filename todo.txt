@@ -1,10 +1,11 @@
-Database stuff:
-    set up script to download prod database and upload it into local
 
-More advanced user authentication for modifications!
-    either:
-        https://github.com/binarylogic/authlogic
-        devise
+Edit recipe:
+    - box for Description
+    - better place for the 'All Recipes' link
+    - ingredient field needs to be as wide as the widest ingredient
+	- text boxes should be big enough to show all text (i.e. method)
+    - 'add an ingredient' link should stay below the last, or above the first
+    - step number should auto-populate
 
 New Recipe:
     - description box needs a border
@@ -17,18 +18,15 @@ All recipes page:
 Show recipe:
     - tidy links
 
-Edit recipe:
-    - box for Description
-    - better place for the 'All Recipes' link
-    - ingredient field needs to be as wide as the widest ingredient
-	- text boxes should be big enough to show all text (i.e. method)
-    - 'add an ingredient' link should stay below the last, or above the first
-    - step number should auto-populate
-
 Model:
     add an 'alternatives' set of things
         - comment and link field (both optional)
     category of recipe, and/or tags
     sections of ingredients/method - i.e subrecipes?
     thoughts or breakdown etc
+
+More advanced user authentication for modifications!
+    either:
+        https://github.com/binarylogic/authlogic
+        devise
 
