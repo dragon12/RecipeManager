@@ -7,6 +7,7 @@ class Instruction < ActiveRecord::Base
   validates :details, presence: true,
                       length: {minimum: 3}
                       
-  validates_uniqueness_of :step_number, scope: :recipe_id
+  #don't actually care if it's non-unique
+  #validates_uniqueness_of :step_number, scope: :recipe_id
                       
 end

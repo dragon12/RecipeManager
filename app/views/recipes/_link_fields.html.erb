@@ -1,4 +1,5 @@
-<p>
-	<%= f.url_field :url %>
-  	<%= f.link_to_remove "Remove" %>
-</p>
+<tr class="fields">
+	<td><%= f.text_area :description %></td>
+	<td><%= f.url_field :url %></td>
+  	<td><%= f.link_to_remove "Remove", :data => { :target => "#links" } %></td>
+</tr>

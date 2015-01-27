@@ -14,6 +14,46 @@
  *= require_self
  */
 
+ul.my_navbar {
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.my_navbar li {
+	float: left;
+}
+ul.my_navbar a {
+	display: block;
+    width: 250px;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #98bf21;
+    text-align: center;
+    padding: 4px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+ul.my_navbar a:hover, 
+ul.my_navbar a:active {
+    background-color: #7A991A;
+}
+
+body {
+	background-color: #CCFFCC;
+}
+
+h2 {
+	font-family: verdana,arial,sans-serif;
+	font-size: 30px;
+	font-weight: bold;
+	color:#333333;
+  }
+
+body textarea {
+	border-style: solid;
+	border: 1px solid black;
+}
 
 table.gridtable {
   font-family: verdana,arial,sans-serif;
@@ -24,8 +64,9 @@ table.gridtable {
   border-collapse: collapse;
 }
 table.gridtable caption {
-	font-size: 20px;
+	font-size: 30px;
 	font-weight: bold;
+	text-align: left;
 }
 table.gridtable th {
   border-width: 1px;
@@ -42,7 +83,9 @@ table.gridtable td {
   background-color: #ffffff;
 }
 
-table.gridtable input,textarea,select{
+table.gridtable input,
+table.gridtable textarea,
+table.gridtable select{
 	border: none;
     width: 100%;
     -webkit-box-sizing: border-box; /* <=iOS4, <= Android  2.3 */

@@ -1,10 +1,4 @@
 
-Edit recipe:
-    - box for Description
-    - better place for the 'All Recipes' link
-    - ingredient field needs to be as wide as the widest ingredient
-	- text boxes should be big enough to show all text (i.e. method)
-
 New Recipe:
     - description box needs a border
 
