@@ -1,14 +1,7 @@
 
-New Recipe:
-    - description box needs a border
-
 All recipes page:
     - tidy filter fields
-    - better place for 'new recipe' and 'ingredient list' links
     - filter by specific ingredient as well as freeform (i.e. select box)
-
-Show recipe:
-    - tidy links
 
 Model:
     add an 'alternatives' set of things
