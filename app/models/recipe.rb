@@ -32,7 +32,15 @@ class Recipe < ActiveRecord::Base
   end
   
   def self.search_by_ingredient(query)
-    joins(:ingredients).where("ingredients.name like ?", "%#{query}%")
+    select("DISTINCT recipes.*")
+      .joins(:ingredients)
+      .where("ingredients.name like ?", "%#{query}%")
+  end
+  
+  def self.search_by_ingredient_id(query)
+    select("DISTINCT recipes.*")
+      .joins(:ingredients)
+      .where("ingredients.id= ?", "#{query}")
   end
 
   def ingredient_quantities_attributes=(hash)

@@ -14,6 +14,16 @@
  *= require_self
  */
 
+[class*='col-'] {
+  float: left;
+}
+
+.grid:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 ul.my_navbar {
 	list-style-type: none;
     margin: 0;

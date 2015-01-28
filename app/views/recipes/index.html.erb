@@ -1,27 +1,54 @@
 <h1>Listing recipes</h1>
+ <%= form_tag(recipes_path, :method => "get", id: "search-form") do %>
+  <table>
+ 	<tr>
+ 		<td>
+ 			Filter by Name:
+ 		</td>
+		<td>
+ 			<%= text_field_tag :search_by_name, params[:search_by_name], placeholder: "Search Recipes by Name" %>
+		</td>
+		<td>
+			<%= submit_tag "Search", :name => nil %>
+		</td>
+ 	</tr>
+ 	<tr>
+ 		<td>
+ 			Filter by Ingredient:
+ 		</td>
+		<td>
+			<%= text_field_tag :search_by_ingredient, 
+								params[:search_by_ingredient], 
+								placeholder: "Search Recipes by Ingredient" %>
+		</td>
+		<td>
+			<%= submit_tag "Search", :name => nil %>
+		</td>
+ 	</tr>
+ 	<tr>
+ 		<td align='right'>Or Exact:</td>
+ 		<td align='right'>
+		<%= select_tag(:search_by_ingredient_id, 
+							options_from_collection_for_select(
+								Ingredient.order("name"), 
+								:id, :name, @search_ingredient.id),
+							:prompt => '<Select an Ingredient>'
+							) %>
+		</td>
+		<td>
+			<%= submit_tag "Search", :name => nil %>
+		</td>
+ 	</tr>
+ </table>
+<%end%>
  
- <p>
- <%= link_to 'Ingredient List', ingredients_path %><br/>
- <%= link_to 'New recipe', new_recipe_path %>
- </p>
- 
- <p>
- <%= form_tag(recipes_path, :method => "get", id: "search-by-name-form") do %>
-  Filter by Name:
-  <%= text_field_tag :search_by_name, params[:search_by_name], placeholder: "Search Recipes by Name" %>
-  <%= submit_tag "Search", :name => nil %>
- <% end %>
-
- <%= form_tag(recipes_path, :method => "get", id: "search-by-ingredient-form") do %>
-  Filter by Ingredient:
-  <%= text_field_tag :search_by_ingredient, params[:search_by_ingredient], placeholder: "Search Recipes by Ingredient" %>
-  <%= submit_tag "Search", :name => nil %>
- <% end %>
-
  <%= link_to 'Clear Filters', recipes_path %>
+ 
+  <p>
+ <%= link_to 'Add recipe', new_recipe_path %>
  </p>
- 
- 
+
+
 <table class='gridtable'>
   <tr>
     <th>Name</th>

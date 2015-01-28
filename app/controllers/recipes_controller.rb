@@ -17,13 +17,19 @@ class RecipesController < ApplicationController
 #  helper_method :authenticated?
   
   def index
-    if params[:search_by_name]
+    @search_ingredient = Ingredient.new
+    
+    if !params[:search_by_name].blank?
       @recipes = Recipe.search_by_name(params[:search_by_name]).order("created_at DESC")
-    elsif params[:search_by_ingredient]
+    elsif !params[:search_by_ingredient].blank?
       @recipes = Recipe.search_by_ingredient(params[:search_by_ingredient]).order("created_at DESC")
+    elsif !params[:search_by_ingredient_id].blank?
+      @recipes = Recipe.search_by_ingredient_id(params[:search_by_ingredient_id]).order("created_at DESC")
+      @search_ingredient = Ingredient.find(params[:search_by_ingredient_id])
     else
       @recipes = Recipe.all
     end
+    render'index'
   end
   
   def show
@@ -75,7 +81,7 @@ class RecipesController < ApplicationController
     def recipe_params
       ret_params = params.require(:recipe)
         .permit(:name, :description, :_destroy,
-                links_attributes: [:id, :description, :url, :_destroy],
+                links_attributes: [:id, :url, :_destroy],
                 instructions_attributes: [
                   :id,
                   :step_number, 

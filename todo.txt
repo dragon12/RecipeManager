@@ -1,8 +1,4 @@
 
-All recipes page:
-    - tidy filter fields
-    - filter by specific ingredient as well as freeform (i.e. select box)
-
 Model:
     add an 'alternatives' set of things
         - comment and link field (both optional)
