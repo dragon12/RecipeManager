@@ -1,6 +1,5 @@
 
 Model:
-    'comments' field - freeform text
     category of recipe (and editable categories)
 
 COMPLEX STUFF
