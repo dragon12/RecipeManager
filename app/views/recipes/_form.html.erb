@@ -18,7 +18,11 @@
     <%= f.label :name %><br>
     <%= f.text_field :name, size: "50" %>
   </p>
- 
+  
+  <p>
+  	<%= f.label :category %>
+  	<%= f.collection_select(:category_id, Category.order("name"), :id, :name, prompt: true) %>
+  </p>
   <h2>Description</h2>
   <p>
     <%= f.text_area :description, size: "100x4" %>

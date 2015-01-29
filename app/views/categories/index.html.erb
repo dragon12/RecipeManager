@@ -35,7 +35,7 @@
     <tr>
       <td><%= category.name %></td>
       <td><%= link_to category.recipes.count,
-      			recipes_path(:search_by_category => category.name)%></td>
+      			recipes_path(:search_by_category_id => category.id)%></td>
       <td><%= link_to 'Edit', category_path(category) %></td>
       <td><%= link_to 'Delete', category_path(category),
                     method: :delete, data: { confirm: 'Are you sure?' } %></td>

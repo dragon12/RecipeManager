@@ -1,19 +1,21 @@
-<head>
-	<title>
-		<%= @recipe.name %>
-	</title>
- </head>
 
-<h1><%= @recipe.name %> (<%= link_to 'Edit', edit_recipe_path(@recipe) %>)</h1>
+<h1 class='h1-smaller-margin'><%= @recipe.name %> (<%= link_to 'Edit', edit_recipe_path(@recipe) %>)</h1>
+
+<% if @recipe.category %>
+	<%= link_to @recipe.category.name,
+      			recipes_path(:search_by_category_id => @recipe.category.id),
+      			:class => 'category_tag'
+      			%>
+<%end%>
 
 <p>
-  <i><%= @recipe.description %></i>
+  <%= @recipe.description %>
 </p>
 
 <% if @recipe.links.any? %>
 <div id="related_links">
 	<strong>Links:</strong><br/>
-	<ul class="navigation">
+	<ul >
 	<% @recipe.links.each do |link| %>
 		<li><a href="<%= link.url %>"><%= link.description %></a></li>
 	<% end %>

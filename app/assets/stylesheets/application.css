@@ -10,9 +10,23 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
- *= require_self
+
+
  */
+
+.h1-smaller-margin {
+	line-height: 25px
+}
+.category_tag {
+    font-family: Helvetica, Arial, sans-serif;
+    background: #588fe5;
+    display: inline-block;
+    color: #fff;
+    position: relative;
+    padding: 10px;
+    margin: 0 30px 0 0;
+    text-decoration: none;
+}
 
 .display_box {
 	border: 1px solid black;
@@ -123,16 +137,15 @@ table.gridtable select{
 #related_links li {
     border-bottom     : 1px solid #90bade;
     list-style-type   : none;
-    display           : inline-block;
     }
 
 #related_links li a {
     background-color  : #2175bc;
     color             : #fff;
-    border-left       : 10px solid #1958b7;
-    border-right      : 10px solid #508fc4;
+    border-left       : 5px solid #1958b7;
+    border-right      : 5px solid #508fc4;
     font-weight       : bold;
-    padding           : .5em;
+    padding           : 0em;
     text-decoration   : none;
     }
 

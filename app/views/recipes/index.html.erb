@@ -1,4 +1,10 @@
-<h1>Listing recipes</h1>
+<h1>
+	<%if !@filtered_text.blank?%>
+Filtered Recipes: <%=@filtered_text%>
+<%else%>
+All Recipes
+<%end%>
+	</h1>
  <%= form_tag(recipes_path, :method => "get", id: "search-form") do %>
   <table>
  	<tr>
@@ -39,6 +45,22 @@
 			<%= submit_tag "Search", :name => nil %>
 		</td>
  	</tr>
+ 	 	<tr>
+ 		<td>
+ 			Filter by Category:
+ 		</td>
+		<td align='right'>
+			<%= select_tag(:search_by_category_id, 
+							options_from_collection_for_select(
+								Category.order("name"), 
+								:id, :name, @search_category.id),
+							:prompt => '<Select a Category>'
+							) %>
+		</td>
+		<td>
+			<%= submit_tag "Search", :name => nil %>
+		</td>
+ 	</tr>
  </table>
 <%end%>
  
@@ -51,16 +73,21 @@
 
 <table class='gridtable'>
   <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th># Ingredients</th>
-    <th># Instructions</th>
+    <th style='width:20%'>Name</th>
+    <th style='width:40%'>Description</th>
+    <th style='width:10%'>Category</th>
+    <th style='width:5%'># Ingredients</th>
+    <th style='width:5%'># Instructions</th>
   </tr>
  
   <% @recipes.each do |recipe| %>
     <tr>
       <td><%= link_to recipe.name, recipe_path(recipe) %></td>
       <td><%= recipe.description %></td>
+      <td><%if recipe.category%>
+      		<%= link_to recipe.category.name, recipes_path(:search_by_category_id => recipe.category.id)  %>
+          <%end%>
+      </td>
       <td><%= recipe.ingredients.size %></td>
       <td><%= recipe.instructions.size %></td>
       <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>

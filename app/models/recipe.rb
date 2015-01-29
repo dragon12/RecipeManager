@@ -1,5 +1,5 @@
 class Recipe < ActiveRecord::Base
-  has_one :category
+  belongs_to :category
   
   has_many :ingredient_quantities, dependent: :destroy
   accepts_nested_attributes_for :ingredient_quantities, 
@@ -45,6 +45,12 @@ class Recipe < ActiveRecord::Base
       .where("ingredients.id= ?", "#{query}")
   end
 
+  def self.search_by_category_id(query)
+    select("DISTINCT recipes.*")
+      .joins(:category)
+      .where("categories.id= ?", "#{query}")
+  end
+  
   def ingredient_quantities_attributes=(hash)
     logger.info "setting ingredient quantities: #{hash.inspect}"
     logger.info "this recipe id is #{self.id}"

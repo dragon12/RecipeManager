@@ -1,13 +1,12 @@
 
 Model:
-    category of recipe (and editable categories)
-        - add column to recipes list
-        - add filter to recipes show page
+    ratings - integer 1-10
 
 COMPLEX STUFF
     Model
         tags
         sections of ingredients/method - i.e subrecipes?
+        ratings - numeric
 
     More advanced user authentication for modifications!
         either:

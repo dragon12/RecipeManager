@@ -17,18 +17,26 @@ class RecipesController < ApplicationController
   
   def index
     @search_ingredient = Ingredient.new
+    @search_category = Category.new
     
     if !params[:search_by_name].blank?
       @recipes = Recipe.search_by_name(params[:search_by_name]).order("created_at DESC")
+      @filtered_text = "name like '%s'" % params[:search_by_name]
     elsif !params[:search_by_ingredient].blank?
       @recipes = Recipe.search_by_ingredient(params[:search_by_ingredient]).order("created_at DESC")
+      @filtered_text = "containing ingredients like '%s'" % params[:search_by_ingredient]
     elsif !params[:search_by_ingredient_id].blank?
       @recipes = Recipe.search_by_ingredient_id(params[:search_by_ingredient_id]).order("created_at DESC")
       @search_ingredient = Ingredient.find(params[:search_by_ingredient_id])
+      @filtered_text = "containing '%s'" % @search_ingredient.name
+    elsif !params[:search_by_category_id].blank?
+      @recipes = Recipe.search_by_category_id(params[:search_by_category_id]).order("created_at DESC")
+      @search_category = Category.find(params[:search_by_category_id])
+      @filtered_text = "in category '%s'" % @search_category.name
     else
       @recipes = Recipe.all
     end
-    render'index'
+    render 'index'
   end
   
   def show
@@ -79,8 +87,8 @@ class RecipesController < ApplicationController
   private
     def recipe_params
       ret_params = params.require(:recipe)
-        .permit(:name, :description, :comments, :_destroy,
-                links_attributes: [:id, :url, :_destroy],
+        .permit(:name, :description, :comments, :category_id, :_destroy,
+                links_attributes: [:id, :description, :url, :_destroy],
                 instructions_attributes: [
                   :id,
                   :step_number, 
