@@ -3,7 +3,7 @@
 		<%= @recipe.name %>
 	</title>
  </head>
- 
+
 <h1><%= @recipe.name %> (<%= link_to 'Edit', edit_recipe_path(@recipe) %>)</h1>
 
 <p>
@@ -11,19 +11,17 @@
 </p>
 
 <% if @recipe.links.any? %>
-<p>
-	<div id="related_links">
+<div id="related_links">
 	<strong>Links:</strong><br/>
 	<ul class="navigation">
 	<% @recipe.links.each do |link| %>
 		<li><a href="<%= link.url %>"><%= link.description %></a></li>
 	<% end %>
 	</ul>
-	</div>
-</p>
+</div>
 <%end%>
 
-<p>
+<div id='ingredients_div'>
 	<table class='gridtable'>
 		<caption>Ingredients</caption>
 		<thead>
@@ -44,9 +42,9 @@
 		</tr>
 	<% end %>
 	</table>
-</p>
-
-<p>
+</div>
+</br>
+<div id='instructions_div'>
 	<table class='gridtable'>
 	<caption>Instructions</caption>
 	<thead>
@@ -63,5 +61,11 @@
 	</tr>
 	<% end %>
 	</table>
-</p>
+</div>
 
+<%if !@recipe.comments.blank?%>
+<h2>Comments</h2>
+<div class='display_box'>
+<%= simple_format(@recipe.comments) %>
+</div>
+<%end%>

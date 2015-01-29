@@ -14,6 +14,13 @@
  *= require_self
  */
 
+.display_box {
+	border: 1px solid black;
+	background-color: #ffffff;
+	width: 40em;
+	padding: 0;
+	margin: 0;
+}
 [class*='col-'] {
   float: left;
 }
