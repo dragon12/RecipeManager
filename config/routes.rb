@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  get 'categories/index'
+
+  get 'categories/create'
+
+  get 'categories/show'
+
+  get 'categories/update'
+
+  get 'categories/destroy'
+
   get 'welcome/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -16,7 +26,7 @@ Rails.application.routes.draw do
   # Example resource route (maps HTTP verbs to controller actions automatically):
   resources :recipes
   resources :ingredients
-
+  resources :categories
   # Example resource route with options:
   #   resources :products do
   #     member do

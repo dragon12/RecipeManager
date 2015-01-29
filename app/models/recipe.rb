@@ -1,4 +1,6 @@
 class Recipe < ActiveRecord::Base
+  has_one :category
+  
   has_many :ingredient_quantities, dependent: :destroy
   accepts_nested_attributes_for :ingredient_quantities, 
                     allow_destroy: true,
