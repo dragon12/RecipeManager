@@ -1,2 +1,44 @@
-<h1>Categories#index</h1>
-<p>Find me in app/views/categories/index.html.erb</p>
+<h1>Categories</h1>
+
+ <% if @category.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@category.errors.count, "error") %> prohibited
+      this category from being updated:</h2>
+    <ul>
+    <% @category.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% else %>
+  
+  <% end %>
+  
+  <% flash.each do |name, msg| -%>
+      <%= content_tag :div, msg, class: name %>
+    <% end -%>
+    
+<%= form_for @category do |f| %>
+  <p>
+    <%= f.text_field :name %> <%= f.submit %>
+  </p>
+<% end %>
+
+ 
+<table class='gridtable'>
+  <tr>
+    <th>Name</th>
+    <th>Recipes</th>
+  </tr>
+ 
+  <% @categories.each do |category| %>
+    <tr>
+      <td><%= category.name %></td>
+      <td><%= link_to category.recipes.count,
+      			recipes_path(:search_by_category => category.name)%></td>
+      <td><%= link_to 'Edit', category_path(category) %></td>
+      <td><%= link_to 'Delete', category_path(category),
+                    method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>

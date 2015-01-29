@@ -1,7 +1,6 @@
 class RecipesController < ApplicationController
-   http_basic_authenticate_with name: "gers", 
-                                password: "myrecipes", 
-                                except: [:index, :show]
+
+  include AuthenticationHelper
   
   #before_filter :authenticate, except: [:index, :show]
 

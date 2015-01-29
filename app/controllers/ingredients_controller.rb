@@ -1,9 +1,6 @@
 class IngredientsController < ApplicationController
   
-   http_basic_authenticate_with name: "gers", 
-                              password: "myrecipes", 
-                              except: [:index, :show]
-  
+  include AuthenticationHelper
   
   def index
     @ingredients = Ingredient.order(:name)

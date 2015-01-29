@@ -1,8 +1,5 @@
 <h1>Ingredients</h1>
- <p>
- <%= link_to 'Recipes', recipes_path %><br/>
- </p>
- 
+
  <% if @ingredient.errors.any? %>
   <div id="error_explanation">
     <h2><%= pluralize(@ingredient.errors.count, "error") %> prohibited
