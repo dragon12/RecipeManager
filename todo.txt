@@ -1,6 +1,12 @@
 
 Model:
     category of recipe (and editable categories)
+        - add resource
+        - add model/schema - allowed just one category
+        - add edit and show page (like ingredients)
+        - add link to title bar
+        - add column to recipes list
+        - add filter to recipes show page
 
 COMPLEX STUFF
     Model
