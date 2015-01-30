@@ -5,18 +5,16 @@
 #   gem 'sqlite3'
 #
 default: &default
-  adapter: postgresql 
+  adapter: mysql 
   pool: 5
   timeout: 5000
   encoding: utf8
-  database: dev
-  username: ger
 
 
 development:
   <<: *default
   database: development
-  username: ger
+  username: root
   password:
 
 # Warning: The database defined as "test" will be erased and

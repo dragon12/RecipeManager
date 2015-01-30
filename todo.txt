@@ -2,6 +2,9 @@
 Model:
     ratings - integer 1-10
 
+misc:
+    currently can delete categories that are tied to recipes
+
 COMPLEX STUFF
     Model
         tags
