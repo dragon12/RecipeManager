@@ -15,7 +15,7 @@ default: &default
 
 development:
   <<: *default
-  database: development
+  database: localbk12
   username: ger
   password:
 
