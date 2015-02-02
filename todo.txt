@@ -1,5 +1,4 @@
 wider text fields on categories/recipes page
-default/blank choice of ingredient on new recipe
 wider url
 tab when adding ingredients should add a new row
 an entry for total time required, cooking time
@@ -8,7 +7,6 @@ sortable table on all recipes page
 appropriate pluralisation of ingredients
 step number maybe shouldn't be an int? e.g. 1a
 definitely need sections for ingredients and method
-category editing doesn't work
 
 Model:
     ratings - integer 1-10

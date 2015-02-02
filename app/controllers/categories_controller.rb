@@ -20,7 +20,7 @@ class CategoriesController < ApplicationController
   end
   
   def show
-    @categorys = Category.order(:name)
+    @categories = Category.order(:name)
     @category = Category.find(params[:id])
     render 'index'
   end
@@ -33,7 +33,7 @@ class CategoriesController < ApplicationController
     if @category.update(category_params)
       redirect_to categories_path
     else
-      @categorys = Category.order(:name)
+      @categories = Category.order(:name)
       render 'index'
     end
   end
