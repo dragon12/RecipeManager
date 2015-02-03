@@ -54,9 +54,9 @@ end
 gem 'pg'
 
 # for heroku
+gem 'puma'
 group :production do
     gem 'rails_12factor'
-    gem 'puma'
 end
 
 
