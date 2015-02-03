@@ -1,3 +1,5 @@
+ingredients should be ordered by creation time
+
 wider text fields on categories/recipes page
 wider url
 tab when adding ingredients should add a new row
