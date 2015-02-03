@@ -1,7 +1,7 @@
 class Recipe < ActiveRecord::Base
   belongs_to :category
   
-  has_many :ingredient_quantities, dependent: :destroy
+  has_many :ingredient_quantities, -> {order(:created_at) }, dependent: :destroy
   accepts_nested_attributes_for :ingredient_quantities, 
                     allow_destroy: true,
                     reject_if: lambda { |a| a[:quantity].blank? or a[:ingredient].blank? }
