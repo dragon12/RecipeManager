@@ -20,20 +20,25 @@
     
 <%= form_for @ingredient do |f| %>
   <p>
-    <%= f.text_field :name %> <%= f.submit %>
+    <%= f.text_field :name %>
+    <%= f.collection_select(:measurement_type_id, 
+								MeasurementType.all, 
+								:id, :measurement_type, :prompt => '<Select a Measurement Type>') %>
+    <%= f.submit %>
   </p>
 <% end %>
-
- 
+   
 <table class='gridtable'>
   <tr>
     <th>Name</th>
+    <th>Measurement</th>
     <th>Recipes</th>
   </tr>
  
   <% @ingredients.each do |ingredient| %>
     <tr>
       <td><%= ingredient.name %></td>
+      <td><%= ingredient.measurement_type ? ingredient.measurement_type.measurement_type : "N/A" %></td>
       <td><%= link_to ingredient.recipes.count,
       			recipes_path(:search_by_ingredient_id => ingredient.id)%></td>
       <td><%= link_to 'Edit', ingredient_path(ingredient) %></td>

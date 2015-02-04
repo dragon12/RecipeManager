@@ -1,4 +1,7 @@
 class Ingredient < ActiveRecord::Base
+  belongs_to :measurement_type
+  validates :measurement_type, presence: true
+  
   has_many :ingredient_quantities
   has_many :recipes, through: :ingredient_quantities
   

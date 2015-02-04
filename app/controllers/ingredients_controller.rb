@@ -59,7 +59,7 @@ class IngredientsController < ApplicationController
 private
 
   def ingredient_params
-    return params.require(:ingredient).permit(:name)
+    return params.require(:ingredient).permit(:name, :measurement_type_id)
   end
   
 end

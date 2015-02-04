@@ -1,5 +1,6 @@
 class Recipe < ActiveRecord::Base
   belongs_to :category
+  validates :category, presence: true
   
   has_many :ingredient_quantities, -> {order(:created_at) }, dependent: :destroy
   accepts_nested_attributes_for :ingredient_quantities, 

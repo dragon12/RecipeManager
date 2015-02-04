@@ -1,4 +1,10 @@
 
+ingredient measurement type
+    - volume
+    - weight 
+    - item
+
+
 tab when adding ingredients should add a new row
 sortable table on all recipes page
 appropriate pluralisation of ingredients
@@ -6,21 +12,12 @@ step number maybe shouldn't be an int? e.g. 1a
 definitely need sections for ingredients and method
     - add a 'section' column to method which can somehow be sortable if non-null
 
-ingredient measurement type
-    - volume
-    - weight 
-    - item
-
 Model:
-
-misc:
-    currently can delete categories that are tied to recipes
 
 COMPLEX STUFF
     Model
         tags
         sections of ingredients/method - i.e subrecipes?
-        ratings - numeric
 
     More advanced user authentication for modifications!
         either:
