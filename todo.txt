@@ -4,15 +4,21 @@ minor recipe additions:
     wider url
     an entry for total time required, cooking time
     attribute for how many of thing it makes
+    ratings - integer 1-10
 
 tab when adding ingredients should add a new row
 sortable table on all recipes page
 appropriate pluralisation of ingredients
 step number maybe shouldn't be an int? e.g. 1a
 definitely need sections for ingredients and method
+    - add a 'section' column to method which can somehow be sortable if non-null
+
+ingredient measurement type
+    - volume
+    - weight 
+    - item
 
 Model:
-    ratings - integer 1-10
 
 misc:
     currently can delete categories that are tied to recipes
