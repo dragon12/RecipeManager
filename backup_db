@@ -1,5 +1,0 @@
-backup_name=`date +%Y%m%d`
-
-heroku pg:pull HEROKU_POSTGRESQL_PURPLE_URL $backup_name --app recipesmanager 
-pg_dump -d $backup_name > /media/sf_vbox_shared/db_backups/recipemanager.$backup_name
-

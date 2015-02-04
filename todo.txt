@@ -1,10 +1,11 @@
-ingredients should be ordered by creation time
 
-wider text fields on categories/recipes page
-wider url
+minor recipe additions:
+    wider text fields on categories/recipes page
+    wider url
+    an entry for total time required, cooking time
+    attribute for how many of thing it makes
+
 tab when adding ingredients should add a new row
-an entry for total time required, cooking time
-attribute for how many of thing it makes
 sortable table on all recipes page
 appropriate pluralisation of ingredients
 step number maybe shouldn't be an int? e.g. 1a
