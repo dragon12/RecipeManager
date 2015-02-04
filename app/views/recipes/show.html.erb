@@ -23,6 +23,20 @@
 </div>
 <%end%>
 
+<p>
+Total Time: <%= @recipe.total_time || "N/A" %>, 
+Active Time: <%= @recipe.active_time || "N/A" %>, 
+Cooking Time: <%= @recipe.cooking_time || "N/A" %>
+</p>
+
+<p>
+	Rating: <%= @recipe.rating || "N/A" %>
+</p>
+
+<p>
+	Number of Portions: <%= @recipe.portion_count || "N/A" %>
+</p>
+
 <div id='ingredients_div'>
 	<table class='gridtable'>
 		<caption>Ingredients</caption>

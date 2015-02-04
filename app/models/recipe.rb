@@ -23,7 +23,13 @@ class Recipe < ActiveRecord::Base
   validates_presence_of :description, :ingredient_quantities
   
   validates :name, presence: true,
-                   length: { minimum: 5 }
+                   length: { minimum: 4 }
+
+
+
+  validates :rating, :numericality => true, :allow_nil => true
+  validates :portion_count, :numericality =>true, :allow_nil => true
+
 
   validate do
     logger.info "in validate now"
