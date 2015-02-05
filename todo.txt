@@ -1,13 +1,13 @@
 
-ingredient measurement type
-    - volume
-    - weight 
-    - item
+appropriate pluralisation of ingredients
 
+
+linking to specific other recipes as an ingredient
+
+main page maybe should have cooking time rather than number of ingredients
 
 tab when adding ingredients should add a new row
 sortable table on all recipes page
-appropriate pluralisation of ingredients
 step number maybe shouldn't be an int? e.g. 1a
 definitely need sections for ingredients and method
     - add a 'section' column to method which can somehow be sortable if non-null
