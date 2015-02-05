@@ -14,3 +14,6 @@ weight.save
 
 items = MeasurementType.create(measurement_type: 'By Quantity', measurement_name: '')
 items.save
+
+vol2 = MeasurementType.create(measurement_type: 'By Volume (tsp)', measurement_name: 'tsp')
+vol2.save

@@ -8,6 +8,15 @@ class IngredientQuantity < ActiveRecord::Base
   #validates :ingredient, :presence => true
   #validates :recipe, :presence => true
   
+  def quantity_description
+    measurement = self.ingredient.measurement_type.measurement_name
+    if measurement.blank?
+      "#{quantity}"
+    else
+      "#{quantity} #{measurement}"
+    end
+  end
+  
   def ingredient_name
     ingredient.try(:name)
   end
@@ -16,6 +25,5 @@ class IngredientQuantity < ActiveRecord::Base
     self.ingredient = Ingredient.find_or_create_by_name(name) if name.present?
   end
 
-  validates :quantity, presence: true,
-                 length: { minimum: 1 }
+  validates :quantity, presence: true, numericality: true
 end

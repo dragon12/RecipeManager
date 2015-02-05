@@ -49,7 +49,7 @@ Cooking Time: <%= @recipe.cooking_time || "N/A" %>
 			
 	<% @recipe.ingredient_quantities.each do |ingredient_quantity| %>
 		<tr>
-			<td><%= ingredient_quantity.quantity %></td>
+			<td><%= ingredient_quantity.quantity_description %></td>
 			<td><%= ingredient_quantity.ingredient.name -%>
 				<% if ingredient_quantity.preparation && !ingredient_quantity.preparation.empty?%>
 , <%= ingredient_quantity.preparation %>

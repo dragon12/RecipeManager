@@ -11,6 +11,13 @@ class Ingredient < ActiveRecord::Base
                    
   before_destroy :check_for_recipes
 
+  def description_in_recipe
+    if !measurement_type.measurement_name.blank?
+      "#{name} (#{measurement_type.measurement_name})"
+    else
+      "#{name}"
+    end
+  end
 private
 
   def check_for_recipes
