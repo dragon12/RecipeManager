@@ -1,3 +1,4 @@
+#coding: utf-8
 class Ingredient < ActiveRecord::Base
   belongs_to :measurement_type
   validates :measurement_type, presence: true
@@ -17,6 +18,31 @@ class Ingredient < ActiveRecord::Base
   
   before_destroy :check_for_recipes
 
+  def cost_for_quantity(qty)
+    if standard_unit.to_i == 0 || cost_per_unit.nil?
+        logger.error "CALC_COST: ingredient #{name} has zero values"
+        return nil
+      end
+      
+      logger.info "CALC_COST: ingredient #{name}, unit #{standard_unit}, cost #{cost_per_unit}"
+      units_used = qty / standard_unit
+      
+      return units_used * cost_per_unit
+  end
+  
+  def kcal_for_quantity(qty)
+    if standard_unit.to_i == 0 || kcal_per_unit.nil?
+        logger.error "CALC_KCAL: ingredient #{name} has zero values"
+        return nil
+      end
+      
+      logger.info "CALC_KCAL: ingredient #{name}, unit #{standard_unit}, kcal #{kcal_per_unit}"
+      units_used = qty / standard_unit
+      
+      return units_used * kcal_per_unit
+  end
+  
+  
   def standard_unit_str
     if !standard_unit_note.blank?
       "#{standard_unit} (#{standard_unit_note})"

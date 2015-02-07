@@ -64,6 +64,14 @@ class Recipe < ActiveRecord::Base
     return "£%.2f" % total
   end
   
+  def total_kcal
+    total = calculate_total_kcal
+    if (total == 0)
+      return "N/A"
+    end
+    return "%d" % total
+  end
+  
   def self.search_by_name(query)
     where("name like ?", "%#{query}%") 
   end
@@ -146,19 +154,7 @@ class Recipe < ActiveRecord::Base
   def calculate_total_cost
     cumulative = 0.0
     ingredient_quantities.each do |iq|
-      ing = iq.ingredient
-      if ing.standard_unit.to_i == 0 || ing.cost_per_unit.nil?
-        logger.error "CALC_COST: ingredient #{ing.name} has zero values"
-        return 0
-      end
-      
-      logger.info "CALC_COST: ingredient #{ing.name}, unit #{ing.standard_unit}, kcal #{ing.cost_per_unit}"
-      units_used = iq.quantity / ing.standard_unit
-      
-      cost_for_used = units_used * ing.cost_per_unit
-      
-      cumulative += cost_for_used
-      logger.info "CALC_COST: units used #{units_used}, cost_for_used #{cost_for_used}, cumulative #{cumulative}"
+      cumulative += iq.cost
     end
     return cumulative
   end
@@ -167,19 +163,7 @@ class Recipe < ActiveRecord::Base
   def calculate_total_kcal
     cumulative = 0.0
     ingredient_quantities.each do |iq|
-      ing = iq.ingredient
-      if ing.standard_unit.to_i == 0 || ing.kcal_per_unit.nil?
-        logger.error "CALC: ingredient #{ing.name} has zero values"
-        return 0
-      end
-      
-      logger.info "CALC: ingredient #{ing.name}, unit #{ing.standard_unit}, kcal #{ing.kcal_per_unit}"
-      units_used = iq.quantity / ing.standard_unit
-      
-      kcal_for_used = units_used * ing.kcal_per_unit
-      
-      cumulative += kcal_for_used
-    logger.info "CALC: units used #{units_used}, kcal_for_ursed #{kcal_for_used}, cumulative #{cumulative}"
+      cumulative += iq.kcal
     end
     return cumulative
   end

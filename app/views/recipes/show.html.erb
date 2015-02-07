@@ -37,11 +37,27 @@ Cooking Time: <%= @recipe.cooking_time || "N/A" %>
 	Number of Portions: <%= @recipe.portion_count || "N/A" %>
 </p>
 
-<p>
-	Total Cost: <%= @recipe.total_cost %><br/>
-	Cost per Portion: <%= @recipe.cost_per_portion %><br/>
-	KCal per Portion: <%= @recipe.kcal_per_portion %><br/>
-</p>
+<table class='gridtable'>
+	<caption>Fact Sheet</caption>
+	<thead>
+		<tr>
+			<th></th>
+			<th>Total</th>
+			<th>Per Portion</th>
+		</tr>
+	</thead>
+	<tr>
+		<td>Cost</td>
+		<td><%= @recipe.total_cost %></td>
+		<td><%= @recipe.cost_per_portion %></td>
+	</tr>
+	<tr>
+		<td>KCal</td>
+		<td><%= @recipe.total_kcal %></td>
+		<td><%= @recipe.kcal_per_portion %></td>
+	</tr>
+</table>
+
 <div id='ingredients_div'>
 	<table class='gridtable'>
 		<caption>Ingredients</caption>
@@ -49,17 +65,17 @@ Cooking Time: <%= @recipe.cooking_time || "N/A" %>
 			<tr>
 				<th>Quantity</th>
 				<th>Ingredient</th>
+				<th>Cost</th>
+				<th>KCal</th>
 			<tr>
 		</thead>
 			
 	<% @recipe.ingredient_quantities.each do |ingredient_quantity| %>
 		<tr>
 			<td><%= ingredient_quantity.quantity_description %></td>
-			<td><%= ingredient_quantity.ingredient.name -%>
-				<% if ingredient_quantity.preparation && !ingredient_quantity.preparation.empty?%>
-, <%= ingredient_quantity.preparation %>
-				<%end%>
-			</td>
+			<td><%= ingredient_quantity.prepared_ingredient_description %></td>
+			<td><%= ingredient_quantity.cost_as_str %></td>
+			<td><%= ingredient_quantity.kcal_as_str %></td>
 		</tr>
 	<% end %>
 	</table>
