@@ -17,7 +17,7 @@
 	<strong>Links:</strong><br/>
 	<ul >
 	<% @recipe.links.each do |link| %>
-		<li><a href="<%= link.url %>"><%= link.description %></a></li>
+	 <li><%= link_to link.description, link.url, :target=> '_blank' %></li>
 	<% end %>
 	</ul>
 </div>

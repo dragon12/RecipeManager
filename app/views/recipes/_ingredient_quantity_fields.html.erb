@@ -1,5 +1,5 @@
  <tr class="fields">
- 	<td><%= f.hidden_field :id %><%= f.text_field :quantity %></td>
+ 	<td><%= f.hidden_field :id %><%= f.text_field :quantity, :value => f.object.quantity_as_string %></td>
  	
  	<td><%= f.collection_select(:ingredient_id, 
 								Ingredient.order("name"), 

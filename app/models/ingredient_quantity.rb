@@ -8,12 +8,19 @@ class IngredientQuantity < ActiveRecord::Base
   #validates :ingredient, :presence => true
   #validates :recipe, :presence => true
   
+  def quantity_as_string
+    if self.quantity
+      "%g" % self.quantity
+    end
+    
+  end
+  
   def quantity_description
     measurement = self.ingredient.measurement_type.measurement_name
     if measurement.blank?
-      "#{quantity}"
+      "#{quantity_as_string}"
     else
-      "#{quantity} #{measurement}"
+      "#{quantity_as_string} #{measurement}"
     end
   end
   
