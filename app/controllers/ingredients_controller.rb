@@ -5,6 +5,7 @@ class IngredientsController < ApplicationController
   def index
     @ingredients = Ingredient.order(:name)
   
+    
     @ingredient = Ingredient.new
   end  
   
@@ -59,7 +60,7 @@ class IngredientsController < ApplicationController
 private
 
   def ingredient_params
-    return params.require(:ingredient).permit(:name, :measurement_type_id)
+    return params.require(:ingredient).permit(:name, :measurement_type_id, :standard_unit, :cost_per_unit, :kcal_per_unit)
   end
   
 end

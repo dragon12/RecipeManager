@@ -9,6 +9,7 @@ appropriate pluralisation of ingredients
 
 linking to specific other recipes as an ingredient
 
+showing the various things on the recipes page: maybe a fact-sheet kinda thing?
 
 
 main page maybe should have cooking time rather than number of ingredients

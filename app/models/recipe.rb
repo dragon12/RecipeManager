@@ -1,3 +1,4 @@
+#coding: utf-8
 class Recipe < ActiveRecord::Base
   belongs_to :category
   validates :category, presence: true
@@ -34,6 +35,33 @@ class Recipe < ActiveRecord::Base
 
   validate do
     logger.info "in validate now"
+  end
+  
+  
+  def cost_per_portion
+    total = calculate_total_cost
+    if portion_count.to_i == 0 || total == 0
+      return "N/A"
+    end
+    
+    per_portion = total / portion_count
+    return "£%.2f" % per_portion
+  end
+  
+  def kcal_per_portion
+    total = calculate_total_kcal
+    if portion_count.to_i == 0
+      return "N/A"
+    end
+    return "%.0f" % (total / portion_count)
+  end
+  
+  def total_cost
+    total = calculate_total_cost
+    if (total == 0)
+      return "N/A"
+    end
+    return "£%.2f" % total
   end
   
   def self.search_by_name(query)
@@ -114,5 +142,46 @@ class Recipe < ActiveRecord::Base
   end
   
   private
+  
+  def calculate_total_cost
+    cumulative = 0.0
+    ingredient_quantities.each do |iq|
+      ing = iq.ingredient
+      if ing.standard_unit.to_i == 0 || ing.cost_per_unit.to_f == 0
+        logger.error "CALC_COST: ingredient #{ing.name} has zero values"
+        return 0
+      end
+      
+      logger.info "CALC_COST: ingredient #{ing.name}, unit #{ing.standard_unit}, kcal #{ing.cost_per_unit}"
+      units_used = iq.quantity / ing.standard_unit
+      
+      cost_for_used = units_used * ing.cost_per_unit
+      
+      cumulative += cost_for_used
+      logger.info "CALC_COST: units used #{units_used}, cost_for_used #{cost_for_used}, cumulative #{cumulative}"
+    end
+    return cumulative
+  end
+  
+  
+  def calculate_total_kcal
+    cumulative = 0.0
+    ingredient_quantities.each do |iq|
+      ing = iq.ingredient
+      if ing.standard_unit.to_i == 0 || ing.kcal_per_unit.to_i == 0
+        logger.error "CALC: ingredient #{ing.name} has zero values"
+        return 0
+      end
+      
+      logger.info "CALC: ingredient #{ing.name}, unit #{ing.standard_unit}, kcal #{ing.kcal_per_unit}"
+      units_used = iq.quantity / ing.standard_unit
+      
+      kcal_for_used = units_used * ing.kcal_per_unit
+      
+      cumulative += kcal_for_used
+    logger.info "CALC: units used #{units_used}, kcal_for_ursed #{kcal_for_used}, cumulative #{cumulative}"
+    end
+    return cumulative
+  end
   
 end

@@ -6,10 +6,10 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-vol = MeasurementType.create(measurement_type: 'By Volume', measurement_name: 'ml')
+vol = MeasurementType.create(measurement_type: 'By Volume (ml)', measurement_name: 'ml')
 vol.save
 
-weight = MeasurementType.create(measurement_type: 'By Weight', measurement_name: 'g')
+weight = MeasurementType.create(measurement_type: 'By Weight (g)', measurement_name: 'g')
 weight.save
 
 items = MeasurementType.create(measurement_type: 'By Quantity', measurement_name: '')

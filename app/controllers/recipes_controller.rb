@@ -34,7 +34,8 @@ class RecipesController < ApplicationController
       @search_category = Category.find(params[:search_by_category_id])
       @filtered_text = "in category '%s'" % @search_category.name
     else
-      @recipes = Recipe.all
+      #@recipes = Recipe.joins(:category).order('categories.name asc, name asc')
+      @recipes = Recipe.order(:created_at)
     end
     render 'index'
   end
