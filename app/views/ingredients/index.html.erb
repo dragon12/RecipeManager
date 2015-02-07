@@ -27,13 +27,20 @@
 	<br/>
 	<table>
 	 	<tr>
-	 		<td><%= f.label :standard_unit %></td><td><%= f.text_field :standard_unit, :size => 4, :autocomplete => :off %></td>
+	 		<td><%= f.label :standard_unit %></td>
+	 		<td><%= f.text_field :standard_unit, :size => 4, :autocomplete => :off %></td>
+	 		<td><%= f.label :standard_unit_note, "Note" %></td>
+	 		<td><%= f.text_field :standard_unit_note, :size => 25, :autocomplete => :off %></td>
 	 	</tr>
 	 	<tr>
 			<td><%= f.label :cost_per_unit %></td><td><%= f.text_field :cost_per_unit, :size => 4, :autocomplete => :off %></td>
+			<td></td>
+			<td></td>
 	 	</tr>
 	 	<tr>
 			<td><%= f.label :kcal_per_unit %></td><td><%= f.text_field :kcal_per_unit, :size => 4, :autocomplete => :off %></td>
+			<td></td>
+			<td></td>
 	 	</tr>
 	</table>
 	<br/>
@@ -55,7 +62,7 @@
     <tr>
       <td><%= ingredient.name %></td>
       <td><%= ingredient.measurement_type ? ingredient.measurement_type.measurement_type : "N/A" %></td>
-      <td><%= ingredient.standard_unit %></td>
+      <td><%= ingredient.standard_unit_str %></td>
       <td><%= ingredient.cost_per_unit_str %></td>
       <td><%= ingredient.kcal_per_unit %></td>
       <td><%= link_to ingredient.recipes.count,

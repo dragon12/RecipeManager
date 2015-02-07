@@ -17,6 +17,14 @@ class Ingredient < ActiveRecord::Base
   
   before_destroy :check_for_recipes
 
+  def standard_unit_str
+    if !standard_unit_note.blank?
+      "#{standard_unit} (#{standard_unit_note})"
+    else
+      "#{standard_unit}"
+    end
+  end
+  
   def cost_per_unit_str
     if cost_per_unit
       "%.2f" % cost_per_unit

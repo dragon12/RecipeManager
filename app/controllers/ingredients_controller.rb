@@ -60,7 +60,7 @@ class IngredientsController < ApplicationController
 private
 
   def ingredient_params
-    return params.require(:ingredient).permit(:name, :measurement_type_id, :standard_unit, :cost_per_unit, :kcal_per_unit)
+    return params.require(:ingredient).permit(:name, :measurement_type_id, :standard_unit, :standard_unit_note, :cost_per_unit, :kcal_per_unit)
   end
   
 end
