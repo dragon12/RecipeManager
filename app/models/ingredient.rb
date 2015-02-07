@@ -26,10 +26,26 @@ class Ingredient < ActiveRecord::Base
   end
   
   def cost_per_unit_str
+    formatted = ""
     if cost_per_unit
-      "%.2f" % cost_per_unit
+      formatted = "%.2f" % cost_per_unit
+    end
+
+    if !cost_per_unit_note.blank?
+      "#{formatted} (#{cost_per_unit_note})"
+    else
+      "#{formatted}"
     end
   end
+
+  def kcal_per_unit_str
+    if !kcal_per_unit_note.blank?
+      "#{kcal_per_unit} (#{kcal_per_unit_note})"
+    else
+      "#{kcal_per_unit}"
+    end
+  end
+  
   
   def description_in_recipe
     if !measurement_type.measurement_name.blank?

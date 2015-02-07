@@ -34,13 +34,13 @@
 	 	</tr>
 	 	<tr>
 			<td><%= f.label :cost_per_unit %></td><td><%= f.text_field :cost_per_unit, :size => 4, :autocomplete => :off %></td>
-			<td></td>
-			<td></td>
+	 		<td><%= f.label :cost_per_unit_note, "Note" %></td>
+	 		<td><%= f.text_field :cost_per_unit_note, :size => 25, :autocomplete => :off %></td>
 	 	</tr>
 	 	<tr>
 			<td><%= f.label :kcal_per_unit %></td><td><%= f.text_field :kcal_per_unit, :size => 4, :autocomplete => :off %></td>
-			<td></td>
-			<td></td>
+	 		<td><%= f.label :kcal_per_unit_note, "Note" %></td>
+	 		<td><%= f.text_field :kcal_per_unit_note, :size => 25, :autocomplete => :off %></td>
 	 	</tr>
 	</table>
 	<br/>
@@ -64,7 +64,7 @@
       <td><%= ingredient.measurement_type ? ingredient.measurement_type.measurement_type : "N/A" %></td>
       <td><%= ingredient.standard_unit_str %></td>
       <td><%= ingredient.cost_per_unit_str %></td>
-      <td><%= ingredient.kcal_per_unit %></td>
+      <td><%= ingredient.kcal_per_unit_str %></td>
       <td><%= link_to ingredient.recipes.count,
       			recipes_path(:search_by_ingredient_id => ingredient.id)%></td>
       <td><%= link_to 'Edit', ingredient_path(ingredient) %></td>

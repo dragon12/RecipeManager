@@ -147,7 +147,7 @@ class Recipe < ActiveRecord::Base
     cumulative = 0.0
     ingredient_quantities.each do |iq|
       ing = iq.ingredient
-      if ing.standard_unit.to_i == 0 || ing.cost_per_unit.to_f == 0
+      if ing.standard_unit.to_i == 0 || ing.cost_per_unit.nil?
         logger.error "CALC_COST: ingredient #{ing.name} has zero values"
         return 0
       end
@@ -168,7 +168,7 @@ class Recipe < ActiveRecord::Base
     cumulative = 0.0
     ingredient_quantities.each do |iq|
       ing = iq.ingredient
-      if ing.standard_unit.to_i == 0 || ing.kcal_per_unit.to_i == 0
+      if ing.standard_unit.to_i == 0 || ing.kcal_per_unit.nil?
         logger.error "CALC: ingredient #{ing.name} has zero values"
         return 0
       end
