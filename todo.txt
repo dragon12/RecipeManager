@@ -1,10 +1,4 @@
 
-ingredient attributes
-    - should have a value
-    - 
-
-calculation of calorie and cost per portion
-
 appropriate pluralisation of ingredients
 
 linking to specific other recipes as an ingredient
