@@ -20,20 +20,20 @@
     
 <%= form_for @ingredient do |f| %>
   <p>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, :autocomplete => :off %>
     <%= f.collection_select(:measurement_type_id, 
 								MeasurementType.all, 
 								:id, :measurement_type, :prompt => '<Select a Measurement Type>') %>
 	<br/>
 	<table>
 	 	<tr>
-	 		<td><%= f.label :standard_unit %></td><td><%= f.text_field :standard_unit, :size => 4 %></td>
+	 		<td><%= f.label :standard_unit %></td><td><%= f.text_field :standard_unit, :size => 4, :autocomplete => :off %></td>
 	 	</tr>
 	 	<tr>
-			<td><%= f.label :cost_per_unit %></td><td><%= f.text_field :cost_per_unit, :size => 4 %></td>
+			<td><%= f.label :cost_per_unit %></td><td><%= f.text_field :cost_per_unit, :size => 4, :autocomplete => :off %></td>
 	 	</tr>
 	 	<tr>
-			<td><%= f.label :kcal_per_unit %></td><td><%= f.text_field :kcal_per_unit, :size => 4 %></td>
+			<td><%= f.label :kcal_per_unit %></td><td><%= f.text_field :kcal_per_unit, :size => 4, :autocomplete => :off %></td>
 	 	</tr>
 	</table>
 	<br/>

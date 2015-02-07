@@ -12,7 +12,7 @@ All Recipes
  			Filter by Name:
  		</td>
 		<td>
- 			<%= text_field_tag :search_by_name, params[:search_by_name], placeholder: "Search Recipes by Name" %>
+ 			<%= text_field_tag :search_by_name, params[:search_by_name], placeholder: "Search Recipes by Name", :autocomplete => :off %>
 		</td>
 		<td>
 			<%= submit_tag "Search", :name => nil %>
@@ -25,7 +25,7 @@ All Recipes
 		<td>
 			<%= text_field_tag :search_by_ingredient, 
 								params[:search_by_ingredient], 
-								placeholder: "Search Recipes by Ingredient" %>
+								placeholder: "Search Recipes by Ingredient", :autocomplete => :off %>
 		</td>
 		<td>
 			<%= submit_tag "Search", :name => nil %>

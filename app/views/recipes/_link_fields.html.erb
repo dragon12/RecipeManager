@@ -1,5 +1,5 @@
 <tr class="fields">
-	<td><%= f.text_area :description %></td>
-	<td><%= f.url_field :url %></td>
+	<td><%= f.text_area :description, :autocomplete => :off %></td>
+	<td><%= f.url_field :url, :autocomplete => :off %></td>
   	<td><%= f.link_to_remove "Remove", :data => { :target => "#links" } %></td>
 </tr>
