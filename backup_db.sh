@@ -12,3 +12,6 @@ echo "Backing up to $backup_name"
 heroku pg:pull HEROKU_POSTGRESQL_PURPLE_URL $backup_name --app recipesmanager 
 pg_dump -d $backup_name > $backup_dir/recipemanager.$backup_name
 
+psql -c 'drop database "latest"'
+psql -c "alter database \"$backup_name\" RENAME TO \"latest\""
+
