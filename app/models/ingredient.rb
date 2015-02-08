@@ -72,7 +72,7 @@ class Ingredient < ActiveRecord::Base
   def kcal_str
     formatted = "#{kcal}#{basis_str(kcal_basis)}"
     if !cost_note.blank?
-      return "#{formatted} (#{cost_note})"
+      return "#{formatted} (#{kcal_note})"
     else
       return "#{formatted}"
     end
