@@ -11,7 +11,7 @@ private
 
   def check_for_ingredient
     if ingredient.count > 0
-      errors.add(:base, "Cannot delete category while used in any ingredient")
+      errors.add(:base, "Cannot delete measurement type while used in any ingredient")
       return false
     end
   end

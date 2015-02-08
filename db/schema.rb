@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150207165538) do
+ActiveRecord::Schema.define(version: 20150208100122) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,12 +39,12 @@ ActiveRecord::Schema.define(version: 20150207165538) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "measurement_type_id"
-    t.integer  "standard_unit"
-    t.decimal  "cost_per_unit",       precision: 10, scale: 2
-    t.integer  "kcal_per_unit"
-    t.string   "standard_unit_note"
-    t.string   "cost_per_unit_note"
-    t.string   "kcal_per_unit_note"
+    t.integer  "cost_basis"
+    t.decimal  "cost",                precision: 10, scale: 2
+    t.integer  "kcal"
+    t.string   "cost_note"
+    t.string   "kcal_note"
+    t.integer  "kcal_basis"
   end
 
   add_index "ingredients", ["measurement_type_id"], name: "index_ingredients_on_measurement_type_id", using: :btree

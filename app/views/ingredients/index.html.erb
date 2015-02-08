@@ -27,20 +27,20 @@
 	<br/>
 	<table>
 	 	<tr>
-	 		<td><%= f.label :standard_unit %></td>
-	 		<td><%= f.text_field :standard_unit, :size => 4, :autocomplete => :off %></td>
-	 		<td><%= f.label :standard_unit_note, "Note" %></td>
-	 		<td><%= f.text_field :standard_unit_note, :size => 25, :autocomplete => :off %></td>
+	 		<td><%= f.label :cost_basis %></td>
+	 		<td><%= f.text_field :cost_basis, :size => 4, :autocomplete => :off %></td>
+            <td><%= f.label :cost %></td>
+            <td><%= f.text_field :cost, :size => 4, :autocomplete => :off %></td>
+	 		<td><%= f.label :cost_note, "Note" %></td>
+	 		<td><%= f.text_field :cost_note, :size => 25, :autocomplete => :off %></td>
 	 	</tr>
 	 	<tr>
-			<td><%= f.label :cost_per_unit %></td><td><%= f.text_field :cost_per_unit, :size => 4, :autocomplete => :off %></td>
-	 		<td><%= f.label :cost_per_unit_note, "Note" %></td>
-	 		<td><%= f.text_field :cost_per_unit_note, :size => 25, :autocomplete => :off %></td>
-	 	</tr>
-	 	<tr>
-			<td><%= f.label :kcal_per_unit %></td><td><%= f.text_field :kcal_per_unit, :size => 4, :autocomplete => :off %></td>
-	 		<td><%= f.label :kcal_per_unit_note, "Note" %></td>
-	 		<td><%= f.text_field :kcal_per_unit_note, :size => 25, :autocomplete => :off %></td>
+	 		<td><%= f.label :kcal_basis %></td>
+	 		<td><%= f.text_field :kcal_basis, :size => 4, :autocomplete => :off %></td>
+            <td><%= f.label :kcal %></td>
+            <td><%= f.text_field :kcal, :size => 4, :autocomplete => :off %></td>
+	 		<td><%= f.label :kcal_note, "Note" %></td>
+	 		<td><%= f.text_field :kcal_note, :size => 25, :autocomplete => :off %></td>
 	 	</tr>
 	</table>
 	<br/>
@@ -52,19 +52,17 @@
   <tr>
     <th>Name</th>
     <th>Measurement</th>
-    <th>Standard Unit</th>
-    <th>Cost per Unit (£)</th>
-    <th>KCal per Unit</th>
+    <th>Cost (£)</th>
+    <th>KCal</th>
     <th># Recipes</th>
   </tr>
  
   <% @ingredients.each do |ingredient| %>
     <tr>
       <td><%= ingredient.name %></td>
-      <td><%= ingredient.measurement_type ? ingredient.measurement_type.measurement_type : "N/A" %></td>
-      <td><%= ingredient.standard_unit_str %></td>
-      <td><%= ingredient.cost_per_unit_str %></td>
-      <td><%= ingredient.kcal_per_unit_str %></td>
+      <td><%= ingredient.measurement_type_str %></td>
+      <td><%= ingredient.cost_str %></td>
+      <td><%= ingredient.kcal_str %></td>
       <td><%= link_to ingredient.recipes.count,
       			recipes_path(:search_by_ingredient_id => ingredient.id)%></td>
       <td><%= link_to 'Edit', ingredient_path(ingredient) %></td>
