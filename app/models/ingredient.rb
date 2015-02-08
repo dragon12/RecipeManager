@@ -59,9 +59,14 @@ class Ingredient < ActiveRecord::Base
   end
   
   def cost_str
-    formatted_cost = "%.2f" % cost
+    if cost > 0
+      formatted_cost = "%.2f" % cost
     
-    formatted = "#{formatted_cost}#{basis_str(cost_basis)}"
+      formatted = "#{formatted_cost}#{basis_str(cost_basis)}"
+    else
+      formatted = "0"
+    end
+    
     if !cost_note.blank?
       return "£#{formatted} (#{cost_note})"
     else
@@ -70,7 +75,12 @@ class Ingredient < ActiveRecord::Base
   end
 
   def kcal_str
-    formatted = "#{kcal}#{basis_str(kcal_basis)}"
+    if kcal > 0
+      formatted = "#{kcal}#{basis_str(kcal_basis)}"
+    else
+      formatted = "0"
+    end
+    
     if !kcal_note.blank?
       return "#{formatted} (#{kcal_note})"
     else
