@@ -11,57 +11,8 @@
   </div>
   <% end %>
   
-  <%#= @recipe.inspect %>
-  <%#= @recipe.ingredient_quantities.inspect %>
-  
-  <p>
-    <%= f.label :name %><br>
-    <%= f.text_field :name, size: "50", :autocomplete => :off %>
-  </p>
-  
-  <p>
-  	<%= f.label :category %>
-  	<%= f.collection_select(:category_id, Category.order("name"), :id, :name, prompt: true) %>
-  </p>
-  <h2>Description</h2>
-  <p>
-    <%= f.text_area :description, size: "100x4", :autocomplete => :off %>
-  </p>
-  
-  <p>
-  	<%= f.label :total_time %>: <%= f.text_field :total_time, size: "3", :autocomplete => :off %>
-  	<%= f.label :active_time %>: <%= f.text_field :active_time, size: "3", :autocomplete => :off %>
-  	<%= f.label :cooking_time %>: <%= f.text_field :cooking_time, size: "3", :autocomplete => :off %>
-  </p>
-  
-  <p>
-  	<%= f.label :portion_count %>: <%= f.text_field :portion_count, size:"3", :autocomplete => :off %>
-  </p>
-
-  <p>
-  	<%= f.label :rating %>: <%= f.text_field :rating, size:"3", :autocomplete => :off %>
-  </p>
-
-  <p>
-<table class='gridtable' id='links'>
-	<caption>Links</caption>
-	<thead>
-		<tr>
-			<th style="width:250px">Description</th>
-			<th style="width:500px">URL</th>
-		</tr>
-	</thead>
-	<%= f.fields_for :links, :wrapper => false %>
-	<tr>
-		<td colspan="2">
-			<%= f.link_to_add "Add a link", :links, :data => { :target => "#links"} %>
-		</td>
-	</tr>
-</table>
-</p>
-
-<p>
-<table class='gridtable' id="ingredients">
+  <div>
+  <table class='gridtable'>
 	<caption>Ingredients</caption>
 	<thead>
 		<tr>
@@ -70,45 +21,25 @@
 			<th style="width:200px">Preparation</th>
 		</tr>
 	</thead>
- <%= f.fields_for :ingredient_quantities, :wrapper => false %>
-	<tr>
-		<td colspan="4">
-	<%= f.link_to_add "Add an Ingredient", 
+  </table>
+
+<%= f.fields_for :ingredient_quantity_groups do |iqd_fields| %>
+<%= iqd_fields.text_field :name %>
+<table class='gridtable' id="ingredients">
+	<%= iqd_fields.fields_for :ingredient_quantities, :wrapper => false %>
+	<td colspan="4">
+				<%= iqd_fields.link_to_add "Add an Ingredient", 
   					:ingredient_quantities,
   					:data => { :target => "#ingredients" } %>
   		</td>
-  	</tr>
 </table>
-</p>
 
-<table class='gridtable' id="instructions">
-	<caption>Instructions</caption>
-	<thead>
-		<tr>
-			<th style="width:50px">Step #</th>
-			<th style="width:500px">Instruction</th>
-		</tr>
-	</thead>
- <%= f.fields_for :instructions, :wrapper => false %>
+<%end%>
+<div>
+	<%= f.link_to_add "Add an Ingredient Group", :ingredient_quantity_groups%>
+	</div>
+</div>
 
-<tr>
-	<td colspan="2">
-<%= f.link_to_add "Add an instruction", 
-  					:instructions,
-  					:data => { :target => "#instructions" } %>
-	</td>
-</tr>
-
-</table>
- 
-  
-  <h2>Comments</h2>
-  <p>
-    <%= f.text_area :comments, size: "100x6" %>
-  </p>
-  
-  
- <br/>
  <p>
     <%= f.submit %>
  </p>

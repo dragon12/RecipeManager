@@ -1,5 +1,13 @@
 'update' link at top of recipe
 
+some kind of separator/grouper for the ingredients and method lists
+
+bug in submit ingredient if there's a blank ingredient present - should be ignored
+
+Headings on index should be click-to-sort
+
+welcome page should just be the recipes
+
 
 appropriate pluralisation of ingredients
 

@@ -70,6 +70,9 @@ class RecipesController < ApplicationController
   def new
     #we create an empty recipe here so that there is always a 'recipe' variable available to the template
     @recipe = Recipe.new
+    iqg = IngredientQuantityGroup.new
+    iqg.name = "Default"
+    @recipe.ingredient_quantity_groups << iqg
   end
   
   def create
@@ -96,7 +99,11 @@ class RecipesController < ApplicationController
                   :step_number, 
                   :details,
                   :_destroy],
-                ingredient_quantities_attributes: [
+                ingredient_quantity_groups_attributes: [
+                  :id,
+                  :name,
+                  :_destroy,
+                  {:ingredient_quantity_attributes => [
                       :id, 
                       :quantity, 
                       :preparation,
@@ -105,6 +112,8 @@ class RecipesController < ApplicationController
                       {:ingredient => [:name, :id]},
                       {:ingredient_attributes => [:name, :id]},
                       :_destroy]
+                    }
+                  ]
                 )
     
       return ret_params

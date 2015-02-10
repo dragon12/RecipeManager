@@ -3,13 +3,19 @@ class Recipe < ActiveRecord::Base
   belongs_to :category
   validates :category, presence: true
   
-  has_many :ingredient_quantities, -> {order(:created_at) }, dependent: :destroy
-  accepts_nested_attributes_for :ingredient_quantities, 
+  has_many :ingredient_quantity_groups, -> {order(:created_at) }, dependent: :destroy
+  accepts_nested_attributes_for :ingredient_quantity_groups, 
                     allow_destroy: true,
-                    reject_if: lambda { |a| a[:quantity].blank? or a[:ingredient].blank? }
-                    
-  has_many :ingredients, through: :ingredient_quantities
-  accepts_nested_attributes_for :ingredients               
+                    reject_if: lambda { |a| a[:name].blank? }
+  
+  
+#  has_many :ingredient_quantities, -> {order(:created_at) }, dependent: :destroy
+#  accepts_nested_attributes_for :ingredient_quantities, 
+#                    allow_destroy: true,
+#                    reject_if: lambda { |a| a[:quantity].blank? or a[:ingredient].blank? }
+#                    
+#  has_many :ingredients, through: :ingredient_quantities
+#  accepts_nested_attributes_for :ingredients               
                     
   has_many :instructions, -> { order(:step_number) },
             dependent: :destroy
@@ -22,7 +28,9 @@ class Recipe < ActiveRecord::Base
                     reject_if: lambda { |a| a[:url].blank? },
                     allow_destroy: true
   
-  validates_presence_of :description, :ingredient_quantities
+  validates_presence_of :description
+  
+  validates_presence_of :ingredient_quantity_groups
   
   validates :name, presence: true,
                    length: { minimum: 4 }
@@ -92,6 +100,10 @@ class Recipe < ActiveRecord::Base
     select("DISTINCT recipes.*")
       .joins(:category)
       .where("categories.id= ?", "#{query}")
+  end
+  
+  def ingredient_quantity_groups_attributes=(hash)
+    logger.info "setting iq groups"
   end
   
   def ingredient_quantities_attributes=(hash)

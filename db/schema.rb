@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150208111005) do
+ActiveRecord::Schema.define(version: 20150210220831) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,16 +23,25 @@ ActiveRecord::Schema.define(version: 20150208111005) do
   end
 
   create_table "ingredient_quantities", force: true do |t|
-    t.decimal  "quantity",      precision: 10, scale: 3
-    t.integer  "ingredient_id",                          null: false
-    t.integer  "recipe_id",                              null: false
+    t.decimal  "quantity",                     precision: 10, scale: 3
+    t.integer  "ingredient_id",                                         null: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "preparation"
+    t.integer  "ingredient_quantity_group_id",                          null: false
   end
 
   add_index "ingredient_quantities", ["ingredient_id"], name: "index_ingredient_quantities_on_ingredient_id", using: :btree
-  add_index "ingredient_quantities", ["recipe_id"], name: "index_ingredient_quantities_on_recipe_id", using: :btree
+  add_index "ingredient_quantities", ["ingredient_quantity_group_id"], name: "index_ingredient_quantities_on_ingredient_quantity_group_id", using: :btree
+
+  create_table "ingredient_quantity_groups", force: true do |t|
+    t.string   "name"
+    t.integer  "recipe_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "ingredient_quantity_groups", ["recipe_id"], name: "index_ingredient_quantity_groups_on_recipe_id", using: :btree
 
   create_table "ingredients", force: true do |t|
     t.string   "name"

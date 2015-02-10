@@ -17,6 +17,11 @@
 //= require jquery_nested_form
 
 window.NestedFormEvents.prototype.insertFields = function(content, assoc, link) {
-  var $tr = $(link).closest('tr');
-  return $(content).insertBefore($tr);
+  	if (assoc == "ingredient_quantity_groups") {
+  		var $form = $(link).closest('div');
+  		return $(content).insertBefore($form);
+  	} else {
+		var $tr = $(link).closest('tr');
+  		return $(content).insertBefore($tr);
+  	}
 };
