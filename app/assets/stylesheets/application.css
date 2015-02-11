@@ -14,6 +14,10 @@
 
  */
 
+.bold_centered {
+	font-weight: bold;
+	text-align: center;
+}
 .h1-smaller-margin {
 	line-height: 25px
 }

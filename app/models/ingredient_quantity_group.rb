@@ -15,6 +15,9 @@ class IngredientQuantityGroup < ActiveRecord::Base
 
   validates :name, presence: true, length: {minimum: 2}
   
+  def name_or_default
+    name.blank? ? "<Enter Group Name>" : name
+  end
 private
   def check_for_ingredient_quantities
     if ingredient_quantities.count > 0
