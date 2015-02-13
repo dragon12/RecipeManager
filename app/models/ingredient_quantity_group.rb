@@ -18,6 +18,22 @@ class IngredientQuantityGroup < ActiveRecord::Base
   def name_or_default
     name.blank? ? "<Enter Group Name>" : name
   end
+  
+  def cost
+    total = 0
+    ingredient_quantities.each do |iq|
+      total += iq.cost
+    end
+    return total
+  end
+  
+  def kcal
+    total = 0
+    ingredient_quantities.each do |iq|
+      total += iq.kcal
+    end
+    return total
+  end
 private
   def check_for_ingredient_quantities
     if ingredient_quantities.count > 0

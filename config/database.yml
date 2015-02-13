@@ -9,7 +9,7 @@ default: &default
   pool: 5
   timeout: 5000
   encoding: utf8
-  database: dev
+  database: latest
   username: ger
 
 

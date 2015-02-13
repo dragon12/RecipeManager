@@ -22,7 +22,7 @@ class Ingredient < ActiveRecord::Base
   def cost_for_quantity(qty)
     if cost_basis.to_i == 0 || cost.nil?
         logger.error "CALC_COST: ingredient #{name} has zero values"
-        return nil
+        return 0
       end
       
       logger.info "CALC_COST: ingredient #{name}, unit #{cost_basis}, cost #{cost}"
@@ -34,7 +34,7 @@ class Ingredient < ActiveRecord::Base
   def kcal_for_quantity(qty)
     if kcal_basis.to_i == 0 || kcal.nil?
         logger.error "CALC_KCAL: ingredient #{name} has zero values"
-        return nil
+        return 0
       end
       
       logger.info "CALC_KCAL: ingredient #{name}, unit #{kcal_basis}, kcal #{kcal}"

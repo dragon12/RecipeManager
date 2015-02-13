@@ -106,6 +106,22 @@ class Recipe < ActiveRecord::Base
     logger.info "setting iq groups"
   end
   
+  def ingredient_quantity_groups_attributes=(hash)
+    logger.info "setting iqd attributes: #{hash.inspect}"
+    hash.each do |seq, iqd_values|
+      if (!iqd_values["id"].blank?)
+        iqd = IngredientQuantityGroup.find(iqd_values["id"])
+      else
+        iqd = IngredientQuantityGroup.new(iqd_values)
+      end
+      logger.info "iqd values: #{iqd_values.inspect}"
+      iqd_values["ingredient_quantities_attributes"].each do |iq_seq, iq_values|
+      end
+      
+      ingredient_quantity_groups << iqd
+    end
+  end
+  
   def ingredient_quantities_attributes=(hash)
     logger.info "setting ingredient quantities: #{hash.inspect}"
     logger.info "this recipe id is #{self.id}"
@@ -165,8 +181,8 @@ class Recipe < ActiveRecord::Base
   
   def calculate_total_cost
     cumulative = 0.0
-    ingredient_quantities.each do |iq|
-      cumulative += iq.cost
+    ingredient_quantity_groups.each do |iqd|
+      cumulative += iqd.cost
     end
     return cumulative
   end
@@ -174,8 +190,8 @@ class Recipe < ActiveRecord::Base
   
   def calculate_total_kcal
     cumulative = 0.0
-    ingredient_quantities.each do |iq|
-      cumulative += iq.kcal
+    ingredient_quantity_groups.each do |iqd|
+      cumulative += iqd.kcal
     end
     return cumulative
   end

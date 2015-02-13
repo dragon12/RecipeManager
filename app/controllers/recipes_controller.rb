@@ -103,7 +103,7 @@ class RecipesController < ApplicationController
                   :id,
                   :name,
                   :_destroy,
-                  {:ingredient_quantity_attributes => [
+                  {:ingredient_quantities_attributes => [
                       :id, 
                       :quantity, 
                       :preparation,

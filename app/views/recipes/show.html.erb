@@ -70,13 +70,20 @@ Cooking Time: <%= @recipe.cooking_time || "N/A" %>
 			<tr>
 		</thead>
 			
-	<% @recipe.ingredient_quantities.each do |ingredient_quantity| %>
+    <% @recipe.ingredient_quantity_groups.each do |iqd| %>
+        <%if @recipe.ingredient_quantity_groups.count > 1 || iqd.name != "Ingredients" %>
+        	<tr>
+        		<td colspan="4" class='bold_centered'><%= iqd.name %></td>
+      		</tr>
+      	<%end%>
+		<% iqd.ingredient_quantities.each do |ingredient_quantity| %>
 		<tr>
 			<td><%= ingredient_quantity.quantity_description %></td>
 			<td><%= ingredient_quantity.prepared_ingredient_description %></td>
 			<td><%= ingredient_quantity.cost_as_str %></td>
 			<td><%= ingredient_quantity.kcal_as_str %></td>
 		</tr>
+		<%end%>
 	<% end %>
 	</table>
 </div>
