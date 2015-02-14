@@ -58,32 +58,47 @@
 </table>
 </p>
 
-<div style="display:table;">
-<%= f.fields_for :ingredient_quantity_groups do |iqd_fields| %>
-<div style="display:table-row;">
-	<div style="display:table-cell;">
-	<%= iqd_fields.hidden_field :id%>
-			<%= iqd_fields.text_field :name,
-			    :value => iqd_fields.object.name_or_default, 
-			    class: 'bold_centered' %>
-			    </div>
-	</div>
-	</br>
-	<%= iqd_fields.fields_for :ingredient_quantities do |iq_fields|%>
-		<%= iq_fields.hidden_field :id%>
-		<%= iq_fields.text_field :quantity, :value => iq_fields.object.quantity_as_string, :autocomplete => :off %>
-		<%= iq_fields.collection_select(:ingredient_id, 
-								Ingredient.order("name"), 
-								:id, :description_in_recipe, :prompt => '<Select an Ingredient>') %>
-		<%= iq_fields.text_field :preparation, :autocomplete => :off %>
-		<%= iq_fields.link_to_remove "Remove Ingredient" %>
-</br>
+<div class='global-container'>
+	<div class='container'>
+		<div class='table-caption'>Ingredients</div>
+		<div class='table-heading-3col'>
+            <div class='table-col table-col-1-4 table-col-heading'>Quantity</div>
+            <div class='table-col table-col-2-4 table-col-heading'>Ingredient</div>
+            <div class='table-col table-col-3-4 table-col-heading'>Preparation</div>
+            <div class='table-col table-col-4-4 table-col-heading'></div>
+        </div>
+    </div>
+    <div class='container'>
+		<%= f.fields_for :ingredient_quantity_groups do |iqd_fields| %>
+		<div class='table-subcaption'>
+			<%= iqd_fields.hidden_field :id%>
+			<%= iqd_fields.text_field :name, :value => iqd_fields.object.name_or_default, :class => "bold-centered"%>
+		</div>
+		<%= iqd_fields.fields_for :ingredient_quantities do |iq_fields|%>
+		<div class='table-row'>
+			<div class='table-col table-col-1-4'>
+				<%= iq_fields.hidden_field :id%>
+				<%= iq_fields.text_field :quantity, :value => iq_fields.object.quantity_as_string, :autocomplete => :off %>
+			</div>
+			<div class='table-col table-col-2-4'>
+				<%= iq_fields.collection_select(:ingredient_id, 
+										Ingredient.order("name"), 
+										:id, :description_in_recipe, :prompt => '<Select an Ingredient>') %>
+			</div>
+			<div class='table-col table-col-3-4'>
+				<%= iq_fields.text_field :preparation, :autocomplete => :off %>
+			</div>
+			<div class='table-col table-col-4-4'>
+				<%= iq_fields.link_to_remove "Remove" %>
+			</div>
+		</div>
+		<%end%>
+		<div class='table-row'>
+			<%= iqd_fields.link_to_add 'Add Ingredient', :ingredient_quantities %>
+		</div>
 	<%end%>
-	<%= iqd_fields.link_to_add 'Add Ingredient', :ingredient_quantities %>
-</br>
-<%end%>
-
-<%= f.link_to_add 'Add Group', :ingredient_quantity_groups %>
+	<%= f.link_to_add 'Add Group', :ingredient_quantity_groups %>
+	</div>
 </div>
 
 

@@ -39,9 +39,9 @@
 	padding: 0;
 	margin: 0;
 }
-[class*='col-'] {
+/*[class*='col-'] {
   float: left;
-}
+}*/
 
 .grid:after {
   content: "";
@@ -159,3 +159,120 @@ table.gridtable select{
     border-left       : 10px solid #1c64d1;
     border-right      : 10px solid #5ba3e0;
     }
+    
+    
+/* this is stuff that's used in the recipes controller */
+
+.global-container {
+    width: 750px;
+}
+.container {
+    width:90%;
+    font-family: verdana,arial,sans-serif;
+    font-size:14px;
+    color:#333333;
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+}
+.container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.table-caption {
+    width: 90%;
+    display: table-caption;
+    //border: 1px solid black;
+    font-size: 30px;
+  font-weight: bold;
+  text-align: left;
+}
+.table-subcaption {
+    width: 100%;
+    height: 30px;
+    display: table-caption;
+    border: 1px solid black;
+    font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+}
+.table-heading-3col {
+    width: 90%;
+    display: table-row;
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #666666;
+    background-color: #dedede;
+    line-height: 50px;
+}
+.table-row {
+    display: table-row;
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #666666;
+    background-color: #ffffff;
+    width: 100%;
+}
+.table-col {
+	padding: 8px;
+    display: table-cell;
+    border-width: 1px;
+  	border-style: solid;
+  	border-color: #666666;
+  	background-color: #ffffff;
+}
+.table-col-1-4 {
+  width: 20%;
+}
+
+.table-col-2-4 {
+  width: 40%;
+}
+
+.table-col-3-4 {
+  width: 25%;
+}
+
+.table-col-4-4 {
+  width: 15%;
+}
+
+.table-col-noborder {
+    display: table-cell
+}
+.table-col-span3_of_4 {
+    display: table-cell;
+    width: 90%;
+}
+.bold-centered {
+    font-weight: bold;
+    text-align: center;
+}
+
+.table-col-heading {
+    font-weight: bold;
+    text-align: center;
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #666666;
+    background-color: #dedede;
+}
+
+div.container input,
+div.container textarea,
+div.container select{
+	vertical-align: top;
+	border: none;
+	width: 100%;
+    height: 100%;
+    -webkit-box-sizing: border-box; /* <=iOS4, <= Android  2.3 */
+       -moz-box-sizing: border-box; /* FF1+ */
+            box-sizing: border-box; /* Chrome, IE8, Opera, Safari 5.1*/
+     
+}
+
