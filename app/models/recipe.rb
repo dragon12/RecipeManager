@@ -8,6 +8,8 @@ class Recipe < ActiveRecord::Base
                     allow_destroy: true,
                     reject_if: lambda { |a| a[:name].blank? }
   
+  has_many :ingredient_quantities, through: :ingredient_quantity_groups
+  has_many :ingredients, through: :ingredient_quantities
   
 #  has_many :ingredient_quantities, -> {order(:created_at) }, dependent: :destroy
 #  accepts_nested_attributes_for :ingredient_quantities, 

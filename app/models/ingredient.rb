@@ -4,7 +4,8 @@ class Ingredient < ActiveRecord::Base
   validates :measurement_type, presence: true
   
   has_many :ingredient_quantities
-  has_many :recipes, through: :ingredient_quantities
+  has_many :ingredient_quantity_groups, through: :ingredient_quantities
+  has_many :recipes, through: :ingredient_quantity_groups
   
   validates :name, presence: true,
                    length: { minimum: 3 },
@@ -19,6 +20,10 @@ class Ingredient < ActiveRecord::Base
   
   before_destroy :check_for_recipes
 
+  def recipes_count
+    recipes.distinct.count
+  end
+  
   def cost_for_quantity(qty)
     if cost_basis.to_i == 0 || cost.nil?
         logger.error "CALC_COST: ingredient #{name} has zero values"
