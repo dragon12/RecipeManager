@@ -58,12 +58,16 @@
 </table>
 </p>
 
+<div style="display:table;">
 <%= f.fields_for :ingredient_quantity_groups do |iqd_fields| %>
+<div style="display:table-row;">
+	<div style="display:table-cell;">
 	<%= iqd_fields.hidden_field :id%>
 			<%= iqd_fields.text_field :name,
 			    :value => iqd_fields.object.name_or_default, 
 			    class: 'bold_centered' %>
-	
+			    </div>
+	</div>
 	</br>
 	<%= iqd_fields.fields_for :ingredient_quantities do |iq_fields|%>
 		<%= iq_fields.hidden_field :id%>
@@ -80,7 +84,7 @@
 <%end%>
 
 <%= f.link_to_add 'Add Group', :ingredient_quantity_groups %>
-
+</div>
 
 
 <table class='gridtable' id="instructions">

@@ -3,6 +3,7 @@ class IngredientQuantity < ActiveRecord::Base
   belongs_to :ingredient, :inverse_of => :ingredient_quantities
   belongs_to :ingredient_quantity_group, :inverse_of => :ingredient_quantities
   
+  
   #this is needed so that it can do fields_for on the nested ingredient
   accepts_nested_attributes_for :ingredient
   

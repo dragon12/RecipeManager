@@ -16,13 +16,14 @@
 //= require_tree .
 //= require jquery_nested_form
 
-/*window.NestedFormEvents.prototype.insertFields = function(content, assoc, link) {
- 	if (assoc == "ingredient_quantity_groups") {
+//window.NestedFormEvents.prototype.insertFields = function(content, assoc, link) {
+ /*if (assoc == "ingredient_quantity_groups") {
   		var $form = $(link).closest('tr');
   		return $(content).insertBefore($form);
-  	} else {
-		var $tr = $(link).closest('tr');
-  		return $(content).insertBefore($tr);
-  	}
-};*/
+  	} else {*/
+  
+	//	var $tr = $(link).closest('tr');
+  	//	return $(content).insertBefore($tr);
+  	//}
+//};
 
