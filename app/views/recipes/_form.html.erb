@@ -58,45 +58,28 @@
 </table>
 </p>
 
-  <table class='gridtable'>
-	<caption>Ingredients</caption>
-	<thead>
-		<tr>
-			<th style="width:75px">Quantity</th>
-			<th style="width:200px">Ingredient</th>
-			<th style="width:200px">Preparation</th>
-		</tr>
-	</thead>
-	
-	<div id="#iqds">
-<%= f.fields_for :ingredient_quantity_groups, :wrapper => false do |iqd_fields| %>
-	<tr>
-		<td colspan="3"><%= iqd_fields.hidden_field :id%>
+<%= f.fields_for :ingredient_quantity_groups do |iqd_fields| %>
+	<%= iqd_fields.hidden_field :id%>
 			<%= iqd_fields.text_field :name,
 			    :value => iqd_fields.object.name_or_default, 
-			    class: 'bold_centered' %></td>
-		<!-- <td><%= iqd_fields.link_to_remove 'Remove Group' %></td>-->
-		<td>(group)</td>
-	</tr>
-	<%= iqd_fields.fields_for :ingredient_quantities, :wrapper => false do |iq_fields|%>
-	<tr class='fields'>
-		<td><%= iq_fields.hidden_field :id%>
-			<%= iq_fields.text_field :quantity, :value => iq_fields.object.quantity_as_string, :autocomplete => :off %></td>
-		<td><%= iq_fields.collection_select(:ingredient_id, 
-								Ingredient.order("name"), 
-								:id, :description_in_recipe, :prompt => '<Select an Ingredient>') %></td>
-		<td><%= iq_fields.text_field :preparation, :autocomplete => :off %></td>
-		<td><%= iq_fields.link_to_remove "Remove Ingredient" %></td>
+			    class: 'bold_centered' %>
 	
-	</tr>
+	</br>
+	<%= iqd_fields.fields_for :ingredient_quantities do |iq_fields|%>
+		<%= iq_fields.hidden_field :id%>
+		<%= iq_fields.text_field :quantity, :value => iq_fields.object.quantity_as_string, :autocomplete => :off %>
+		<%= iq_fields.collection_select(:ingredient_id, 
+								Ingredient.order("name"), 
+								:id, :description_in_recipe, :prompt => '<Select an Ingredient>') %>
+		<%= iq_fields.text_field :preparation, :autocomplete => :off %>
+		<%= iq_fields.link_to_remove "Remove Ingredient" %>
+</br>
 	<%end%>
-	<tr><td colspan="3"><%= iqd_fields.link_to_add 'Add Ingredient', :ingredient_quantities, :data => { :target => "#iqs" }%></td></tr>
+	<%= iqd_fields.link_to_add 'Add Ingredient', :ingredient_quantities %>
+</br>
 <%end%>
-</div>
-	<tr>
-   		<td><%= f.link_to_add 'Add Group', :ingredient_quantity_groups, :data => { :target => "#iqds" } %></td>
-  	</tr>
-</table>
+
+<%= f.link_to_add 'Add Group', :ingredient_quantity_groups %>
 
 
 
