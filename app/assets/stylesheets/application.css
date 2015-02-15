@@ -215,8 +215,8 @@ table.gridtable select{
     width: 100%;
 }
 .table-col {
-	padding: 8px;
     display: table-cell;
+    height: 25px;
     border-width: 1px;
   	border-style: solid;
   	border-color: #666666;
