@@ -40,23 +40,32 @@
   	<%= f.label :rating %>: <%= f.text_field :rating, size:"3", :autocomplete => :off %>
   </p>
 
-  <p>
-<table class='gridtable' id='links'>
-	<caption>Links</caption>
-	<thead>
-		<tr>
-			<th style="width:250px">Description</th>
-			<th style="width:500px">URL</th>
-		</tr>
-	</thead>
-	<%= f.fields_for :links, :wrapper => false %>
-	<tr>
-		<td colspan="2">
-			<%= f.link_to_add "Add a link", :links, :data => { :target => "#links"} %>
-		</td>
-	</tr>
-</table>
-</p>
+<div class='global-container'>
+	<div class='container'>
+		<div class='table-caption'>Links</div>
+		<div class='table-heading-3col'>
+			<div class='table-col table-col-1-3 table-col-heading'>Name</div>
+	        <div class='table-col table-col-2-3 table-col-heading'>Link</div>
+	        <div class='table-col table-col-3-3 table-col-heading'></div>
+	    </div>
+	</div>
+	<div class='container'>
+		<%= f.fields_for :links do |links_fields| %>
+		<div class='table-row'>
+			<div class='table-col table-col-1-3'>
+				<%= links_fields.hidden_field :id%><%= links_fields.text_field :description, :autocomplete => :off %>
+			</div>
+			<div class='table-col table-col-2-3'>
+				<%= links_fields.url_field :url, :autocomplete => :off %>
+			</div>
+			<div class='table-col table-col-3-3'>
+		  		<%= links_fields.link_to_remove "Remove" %>
+			</div>
+		</div>
+		<%end%>
+		<%= f.link_to_add "Add a link", :links, :class => "link-button" %>
+	</div>
+</div>
 
 <div class='global-container'>
 	<div class='container'>
@@ -101,26 +110,32 @@
 	</div>
 </div>
 
-
-<table class='gridtable' id="instructions">
-	<caption>Instructions</caption>
-	<thead>
-		<tr>
-			<th style="width:50px">Step #</th>
-			<th style="width:500px">Instruction</th>
-		</tr>
-	</thead>
- <%= f.fields_for :instructions, :wrapper => false %>
-
-<tr>
-	<td colspan="2">
-<%= f.link_to_add "Add an instruction", 
-  					:instructions,
-  					:data => { :target => "#instructions" } %>
-	</td>
-</tr>
-
-</table>
+<div class='global-container'>
+	<div class='container'>
+		<div class='table-caption'>Instructions</div>
+		<div class='table-heading-3col'>
+			<div class='table-col table-col-1-3 table-col-heading'>Step #</div>
+	        <div class='table-col table-col-2-3 table-col-heading'>Instruction</div>
+	        <div class='table-col table-col-3-3 table-col-heading'></div>
+	    </div>
+	</div>
+	<div class='container'>
+		<%= f.fields_for :instructions do |instructions_fields| %>
+		<div class='table-row'>
+			<div class='table-col table-col-1-3'>
+				<%= instructions_fields.hidden_field :id%><%= instructions_fields.text_field :step_number, :autocomplete => :off %>
+			</div>
+			<div class='table-col table-col-2-3'>
+				<%= instructions_fields.text_area :details, size: "50x3", :autocomplete => :off  %>
+			</div>
+			<div class='table-col table-col-3-3'>
+		  		<%= instructions_fields.link_to_remove "Remove" %>
+			</div>
+		</div>
+		<%end%>
+		<%= f.link_to_add "Add an instruction", :instructions, :class => "link-button" %>
+	</div>
+</div>
  
   
   <h2>Comments</h2>

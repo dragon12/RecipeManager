@@ -1,5 +1,11 @@
-<tr class="fields">
-	<td><%= f.text_area :description, :autocomplete => :off %></td>
-	<td><%= f.url_field :url, :autocomplete => :off %></td>
-  	<td><%= f.link_to_remove "Remove", :data => { :target => "#links" } %></td>
-</tr>
+<div class='table-row'>
+	<div class='table-col table-col-1-3'>
+		<%= f.hidden_field :id%><%= f.text_field :description, :autocomplete => :off %>
+	</div>
+	<div class='table-col table-col-2-3'>
+		<%= f.url_field :url, :autocomplete => :off %>
+	</div>
+	<div class='table-col table-col-3-3'>
+  		<%= f.link_to_remove "Remove" %>
+	</div>
+</div>
