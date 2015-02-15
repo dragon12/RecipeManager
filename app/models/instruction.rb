@@ -1,5 +1,5 @@
 class Instruction < ActiveRecord::Base
-  belongs_to :recipe
+  belongs_to :instruction_group
   
   validates :step_number, presence: true,
                           numericality: { only_integer: true }

@@ -66,6 +66,7 @@
 		<%= f.link_to_add "Add a link", :links, :class => "link-button" %>
 	</div>
 </div>
+<br/>
 
 <div class='global-container'>
 	<div class='container'>
@@ -103,40 +104,49 @@
 		</div>
 		<%end%>
 		<div class='table-row'>
-			<%= iqd_fields.link_to_add 'Add Ingredient', :ingredient_quantities %>
+			<%= iqd_fields.link_to_add 'Add Ingredient', :ingredient_quantities, :class => 'link-button' %>
 		</div>
 	<%end%>
 	<%= f.link_to_add 'Add Group', :ingredient_quantity_groups %>
 	</div>
 </div>
-
+<br/>
 <div class='global-container'>
 	<div class='container'>
 		<div class='table-caption'>Instructions</div>
 		<div class='table-heading-3col'>
-			<div class='table-col table-col-1-3 table-col-heading'>Step #</div>
-	        <div class='table-col table-col-2-3 table-col-heading'>Instruction</div>
-	        <div class='table-col table-col-3-3 table-col-heading'></div>
+			<div class='table-col instructions-table-col-1-3 table-col-heading'>Step #</div>
+	        <div class='table-col instructions-table-col-2-3 table-col-heading'>Instruction</div>
+	        <div class='table-col instructions-table-col-3-3 table-col-heading'></div>
 	    </div>
 	</div>
-	<div class='container'>
-		<%= f.fields_for :instructions do |instructions_fields| %>
-		<div class='table-row'>
-			<div class='table-col table-col-1-3'>
+    <div class='container'>
+		<%= f.fields_for :instruction_groups do |ig_fields| %>
+		<div class='table-subcaption'>
+			<%= ig_fields.hidden_field :id%>
+			<%= ig_fields.text_field :name, :value => ig_fields.object.name_or_default, :class => "bold-centered"%>
+		</div>
+		<%= ig_fields.fields_for :instructions do |instructions_fields| %>
+		<div class='instructions-table-row'>
+			<div class='table-col instructions-table-col-1-3'>
 				<%= instructions_fields.hidden_field :id%><%= instructions_fields.text_field :step_number, :autocomplete => :off %>
 			</div>
-			<div class='table-col table-col-2-3'>
-				<%= instructions_fields.text_area :details, size: "50x3", :autocomplete => :off  %>
+			<div class='table-col instructions-table-col-2-3'>
+				<%= instructions_fields.text_area :details, size: "50x5", :autocomplete => :off, :class => 'multiline'  %>
 			</div>
-			<div class='table-col table-col-3-3'>
+			<div class='table-col instructions-table-col-3-3'>
 		  		<%= instructions_fields.link_to_remove "Remove" %>
 			</div>
 		</div>
 		<%end%>
-		<%= f.link_to_add "Add an instruction", :instructions, :class => "link-button" %>
+		<div class='table-row'>
+			<%= ig_fields.link_to_add "Add an instruction", :instructions, :class => "link-button" %>
+		</div>
+		<%end%>
+		<%= f.link_to_add 'Add Group', :instruction_groups %>
 	</div>
 </div>
- 
+<br/>
   
   <h2>Comments</h2>
   <p>

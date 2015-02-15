@@ -97,12 +97,19 @@ Cooking Time: <%= @recipe.cooking_time || "N/A" %>
 			<th>Instruction</th>
 		<tr>
 	</thead>
-		
-	<% @recipe.instructions.each do |instruction| %>
-	<tr>
-		<td><%= instruction.step_number %></td>
-		<td><%= instruction.details %></td>
-	</tr>
+	<% @recipe.instruction_groups.each do |ig| %>
+        <%if @recipe.instruction_groups.count > 1 || ig.name != "Instructions" %>
+    	<tr>
+    		<td colspan="3" class='bold_centered'><%= ig.name %></td>
+  		</tr>
+      	<%end%>
+      	
+		<% ig.instructions.each do |instruction| %>
+		<tr>
+			<td><%= instruction.step_number %></td>
+			<td><%= instruction.details %></td>
+		</tr>
+		<%end%>
 	<% end %>
 	</table>
 </div>

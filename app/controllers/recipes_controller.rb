@@ -94,11 +94,17 @@ class RecipesController < ApplicationController
         .permit(:name, :description, :comments, :category_id, :total_time, :active_time, 
                   :cooking_time, :rating, :portion_count, :_destroy,
                 links_attributes: [:id, :description, :url, :_destroy],
-                instructions_attributes: [
+                instruction_groups_attributes: [
                   :id,
-                  :step_number, 
-                  :details,
-                  :_destroy],
+                  :name,
+                  :_destroy,
+                  {:instructions_attributes => [
+                    :id,
+                    :step_number, 
+                    :details,
+                    :_destroy]
+                  }
+                ],
                 ingredient_quantity_groups_attributes: [
                   :id,
                   :name,

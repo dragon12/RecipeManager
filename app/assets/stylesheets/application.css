@@ -253,6 +253,20 @@ table.gridtable select{
   width: 20%;
 }
 
+.instructions-table-row {
+}
+.instructions-table-col-1-3 {
+  width: 10%;
+}
+
+.instructions-table-col-2-3 {
+  width: 70%;
+}
+
+.instructions-table-col-3-3 {
+  width: 20%;
+}
+
 
 .table-col-noborder {
     display: table-cell
@@ -274,6 +288,10 @@ table.gridtable select{
     border-style: solid;
     border-color: #666666;
     background-color: #dedede;
+}
+
+.multiline {
+	height: 50px !important;
 }
 
 div.container input,

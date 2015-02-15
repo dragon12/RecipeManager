@@ -11,19 +11,11 @@ class Recipe < ActiveRecord::Base
   has_many :ingredient_quantities, through: :ingredient_quantity_groups
   has_many :ingredients, through: :ingredient_quantities
   
-#  has_many :ingredient_quantities, -> {order(:created_at) }, dependent: :destroy
-#  accepts_nested_attributes_for :ingredient_quantities, 
-#                    allow_destroy: true,
-#                    reject_if: lambda { |a| a[:quantity].blank? or a[:ingredient].blank? }
-#                    
-#  has_many :ingredients, through: :ingredient_quantities
-#  accepts_nested_attributes_for :ingredients               
-                    
-  has_many :instructions, -> { order(:step_number) },
-            dependent: :destroy
-  accepts_nested_attributes_for :instructions, 
-                    reject_if: lambda { |a| a[:details].blank? },
-                    allow_destroy: true
+  has_many :instruction_groups, -> {order(:created_at) }, dependent: :destroy
+  accepts_nested_attributes_for :instruction_groups, allow_destroy: true
+  
+  has_many :instructions, through: :instruction_groups
+  
   
   has_many :links, dependent: :destroy
   accepts_nested_attributes_for :links, 
