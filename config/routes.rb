@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'users/new'
+
   get 'categories/index'
 
   get 'categories/create'
@@ -27,6 +29,7 @@ Rails.application.routes.draw do
   resources :recipes
   resources :ingredients
   resources :categories
+  resources :users
   # Example resource route with options:
   #   resources :products do
   #     member do

@@ -37,6 +37,8 @@ gem 'nested_form'
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
+ 
+gem 'bootstrap-sass' 
 
 # Use unicorn as the app server
 # gem 'unicorn'
@@ -45,7 +47,7 @@ gem 'bcrypt', '~> 3.1.7'
 # gem 'capistrano-rails', group: :development
 
 # Use debugger
-# gem 'debugger', group: [:development, :test]
+gem 'debugger', group: [:development, :test]
 
 group :development do
     gem 'webrick', '~> 1.3.1'
