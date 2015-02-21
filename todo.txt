@@ -14,7 +14,7 @@ More significant features
 
 known bugs:
     bug in submit ingredient if there's a blank ingredient present - should be ignored
-    text fields should preserve multi-line input (method fields)
+    Shouldn't display times if they're empty
 
 
 Model:
