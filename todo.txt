@@ -12,7 +12,6 @@ More significant features
 
 known bugs:
     bug in submit ingredient if there's a blank ingredient present - should be ignored
-    Shouldn't display times if they're empty
 
 
 Model:

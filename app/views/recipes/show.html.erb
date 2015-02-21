@@ -24,9 +24,15 @@
 <%end%>
 
 <p>
-Total Time: <%= @recipe.total_time || "N/A" %>, 
-Active Time: <%= @recipe.active_time || "N/A" %>, 
-Cooking Time: <%= @recipe.cooking_time || "N/A" %>
+	<% if !@recipe.total_time.blank? %>
+Total Time: <%= @recipe.total_time || "N/A" %><br/>
+	<%end%>
+	<% if !@recipe.active_time.blank? %>
+Active Time: <%= @recipe.active_time || "N/A" %><br/>
+	<%end%>
+	<% if !@recipe.cooking_time.blank? %>
+Cooking Time: <%= @recipe.cooking_time || "N/A" %><br/>
+	<%end%>
 </p>
 
 <p>
