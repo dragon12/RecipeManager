@@ -1,28 +1,21 @@
-'update' link at top of recipe
-
-some kind of separator/grouper for the ingredients and method lists
-
-bug in submit ingredient if there's a blank ingredient present - should be ignored
-
-Headings on index should be click-to-sort
-
-welcome page should just be the recipes
 
 
-appropriate pluralisation of ingredients
+Minor feature updates:
+    'update' link at top of recipe
+    welcome page should just be the recipes
+    New recipe should start with an empty ingredient/group/instruction/group
 
-linking to specific other recipes as an ingredient
+More significant features
+    Headings on index should be click-to-sort
+    appropriate pluralisation of ingredients
+    linking to specific other recipes as an ingredient
+    tab when adding ingredients should add a new row
+    auto-numbering of instructions (on submit if all blank)
 
-showing the various things on the recipes page: maybe a fact-sheet kinda thing?
+known bugs:
+    bug in submit ingredient if there's a blank ingredient present - should be ignored
+    text fields should preserve multi-line input (method fields)
 
-
-main page maybe should have cooking time rather than number of ingredients
-
-tab when adding ingredients should add a new row
-sortable table on all recipes page
-step number maybe shouldn't be an int? e.g. 1a
-definitely need sections for ingredients and method
-    - add a 'section' column to method which can somehow be sortable if non-null
 
 Model:
 
