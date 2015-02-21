@@ -107,7 +107,7 @@ Cooking Time: <%= @recipe.cooking_time || "N/A" %>
 		<% ig.instructions.each do |instruction| %>
 		<tr>
 			<td><%= instruction.step_number %></td>
-			<td><%= instruction.details %></td>
+			<td style="white-space: pre-wrap;"><%= instruction.details %></td>
 		</tr>
 		<%end%>
 	<% end %>
