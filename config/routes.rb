@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
+
   get 'users/new'
 
   get 'categories/index'
@@ -30,6 +32,12 @@ Rails.application.routes.draw do
   resources :ingredients
   resources :categories
   resources :users
+  
+  get    'signup'  => 'users#new'
+  get    'login'   => 'sessions#new'
+  post   'login'   => 'sessions#create'
+  delete 'logout'  => 'sessions#destroy'
+
   # Example resource route with options:
   #   resources :products do
   #     member do
