@@ -1,7 +1,6 @@
 
 
 Minor feature updates:
-    welcome page should just be the recipes
     New recipe should start with an empty ingredient/group/instruction/group
 
 More significant features

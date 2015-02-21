@@ -6,7 +6,9 @@ All Recipes
 <%end%>
 	</h1>
  <%= form_tag(recipes_path, :method => "get", id: "search-form") do %>
-  <table>
+ 
+ <div class='boxed_table'>
+  <table >
  	<tr>
  		<td>
  			Filter by Name:
@@ -45,7 +47,7 @@ All Recipes
 			<%= submit_tag "Search", :name => nil %>
 		</td>
  	</tr>
- 	 	<tr>
+ 	 <tr>
  		<td>
  			Filter by Category:
  		</td>
@@ -65,6 +67,7 @@ All Recipes
 <%end%>
  
  <%= link_to 'Clear Filters', recipes_path %>
+ </div>
  
   <p>
  <%= link_to 'Add recipe', new_recipe_path %>
