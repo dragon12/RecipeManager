@@ -37,6 +37,7 @@ class RecipesController < ApplicationController
       #@recipes = Recipe.joins(:category).order('categories.name asc, name asc')
       @recipes = Recipe.order(:created_at)
     end
+    @recipes = @recipes.paginate(page: params[:page])
     render 'index'
   end
   

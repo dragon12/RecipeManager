@@ -39,6 +39,9 @@ gem 'nested_form'
 gem 'bcrypt', '~> 3.1.7'
  
 gem 'bootstrap-sass' 
+gem 'will_paginate',           '3.0.7'
+gem 'bootstrap-will_paginate', '0.0.10'
+
 
 # Use unicorn as the app server
 # gem 'unicorn'
