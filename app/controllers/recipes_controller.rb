@@ -70,9 +70,12 @@ class RecipesController < ApplicationController
   def new
     #we create an empty recipe here so that there is always a 'recipe' variable available to the template
     @recipe = Recipe.new
-    iqg = IngredientQuantityGroup.new
-    iqg.name = "Default"
-    @recipe.ingredient_quantity_groups << iqg
+    
+    ingredient_group = @recipe.ingredient_quantity_groups.build(name: "Default")
+    ingredient_group.ingredient_quantities << IngredientQuantity.new
+    
+    instruction_group = @recipe.instruction_groups.build(name: "Default")
+    instruction_group.instructions << Instruction.new
   end
   
   def create
@@ -121,7 +124,44 @@ class RecipesController < ApplicationController
                     }
                   ]
                 )
-    
+      if ret_params.has_key?("links_attributes")
+        ret_params[:links_attributes].reject!{|unused, a| 
+          a[:description].blank? && a[:url].blank? && a[:_destroy] == "false"
+          }
+      end
+      
+      if ret_params.has_key?("instruction_groups_attributes")
+         ret_params[:instruction_groups_attributes].reject! {|unused, ig|
+           logger.info(ig)
+           
+           retval=ig[:name].blank? && ig[:_destroy] == "false"
+           if ig.has_key?("instructions_attributes")
+             ig[:instructions_attributes].reject! {|unused2, ins|
+               ins[:step_number].blank? && ins[:description].blank? && ins[:_destroy] == "false"
+               }
+             retval = retval && ig[:instructions_attributes].empty?
+           end
+          
+           retval
+         }
+      end
+      if ret_params.has_key?("ingredient_quantity_groups_attributes")
+         ret_params[:ingredient_quantity_groups_attributes].reject! {|unused, iqg|
+           logger.info(iqg)
+           
+           retval=iqg[:name].blank? && iqg[:_destroy] == "false"
+           if iqg.has_key?("ingredient_quantities_attributes")
+             iqg[:ingredient_quantities_attributes].reject! {|unused2, iq|
+               iq[:quantity].blank? && iq[:preparation].blank? && iq[:ingredient_id].blank? && iq[:_destroy] == "false"
+               }
+             retval = retval && ig[:ingredient_quantities_attributes].empty?
+           end
+          
+           retval
+         }
+      end
+      logger.info ("after")
+      logger.info(ret_params)
       return ret_params
       
     end

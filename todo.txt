@@ -1,7 +1,6 @@
 
 
 Minor feature updates:
-    New recipe should start with an empty ingredient/group/instruction/group
 
 More significant features
     Headings on index should be click-to-sort
@@ -11,7 +10,6 @@ More significant features
     auto-numbering of instructions (on submit if all blank)
 
 known bugs:
-    bug in submit ingredient if there's a blank ingredient present - should be ignored
 
 
 Model:

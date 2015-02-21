@@ -19,7 +19,7 @@ class Recipe < ActiveRecord::Base
   
   has_many :links, dependent: :destroy
   accepts_nested_attributes_for :links, 
-                    reject_if: lambda { |a| a[:url].blank? },
+                    #reject_if: lambda { |a| a[:url].blank? && a[:name].blank? },
                     allow_destroy: true
   
   validates_presence_of :description
