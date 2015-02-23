@@ -6,7 +6,7 @@ class IngredientQuantityGroup < ActiveRecord::Base
   has_many :ingredient_quantities, -> {order(:created_at) }, dependent: :destroy
   accepts_nested_attributes_for :ingredient_quantities,
                       allow_destroy: true,
-                      reject_if: lambda { |a| a[:quantity].blank? or a[:ingredient].blank? }
+                      reject_if: lambda { |a| a[:quantity].blank? or (a[:ingredient].blank? and a[:ingredient_id].blank?) }
   
   #has_many :ingredients, through: :ingredient_quantities
   #accepts_nested_attributes_for :ingredients               
@@ -18,6 +18,12 @@ class IngredientQuantityGroup < ActiveRecord::Base
   def name_or_default
     name.blank? ? "<Enter Group Name>" : name
   end
+  
+  #def ingredient_quantities_attributes=(h)
+  #  logger.info("Trying to set iq attribs to #{h}")
+  #  debugger
+  #  super(h)
+  #end
   
   def cost
     total = 0
