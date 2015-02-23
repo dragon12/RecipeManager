@@ -125,42 +125,58 @@ class RecipesController < ApplicationController
                     }
                   ]
                 )
-      if ret_params.has_key?("links_attributes")
-        ret_params[:links_attributes].reject!{|unused, a| 
-          a[:description].blank? && a[:url].blank? && a[:_destroy] == "false"
-          }
-      end
+#      if ret_params.has_key?("links_attributes")
+#        ret_params[:links_attributes].reject!{|unused, a| 
+#          a[:description].blank? && a[:url].blank? && a[:_destroy] == "false"
+#          }
+#      end
       
-      if ret_params.has_key?("instruction_groups_attributes")
-         ret_params[:instruction_groups_attributes].reject! {|unused, ig|
-           logger.info(ig)
+      #there has got to be a better way of doing this ...
+#      if ret_params.has_key?("instruction_groups_attributes")
+#        debugger
+#         ret_params[:instruction_groups_attributes].reject! {|unused, ig|
+#           logger.info(ig)
+#           
+#           all_removed = true
+#           if ig.has_key?("instructions_attributes")
+#             ig[:instructions_attributes].reject! {|unused2, ins|
+#               all_removed = all_removed && (ins[:_destroy] == "true" || ins[:_destroy] == "1")
+#               ins[:step_number].blank? && ins[:description].blank? && ins[:_destroy] == "false"
+#               }
+#           end
+#           
+#           #debugger
+#           if !ig.has_key?("instructions_attributes") || ig[:instructions_attributes].empty? || all_removed
+#             logger.info("doesnt' have instructions")
+#             ig[:_destroy] = "1"
+#           end
+#           false
+#           }
+#      end
+#      
+#      if ret_params.has_key?("ingredient_quantity_groups_attributes")
+#         ret_params[:ingredient_quantity_groups_attributes].reject! {|unused, iqg|
+#           logger.info(iqg)
+#        
+#           all_removed = true
+#           #debugger
+#           if iqg.has_key?("ingredient_quantities_attributes")
+#             iqg[:ingredient_quantities_attributes].reject! {|unused2, iq|
+#               all_removed = all_removed && (iq[:_destroy] == "true" || iq[:_destroy] == "1")
+#               iq[:quantity].blank? && iq[:preparation].blank? && iq[:ingredient_id].blank? && iq[:_destroy] == "false"
+#               }
+#             retval = retval && ig[:ingredient_quantities_attributes].empty?
+#           end
+#           
+#           
+#           if all_removed
+#             logger.info("doesn't have ingredients")
+#             iqg[:_destroy] = "1"
+#           end
            
-           retval=ig[:name].blank? && ig[:_destroy] == "false"
-           if ig.has_key?("instructions_attributes")
-             ig[:instructions_attributes].reject! {|unused2, ins|
-               ins[:step_number].blank? && ins[:description].blank? && ins[:_destroy] == "false"
-               }
-             retval = retval && ig[:instructions_attributes].empty?
-           end
-          
-           retval
-         }
-      end
-      if ret_params.has_key?("ingredient_quantity_groups_attributes")
-         ret_params[:ingredient_quantity_groups_attributes].reject! {|unused, iqg|
-           logger.info(iqg)
-           
-           retval=iqg[:name].blank? && iqg[:_destroy] == "false"
-           if iqg.has_key?("ingredient_quantities_attributes")
-             iqg[:ingredient_quantities_attributes].reject! {|unused2, iq|
-               iq[:quantity].blank? && iq[:preparation].blank? && iq[:ingredient_id].blank? && iq[:_destroy] == "false"
-               }
-             retval = retval && ig[:ingredient_quantities_attributes].empty?
-           end
-          
-           retval
-         }
-      end
+#           false
+#         }
+#      end
       logger.info ("after")
       logger.info(ret_params)
       return ret_params

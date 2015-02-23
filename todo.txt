@@ -1,6 +1,9 @@
 
 
 Minor feature updates:
+	recipe in progress - not displayed on main screen
+	
+
 
 More significant features
     Headings on index should be click-to-sort
@@ -10,7 +13,7 @@ More significant features
     auto-numbering of instructions (on submit if all blank)
 
 known bugs:
-
+	doesn't correctly strip empty ingredient quantities
 
 Model:
 
