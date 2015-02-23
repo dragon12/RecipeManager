@@ -125,6 +125,33 @@ class RecipesController < ApplicationController
                     }
                   ]
                 )
+       if ret_params.has_key?("instruction_groups_attributes")
+         groups = ret_params["instruction_groups_attributes"]
+         
+         groups.each do |unused, group|
+           empty = true
+           if (group.has_key?("instructions_attributes"))
+             insts = group["instructions_attributes"]
+             
+             #strip any that are not real and are blank
+             insts.reject! {|unused2, inst| Instruction.is_params_empty(inst) && inst["id"].blank?}
+             insts.each do |unused2, inst|
+               empty = false
+               
+               logger.info("looking at instruction #{inst}")
+               if Instruction.is_params_empty(inst)
+                 logger.info("Is empty, marking for destruction")
+                 inst[:_destroy] = "1"
+               end
+             end
+           end
+           if empty
+             logger.info("group #{group[:name]} is empty, marking for destruction")
+             group[:_destroy] = "1"
+           end
+         end
+         
+       end
 #      if ret_params.has_key?("links_attributes")
 #        ret_params[:links_attributes].reject!{|unused, a| 
 #          a[:description].blank? && a[:url].blank? && a[:_destroy] == "false"

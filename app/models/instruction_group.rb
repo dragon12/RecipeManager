@@ -8,9 +8,10 @@ class InstructionGroup < ActiveRecord::Base
                                   allow_destroy: true,
                                   reject_if: lambda { |a| a[:step_number].blank? or a[:details].blank? }
   
+
   validates_presence_of :instructions
   validates :name, presence: true, length: {minimum: 2}
-  
+
   def name_or_default
     name.blank? ? "<Enter Group Name>" : name
   end
@@ -18,7 +19,9 @@ class InstructionGroup < ActiveRecord::Base
 private
   def check_for_instructions
     if instructions.count > 0
-      errors.add(:base, "Cannot delete instruction group while holding any instruction")
+      issue = "Cannot delete instruction group while holding any instruction"
+      errors.add(:base, issue)
+      logger.warn(issue)
       return false
     end
   end
