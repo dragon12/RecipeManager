@@ -1,5 +1,4 @@
 class InstructionGroup < ActiveRecord::Base
-  before_destroy :check_for_instructions
   
   belongs_to :recipe
   has_many :instructions, -> {order(:step_number)}, dependent: :destroy
@@ -17,12 +16,5 @@ class InstructionGroup < ActiveRecord::Base
   end
   
 private
-  def check_for_instructions
-    if instructions.count > 0
-      issue = "Cannot delete instruction group while holding any instruction"
-      errors.add(:base, issue)
-      logger.warn(issue)
-      return false
-    end
-  end
+ 
 end

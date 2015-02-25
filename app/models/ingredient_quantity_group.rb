@@ -1,5 +1,4 @@
 class IngredientQuantityGroup < ActiveRecord::Base
-  before_destroy :check_for_ingredient_quantities
   
   belongs_to :recipe
   
@@ -40,11 +39,5 @@ class IngredientQuantityGroup < ActiveRecord::Base
     end
     return total
   end
-private
-  def check_for_ingredient_quantities
-    if ingredient_quantities.count > 0
-      errors.add(:base, "Cannot delete ingredient quantity group while holding any ingredient quantity")
-      return false
-    end
-  end
+
 end
