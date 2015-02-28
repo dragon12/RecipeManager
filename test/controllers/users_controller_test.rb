@@ -16,9 +16,9 @@ class UsersControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should create user" do
-    assert_difference('User.count') do
-      post :create, user: {  }
+  test "should not create duplicate user" do
+    assert_no_difference('User.count') do
+      post :create, :user => @user.attributes
     end
 
     assert_redirected_to user_path(assigns(:user))
