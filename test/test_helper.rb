@@ -1,6 +1,8 @@
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../../config/environment', __FILE__)
+#require Rails.root.join('../factories.rb')
 require 'rails/test_help'
+require 'minitest/spec'
 require "minitest/reporters"
 Minitest::Reporters.use!
 Minitest::Reporters.use!(
@@ -8,7 +10,19 @@ Minitest::Reporters.use!(
   ENV,
   Minitest.backtrace_filter
 )
+# MiniTest
+class MiniTest::Unit::TestCase
+  include FactoryGirl::Syntax::Methods
+end
+
+# MiniTest::Spec
+class MiniTest::Spec
+  include FactoryGirl::Syntax::Methods
+end
+
 class ActiveSupport::TestCase
+  include FactoryGirl::Syntax::Methods
+
   fixtures :all
 
   # Returns true if a test user is logged in.

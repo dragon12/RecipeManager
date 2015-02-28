@@ -71,5 +71,5 @@ group :test do
 end
 
 gem 'faker', '1.4.2'
-
+gem 'factory_girl_rails'
 

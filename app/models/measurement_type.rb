@@ -5,12 +5,13 @@ class MeasurementType < ActiveRecord::Base
   validates :measurement_type, presence: true,
                               uniqueness: { case_sensitive: false }
  
-  validates :measurement_name, uniqueness: { case_sensitive: false, :scope => :measurement_type }
+  validates :measurement_name, presence: true,
+                               uniqueness: { case_sensitive: false}
  
 private
 
-  def check_for_ingredient
-    if ingredient.count > 0
+  def check_for_ingredients
+    if ingredients.count > 0
       errors.add(:base, "Cannot delete measurement type while used in any ingredient")
       return false
     end
