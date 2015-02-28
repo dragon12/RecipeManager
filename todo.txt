@@ -1,5 +1,7 @@
+User stuff:
+    ingredients page: top box should only be visible to admin user
+    edit/create/destroy only allowable to admin user
 
-broken free-text search on ingredient
 
 Minor feature updates:
 	recipe in progress - not displayed on main screen

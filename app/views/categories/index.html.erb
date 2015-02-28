@@ -18,12 +18,14 @@
       <%= content_tag :div, msg, class: name %>
     <% end -%>
     
+<% if @is_admin %>
+    
 <%= form_for @category do |f| %>
   <p>
     <%= f.text_field :name %> <%= f.submit %>
   </p>
 <% end %>
-
+<% end %>
  
 <table class='gridtable'>
   <tr>
@@ -36,9 +38,11 @@
       <td><%= category.name %></td>
       <td><%= link_to category.recipes.count,
       			recipes_path(:search_by_category_id => category.id)%></td>
+<%if @is_admin %>
       <td><%= link_to 'Edit', category_path(category) %></td>
       <td><%= link_to 'Delete', category_path(category),
                     method: :delete, data: { confirm: 'Are you sure?' } %></td>
+<%end%>
     </tr>
   <% end %>
 </table>

@@ -1,17 +1,17 @@
 class IngredientsController < ApplicationController
-  
-  include AuthenticationHelper
+  before_action :admin_user, only: [:edit, :update, :destroy]
+
+  @is_admin = false
   
   def index
+    setup_vars
     @ingredients = Ingredient.order(:name)
-  
-    
     @ingredient = Ingredient.new
   end  
   
   def create
     #render plain: params[:recipe].inspect
-    
+    setup_vars
     @ingredient = Ingredient.new(ingredient_params)
  
     if @ingredient.save
@@ -23,12 +23,14 @@ class IngredientsController < ApplicationController
   end
   
   def show
+    setup_vars
     @ingredients = Ingredient.order(:name)
     @ingredient = Ingredient.find(params[:id])
     render 'index'
   end
   
   def update
+    setup_vars
 #    render plain: params[:recipe].inspect
     
     @ingredient = Ingredient.find(params[:id])
@@ -42,6 +44,7 @@ class IngredientsController < ApplicationController
   end
   
   def destroy
+    setup_vars
     @deleted_ingredient = Ingredient.find(params[:id])
     if @deleted_ingredient.destroy
       #redirect_to ingredients_path
@@ -58,6 +61,9 @@ class IngredientsController < ApplicationController
   end
   
 private
+  def setup_vars
+    @is_admin = current_user && current_user.is_admin?
+  end
 
   def ingredient_params
     return params.require(:ingredient).permit(:name, :measurement_type_id, 
@@ -65,4 +71,12 @@ private
                                                   :kcal_basis, :kcal, :kcal_note)
   end
   
+  
+  # Confirms an admin user.
+  def admin_user
+    unless logged_in? && current_user.is_admin?
+      flash[:danger] = "Must be admin to modify ingredients"
+      redirect_to(ingredients_url) 
+    end
+  end
 end

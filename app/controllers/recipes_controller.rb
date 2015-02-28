@@ -1,19 +1,8 @@
 class RecipesController < ApplicationController
+  before_action :setup_vars
+  before_action :admin_user, only: [:new, :create, :edit, :update, :destroy]
 
-  include AuthenticationHelper
-  
-  #before_filter :authenticate, except: [:index, :show]
-
-  #def authenticate
-  #  authenticate_or_request_with_http_basic do |username, password|
-  #    @authenticated = username == "foo" && password == "bar"
-  #  end
-  #end
-#
-#  def authenticated?
-#    @authenticated
-#  end
-#  helper_method :authenticated?
+  @is_admin = false
   
   def index
     @search_ingredient = Ingredient.new
@@ -146,5 +135,15 @@ class RecipesController < ApplicationController
       
     end
     
-  
+  def setup_vars
+    @is_admin = current_user && current_user.is_admin?
+  end
+     
+  # Confirms an admin user.
+  def admin_user
+    unless @is_admin
+      flash[:danger] = "Must be admin to modify recipes"
+      redirect_to(recipes_url) 
+    end
+  end
 end

@@ -69,10 +69,11 @@ All Recipes
  </div>
 <%end%>
  
+<% if @is_admin %>
   <p>
  <%= link_to 'Add recipe', new_recipe_path %>
  </p>
-
+<% end %>
 
 <%= will_paginate %>
 
@@ -81,7 +82,7 @@ All Recipes
     <th style='width:20%'>Name</th>
     <th style='width:40%'>Description</th>
     <th style='width:10%'>Category</th>
-    <th style='width:5%'>Rating</th>
+    <th style='width:5%'>Chef's Rating</th>
     <th style='width:5%'>Total Time</th>
     <th style='width:5%'>Cost Per Portion</th>
   </tr>
@@ -97,9 +98,11 @@ All Recipes
       <td><%= recipe.rating %></td>
       <td><%= recipe.total_time %></td>
       <td><%= recipe.cost_per_portion %></td>
+    <% if @is_admin %>
       <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
       <td><%= link_to 'Delete', recipe_path(recipe),
                     method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <% end %>
     </tr>
   <% end %>
 </table>

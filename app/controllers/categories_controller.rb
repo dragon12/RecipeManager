@@ -1,14 +1,16 @@
 class CategoriesController < ApplicationController
-  include AuthenticationHelper
+  before_action :admin_user, only: [:edit, :update, :destroy]
 
-  def index
-    @categories = Category.order(:name)
+  @is_admin = false
   
+  def index
+    setup_vars
+    @categories = Category.order(:name)
     @category = Category.new
   end
+
   def create
-    #render plain: params[:recipe].inspect
-    
+    setup_vars
     @category = Category.new(category_params)
  
     if @category.save
@@ -20,12 +22,14 @@ class CategoriesController < ApplicationController
   end
   
   def show
+    setup_vars
     @categories = Category.order(:name)
     @category = Category.find(params[:id])
     render 'index'
   end
   
   def update
+    setup_vars
 #    render plain: params[:recipe].inspect
     
     @category = Category.find(params[:id])
@@ -39,6 +43,7 @@ class CategoriesController < ApplicationController
   end
   
   def destroy
+    setup_vars
     @deleted_category = Category.find(params[:id])
     if @deleted_category.destroy
       #redirect_to categorys_path
@@ -55,9 +60,20 @@ class CategoriesController < ApplicationController
   end
   
 private
-
+  def setup_vars
+    @is_admin = current_user && current_user.is_admin?
+  end
+  
   def category_params
     return params.require(:category).permit(:name)
   end
   
+   
+  # Confirms an admin user.
+  def admin_user
+    unless logged_in? && current_user.is_admin?
+      flash[:danger] = "Must be admin to modify categories"
+      redirect_to(categories_url) 
+    end
+  end
 end
