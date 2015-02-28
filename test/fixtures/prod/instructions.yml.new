@@ -1,0 +1,2584 @@
+---
+instructions_001:
+  step_number: '1'
+  details: ! "Cook turkey, onion, until turkey is cooked. Add the garlic and scotch
+    bonnets and cook a bit more.\r\n"
+  created_at: '2015-02-15 21:16:22.705028'
+  updated_at: '2015-02-15 21:16:22.705028'
+  instruction_group_id: '2'
+instructions_002:
+  step_number: '2'
+  details: ! 'Combine #1 with the spices, refried beans, corn in a bowl'
+  created_at: '2015-02-15 21:16:22.707053'
+  updated_at: '2015-02-15 21:16:22.707053'
+  instruction_group_id: '2'
+instructions_003:
+  step_number: '4'
+  details: Combine the flour and salt in a bowl, gradually add the milk and sauce
+    until blended. Stir in the eggs.
+  created_at: '2015-02-15 21:16:22.709917'
+  updated_at: '2015-02-15 21:16:22.709917'
+  instruction_group_id: '2'
+instructions_004:
+  step_number: '5'
+  details: Pour the milk mix over the base.
+  created_at: '2015-02-15 21:16:22.711584'
+  updated_at: '2015-02-15 21:16:22.711584'
+  instruction_group_id: '2'
+instructions_005:
+  step_number: '6'
+  details: Bake at 170C for 65 minutes. Let stand for at least 5 minutes.
+  created_at: '2015-02-15 21:16:22.713076'
+  updated_at: '2015-02-15 21:16:22.713076'
+  instruction_group_id: '2'
+instructions_006:
+  step_number: '1'
+  details: Cook chorizo in the pan for approx. 7 minutes. Remove to a bowl, leaving
+    the juice behind.
+  created_at: '2015-02-16 21:24:17.666924'
+  updated_at: '2015-02-16 21:24:17.666924'
+  instruction_group_id: '49'
+instructions_007:
+  step_number: '3'
+  details: ! "Arrange layers in the large dish:\r\ngreen chilli strips flattened face
+    down at the bottom\r\n90g cheese\r\nbean mixture, leaving ¼ inch gap around edges\r\n90g
+    cheese\r\n"
+  created_at: '2015-02-15 21:16:22.708378'
+  updated_at: '2015-02-15 21:22:02.099331'
+  instruction_group_id: '2'
+instructions_008:
+  step_number: '1'
+  details: Place the flour, parmesan, butter and salt in a bowl, rubbing together
+    until a coarse sandy mixture has formed.
+  created_at: '2015-02-15 21:33:05.750968'
+  updated_at: '2015-02-15 21:33:05.750968'
+  instruction_group_id: '37'
+instructions_009:
+  step_number: '2'
+  details: Dump the crumbs into the 10" tart dish. Press down and into the sides,
+    tightly and evenly.
+  created_at: '2015-02-15 21:40:02.927944'
+  updated_at: '2015-02-15 21:40:02.927944'
+  instruction_group_id: '37'
+instructions_010:
+  step_number: '3'
+  details: Bake for 20 minutes at 175C.
+  created_at: '2015-02-15 21:40:02.929573'
+  updated_at: '2015-02-15 21:40:02.929573'
+  instruction_group_id: '37'
+instructions_011:
+  step_number: '1'
+  details: Fry the onions, anchovies and garlic in 1 tbsp oil and salt and pepper,
+    stirring well and not allowing to brown - 8 minutes.
+  created_at: '2015-02-15 21:40:02.932117'
+  updated_at: '2015-02-15 21:40:02.932117'
+  instruction_group_id: '38'
+instructions_012:
+  step_number: '2'
+  details: Add the spinach, some more salt & pepper and 30ml water. Toss, then cook
+    for 5 minutes until all the water has simmered away.
+  created_at: '2015-02-15 21:40:02.933339'
+  updated_at: '2015-02-15 21:40:02.933339'
+  instruction_group_id: '38'
+instructions_013:
+  step_number: '1'
+  details: Combine the ricotta, parmesan and eggs with 1/2 tsp salt and some pepper.
+  created_at: '2015-02-15 21:40:02.936453'
+  updated_at: '2015-02-15 21:40:02.936453'
+  instruction_group_id: '39'
+instructions_014:
+  step_number: '2'
+  details: Add the cooked mix, stir well to combine.
+  created_at: '2015-02-15 21:40:02.938554'
+  updated_at: '2015-02-15 21:40:02.938554'
+  instruction_group_id: '39'
+instructions_015:
+  step_number: '3'
+  details: Spoon the filling into the tart.
+  created_at: '2015-02-15 21:40:02.94194'
+  updated_at: '2015-02-15 21:40:02.94194'
+  instruction_group_id: '39'
+instructions_016:
+  step_number: '4'
+  details: Bake for 55 minutes at 175C.
+  created_at: '2015-02-15 21:40:02.946023'
+  updated_at: '2015-02-15 21:40:02.946023'
+  instruction_group_id: '39'
+instructions_017:
+  step_number: '1'
+  details: Toast the de-seeded chilis, then place them in chicken stock for 20 minutes.
+  created_at: '2015-02-15 21:47:02.980216'
+  updated_at: '2015-02-15 21:47:02.980216'
+  instruction_group_id: '40'
+instructions_018:
+  step_number: '2'
+  details: Cook the onion, garlic and olive oil under the grill for 15 minutes.
+  created_at: '2015-02-15 21:47:02.98269'
+  updated_at: '2015-02-15 21:47:02.98269'
+  instruction_group_id: '40'
+instructions_019:
+  step_number: '3'
+  details: Drain the chilis of most of the stock, then blend everything together.
+  created_at: '2015-02-15 21:47:02.98526'
+  updated_at: '2015-02-15 21:47:02.98526'
+  instruction_group_id: '40'
+instructions_020:
+  step_number: '1'
+  details: Toast the cumin and coriander seeds.
+  created_at: '2015-02-15 21:47:02.99487'
+  updated_at: '2015-02-15 21:47:02.99487'
+  instruction_group_id: '41'
+instructions_021:
+  step_number: '2'
+  details: Grind in a pestle & mortar.
+  created_at: '2015-02-15 21:47:02.997603'
+  updated_at: '2015-02-15 21:47:02.997603'
+  instruction_group_id: '41'
+instructions_022:
+  step_number: '1'
+  details: Add the chili paste and spices to the pan with the remaining oil, cook
+    2 minutes.
+  created_at: '2015-02-15 21:47:03.002377'
+  updated_at: '2015-02-15 21:47:03.002377'
+  instruction_group_id: '42'
+instructions_023:
+  step_number: '2'
+  details: Add the beans and chicken breasts, adding water as necessary to submerge
+    them.
+  created_at: '2015-02-15 21:47:03.004009'
+  updated_at: '2015-02-15 21:47:03.004009'
+  instruction_group_id: '42'
+instructions_024:
+  step_number: '3'
+  details: Bring to a boil, then cook at a simmer for 15-20 minutes until chicken
+    is cooked.
+  created_at: '2015-02-15 21:47:03.005629'
+  updated_at: '2015-02-15 21:47:03.005629'
+  instruction_group_id: '42'
+instructions_025:
+  step_number: '4'
+  details: Remove the chicken breasts and shred. Set aside for now
+  created_at: '2015-02-15 21:47:03.006824'
+  updated_at: '2015-02-15 21:47:03.006824'
+  instruction_group_id: '42'
+instructions_026:
+  step_number: '5'
+  details: Continue cooking the bean mix for a further 20 minutes.
+  created_at: '2015-02-15 21:47:03.007997'
+  updated_at: '2015-02-15 21:47:03.007997'
+  instruction_group_id: '42'
+instructions_027:
+  step_number: '6'
+  details: Remove 2 cups of bean and liquid, blend until completely smooth, then return
+    to the pot.
+  created_at: '2015-02-15 21:47:03.009332'
+  updated_at: '2015-02-15 21:47:03.009332'
+  instruction_group_id: '42'
+instructions_028:
+  step_number: '7'
+  details: Add back shredded chicken.
+  created_at: '2015-02-15 21:47:03.010513'
+  updated_at: '2015-02-15 21:47:03.010513'
+  instruction_group_id: '42'
+instructions_029:
+  step_number: '8'
+  details: Stir in the grated cheddar.
+  created_at: '2015-02-15 21:47:03.011737'
+  updated_at: '2015-02-15 21:47:03.011737'
+  instruction_group_id: '42'
+instructions_030:
+  step_number: '9'
+  details: Add the lime juice and chopped coriander.
+  created_at: '2015-02-15 21:47:03.012933'
+  updated_at: '2015-02-15 21:47:03.012933'
+  instruction_group_id: '42'
+instructions_031:
+  step_number: '10'
+  details: Season to taste, then serve.
+  created_at: '2015-02-15 21:47:03.014135'
+  updated_at: '2015-02-15 21:47:03.014135'
+  instruction_group_id: '42'
+instructions_032:
+  step_number: '1'
+  details: Toast the chilis.
+  created_at: '2015-02-15 21:56:48.591923'
+  updated_at: '2015-02-15 21:56:48.591923'
+  instruction_group_id: '43'
+instructions_033:
+  step_number: '2'
+  details: Soak in the chicken stock for 20 minutes.
+  created_at: '2015-02-15 21:56:48.593498'
+  updated_at: '2015-02-15 21:56:48.593498'
+  instruction_group_id: '43'
+instructions_034:
+  step_number: '3'
+  details: Drain some of the stock, then blend to a paste.
+  created_at: '2015-02-15 21:56:48.594728'
+  updated_at: '2015-02-15 21:56:48.594728'
+  instruction_group_id: '43'
+instructions_035:
+  step_number: '1'
+  details: Toast and grind the cumin and coriander seeds.
+  created_at: '2015-02-15 21:56:48.597428'
+  updated_at: '2015-02-15 21:56:48.597428'
+  instruction_group_id: '44'
+instructions_036:
+  step_number: '1'
+  details: Cook the mince with the oregano and salt until browned, then remove.
+  created_at: '2015-02-15 21:56:48.600092'
+  updated_at: '2015-02-15 21:56:48.600092'
+  instruction_group_id: '45'
+instructions_037:
+  step_number: '2'
+  details: Cook the corn in oil for 4 minutes (until charred in spots).
+  created_at: '2015-02-15 21:56:48.601463'
+  updated_at: '2015-02-15 21:56:48.601463'
+  instruction_group_id: '45'
+instructions_038:
+  step_number: '3'
+  details: Add the onion, garlic and anchovies, fry for 3-4 minutes.
+  created_at: '2015-02-15 21:56:48.602891'
+  updated_at: '2015-02-15 21:56:48.602891'
+  instruction_group_id: '45'
+instructions_039:
+  step_number: '4'
+  details: Add the chili paste and spices, cook for 30 seconds.
+  created_at: '2015-02-15 21:56:48.604437'
+  updated_at: '2015-02-15 21:56:48.604437'
+  instruction_group_id: '45'
+instructions_040:
+  step_number: '5'
+  details: Put everything (mince, tomatoes, beans, sliced olives) into the pot.
+  created_at: '2015-02-15 21:56:48.60589'
+  updated_at: '2015-02-15 21:56:48.60589'
+  instruction_group_id: '45'
+instructions_041:
+  step_number: '6'
+  details: Simmer for 30 minutes.
+  created_at: '2015-02-15 21:56:48.607126'
+  updated_at: '2015-02-15 21:56:48.607126'
+  instruction_group_id: '45'
+instructions_042:
+  step_number: '1'
+  details: Cook the butter over medium heat until browned.
+  created_at: '2015-02-15 21:56:48.609791'
+  updated_at: '2015-02-15 21:56:48.609791'
+  instruction_group_id: '46'
+instructions_043:
+  step_number: '2'
+  details: Combine the cornmeal, flour, sugar, salt, baking powder, baking soda in
+    a bowl.
+  created_at: '2015-02-15 21:56:48.611293'
+  updated_at: '2015-02-15 21:56:48.611293'
+  instruction_group_id: '46'
+instructions_044:
+  step_number: '3'
+  details: In a separate bowl, combine the eggs, sour cream, yoghurt, water and flour,
+    whisking until homogeneous.
+  created_at: '2015-02-15 21:56:48.61285'
+  updated_at: '2015-02-15 21:56:48.61285'
+  instruction_group_id: '46'
+instructions_045:
+  step_number: '4'
+  details: Add the brown butter to the liquid mix.
+  created_at: '2015-02-15 21:56:48.614094'
+  updated_at: '2015-02-15 21:56:48.614094'
+  instruction_group_id: '46'
+instructions_046:
+  step_number: '5'
+  details: Whisk wet ingredients into dry.
+  created_at: '2015-02-15 21:56:48.615332'
+  updated_at: '2015-02-15 21:56:48.615332'
+  instruction_group_id: '46'
+instructions_047:
+  step_number: '1'
+  details: Divide the base mix into the two medium dishes.
+  created_at: '2015-02-15 21:56:48.617882'
+  updated_at: '2015-02-15 21:56:48.617882'
+  instruction_group_id: '47'
+instructions_048:
+  step_number: '2'
+  details: Dollop the cornbread batter on top, spreading evenly.
+  created_at: '2015-02-15 21:56:48.619156'
+  updated_at: '2015-02-15 21:56:48.619156'
+  instruction_group_id: '47'
+instructions_049:
+  step_number: '3'
+  details: Bake for 2 minutes at 220C
+  created_at: '2015-02-15 21:56:48.620478'
+  updated_at: '2015-02-15 21:56:48.620478'
+  instruction_group_id: '47'
+instructions_050:
+  step_number: '1'
+  details: Cook the lentils in the veg stock for 10 minutes.
+  created_at: '2015-02-15 22:30:19.201304'
+  updated_at: '2015-02-15 22:30:19.201304'
+  instruction_group_id: '48'
+instructions_051:
+  step_number: '2'
+  details: Boil the cubed potato for 15 minutes - don't want it too tender.
+  created_at: '2015-02-15 22:30:19.203188'
+  updated_at: '2015-02-15 22:30:19.203188'
+  instruction_group_id: '48'
+instructions_052:
+  step_number: '3'
+  details: Toast and grind the spices for the curry powder.
+  created_at: '2015-02-15 22:30:19.204637'
+  updated_at: '2015-02-15 22:30:19.204637'
+  instruction_group_id: '48'
+instructions_053:
+  step_number: '4'
+  details: Saute the onion for 5 minutes.
+  created_at: '2015-02-15 22:30:19.206216'
+  updated_at: '2015-02-15 22:30:19.206216'
+  instruction_group_id: '48'
+instructions_054:
+  step_number: '5'
+  details: Add the salt, ginger, chiles and garlic, saute 5 minutes.
+  created_at: '2015-02-15 22:30:19.207526'
+  updated_at: '2015-02-15 22:30:19.207526'
+  instruction_group_id: '48'
+instructions_055:
+  step_number: '6'
+  details: Add the spices, and spinach, saute 5 minutes.
+  created_at: '2015-02-15 22:30:19.209066'
+  updated_at: '2015-02-15 22:30:19.209066'
+  instruction_group_id: '48'
+instructions_056:
+  step_number: '7'
+  details: Add the lentils, potatoes, chopped tomatoes, coconut milk, simmer for 15
+    minutes.
+  created_at: '2015-02-15 22:30:19.210579'
+  updated_at: '2015-02-15 22:30:19.210579'
+  instruction_group_id: '48'
+instructions_057:
+  step_number: '8'
+  details: Add the tamarind paste and coriander leaves, simmer for 15 minutes.
+  created_at: '2015-02-15 22:30:19.211937'
+  updated_at: '2015-02-15 22:30:19.211937'
+  instruction_group_id: '48'
+instructions_058:
+  step_number: '9'
+  details: Serve!
+  created_at: '2015-02-15 22:30:19.213265'
+  updated_at: '2015-02-15 22:30:19.213265'
+  instruction_group_id: '48'
+instructions_059:
+  step_number: '2'
+  details: Add mushrooms to the pan with a little butter, cook until moisture has
+    evaporated fully - about 10 minutes.
+  created_at: '2015-02-16 21:24:17.677392'
+  updated_at: '2015-02-16 21:24:17.677392'
+  instruction_group_id: '49'
+instructions_060:
+  step_number: '3'
+  details: Add the shallots, garlic, scallions and chives, cook 30 seconds.
+  created_at: '2015-02-16 21:24:17.679347'
+  updated_at: '2015-02-16 21:24:17.679347'
+  instruction_group_id: '49'
+instructions_061:
+  step_number: '4'
+  details: Add worcester sauce and lemon juice, stir.
+  created_at: '2015-02-16 21:24:17.681318'
+  updated_at: '2015-02-16 21:24:17.681318'
+  instruction_group_id: '49'
+instructions_062:
+  step_number: '5'
+  details: Add the flour, cook for 1 minute.
+  created_at: '2015-02-16 21:24:17.683186'
+  updated_at: '2015-02-16 21:24:17.683186'
+  instruction_group_id: '49'
+instructions_063:
+  step_number: '6'
+  details: Whisk in the stock and cream, simmer for 2 minutes until thickened.
+  created_at: '2015-02-16 21:24:17.685132'
+  updated_at: '2015-02-16 21:24:17.685132'
+  instruction_group_id: '49'
+instructions_064:
+  step_number: '7'
+  details: Stir in the parmesan until melted, then the parsley.
+  created_at: '2015-02-16 21:24:17.687243'
+  updated_at: '2015-02-16 21:24:17.687243'
+  instruction_group_id: '49'
+instructions_065:
+  step_number: '1'
+  details: Melt the chocolate.
+  created_at: '2015-02-26 10:06:21.911563'
+  updated_at: '2015-02-26 10:06:21.911563'
+  instruction_group_id: '74'
+instructions_066:
+  step_number: '1'
+  details: Put everything in the blender.
+  created_at: '2015-01-31 16:03:19.627949'
+  updated_at: '2015-02-15 13:43:09.416941'
+  instruction_group_id: '3'
+instructions_067:
+  step_number: '8'
+  details: Add back the chorizo, then season with salt and pepper.
+  created_at: '2015-02-16 21:24:17.689225'
+  updated_at: '2015-02-16 21:24:17.689225'
+  instruction_group_id: '49'
+instructions_068:
+  step_number: '9'
+  details: Cook the pasta in boiling water for 10 minutes - should be a little short
+    of al dente.
+  created_at: '2015-02-16 21:24:17.692035'
+  updated_at: '2015-02-16 21:24:17.692035'
+  instruction_group_id: '49'
+instructions_069:
+  step_number: '1'
+  details: Mix together the ingredients in a bowl.
+  created_at: '2015-02-16 21:24:17.695953'
+  updated_at: '2015-02-16 21:24:17.695953'
+  instruction_group_id: '50'
+instructions_070:
+  step_number: '1'
+  details: Add the pasta to the creamy mix, stirring to combine.
+  created_at: '2015-02-16 21:24:17.69973'
+  updated_at: '2015-02-16 21:24:17.69973'
+  instruction_group_id: '51'
+instructions_071:
+  step_number: '2'
+  details: Spread in two medium pyrex dishes, topping with the breadcrumbs.
+  created_at: '2015-02-16 21:24:17.701593'
+  updated_at: '2015-02-16 21:24:17.701593'
+  instruction_group_id: '51'
+instructions_072:
+  step_number: '3'
+  details: Grill for about 5 minutes.
+  created_at: '2015-02-16 21:24:17.703454'
+  updated_at: '2015-02-16 21:24:17.703454'
+  instruction_group_id: '51'
+instructions_073:
+  step_number: '1'
+  details: Grind the saffron and soak in one-third of the risotto stock for 20 minutes.
+  created_at: '2015-02-16 21:45:50.684998'
+  updated_at: '2015-02-16 21:45:50.684998'
+  instruction_group_id: '52'
+instructions_074:
+  step_number: '2'
+  details: Mix the gelatin with the rest of the risotto stock, leave for 20 minutes.
+  created_at: '2015-02-16 21:45:50.687184'
+  updated_at: '2015-02-16 21:45:50.687184'
+  instruction_group_id: '52'
+instructions_075:
+  step_number: '3'
+  details: Boil the butternut squash for 15-20 minutes until starting to become tender.
+  created_at: '2015-02-16 21:45:50.689176'
+  updated_at: '2015-02-16 21:45:50.689176'
+  instruction_group_id: '52'
+instructions_076:
+  step_number: '4'
+  details: Fry the mushrooms until the moisture comes out.
+  created_at: '2015-02-16 21:45:50.691051'
+  updated_at: '2015-02-16 21:45:50.691051'
+  instruction_group_id: '52'
+instructions_077:
+  step_number: '1'
+  details: Fry the onion in the oil for approx 3 minutes.
+  created_at: '2015-02-16 21:45:50.694981'
+  updated_at: '2015-02-16 21:45:50.694981'
+  instruction_group_id: '53'
+instructions_078:
+  step_number: '2'
+  details: Add the rice, cook until toasted but not browned - approx 3 minutes.
+  created_at: '2015-02-16 21:45:50.69693'
+  updated_at: '2015-02-16 21:45:50.69693'
+  instruction_group_id: '53'
+instructions_079:
+  step_number: '3'
+  details: Add the wine and the mushrooms, cook until almost evaporated - approx 1
+    minute.
+  created_at: '2015-02-16 21:45:50.698878'
+  updated_at: '2015-02-16 21:45:50.698878'
+  instruction_group_id: '53'
+instructions_080:
+  step_number: '4'
+  details: Stir in the butternut and 200ml of the saffron mix, season with salt.
+  created_at: '2015-02-16 21:45:50.700961'
+  updated_at: '2015-02-16 21:45:50.700961'
+  instruction_group_id: '53'
+instructions_081:
+  step_number: '5'
+  details: When liquid almost evaporated add another 200ml stock; repeat until all
+    the stock is used and the rice is cooked.
+  created_at: '2015-02-16 21:45:50.703308'
+  updated_at: '2015-02-16 21:45:50.703308'
+  instruction_group_id: '53'
+instructions_082:
+  step_number: '6'
+  details: Season with salt and pepper
+  created_at: '2015-02-16 21:45:50.70528'
+  updated_at: '2015-02-16 21:45:50.70528'
+  instruction_group_id: '53'
+instructions_083:
+  step_number: '1'
+  details: Melt the butter over a medium heat.
+  created_at: '2015-02-16 21:45:50.71444'
+  updated_at: '2015-02-16 21:45:50.71444'
+  instruction_group_id: '54'
+instructions_084:
+  step_number: '2'
+  details: Stir in the flour, whisking constantly until it's no longer raw - 1-2 minutes.
+  created_at: '2015-02-16 21:45:50.71679'
+  updated_at: '2015-02-16 21:45:50.71679'
+  instruction_group_id: '54'
+instructions_085:
+  step_number: '3'
+  details: Whisk in the milk and veg stock.
+  created_at: '2015-02-16 21:45:50.719337'
+  updated_at: '2015-02-16 21:45:50.719337'
+  instruction_group_id: '54'
+instructions_086:
+  step_number: '4'
+  details: Simmer until thick enough to coat the back of a spoon.
+  created_at: '2015-02-16 21:45:50.721565'
+  updated_at: '2015-02-16 21:45:50.721565'
+  instruction_group_id: '54'
+instructions_087:
+  step_number: '5'
+  details: Remove from heat and season with salt and pepper.
+  created_at: '2015-02-16 21:45:50.726897'
+  updated_at: '2015-02-16 21:45:50.726897'
+  instruction_group_id: '54'
+instructions_088:
+  step_number: '6'
+  details: Leave for 10 minutes, then whisk in the egg.
+  created_at: '2015-02-16 21:45:50.729454'
+  updated_at: '2015-02-16 21:45:50.729454'
+  instruction_group_id: '54'
+instructions_089:
+  step_number: '1'
+  details: Melt the butter in a saucepan.
+  created_at: '2015-02-16 21:45:50.73825'
+  updated_at: '2015-02-16 21:45:50.73825'
+  instruction_group_id: '55'
+instructions_090:
+  step_number: '2'
+  details: Combine with all of the other topping ingredients in a bowl.
+  created_at: '2015-02-16 21:45:50.740379'
+  updated_at: '2015-02-16 21:45:50.740379'
+  instruction_group_id: '55'
+instructions_091:
+  step_number: '1'
+  details: Combine the risotto with the bechamel and spread in a large pyrex dish.
+  created_at: '2015-02-16 21:45:50.745893'
+  updated_at: '2015-02-16 21:45:50.745893'
+  instruction_group_id: '56'
+instructions_092:
+  step_number: '2'
+  details: Top with the topping!
+  created_at: '2015-02-16 21:45:50.749116'
+  updated_at: '2015-02-16 21:45:50.749116'
+  instruction_group_id: '56'
+instructions_093:
+  step_number: '3'
+  details: Bake at 175C for 25-30 minutes.
+  created_at: '2015-02-16 21:45:50.757194'
+  updated_at: '2015-02-16 21:45:50.757194'
+  instruction_group_id: '56'
+instructions_094:
+  step_number: '2'
+  details: Mix together the melted chocolate, apple sauce, cocoa, milo, vanilla essence,
+    baking powder, honey.
+  created_at: '2015-02-26 10:06:21.924114'
+  updated_at: '2015-02-26 10:06:21.924114'
+  instruction_group_id: '74'
+instructions_095:
+  step_number: '3'
+  details: Beat the egg yolk into the sugar, then mix into the chocolate mixture.
+  created_at: '2015-02-26 10:06:21.931412'
+  updated_at: '2015-02-26 10:06:21.931412'
+  instruction_group_id: '74'
+instructions_096:
+  step_number: '4'
+  details: Beat the egg whites to soft peaks, then fold into the chocolate mixture.
+  created_at: '2015-02-26 10:06:21.935973'
+  updated_at: '2015-02-26 10:06:21.935973'
+  instruction_group_id: '74'
+instructions_097:
+  step_number: '5'
+  details: Add the chocolate chips.
+  created_at: '2015-02-26 10:06:21.941893'
+  updated_at: '2015-02-26 10:06:21.941893'
+  instruction_group_id: '74'
+instructions_098:
+  step_number: '6'
+  details: Divide into 4 ramekins and bake for 14 minutes at 200C.
+  created_at: '2015-02-26 10:06:21.948087'
+  updated_at: '2015-02-26 10:06:21.948087'
+  instruction_group_id: '74'
+instructions_099:
+  step_number: '1'
+  details: When the chickpeas are boiled, add a little olive oil and cumin to the
+    water and let sit (still hot) until they're needed.
+  created_at: '2015-02-22 21:50:02.597089'
+  updated_at: '2015-02-22 21:50:02.597089'
+  instruction_group_id: '57'
+instructions_100:
+  step_number: '1'
+  details: Put the flour, polenta and salt in a food processor, pulse to combine.
+  created_at: '2015-02-22 21:58:56.785887'
+  updated_at: '2015-02-22 21:58:56.785887'
+  instruction_group_id: '58'
+instructions_101:
+  step_number: '2'
+  details: Add the butter, pulse until it looks like small peas.
+  created_at: '2015-02-22 21:58:56.78791'
+  updated_at: '2015-02-22 21:58:56.78791'
+  instruction_group_id: '58'
+instructions_102:
+  step_number: '3'
+  details: Add the ice water, a little at a time, until the dough sticks together
+    - careful not to over-mix.
+  created_at: '2015-02-22 21:58:56.790297'
+  updated_at: '2015-02-22 21:58:56.790297'
+  instruction_group_id: '58'
+instructions_103:
+  step_number: '4'
+  details: Shape the dough into a disk, cover in clingfilm and put in the fridge for
+    at least 30 minutes.
+  created_at: '2015-02-22 21:58:56.795279'
+  updated_at: '2015-02-22 21:58:56.795279'
+  instruction_group_id: '58'
+instructions_104:
+  step_number: '1'
+  details: Put the yogurt in a mixing bowl.
+  created_at: '2015-02-23 22:36:48.518165'
+  updated_at: '2015-02-23 22:36:48.518165'
+  instruction_group_id: '60'
+instructions_105:
+  step_number: '2'
+  details: Add the tahini, lemon juice, garlic, whisk well.
+  created_at: '2015-02-23 22:36:48.522329'
+  updated_at: '2015-02-23 22:36:48.522329'
+  instruction_group_id: '60'
+instructions_106:
+  step_number: '3'
+  details: Heat the glass bowl in a saucepan of water, whisking regularly, until it's
+    a little bit warm and the flavours blend.
+  created_at: '2015-02-23 22:36:48.523682'
+  updated_at: '2015-02-23 22:36:48.523682'
+  instruction_group_id: '60'
+instructions_107:
+  step_number: '4'
+  details: Add salt and pepper to taste.
+  created_at: '2015-02-23 22:36:48.525015'
+  updated_at: '2015-02-23 22:36:48.525015'
+  instruction_group_id: '60'
+instructions_108:
+  step_number: '1'
+  details: Open up the pittas and brush them with approx 50ml olive oil
+  created_at: '2015-02-23 22:36:48.527602'
+  updated_at: '2015-02-23 22:36:48.527602'
+  instruction_group_id: '61'
+instructions_109:
+  step_number: '2'
+  details: Toast in a hot oven until getting stiff
+  created_at: '2015-02-23 22:36:48.528889'
+  updated_at: '2015-02-23 22:36:48.528889'
+  instruction_group_id: '61'
+instructions_110:
+  step_number: '3'
+  details: Remove and tear into bite-sized pieces.
+  created_at: '2015-02-23 22:36:48.530181'
+  updated_at: '2015-02-23 22:36:48.530181'
+  instruction_group_id: '61'
+instructions_111:
+  step_number: '1'
+  details: Spread the bread in an even layer on the bottom of a mid-size pyrex dish.
+  created_at: '2015-02-23 22:36:48.532796'
+  updated_at: '2015-02-23 22:36:48.532796'
+  instruction_group_id: '62'
+instructions_112:
+  step_number: '2'
+  details: Pour 250ml of the chickpea boiling liquid (or, just hot water) over the
+    bread so that they're soaked.
+  created_at: '2015-02-23 22:36:48.534096'
+  updated_at: '2015-02-23 22:36:48.534096'
+  instruction_group_id: '62'
+instructions_113:
+  step_number: '3'
+  details: Put most of the chickpeas over the bread.
+  created_at: '2015-02-23 22:36:48.535538'
+  updated_at: '2015-02-23 22:36:48.535538'
+  instruction_group_id: '62'
+instructions_114:
+  step_number: '4'
+  details: Pour the warmed yogurt mixture over the chickpeas, gently stirring the
+    layers together.
+  created_at: '2015-02-23 22:36:48.537204'
+  updated_at: '2015-02-23 22:36:48.537204'
+  instruction_group_id: '62'
+instructions_115:
+  step_number: '5'
+  details: Top with the remaining chickpeas.
+  created_at: '2015-02-23 22:36:48.538821'
+  updated_at: '2015-02-23 22:36:48.538821'
+  instruction_group_id: '62'
+instructions_116:
+  step_number: '6'
+  details: Fry the pine nuts in 1 tbsp oil until golden, and then pour them and the
+    oil over the top.
+  created_at: '2015-02-23 22:36:48.541023'
+  updated_at: '2015-02-23 22:36:48.541023'
+  instruction_group_id: '62'
+instructions_117:
+  step_number: '7'
+  details: Sprinkle paprika (and optionally cayenne) on top.
+  created_at: '2015-02-23 22:36:48.542739'
+  updated_at: '2015-02-23 22:36:48.542739'
+  instruction_group_id: '62'
+instructions_118:
+  step_number: '8'
+  details: Can serve at room temperature or warmed.
+  created_at: '2015-02-23 22:36:48.54444'
+  updated_at: '2015-02-23 22:36:48.54444'
+  instruction_group_id: '62'
+instructions_119:
+  step_number: '1'
+  details: ! 'Combine the following in a bowl: flour, sugar, cocoa powder, milo, coffee
+    powder and baking powder.'
+  created_at: '2015-02-22 22:57:08.087579'
+  updated_at: '2015-02-25 22:49:31.019826'
+  instruction_group_id: '59'
+instructions_120:
+  step_number: '1'
+  details: Boil the potatoes with the salt and 15ml vinegar for 20 minutes, until
+    tender.
+  created_at: '2015-02-27 00:02:41.607491'
+  updated_at: '2015-02-27 00:02:41.607491'
+  instruction_group_id: '75'
+instructions_121:
+  step_number: '1'
+  details: ! '...'
+  created_at: '2015-02-27 00:06:48.537672'
+  updated_at: '2015-02-27 00:06:48.537672'
+  instruction_group_id: '76'
+instructions_122:
+  step_number: '1'
+  details: ! '...'
+  created_at: '2015-02-27 00:15:04.518915'
+  updated_at: '2015-02-27 00:15:04.518915'
+  instruction_group_id: '77'
+instructions_123:
+  step_number: '1'
+  details: ! '...'
+  created_at: '2015-02-27 00:20:47.134973'
+  updated_at: '2015-02-27 00:20:47.134973'
+  instruction_group_id: '78'
+instructions_124:
+  step_number: '1'
+  details: ! '...'
+  created_at: '2015-02-27 00:28:45.385667'
+  updated_at: '2015-02-27 00:28:45.385667'
+  instruction_group_id: '79'
+instructions_125:
+  step_number: '5'
+  details: When the filling is ready, remove the dough from the fridge and roll out
+    into a large circle about 1/4 inch thick. Transfer to paper-lined baking tray
+    or dish.
+  created_at: '2015-02-25 22:38:59.01925'
+  updated_at: '2015-02-25 22:38:59.01925'
+  instruction_group_id: '58'
+instructions_126:
+  step_number: '1'
+  details: Cut the squash into sliced segments.
+  created_at: '2015-02-25 22:38:59.030861'
+  updated_at: '2015-02-25 22:38:59.030861'
+  instruction_group_id: '65'
+instructions_127:
+  step_number: '2'
+  details: Toss with the olive oil, chopped garlic and thyme. Spread out on a baking
+    sheet and sprinkle with salt and pepper.
+  created_at: '2015-02-25 22:38:59.034787'
+  updated_at: '2015-02-25 22:38:59.034787'
+  instruction_group_id: '65'
+instructions_128:
+  step_number: '3'
+  details: Put the unpeeled garlic cloves on the same baking sheet.
+  created_at: '2015-02-25 22:38:59.038749'
+  updated_at: '2015-02-25 22:38:59.038749'
+  instruction_group_id: '65'
+instructions_129:
+  step_number: '4'
+  details: Bake for 25 mins at 200C, until tender. Be careful to not let the garlic
+    cloves burn, they may need to be taken out early.
+  created_at: '2015-02-25 22:38:59.042817'
+  updated_at: '2015-02-25 22:38:59.042817'
+  instruction_group_id: '65'
+instructions_130:
+  step_number: '5'
+  details: Peel the garlic and squeeze into a bowl. Mash with a spoon until smooth
+    then stir in the ricotta.
+  created_at: '2015-02-25 22:38:59.046998'
+  updated_at: '2015-02-25 22:38:59.046998'
+  instruction_group_id: '65'
+instructions_131:
+  step_number: '10'
+  details: Bake for 28 minutes at 170C.
+  created_at: '2015-01-31 17:19:20.727166'
+  updated_at: '2015-02-15 13:43:09.659757'
+  instruction_group_id: '10'
+instructions_132:
+  step_number: '6'
+  details: Spread the garlic/ricotta mix over the pastry circle, leaving a 1-inch
+    border.
+  created_at: '2015-02-25 22:38:59.050132'
+  updated_at: '2015-02-25 22:38:59.050132'
+  instruction_group_id: '65'
+instructions_133:
+  step_number: '7'
+  details: Spread the squash mixture on top.
+  created_at: '2015-02-25 22:38:59.052848'
+  updated_at: '2015-02-25 22:38:59.052848'
+  instruction_group_id: '65'
+instructions_134:
+  step_number: '8'
+  details: Fold the edges towards the center.
+  created_at: '2015-02-25 22:38:59.054794'
+  updated_at: '2015-02-25 22:38:59.054794'
+  instruction_group_id: '65'
+instructions_135:
+  step_number: '9'
+  details: Sprinkle the edam over the center and the parmesan over the edges.
+  created_at: '2015-02-25 22:38:59.056222'
+  updated_at: '2015-02-25 22:38:59.056222'
+  instruction_group_id: '65'
+instructions_136:
+  step_number: '10'
+  details: Bake until the crust is crisp and golden brown - 30 minutes at 200C.
+  created_at: '2015-02-25 22:38:59.057746'
+  updated_at: '2015-02-25 22:38:59.057746'
+  instruction_group_id: '65'
+instructions_137:
+  step_number: '1'
+  details: Toss the potatoes with the olive oil, salt and pepper.
+  created_at: '2015-02-23 23:26:57.94784'
+  updated_at: '2015-02-25 22:43:26.801728'
+  instruction_group_id: '63'
+instructions_138:
+  step_number: '2'
+  details: Spread the washed potatoes on baking sheets, some of them halved if they're
+    too big.
+  created_at: '2015-02-25 22:43:26.803661'
+  updated_at: '2015-02-25 22:43:26.803661'
+  instruction_group_id: '63'
+instructions_139:
+  step_number: '3'
+  details: Roast until tender and browning - 40 minutes at 220C.
+  created_at: '2015-02-25 22:43:26.805279'
+  updated_at: '2015-02-25 22:43:26.805279'
+  instruction_group_id: '63'
+instructions_140:
+  step_number: '1'
+  details: Combine the garlic, salt, pepper, scallions, mustards, lemon juice and
+    vinegar. Whisk well.
+  created_at: '2015-02-25 22:43:26.808033'
+  updated_at: '2015-02-25 22:43:26.808033'
+  instruction_group_id: '66'
+instructions_141:
+  step_number: '2'
+  details: Add the olive and walnut oils, whisk to combine.
+  created_at: '2015-02-25 22:43:26.809346'
+  updated_at: '2015-02-25 22:43:26.809346'
+  instruction_group_id: '66'
+instructions_142:
+  step_number: '3'
+  details: Season to taste with more salt/pepper.
+  created_at: '2015-02-25 22:43:26.81144'
+  updated_at: '2015-02-25 22:43:26.81144'
+  instruction_group_id: '66'
+instructions_143:
+  step_number: '1'
+  details: Toss the potatoes with the vinaigrette, breaking up some of the potatoes
+    at the same time.
+  created_at: '2015-02-25 22:43:26.814527'
+  updated_at: '2015-02-25 22:43:26.814527'
+  instruction_group_id: '67'
+instructions_144:
+  step_number: '2'
+  details: Allow to sit for at least an hour to allow the flavours to soak in.
+  created_at: '2015-02-25 22:43:26.815818'
+  updated_at: '2015-02-25 22:43:26.815818'
+  instruction_group_id: '67'
+instructions_145:
+  step_number: '3'
+  details: Can be served at room temperature as a salad, or heated up again.
+  created_at: '2015-02-25 22:43:26.817503'
+  updated_at: '2015-02-25 22:43:26.817503'
+  instruction_group_id: '67'
+instructions_146:
+  step_number: '2'
+  details: Whisk together the milk, melted butter and vanilla essence.
+  created_at: '2015-02-25 22:49:31.023666'
+  updated_at: '2015-02-25 22:49:31.023666'
+  instruction_group_id: '59'
+instructions_147:
+  step_number: '3'
+  details: ! 'Add the liquid mix to the dry mix and stir to combine. '
+  created_at: '2015-02-25 22:49:31.02623'
+  updated_at: '2015-02-25 22:49:31.02623'
+  instruction_group_id: '59'
+instructions_148:
+  step_number: '4'
+  details: Pour into an 8x8" baking dish - no need for paper, comes out ok.
+  created_at: '2015-02-25 22:49:31.027771'
+  updated_at: '2015-02-25 22:49:31.027771'
+  instruction_group_id: '59'
+instructions_149:
+  step_number: '1'
+  details: Combine the brown sugar and remaining cocoa powder. Sprinkle evenly over
+    the batter.
+  created_at: '2015-02-25 22:49:31.034327'
+  updated_at: '2015-02-25 22:49:31.034327'
+  instruction_group_id: '68'
+instructions_150:
+  step_number: '2'
+  details: Sprinkle the chopped chocolate on top.
+  created_at: '2015-02-25 22:49:31.037689'
+  updated_at: '2015-02-25 22:49:31.037689'
+  instruction_group_id: '68'
+instructions_151:
+  step_number: '3'
+  details: Pour the hot water over the top, but do not stir.
+  created_at: '2015-02-25 22:49:31.040256'
+  updated_at: '2015-02-25 22:49:31.040256'
+  instruction_group_id: '68'
+instructions_152:
+  step_number: '4'
+  details: Cook for 40 minutes at 175C, center should be just barely set.
+  created_at: '2015-02-25 22:49:31.042496'
+  updated_at: '2015-02-25 22:49:31.042496'
+  instruction_group_id: '68'
+instructions_153:
+  step_number: '5'
+  details: Allow to cool for 5-10 minutes after removing.
+  created_at: '2015-02-25 22:49:31.046592'
+  updated_at: '2015-02-25 22:49:31.046592'
+  instruction_group_id: '68'
+instructions_154:
+  step_number: '2'
+  details: Blend until smooth, adding salt and oil to taste.
+  created_at: '2015-01-31 16:03:19.633804'
+  updated_at: '2015-02-15 13:43:09.466491'
+  instruction_group_id: '3'
+instructions_155:
+  step_number: '1'
+  details: Roast the jalapenos slightly
+  created_at: '2015-01-31 16:26:58.765878'
+  updated_at: '2015-02-15 13:43:09.470398'
+  instruction_group_id: '4'
+instructions_156:
+  step_number: '2'
+  details: Put everything (except the oil) to the blender, process.
+  created_at: '2015-01-31 16:26:58.767799'
+  updated_at: '2015-02-15 13:43:09.473674'
+  instruction_group_id: '4'
+instructions_157:
+  step_number: '3'
+  details: Add oil and salt to taste.
+  created_at: '2015-01-31 16:26:58.7696'
+  updated_at: '2015-02-15 13:43:09.477046'
+  instruction_group_id: '4'
+instructions_158:
+  step_number: '1'
+  details: Cook the bacon.
+  created_at: '2015-01-31 16:38:59.163236'
+  updated_at: '2015-02-15 13:43:09.482761'
+  instruction_group_id: '5'
+instructions_159:
+  step_number: '2'
+  details: Add the spinach, cook 3 minutes until water is gone.
+  created_at: '2015-01-31 16:38:59.165703'
+  updated_at: '2015-02-15 13:43:09.491479'
+  instruction_group_id: '5'
+instructions_160:
+  step_number: '3'
+  details: Add the garlic and mushroom stems, saute 5 minutes.
+  created_at: '2015-01-31 16:38:59.168087'
+  updated_at: '2015-02-15 13:43:09.499401'
+  instruction_group_id: '5'
+instructions_161:
+  step_number: '4'
+  details: Put the pan stuff in the food processor, blend for a little.
+  created_at: '2015-01-31 16:38:59.172701'
+  updated_at: '2015-02-15 13:43:09.507698'
+  instruction_group_id: '5'
+instructions_162:
+  step_number: '5'
+  details: Combine in a bowl with the breadcrumbs, herbs and parmesan.
+  created_at: '2015-01-31 16:38:59.176482'
+  updated_at: '2015-02-15 13:43:09.511083'
+  instruction_group_id: '5'
+instructions_163:
+  step_number: '6'
+  details: Lay out the mushroom caps on a baking tray, season with a little salt.
+  created_at: '2015-01-31 16:38:59.187093'
+  updated_at: '2015-02-15 13:43:09.519343'
+  instruction_group_id: '5'
+instructions_164:
+  step_number: '7'
+  details: Fill with the spinach mixture.
+  created_at: '2015-01-31 16:38:59.193881'
+  updated_at: '2015-02-15 13:43:09.523011'
+  instruction_group_id: '5'
+instructions_165:
+  step_number: '8'
+  details: Bake for ~15 minutes at 200C.
+  created_at: '2015-01-31 16:38:59.198073'
+  updated_at: '2015-02-15 13:43:09.528257'
+  instruction_group_id: '5'
+instructions_166:
+  step_number: '1'
+  details: Chop the cooked bacon into smallish pieces
+  created_at: '2015-01-31 16:46:02.823067'
+  updated_at: '2015-02-15 13:43:09.53254'
+  instruction_group_id: '6'
+instructions_167:
+  step_number: '2'
+  details: Add the bacon, spinach and spices to the eggs.
+  created_at: '2015-01-31 16:46:02.825048'
+  updated_at: '2015-02-15 13:43:09.537498'
+  instruction_group_id: '6'
+instructions_168:
+  step_number: '3'
+  details: Cut the pastry into squares and fit into a muffin tray.
+  created_at: '2015-01-31 16:46:02.826918'
+  updated_at: '2015-02-15 13:43:09.540844'
+  instruction_group_id: '6'
+instructions_169:
+  step_number: '4'
+  details: Pour egg mixture into each pastry cup.
+  created_at: '2015-01-31 16:46:02.828724'
+  updated_at: '2015-02-15 13:43:09.547342'
+  instruction_group_id: '6'
+instructions_170:
+  step_number: '5'
+  details: Sprinkle parmesan.
+  created_at: '2015-01-31 16:46:02.830602'
+  updated_at: '2015-02-15 13:43:09.550707'
+  instruction_group_id: '6'
+instructions_171:
+  step_number: '6'
+  details: Bake for 20 minutes at 180C
+  created_at: '2015-01-31 16:46:02.832515'
+  updated_at: '2015-02-15 13:43:09.555304'
+  instruction_group_id: '6'
+instructions_172:
+  step_number: '1'
+  details: Melt 30g of butter and add to the potatoes.
+  created_at: '2015-01-31 16:51:22.945784'
+  updated_at: '2015-02-15 13:43:09.561134'
+  instruction_group_id: '7'
+instructions_173:
+  step_number: '2'
+  details: Add the flour.
+  created_at: '2015-01-31 16:51:22.947729'
+  updated_at: '2015-02-15 13:43:09.5654'
+  instruction_group_id: '7'
+instructions_174:
+  step_number: '3'
+  details: Heat the mixture in a saucepan until it starts to come away from the sides,
+    adjusting the milk/flour ratio as required.
+  created_at: '2015-01-31 16:51:22.949582'
+  updated_at: '2015-02-15 13:43:09.572998'
+  instruction_group_id: '7'
+instructions_175:
+  step_number: '4'
+  details: Roll out the mixture to the desired thickness.
+  created_at: '2015-01-31 16:51:22.952123'
+  updated_at: '2015-02-15 13:43:09.576675'
+  instruction_group_id: '7'
+instructions_176:
+  step_number: '5'
+  details: Cut into squares and fry for approx 3 minutes each side in the remaining
+    70g of butter.
+  created_at: '2015-01-31 16:51:22.953943'
+  updated_at: '2015-02-15 13:43:09.580415'
+  instruction_group_id: '7'
+instructions_177:
+  step_number: '1'
+  details: Bring the water and milk to a slow boil.
+  created_at: '2015-01-31 16:58:05.886965'
+  updated_at: '2015-02-15 13:43:09.584539'
+  instruction_group_id: '8'
+instructions_178:
+  step_number: '2'
+  details: Reduce heat to low and gradually whisk in the polenta, salt and pepper
+    - making sure it doesn’t clump.
+  created_at: '2015-01-31 16:58:05.888954'
+  updated_at: '2015-02-15 13:43:09.588802'
+  instruction_group_id: '8'
+instructions_179:
+  step_number: '3'
+  details: Cook for 25-30 minutes stirring very often. Can add more water if required.
+  created_at: '2015-01-31 16:58:05.890952'
+  updated_at: '2015-02-15 13:43:09.59224'
+  instruction_group_id: '8'
+instructions_180:
+  step_number: '4'
+  details: ! "Fold in the goat’s cheese, half the chives, the thyme.\r\n"
+  created_at: '2015-01-31 16:58:05.892886'
+  updated_at: '2015-02-15 13:43:09.595824'
+  instruction_group_id: '8'
+instructions_181:
+  step_number: '9'
+  details: Fry the onions and salt in oil over a medium-low heat for 35 minutes, stirring
+    every 5 minutes.
+  created_at: '2015-02-03 21:47:17.025313'
+  updated_at: '2015-02-15 13:43:09.836931'
+  instruction_group_id: '17'
+instructions_182:
+  step_number: '5'
+  details: ! "Put the hot polenta into a prepared baking dish and spread in an even
+    layer. Refrigerate until firm - at least an hour, longer the better.\r\n"
+  created_at: '2015-01-31 16:58:05.894838'
+  updated_at: '2015-02-15 13:43:09.599441'
+  instruction_group_id: '8'
+instructions_183:
+  step_number: '6'
+  details: ! "Slice into squares. Coat each square with breadcrumbs and brush with
+    oil.\r\n"
+  created_at: '2015-01-31 16:58:05.896704'
+  updated_at: '2015-02-15 13:43:09.603698'
+  instruction_group_id: '8'
+instructions_184:
+  step_number: '7'
+  details: ! "Grill under medium heat for ~3-4 minutes each side.\r\n"
+  created_at: '2015-01-31 16:58:05.898567'
+  updated_at: '2015-02-15 13:43:09.607227'
+  instruction_group_id: '8'
+instructions_185:
+  step_number: '1'
+  details: Put the spinach and courgette in the food processor, process.
+  created_at: '2015-01-31 17:09:35.945385'
+  updated_at: '2015-02-15 13:43:09.610476'
+  instruction_group_id: '9'
+instructions_186:
+  step_number: '2'
+  details: Squeeze out the moisture then add the scallions, herbs and feta. Layer
+    in a small pyrex dish.
+  created_at: '2015-01-31 17:09:35.948428'
+  updated_at: '2015-02-15 13:43:09.614023'
+  instruction_group_id: '9'
+instructions_187:
+  step_number: '3'
+  details: Sift the flour and baking powder in a bowl.
+  created_at: '2015-01-31 17:09:35.95101'
+  updated_at: '2015-02-15 13:43:09.617305'
+  instruction_group_id: '9'
+instructions_188:
+  step_number: '4'
+  details: Add the remaining ingredients to the flour, mix well.
+  created_at: '2015-01-31 17:09:35.958492'
+  updated_at: '2015-02-15 13:43:09.620599'
+  instruction_group_id: '9'
+instructions_189:
+  step_number: '5'
+  details: Pour over the spinach mixture in the pyrex dish.
+  created_at: '2015-01-31 17:09:35.963587'
+  updated_at: '2015-02-15 13:43:09.623898'
+  instruction_group_id: '9'
+instructions_190:
+  step_number: '6'
+  details: Bake for 28 minutes at 190C.
+  created_at: '2015-01-31 17:09:35.973347'
+  updated_at: '2015-02-15 13:43:09.627508'
+  instruction_group_id: '9'
+instructions_191:
+  step_number: '1'
+  details: ! "Cook bacon in a pan, remove and crumble\r\n"
+  created_at: '2015-01-31 17:19:20.710426'
+  updated_at: '2015-02-15 13:43:09.630793'
+  instruction_group_id: '10'
+instructions_192:
+  step_number: '2'
+  details: ! "Add mushroom, garlic to pan, saute for 6 minutes\r\n"
+  created_at: '2015-01-31 17:19:20.712485'
+  updated_at: '2015-02-15 13:43:09.63416'
+  instruction_group_id: '10'
+instructions_193:
+  step_number: '3'
+  details: ! "Add potatoes and chicken stock, cook 6 minutes, stirring frequently\r\n"
+  created_at: '2015-01-31 17:19:20.714292'
+  updated_at: '2015-02-15 13:43:09.637356'
+  instruction_group_id: '10'
+instructions_194:
+  step_number: '4'
+  details: ! "Add spinach, basil, half of the salt and pepper. Cook for 2 minutes.\r\n"
+  created_at: '2015-01-31 17:19:20.716262'
+  updated_at: '2015-02-15 13:43:09.640676'
+  instruction_group_id: '10'
+instructions_195:
+  step_number: '5'
+  details: ! "Remove from heat, stand for 10 minutes.\r\n"
+  created_at: '2015-01-31 17:19:20.718087'
+  updated_at: '2015-02-15 13:43:09.643883'
+  instruction_group_id: '10'
+instructions_196:
+  step_number: '6'
+  details: ! "Stir in crumbled bacon and the cheese.\r\n"
+  created_at: '2015-01-31 17:19:20.719897'
+  updated_at: '2015-02-15 13:43:09.647094'
+  instruction_group_id: '10'
+instructions_197:
+  step_number: '7'
+  details: ! "Place mixture in small dish, cover and refrigerate overnight.\r\n"
+  created_at: '2015-01-31 17:19:20.721765'
+  updated_at: '2015-02-15 13:43:09.650271'
+  instruction_group_id: '10'
+instructions_198:
+  step_number: '8'
+  details: Combine salt and pepper, milk and eggs.
+  created_at: '2015-01-31 17:19:20.723569'
+  updated_at: '2015-02-15 13:43:09.653443'
+  instruction_group_id: '10'
+instructions_199:
+  step_number: '9'
+  details: Pour over the mushroom/potato mix.
+  created_at: '2015-01-31 17:19:20.725383'
+  updated_at: '2015-02-15 13:43:09.656557'
+  instruction_group_id: '10'
+instructions_200:
+  step_number: '11'
+  details: Grill for 3 minutes until top is browned.
+  created_at: '2015-01-31 17:19:20.728944'
+  updated_at: '2015-02-15 13:43:09.662994'
+  instruction_group_id: '10'
+instructions_201:
+  step_number: '1'
+  details: ! "Saute the onion and garlic.\r\n"
+  created_at: '2015-01-31 17:24:07.076045'
+  updated_at: '2015-02-15 13:43:09.66799'
+  instruction_group_id: '11'
+instructions_202:
+  step_number: '2'
+  details: Add the chorizo, chickpeas and paprika, fry until the chorizo oil starts
+    running.
+  created_at: '2015-01-31 17:24:07.078197'
+  updated_at: '2015-02-15 13:43:09.671622'
+  instruction_group_id: '11'
+instructions_203:
+  step_number: '3'
+  details: Add the spinach.
+  created_at: '2015-01-31 17:24:07.079988'
+  updated_at: '2015-02-15 13:43:09.674924'
+  instruction_group_id: '11'
+instructions_204:
+  step_number: '4'
+  details: ! "Add the eggs, gently stir to get everything mixed then allow to set
+    over a medium heat.\r\n"
+  created_at: '2015-01-31 17:24:07.081755'
+  updated_at: '2015-02-15 13:43:09.678063'
+  instruction_group_id: '11'
+instructions_205:
+  step_number: '5'
+  details: Put the pan under the grill to set the top of the frittata - just needs
+    a minute or two.
+  created_at: '2015-01-31 17:24:07.083514'
+  updated_at: '2015-02-15 13:43:09.68274'
+  instruction_group_id: '11'
+instructions_206:
+  step_number: '6'
+  details: Remove from the grill, loosen the edges, place a plate on top and flip.
+    Then flip the plate again.
+  created_at: '2015-01-31 17:24:07.085301'
+  updated_at: '2015-02-15 13:43:09.686123'
+  instruction_group_id: '11'
+instructions_207:
+  step_number: '7'
+  details: Sprinkle with a little sea salt.
+  created_at: '2015-01-31 17:24:07.087098'
+  updated_at: '2015-02-15 13:43:09.689276'
+  instruction_group_id: '11'
+instructions_208:
+  step_number: '1'
+  details: ! "Combine everything except the sugar in a bowl.\r\n"
+  created_at: '2015-01-31 17:28:41.606748'
+  updated_at: '2015-02-15 13:43:09.692491'
+  instruction_group_id: '12'
+instructions_209:
+  step_number: '2'
+  details: ! "Put in a dish and put in the fridge overnight.\r\n"
+  created_at: '2015-01-31 17:28:41.60917'
+  updated_at: '2015-02-15 13:43:09.696487'
+  instruction_group_id: '12'
+instructions_210:
+  step_number: '3'
+  details: ! "Cook at 190C for 32 minutes (center should be just firm).\r\n"
+  created_at: '2015-01-31 17:28:41.611157'
+  updated_at: '2015-02-15 13:43:09.699649'
+  instruction_group_id: '12'
+instructions_211:
+  step_number: '4'
+  details: ! "Sprinkle over some sugar, grill for a couple of minutes.\r\n"
+  created_at: '2015-01-31 17:28:41.613018'
+  updated_at: '2015-02-15 13:43:09.70287'
+  instruction_group_id: '12'
+instructions_212:
+  step_number: '1'
+  details: Boil the lentils, sweet potato, water in a pot for 20 minutes.
+  created_at: '2015-01-31 17:35:55.51403'
+  updated_at: '2015-02-15 13:43:09.70597'
+  instruction_group_id: '13'
+instructions_213:
+  step_number: '2'
+  details: Saute the mushrooms, onion and garlic.
+  created_at: '2015-01-31 17:35:55.516229'
+  updated_at: '2015-02-15 13:43:09.709127'
+  instruction_group_id: '13'
+instructions_214:
+  step_number: '3'
+  details: Put all the ingredients in the food processor, blend until coarsely chopped.
+  created_at: '2015-01-31 17:35:55.518273'
+  updated_at: '2015-02-15 13:43:09.712435'
+  instruction_group_id: '13'
+instructions_215:
+  step_number: '4'
+  details: Shape into 12 patties.
+  created_at: '2015-01-31 17:35:55.520156'
+  updated_at: '2015-02-15 13:43:09.715597'
+  instruction_group_id: '13'
+instructions_216:
+  step_number: '5'
+  details: Dry-fry for 3-4 minutes on one side, then 3 minutes the other.
+  created_at: '2015-01-31 17:35:55.522004'
+  updated_at: '2015-02-15 13:43:09.719013'
+  instruction_group_id: '13'
+instructions_217:
+  step_number: '1'
+  details: Add all ingredients except sweet potato and egg to the blender, blend a
+    bit.
+  created_at: '2015-01-31 17:42:41.850412'
+  updated_at: '2015-02-15 13:43:09.722374'
+  instruction_group_id: '14'
+instructions_218:
+  step_number: '2'
+  details: Add everything to a bowl, mix well together.
+  created_at: '2015-01-31 17:42:41.892072'
+  updated_at: '2015-02-15 13:43:09.725564'
+  instruction_group_id: '14'
+instructions_219:
+  step_number: '3'
+  details: Shape into 24 patties.
+  created_at: '2015-01-31 17:42:41.897684'
+  updated_at: '2015-02-15 13:43:09.73175'
+  instruction_group_id: '14'
+instructions_220:
+  step_number: '4'
+  details: Dry-fry 4 minutes each side.
+  created_at: '2015-01-31 17:42:41.902763'
+  updated_at: '2015-02-15 13:43:09.73542'
+  instruction_group_id: '14'
+instructions_221:
+  step_number: '1'
+  details: Cook the lentils.
+  created_at: '2015-01-31 17:48:40.50149'
+  updated_at: '2015-02-15 13:43:09.738828'
+  instruction_group_id: '15'
+instructions_222:
+  step_number: '2'
+  details: Add all ingredients except the egg, breadcrumbs and oil to a bowl, mix
+    well.
+  created_at: '2015-01-31 17:48:40.503558'
+  updated_at: '2015-02-15 13:43:09.742117'
+  instruction_group_id: '15'
+instructions_223:
+  step_number: '3'
+  details: Add the egg, combine well.
+  created_at: '2015-01-31 17:48:40.505943'
+  updated_at: '2015-02-15 13:43:09.745324'
+  instruction_group_id: '15'
+instructions_224:
+  step_number: '4'
+  details: Refrigerate for 30 minutes.
+  created_at: '2015-01-31 17:48:40.507935'
+  updated_at: '2015-02-15 13:43:09.749887'
+  instruction_group_id: '15'
+instructions_225:
+  step_number: '6'
+  details: Form 12 patties, coating each with breadcrumbs.
+  created_at: '2015-01-31 17:48:40.510004'
+  updated_at: '2015-02-15 13:43:09.755522'
+  instruction_group_id: '15'
+instructions_226:
+  step_number: '7'
+  details: Bake for 24 minutes at 180C.
+  created_at: '2015-01-31 17:48:40.512535'
+  updated_at: '2015-02-15 13:43:09.759067'
+  instruction_group_id: '15'
+instructions_227:
+  step_number: '5'
+  details: Rub oil on the baking paper, put the patties down, then more oil on top.
+  created_at: '2015-01-31 17:48:40.514662'
+  updated_at: '2015-02-15 13:43:09.762375'
+  instruction_group_id: '15'
+instructions_228:
+  step_number: '1'
+  details: Beat, until fluffy, the butter, caster sugar and zest of one lemon
+  created_at: '2015-01-31 17:59:16.682074'
+  updated_at: '2015-02-15 13:43:09.765552'
+  instruction_group_id: '16'
+instructions_229:
+  step_number: '2'
+  details: Add a pinch of salt and the eggs (one at a time), beating well until combined.
+  created_at: '2015-01-31 17:59:16.684128'
+  updated_at: '2015-02-15 13:43:09.768674'
+  instruction_group_id: '16'
+instructions_230:
+  step_number: '3'
+  details: Sift the flour and baking powder, then fold into the wet mix.
+  created_at: '2015-01-31 17:59:16.686148'
+  updated_at: '2015-02-15 13:43:09.771839'
+  instruction_group_id: '16'
+instructions_231:
+  step_number: '4'
+  details: Add the almonds.
+  created_at: '2015-01-31 17:59:16.688003'
+  updated_at: '2015-02-15 13:43:09.77504'
+  instruction_group_id: '16'
+instructions_232:
+  step_number: '5'
+  details: Add just enough milk to bring the mixture to dropping consistency.
+  created_at: '2015-01-31 17:59:16.689803'
+  updated_at: '2015-02-15 13:43:09.778163'
+  instruction_group_id: '16'
+instructions_233:
+  step_number: '6'
+  details: Spoon into a greased loaf tin.
+  created_at: '2015-01-31 17:59:16.69199'
+  updated_at: '2015-02-15 13:43:09.784679'
+  instruction_group_id: '16'
+instructions_234:
+  step_number: '7'
+  details: Bake at 160C for 55 minutes, until skewer comes out clean.
+  created_at: '2015-01-31 17:59:16.693918'
+  updated_at: '2015-02-15 13:43:09.789903'
+  instruction_group_id: '16'
+instructions_235:
+  step_number: '8'
+  details: ! 'Drizzle: Mix together the remaining zest, the juice of both lemons and
+    the demerara sugar.'
+  created_at: '2015-01-31 17:59:16.695695'
+  updated_at: '2015-02-15 13:43:09.795408'
+  instruction_group_id: '16'
+instructions_236:
+  step_number: '9'
+  details: Poke holes all over the warm cake then pour over the drizzle, waiting for
+    the cake to absorb one lot before adding the next.
+  created_at: '2015-01-31 17:59:16.6975'
+  updated_at: '2015-02-15 13:43:09.800803'
+  instruction_group_id: '16'
+instructions_237:
+  step_number: '10'
+  details: Allow to cool fully before turning out.
+  created_at: '2015-01-31 17:59:16.699457'
+  updated_at: '2015-02-15 13:43:09.804221'
+  instruction_group_id: '16'
+instructions_238:
+  step_number: '1'
+  details: Grease the round pyrex pie dish
+  created_at: '2015-02-03 21:47:17.012591'
+  updated_at: '2015-02-15 13:43:09.807885'
+  instruction_group_id: '17'
+instructions_239:
+  step_number: '2'
+  details: Whisk together the flours, baking powder, salt.
+  created_at: '2015-02-03 21:47:17.015128'
+  updated_at: '2015-02-15 13:43:09.811115'
+  instruction_group_id: '17'
+instructions_240:
+  step_number: '3'
+  details: Make a well in the center, pour the olive oil and milk in. Stir from the
+    center until incorporated.
+  created_at: '2015-02-03 21:47:17.016521'
+  updated_at: '2015-02-15 13:43:09.814828'
+  instruction_group_id: '17'
+instructions_241:
+  step_number: '4'
+  details: Press the dough into the dish and prick all over with a fork.
+  created_at: '2015-02-03 21:47:17.017845'
+  updated_at: '2015-02-15 13:43:09.818231'
+  instruction_group_id: '17'
+instructions_242:
+  step_number: '5'
+  details: Chill for an hour or overnight.
+  created_at: '2015-02-03 21:47:17.019439'
+  updated_at: '2015-02-15 13:43:09.822895'
+  instruction_group_id: '17'
+instructions_243:
+  step_number: '6'
+  details: Bake, with pie weights, for 12 minutes.
+  created_at: '2015-02-03 21:47:17.020872'
+  updated_at: '2015-02-15 13:43:09.826695'
+  instruction_group_id: '17'
+instructions_244:
+  step_number: '7'
+  details: Remove the pie weights, bake for an additional 3-4 minutes. Remove and
+    allow to cool.
+  created_at: '2015-02-03 21:47:17.022494'
+  updated_at: '2015-02-15 13:43:09.830136'
+  instruction_group_id: '17'
+instructions_245:
+  step_number: '8'
+  details: Bake the sweet potato, with oil and salt, at 190C for 20 minutes.
+  created_at: '2015-02-03 21:47:17.02392'
+  updated_at: '2015-02-15 13:43:09.833522'
+  instruction_group_id: '17'
+instructions_246:
+  step_number: '10'
+  details: Add the balsamic, stir until it evaporatses. Remove.
+  created_at: '2015-02-03 21:47:17.026605'
+  updated_at: '2015-02-15 13:43:09.840115'
+  instruction_group_id: '17'
+instructions_247:
+  step_number: '11'
+  details: Fry the garlic for 30 seconds.
+  created_at: '2015-02-03 21:47:17.029417'
+  updated_at: '2015-02-15 13:43:09.843307'
+  instruction_group_id: '17'
+instructions_248:
+  step_number: '12'
+  details: Add the spinach and salt, fry until the moisture is gone.
+  created_at: '2015-02-03 21:47:17.030823'
+  updated_at: '2015-02-15 13:43:09.846871'
+  instruction_group_id: '17'
+instructions_249:
+  step_number: '13'
+  details: Combine the spinach and onion, then add the sweet potato, 3/4 of the feta
+    and the red pepper.
+  created_at: '2015-02-03 21:47:17.032236'
+  updated_at: '2015-02-15 13:43:09.850169'
+  instruction_group_id: '17'
+instructions_250:
+  step_number: '14'
+  details: Whisk the eggs, then add them to the spinach mix.
+  created_at: '2015-02-03 21:47:17.036478'
+  updated_at: '2015-02-15 13:43:09.853535'
+  instruction_group_id: '17'
+instructions_251:
+  step_number: '15'
+  details: Spread the filling evenly in the tart. Scatter the remaining feta on top.
+  created_at: '2015-02-03 21:47:17.039563'
+  updated_at: '2015-02-15 13:43:09.857336'
+  instruction_group_id: '17'
+instructions_252:
+  step_number: '16'
+  details: Bake at 180C for 25-30 minutes.
+  created_at: '2015-02-03 21:47:17.042994'
+  updated_at: '2015-02-15 13:43:09.860742'
+  instruction_group_id: '17'
+instructions_253:
+  step_number: '1'
+  details: Made a marinara sauce with the onion, 3 garlic, chopped tomato, oregano,
+    dried basil and salt. Simmer to reduce.
+  created_at: '2015-02-05 20:57:12.741798'
+  updated_at: '2015-02-15 13:43:09.864102'
+  instruction_group_id: '19'
+instructions_254:
+  step_number: '2'
+  details: ! 'Make the basil pesto: blend the nuts, garlic, lemon, chili flakes, basil,
+    15ml oil, basil pesto together - but not too much. Add salt and pepper to taste.'
+  created_at: '2015-02-05 20:57:12.749032'
+  updated_at: '2015-02-15 13:43:09.867256'
+  instruction_group_id: '19'
+instructions_255:
+  step_number: '4'
+  details: Coat the bottom of the medium pyrex dish with the marinara.
+  created_at: '2015-02-05 20:57:12.751103'
+  updated_at: '2015-02-15 13:43:09.870376'
+  instruction_group_id: '19'
+instructions_256:
+  step_number: '3'
+  details: Toss the sliced courgette with the pesto mix.
+  created_at: '2015-02-05 20:57:12.753038'
+  updated_at: '2015-02-15 13:43:09.873745'
+  instruction_group_id: '19'
+instructions_257:
+  step_number: '5'
+  details: Spread the courgette on top of the marinara.
+  created_at: '2015-02-05 20:57:12.754916'
+  updated_at: '2015-02-15 13:43:09.877274'
+  instruction_group_id: '19'
+instructions_258:
+  step_number: '6'
+  details: Add the breadcrumbs, parmesan and more chilli flakes on top.
+  created_at: '2015-02-05 20:57:12.756779'
+  updated_at: '2015-02-15 13:43:09.880745'
+  instruction_group_id: '19'
+instructions_259:
+  step_number: '7'
+  details: Bake at 190C for 25 minutes.
+  created_at: '2015-02-05 20:57:12.758651'
+  updated_at: '2015-02-15 13:43:09.884072'
+  instruction_group_id: '19'
+instructions_260:
+  step_number: '1'
+  details: Put the garlic, cumin, chili flakes, salt in mortar and pestle, crush for
+    a bit.
+  created_at: '2015-02-05 21:12:07.905099'
+  updated_at: '2015-02-15 13:43:09.887355'
+  instruction_group_id: '20'
+instructions_261:
+  step_number: '2'
+  details: Put the fava beans, a little water (or the liquid from one of the cans),
+    the garlic paste, olive oil and tahini into a saucepan. Cook over high heat for
+    about 5 minutes - should be thick and sauce-like.
+  created_at: '2015-02-05 21:12:07.907424'
+  updated_at: '2015-02-15 13:43:09.890904'
+  instruction_group_id: '20'
+instructions_262:
+  step_number: '3'
+  details: Add lemon juice and salt, to taste.
+  created_at: '2015-02-05 21:12:07.909334'
+  updated_at: '2015-02-15 13:43:09.896091'
+  instruction_group_id: '20'
+instructions_263:
+  step_number: '4'
+  details: Mash them more to give a dip-like consistency.
+  created_at: '2015-02-05 21:12:07.911233'
+  updated_at: '2015-02-15 13:43:09.899597'
+  instruction_group_id: '20'
+instructions_264:
+  step_number: '1'
+  details: Mix the warm water, yeast and sugar.
+  created_at: '2015-02-05 21:21:38.959907'
+  updated_at: '2015-02-15 13:43:09.903276'
+  instruction_group_id: '21'
+instructions_265:
+  step_number: '3'
+  details: ! "Add the flour, polenta, olive oil. Mix with a spatula for 2 minutes.\r\n"
+  created_at: '2015-02-05 21:21:38.962093'
+  updated_at: '2015-02-15 13:43:09.908826'
+  instruction_group_id: '21'
+instructions_266:
+  step_number: '2'
+  details: ! '*Leave for 15 minutes.*'
+  created_at: '2015-02-05 21:21:38.963946'
+  updated_at: '2015-02-15 13:43:09.912567'
+  instruction_group_id: '21'
+instructions_267:
+  step_number: '4'
+  details: Add the salt, mix with a spatula for 1 minute then cover with cling film.
+  created_at: '2015-02-05 21:21:38.965793'
+  updated_at: '2015-02-15 13:43:09.916077'
+  instruction_group_id: '21'
+instructions_268:
+  step_number: '5'
+  details: ! '*leave for 3 hours*'
+  created_at: '2015-02-05 21:21:38.967653'
+  updated_at: '2015-02-15 13:43:09.920386'
+  instruction_group_id: '21'
+instructions_269:
+  step_number: '6'
+  details: ! "Once the dough has doubled in volume, put 2 tablespoons of extra virgin
+    olive oil in the centre of the tray, transfer the dough onto it.\r\n"
+  created_at: '2015-02-05 21:21:38.969532'
+  updated_at: '2015-02-15 13:43:09.923714'
+  instruction_group_id: '21'
+instructions_270:
+  step_number: '7'
+  details: Oil your hands well, pat the dough down, until it has covered the whole
+    tray. Don’t stretch it, just keep on pressing and patting until it has reached
+    the right size.
+  created_at: '2015-02-05 21:21:38.971397'
+  updated_at: '2015-02-15 13:43:09.927104'
+  instruction_group_id: '21'
+instructions_271:
+  step_number: '8'
+  details: ! "Pour 2 tablespoons of water and 2 tablespoons of oil on top of the dough,
+    rub them quickly on the surface and then press your fingertips in the dough, until
+    you touch the tray. I start from one side with my fingertips about 1 cm (1/2 inch)
+    apart and poke the whole surface regularly until I’ve reached the other side of
+    the tray. You want to let the mixture of oil and water to sit in the holes you
+    created, so while cooking they’ll stay pale and moist while the surface will be
+    crisp and golden.\r\n"
+  created_at: '2015-02-05 21:21:38.973219'
+  updated_at: '2015-02-15 13:43:09.930355'
+  instruction_group_id: '21'
+instructions_272:
+  step_number: '9'
+  details: Sprinkle generously with sea salt and place in a warm place, away from
+    draughts.
+  created_at: '2015-02-05 21:21:38.975141'
+  updated_at: '2015-02-15 13:43:09.93386'
+  instruction_group_id: '21'
+instructions_273:
+  step_number: '10'
+  details: ! '*leave for 1 hour*'
+  created_at: '2015-02-05 21:21:38.97706'
+  updated_at: '2015-02-15 13:43:09.937636'
+  instruction_group_id: '21'
+instructions_274:
+  step_number: '12'
+  details: ! "Bake the focaccia for 15-18 minutes at 240C.\r\n"
+  created_at: '2015-02-05 21:21:38.97897'
+  updated_at: '2015-02-15 13:43:09.941168'
+  instruction_group_id: '21'
+instructions_275:
+  step_number: '11'
+  details: Top with choice of toppings - e.g. olives, small bit of feta, rosemary,
+    etc.
+  created_at: '2015-02-05 21:21:38.98092'
+  updated_at: '2015-02-15 13:43:09.944815'
+  instruction_group_id: '21'
+instructions_276:
+  step_number: '1'
+  details: Combine 200g sugar, water, golden syrup in a saucepan.
+  created_at: '2015-02-05 21:40:25.485045'
+  updated_at: '2015-02-15 13:43:09.948025'
+  instruction_group_id: '22'
+instructions_277:
+  step_number: '2'
+  details: Stir gently over medium-high heat until the sugar dissolves.
+  created_at: '2015-02-05 21:40:25.487211'
+  updated_at: '2015-02-15 13:43:09.951305'
+  instruction_group_id: '22'
+instructions_278:
+  step_number: '3'
+  details: Turn the heat to high, stop stirring, bring to a boil. Remove from heat
+    as soon as it hits 175C - should take about 6-8 minutes.
+  created_at: '2015-02-05 21:40:25.48926'
+  updated_at: '2015-02-15 13:43:09.954944'
+  instruction_group_id: '22'
+instructions_279:
+  step_number: '4'
+  details: Slowly stream in the cream, then add the salt.
+  created_at: '2015-02-05 21:40:25.491624'
+  updated_at: '2015-02-15 13:43:09.958216'
+  instruction_group_id: '22'
+instructions_280:
+  step_number: '5'
+  details: Return to a medium-low heat. Add milk and stir to combine.
+  created_at: '2015-02-05 21:40:25.493466'
+  updated_at: '2015-02-15 13:43:09.961591'
+  instruction_group_id: '22'
+instructions_281:
+  step_number: '6'
+  details: Reduce the heat to low.
+  created_at: '2015-02-05 21:40:25.495332'
+  updated_at: '2015-02-15 13:43:09.966954'
+  instruction_group_id: '22'
+instructions_282:
+  step_number: '7'
+  details: Whisk together the egg yolks and 50g sugar.
+  created_at: '2015-02-05 21:40:25.497241'
+  updated_at: '2015-02-15 13:43:09.970838'
+  instruction_group_id: '22'
+instructions_283:
+  step_number: '8'
+  details: Sprinkle with the flour and cornstarch, whisk until combined.
+  created_at: '2015-02-05 21:40:25.499103'
+  updated_at: '2015-02-15 13:43:09.974374'
+  instruction_group_id: '22'
+instructions_284:
+  step_number: '9'
+  details: Pour 1/3 of the warm caramel mixture into the egg mix, whisking constantly.
+  created_at: '2015-02-05 21:40:25.501047'
+  updated_at: '2015-02-15 13:43:09.978474'
+  instruction_group_id: '22'
+instructions_285:
+  step_number: '10'
+  details: Stream in the rest of the caramel, whisking constantly. Set aside.
+  created_at: '2015-02-05 21:40:25.502875'
+  updated_at: '2015-02-15 13:43:09.983051'
+  instruction_group_id: '22'
+instructions_286:
+  step_number: '11'
+  details: Whisk the egg whites on high speed for 1 minute.
+  created_at: '2015-02-05 21:40:25.50604'
+  updated_at: '2015-02-15 13:43:09.986984'
+  instruction_group_id: '22'
+instructions_287:
+  step_number: '12'
+  details: Add the cream of tartar and salt, continue whisking until the whites form
+    soft peaks.
+  created_at: '2015-02-05 21:40:25.507921'
+  updated_at: '2015-02-15 13:43:09.990257'
+  instruction_group_id: '22'
+instructions_288:
+  step_number: '13'
+  details: Stream in the remaining 50g sugar, continue beating until stiff (but not
+    dry) peaks.
+  created_at: '2015-02-05 21:40:25.509732'
+  updated_at: '2015-02-15 13:43:09.993548'
+  instruction_group_id: '22'
+instructions_289:
+  step_number: '14'
+  details: With a spatula, fold 1/4 of the egg-white mix into the caramel mixture
+    until almost combined.
+  created_at: '2015-02-05 21:40:25.511552'
+  updated_at: '2015-02-15 13:43:10.000669'
+  instruction_group_id: '22'
+instructions_290:
+  step_number: '15'
+  details: Fold in another quarter, until almost combined.
+  created_at: '2015-02-05 21:40:25.513467'
+  updated_at: '2015-02-15 13:43:10.003937'
+  instruction_group_id: '22'
+instructions_291:
+  step_number: '16'
+  details: Fold in the remaining until completely combined.
+  created_at: '2015-02-05 21:40:25.515281'
+  updated_at: '2015-02-15 13:43:10.007428'
+  instruction_group_id: '22'
+instructions_292:
+  step_number: '17'
+  details: Transfer to one of the larger pyrex dishes, buttered and dusted with sugar.
+    Run a thumb around the inside edge to create a slight gap.
+  created_at: '2015-02-05 21:40:25.51721'
+  updated_at: '2015-02-15 13:43:10.014389'
+  instruction_group_id: '22'
+instructions_293:
+  step_number: '18'
+  details: Pre-heat the oven to 205C.
+  created_at: '2015-02-05 21:40:25.519178'
+  updated_at: '2015-02-15 13:43:10.01792'
+  instruction_group_id: '22'
+instructions_294:
+  step_number: '19'
+  details: Put the souffle in and immediately reduce to 190C.
+  created_at: '2015-02-05 21:40:25.521194'
+  updated_at: '2015-02-15 13:43:10.022923'
+  instruction_group_id: '22'
+instructions_295:
+  step_number: '20'
+  details: Bake until puffy and dry to the touch, but the center very slightly jiggly
+    - about 25 minutes.
+  created_at: '2015-02-05 21:40:25.523147'
+  updated_at: '2015-02-15 13:43:10.026192'
+  instruction_group_id: '22'
+instructions_296:
+  step_number: '1'
+  details: Whisk together the mayo, garlic, mustards, salt and pepper in a small bowl.
+  created_at: '2015-02-05 21:48:35.889511'
+  updated_at: '2015-02-15 13:43:10.029299'
+  instruction_group_id: '23'
+instructions_297:
+  step_number: '2'
+  details: Cover and refrigerate for at least 1 hour.
+  created_at: '2015-02-05 21:48:35.891781'
+  updated_at: '2015-02-15 13:43:10.032551'
+  instruction_group_id: '23'
+instructions_298:
+  step_number: '3'
+  details: Boil the potatoes in cold water with 2 tbsp salt until a skewer inserted
+    into the center meets some resistance - 15-20 minutes. Drain well.
+  created_at: '2015-02-05 21:48:35.893808'
+  updated_at: '2015-02-15 13:43:10.035793'
+  instruction_group_id: '23'
+instructions_299:
+  step_number: '4'
+  details: Toss the potatoes with the aioli. Season with salt, parsley leaves and
+    tarragon.
+  created_at: '2015-02-05 21:48:35.895831'
+  updated_at: '2015-02-15 13:43:10.039111'
+  instruction_group_id: '23'
+instructions_300:
+  step_number: '5'
+  details: Grill (or roast) until done - 20 minutes roasting.
+  created_at: '2015-02-05 21:48:35.897683'
+  updated_at: '2015-02-15 13:43:10.042979'
+  instruction_group_id: '23'
+instructions_301:
+  step_number: '1'
+  details: Spread the bread on baking sheets. Bake until completely dried (approx
+    45 mins) at 135C. Stick in food processor for a few pulses.
+  created_at: '2015-02-05 21:54:19.879896'
+  updated_at: '2015-02-15 13:43:10.046216'
+  instruction_group_id: '24'
+instructions_302:
+  step_number: '2'
+  details: ! "Cook the mushrooms until all moisture has evaporated, 8 mins.\r\n"
+  created_at: '2015-02-05 21:54:19.882036'
+  updated_at: '2015-02-15 13:43:10.049481'
+  instruction_group_id: '24'
+instructions_303:
+  step_number: '3'
+  details: Add half the sage, cook another 5 minutes.
+  created_at: '2015-02-05 21:54:19.884173'
+  updated_at: '2015-02-15 13:43:10.055274'
+  instruction_group_id: '24'
+instructions_304:
+  step_number: '4'
+  details: Add the onion,leeks, garlic, sage, cook for another 10 minutes (until veg
+    are softened).
+  created_at: '2015-02-05 21:54:19.886088'
+  updated_at: '2015-02-15 13:43:10.05851'
+  instruction_group_id: '24'
+instructions_305:
+  step_number: '5'
+  details: ! "Add the stock, bring to a boil.\r\n"
+  created_at: '2015-02-05 21:54:19.888074'
+  updated_at: '2015-02-15 13:43:10.062126'
+  instruction_group_id: '24'
+instructions_306:
+  step_number: '6'
+  details: ! "Add the bread, mix gently.\r\n"
+  created_at: '2015-02-05 21:54:19.890331'
+  updated_at: '2015-02-15 13:43:10.071741'
+  instruction_group_id: '24'
+instructions_307:
+  step_number: '7'
+  details: Season with salt and pepper.
+  created_at: '2015-02-05 21:54:19.89227'
+  updated_at: '2015-02-15 13:43:10.082083'
+  instruction_group_id: '24'
+instructions_308:
+  step_number: '8'
+  details: Transfer to dish, cover with foil, bake at 175C for 30 minutes.
+  created_at: '2015-02-05 21:54:19.894196'
+  updated_at: '2015-02-15 13:43:10.085975'
+  instruction_group_id: '24'
+instructions_309:
+  step_number: '9'
+  details: Remove foil, bake for 10 minutes more.
+  created_at: '2015-02-05 21:54:19.89648'
+  updated_at: '2015-02-15 13:43:10.089739'
+  instruction_group_id: '24'
+instructions_310:
+  step_number: '1'
+  details: Combine the cucumbers, tomatoes, parsley and salt in a bowl. Toss, then
+    leave in a colander to drain for 30 minutes.
+  created_at: '2015-02-05 22:06:08.456074'
+  updated_at: '2015-02-15 13:43:10.093478'
+  instruction_group_id: '25'
+instructions_311:
+  step_number: '2'
+  details: Set out a large pyrex dish.
+  created_at: '2015-02-05 22:06:08.458336'
+  updated_at: '2015-02-15 13:43:10.097229'
+  instruction_group_id: '25'
+instructions_312:
+  step_number: '3'
+  details: Spread the hummus on the bottom.
+  created_at: '2015-02-05 22:06:08.460293'
+  updated_at: '2015-02-15 13:43:10.102357'
+  instruction_group_id: '25'
+instructions_313:
+  step_number: '4'
+  details: ! 'Next layer: greek yoghurt.'
+  created_at: '2015-02-05 22:06:08.462231'
+  updated_at: '2015-02-15 13:43:10.112265'
+  instruction_group_id: '25'
+instructions_314:
+  step_number: '5'
+  details: Spread the salad layer on top.
+  created_at: '2015-02-05 22:06:08.464329'
+  updated_at: '2015-02-15 13:43:10.118201'
+  instruction_group_id: '25'
+instructions_315:
+  step_number: '6'
+  details: Layer the sliced olives.
+  created_at: '2015-02-05 22:06:08.467871'
+  updated_at: '2015-02-15 13:43:10.12166'
+  instruction_group_id: '25'
+instructions_316:
+  step_number: '7'
+  details: Drizzle with the tahini sauce.
+  created_at: '2015-02-05 22:06:08.470794'
+  updated_at: '2015-02-15 13:43:10.125041'
+  instruction_group_id: '25'
+instructions_317:
+  step_number: '8'
+  details: Add the feta.
+  created_at: '2015-02-05 22:06:08.472739'
+  updated_at: '2015-02-15 13:43:10.134439'
+  instruction_group_id: '25'
+instructions_318:
+  step_number: '9'
+  details: Add the lemon juice and chopped parsley.
+  created_at: '2015-02-05 22:06:08.47471'
+  updated_at: '2015-02-15 13:43:10.141032'
+  instruction_group_id: '25'
+instructions_319:
+  step_number: '1'
+  details: Boil the potatoes with 1.5 tsp salt for 20-25 minutes, until soft.
+  created_at: '2015-02-05 22:15:08.773331'
+  updated_at: '2015-02-15 13:43:10.149813'
+  instruction_group_id: '26'
+instructions_320:
+  step_number: '2'
+  details: Grind the saffron threads to a powder, then add 15ml hot water and soak
+    for a few minutes.
+  created_at: '2015-02-05 22:15:08.775658'
+  updated_at: '2015-02-15 13:43:10.15593'
+  instruction_group_id: '26'
+instructions_321:
+  step_number: '3'
+  details: Drain the potatoes and return them to the hot pot to dry out.
+  created_at: '2015-02-05 22:15:08.777631'
+  updated_at: '2015-02-15 13:43:10.161362'
+  instruction_group_id: '26'
+instructions_322:
+  step_number: '4'
+  details: Melt the butter over medium heat.
+  created_at: '2015-02-05 22:15:08.779511'
+  updated_at: '2015-02-15 13:43:10.165718'
+  instruction_group_id: '26'
+instructions_323:
+  step_number: '5'
+  details: Whisk in the flour to form a thick paste.
+  created_at: '2015-02-05 22:15:08.781413'
+  updated_at: '2015-02-15 13:43:10.171052'
+  instruction_group_id: '26'
+instructions_324:
+  step_number: '6'
+  details: Whisk in the milk, garlic, 1/2 tsp salt and the saffron water. Heat over
+    medium, whisking frequently, until it boils and thickens.
+  created_at: '2015-02-05 22:15:08.783283'
+  updated_at: '2015-02-15 13:43:10.175294'
+  instruction_group_id: '26'
+instructions_325:
+  step_number: '7'
+  details: Pour the saffron sauce over the potato cubes, then mash until smooth.
+  created_at: '2015-02-05 22:15:08.785219'
+  updated_at: '2015-02-15 13:43:10.178746'
+  instruction_group_id: '26'
+instructions_326:
+  step_number: '8'
+  details: Season with more salt and pepper to taste.
+  created_at: '2015-02-05 22:15:08.787095'
+  updated_at: '2015-02-15 13:43:10.183441'
+  instruction_group_id: '26'
+instructions_327:
+  step_number: '1'
+  details: ! "Toss the squash with the oil and salt.\r\n"
+  created_at: '2015-02-05 22:28:41.793625'
+  updated_at: '2015-02-15 13:43:10.189053'
+  instruction_group_id: '27'
+instructions_328:
+  step_number: '2'
+  details: Combine the remaining ingredients.
+  created_at: '2015-02-05 22:28:41.79587'
+  updated_at: '2015-02-15 13:43:10.195767'
+  instruction_group_id: '27'
+instructions_329:
+  step_number: '3'
+  details: Add a little of the breadcrumb mix to the squash, toss, then place in a
+    single layer on a baking sheet.
+  created_at: '2015-02-05 22:28:41.797796'
+  updated_at: '2015-02-15 13:43:10.199521'
+  instruction_group_id: '27'
+instructions_330:
+  step_number: '4'
+  details: Pour over the rest of the breadcrumb mix.
+  created_at: '2015-02-05 22:28:41.799797'
+  updated_at: '2015-02-15 13:43:10.202901'
+  instruction_group_id: '27'
+instructions_331:
+  step_number: '5'
+  details: Bake for 40 minutes at 200C.
+  created_at: '2015-02-05 22:28:41.801688'
+  updated_at: '2015-02-15 13:43:10.210872'
+  instruction_group_id: '27'
+instructions_332:
+  step_number: '1'
+  details: Melt the butter over low heat, then set aside.
+  created_at: '2015-02-07 20:36:44.333451'
+  updated_at: '2015-02-15 13:43:10.219179'
+  instruction_group_id: '28'
+instructions_333:
+  step_number: '2'
+  details: Whisk together the butter, sugars, vanilla extract, honey, egg, salt until
+    smooth.
+  created_at: '2015-02-07 20:36:44.33588'
+  updated_at: '2015-02-15 13:43:10.223062'
+  instruction_group_id: '28'
+instructions_334:
+  step_number: '3'
+  details: Add the flour and chocolate, mix.
+  created_at: '2015-02-07 20:36:44.337162'
+  updated_at: '2015-02-15 13:43:10.228646'
+  instruction_group_id: '28'
+instructions_335:
+  step_number: '4'
+  details: Spread the batter in the 10" square tin.
+  created_at: '2015-02-07 20:36:44.338453'
+  updated_at: '2015-02-15 13:43:10.232589'
+  instruction_group_id: '28'
+instructions_336:
+  step_number: '5'
+  details: Top with the chopped almonds.
+  created_at: '2015-02-07 20:36:44.33975'
+  updated_at: '2015-02-15 13:43:10.236253'
+  instruction_group_id: '28'
+instructions_337:
+  step_number: '6'
+  details: Bake for 35-40 minutes at 175C, until the center is just set.
+  created_at: '2015-02-07 20:36:44.341137'
+  updated_at: '2015-02-15 13:43:10.239762'
+  instruction_group_id: '28'
+instructions_338:
+  step_number: '7'
+  details: Allow to cool (and set) completely before cutting.
+  created_at: '2015-02-07 20:36:44.342437'
+  updated_at: '2015-02-15 13:43:10.243318'
+  instruction_group_id: '28'
+instructions_339:
+  step_number: '1'
+  details: Place the leek halves in a lightly-oiled pan.
+  created_at: '2015-02-07 20:42:14.994719'
+  updated_at: '2015-02-15 13:43:10.246601'
+  instruction_group_id: '29'
+instructions_340:
+  step_number: '2'
+  details: Sprinkle with the salt and pepper, add some of the stock.
+  created_at: '2015-02-07 20:42:14.996411'
+  updated_at: '2015-02-15 13:43:10.249893'
+  instruction_group_id: '29'
+instructions_341:
+  step_number: '3'
+  details: Roast for 35-40 minutes at 200C, adding some more stock now and then to
+    keep it moist.
+  created_at: '2015-02-07 20:42:14.997779'
+  updated_at: '2015-02-15 13:43:10.253602'
+  instruction_group_id: '29'
+instructions_342:
+  step_number: '1'
+  details: Remove the stem end of the onion but leave the root.
+  created_at: '2015-02-07 20:47:49.492554'
+  updated_at: '2015-02-15 13:43:10.257676'
+  instruction_group_id: '30'
+instructions_343:
+  step_number: '2'
+  details: Peel, trimming the root but leaving it intact.
+  created_at: '2015-02-07 20:47:49.494176'
+  updated_at: '2015-02-15 13:43:10.262102'
+  instruction_group_id: '30'
+instructions_344:
+  step_number: '3'
+  details: Segment the onion into 8 through the root so that they stay together.
+  created_at: '2015-02-07 20:47:49.495414'
+  updated_at: '2015-02-15 13:43:10.266423'
+  instruction_group_id: '30'
+instructions_345:
+  step_number: '4'
+  details: Mix the lemon juice, mustard, garlic, thyme, salt, pepper in a bowl.
+  created_at: '2015-02-07 20:47:49.496631'
+  updated_at: '2015-02-15 13:43:10.271049'
+  instruction_group_id: '30'
+instructions_346:
+  step_number: '5'
+  details: Mix with the onion.
+  created_at: '2015-02-07 20:47:49.497889'
+  updated_at: '2015-02-15 13:43:10.27648'
+  instruction_group_id: '30'
+instructions_347:
+  step_number: '6'
+  details: Bake for 25 minutes at 200C.
+  created_at: '2015-02-07 20:47:49.499161'
+  updated_at: '2015-02-15 13:43:10.279881'
+  instruction_group_id: '30'
+instructions_348:
+  step_number: '1'
+  details: Boil the potato for 7-8 minutes, until tender
+  created_at: '2015-02-08 08:51:20.345073'
+  updated_at: '2015-02-15 13:43:10.284348'
+  instruction_group_id: '31'
+instructions_349:
+  step_number: '2'
+  details: ! "Cook the potato in the oil in a frying pan for 5 minutes over a medium
+    heat. Transfer to a plate.\r\n"
+  created_at: '2015-02-08 10:47:12.11422'
+  updated_at: '2015-02-15 13:43:10.290992'
+  instruction_group_id: '31'
+instructions_350:
+  step_number: '3'
+  details: ! "Cook the chorizo in the pan for 2-3 minutes. Transfer to a plate lined
+    with a paper towel.\r\n"
+  created_at: '2015-02-08 10:47:12.142563'
+  updated_at: '2015-02-15 13:43:10.29799'
+  instruction_group_id: '31'
+instructions_351:
+  step_number: '4'
+  details: ! "Cook the onion in the pan for 5 minutes. Add the potato and chorizo,
+    stir to combine.\r\n"
+  created_at: '2015-02-08 10:47:12.143983'
+  updated_at: '2015-02-15 13:43:10.319289'
+  instruction_group_id: '31'
+instructions_352:
+  step_number: '5'
+  details: ! "Whisk the eggs, cream and cheddar in a jug. Pour over the chorizo mixture
+    and add the thyme.\r\n"
+  created_at: '2015-02-08 10:47:12.145279'
+  updated_at: '2015-02-15 13:43:10.327698'
+  instruction_group_id: '31'
+instructions_353:
+  step_number: '6'
+  details: ! "Cook for 8 minutes in the pan, until it begins to set. Place under the
+    grill and cook for 3-5 minutes.\r\n"
+  created_at: '2015-02-08 10:47:12.146567'
+  updated_at: '2015-02-15 13:43:10.34495'
+  instruction_group_id: '31'
+instructions_354:
+  step_number: '1'
+  details: AUBERGINE
+  created_at: '2015-02-08 21:43:05.48677'
+  updated_at: '2015-02-15 13:43:10.358995'
+  instruction_group_id: '32'
+instructions_355:
+  step_number: '2'
+  details: Slice the aubergines lengthwise into ½ inch slices
+  created_at: '2015-02-08 21:43:05.490876'
+  updated_at: '2015-02-15 13:43:10.371749'
+  instruction_group_id: '32'
+instructions_356:
+  step_number: '3'
+  details: Cover a baking tray with double layer of paper towels, spread the slices
+    on top, then cover with another double layer of paper towels.
+  created_at: '2015-02-08 21:43:05.492398'
+  updated_at: '2015-02-15 13:43:10.387631'
+  instruction_group_id: '32'
+instructions_357:
+  step_number: '4'
+  details: Press down with the second baking tray.
+  created_at: '2015-02-08 21:43:05.493962'
+  updated_at: '2015-02-15 13:43:10.395669'
+  instruction_group_id: '32'
+instructions_358:
+  step_number: '5'
+  details: Put the whole thing in the oven for 30 minutes at 190C.
+  created_at: '2015-02-08 21:43:05.495389'
+  updated_at: '2015-02-15 13:43:10.405322'
+  instruction_group_id: '32'
+instructions_359:
+  step_number: '6'
+  details: Remove, press each slice between paper towels until compressed.
+  created_at: '2015-02-08 21:43:05.496677'
+  updated_at: '2015-02-15 13:43:10.419445'
+  instruction_group_id: '32'
+instructions_360:
+  step_number: '7'
+  details: (At this point the filling needs to be on the go - see below)
+  created_at: '2015-02-08 21:43:05.498077'
+  updated_at: '2015-02-15 13:43:10.427828'
+  instruction_group_id: '32'
+instructions_361:
+  step_number: '8'
+  details: ! "Prepare three bowls:\r\n- flour\r\n- eggs + 1 tsp salt\r\n- 50g parmesan,
+    150g homemade breadcrumbs and 2 tsp oregano"
+  created_at: '2015-02-08 21:43:05.499509'
+  updated_at: '2015-02-15 13:43:10.438012'
+  instruction_group_id: '32'
+instructions_362:
+  step_number: '9'
+  details: Dredge each slice of aubergine in flour, then egg, then breadcrumbs, then
+    set aside.
+  created_at: '2015-02-08 21:51:17.730783'
+  updated_at: '2015-02-15 13:43:10.445679'
+  instruction_group_id: '32'
+instructions_363:
+  step_number: '10'
+  details: ! "Repeat until all aubergine done: \r\nHeat 15ml oil to 190C in the pan,
+    add slices of aubergine. Fry one side for 90 seconds, then the other for 60 seconds.
+    Remove and dry quickly with paper towels."
+  created_at: '2015-02-08 21:51:17.732915'
+  updated_at: '2015-02-15 13:43:10.456597'
+  instruction_group_id: '32'
+instructions_364:
+  step_number: '20'
+  details: TOMATO SAUCE
+  created_at: '2015-02-08 21:51:17.734474'
+  updated_at: '2015-02-15 13:43:10.467782'
+  instruction_group_id: '32'
+instructions_365:
+  step_number: '21'
+  details: Heat the butter in a pan.
+  created_at: '2015-02-08 21:51:17.735939'
+  updated_at: '2015-02-15 13:43:10.475095'
+  instruction_group_id: '32'
+instructions_366:
+  step_number: '22'
+  details: Add the diced onion, garlic, oregano and chili flakes - 2 minutes.
+  created_at: '2015-02-08 21:51:17.737394'
+  updated_at: '2015-02-15 13:43:10.486545'
+  instruction_group_id: '32'
+instructions_367:
+  step_number: '23'
+  details: Add tomatoes, onion halves, 3 tbsp each of fresh parsley and basil.
+  created_at: '2015-02-08 21:51:17.738835'
+  updated_at: '2015-02-15 13:43:10.504138'
+  instruction_group_id: '32'
+instructions_368:
+  step_number: '24'
+  details: Bring to a simmer then cook on low until reduced by half - about 1 hour.
+  created_at: '2015-02-08 21:51:17.740159'
+  updated_at: '2015-02-15 13:43:10.518455'
+  instruction_group_id: '32'
+instructions_369:
+  step_number: '25'
+  details: Stir in 3 tbsp more of fresh parsley and basil, and 1 tsp salt. Remove
+    the onion halves. Set aside
+  created_at: '2015-02-08 21:51:17.741536'
+  updated_at: '2015-02-15 13:43:10.529885'
+  instruction_group_id: '32'
+instructions_370:
+  step_number: '30'
+  details: MINCE
+  created_at: '2015-02-08 21:51:17.742936'
+  updated_at: '2015-02-15 13:43:10.542402'
+  instruction_group_id: '32'
+instructions_371:
+  step_number: '31'
+  details: ! 'Cook the mince with the oregano, thyme and garlic cloves. '
+  created_at: '2015-02-08 21:51:17.744234'
+  updated_at: '2015-02-15 13:43:10.551656'
+  instruction_group_id: '32'
+instructions_372:
+  step_number: '32'
+  details: Remove from heat, mix through half of the marinara sauce.
+  created_at: '2015-02-08 21:51:17.745488'
+  updated_at: '2015-02-15 13:43:10.559313'
+  instruction_group_id: '32'
+instructions_373:
+  step_number: '40'
+  details: ASSEMBLY
+  created_at: '2015-02-08 21:51:17.74698'
+  updated_at: '2015-02-15 13:43:10.570193'
+  instruction_group_id: '32'
+instructions_374:
+  step_number: '41'
+  details: Use the largest pyrex dish.
+  created_at: '2015-02-08 21:51:17.748581'
+  updated_at: '2015-02-15 13:43:10.577038'
+  instruction_group_id: '32'
+instructions_375:
+  step_number: '42'
+  details: ! "Assemble as follows:\r\n- 1/2 the meat mix at the bottom\r\n- 1/2 the
+    aubergine slices\r\n- 1/2 the meat mix\r\n- 1/2 the parmesan/cheddar mix\r\n-
+    1/2 the aubergine\r\n- the tomato sauce\r\n- 1/2 the parmesan/cheddar mix"
+  created_at: '2015-02-08 21:51:17.750114'
+  updated_at: '2015-02-15 13:43:10.586632'
+  instruction_group_id: '32'
+instructions_376:
+  step_number: '43'
+  details: Cover with foil, bake at 190C for 20 minutes.
+  created_at: '2015-02-08 21:51:17.751475'
+  updated_at: '2015-02-15 13:43:10.592066'
+  instruction_group_id: '32'
+instructions_377:
+  step_number: '44'
+  details: Remove foil, bake for a further 15 minutes.
+  created_at: '2015-02-08 21:51:17.752822'
+  updated_at: '2015-02-15 13:43:10.601037'
+  instruction_group_id: '32'
+instructions_378:
+  step_number: '1'
+  details: Combine everything in a bowl.
+  created_at: '2015-02-09 22:12:21.196659'
+  updated_at: '2015-02-15 13:43:10.615498'
+  instruction_group_id: '33'
+instructions_379:
+  step_number: '2'
+  details: Shape into balls.
+  created_at: '2015-02-09 22:12:21.201168'
+  updated_at: '2015-02-15 13:43:10.623561'
+  instruction_group_id: '33'
+instructions_380:
+  step_number: '3'
+  details: Bake for 20-25 minutes at 180C.
+  created_at: '2015-02-09 22:12:21.203079'
+  updated_at: '2015-02-15 13:43:10.635512'
+  instruction_group_id: '33'
+instructions_381:
+  step_number: '1'
+  details: Mix together, then roast at 190C for 35 minutes.
+  created_at: '2015-02-10 23:35:37.151353'
+  updated_at: '2015-02-15 13:43:10.647556'
+  instruction_group_id: '34'
+instructions_382:
+  step_number: '1'
+  details: ! 'Filling: Simmer the lentils, oats etc for 15 minutes, stirring occasionally.'
+  created_at: '2015-02-12 00:05:20.409676'
+  updated_at: '2015-02-15 13:43:10.65964'
+  instruction_group_id: '35'
+instructions_383:
+  step_number: '2'
+  details: ! 'Filling: Fry the quartered mushrooms with ½ tsp salt until browned and
+    soft.'
+  created_at: '2015-02-12 00:05:20.414856'
+  updated_at: '2015-02-15 13:43:10.667579'
+  instruction_group_id: '35'
+instructions_384:
+  step_number: '3'
+  details: ! 'Filling: Add the remaining ingredients from that section, cook until
+    soft and translucent.'
+  created_at: '2015-02-12 00:05:20.422265'
+  updated_at: '2015-02-15 13:43:10.673725'
+  instruction_group_id: '35'
+instructions_385:
+  step_number: '4'
+  details: ! 'Filling: Lower heat to medium and add all remaining filling ingredients,
+    and the lentil mixture. Simmer for 5 minutes then remove from heat.'
+  created_at: '2015-02-12 00:05:20.424742'
+  updated_at: '2015-02-15 13:43:10.687447'
+  instruction_group_id: '35'
+instructions_386:
+  step_number: '5'
+  details: ! 'Filling: Add the tomatoes and stock, simmer until thickened - 10 minutes.'
+  created_at: '2015-02-12 00:05:20.426845'
+  updated_at: '2015-02-15 13:43:10.699051'
+  instruction_group_id: '35'
+instructions_387:
+  step_number: '10'
+  details: ! 'Mash: Boil the potatoes and squash in salted water for 15 minutes, until
+    tender.'
+  created_at: '2015-02-12 00:05:20.429169'
+  updated_at: '2015-02-15 13:43:10.703238'
+  instruction_group_id: '35'
+instructions_388:
+  step_number: '11'
+  details: ! 'Mash: Mix with the remaining ingredients and mash well.'
+  created_at: '2015-02-12 00:05:20.431177'
+  updated_at: '2015-02-15 13:43:10.708547'
+  instruction_group_id: '35'
+instructions_389:
+  step_number: '12'
+  details: ! "Assembly: Fill a casserole dish with the filling, cover with the mash.\r\n"
+  created_at: '2015-02-12 00:05:20.433498'
+  updated_at: '2015-02-15 13:43:10.712105'
+  instruction_group_id: '35'
+instructions_390:
+  step_number: '13'
+  details: Bake for 30 minutes at 175C
+  created_at: '2015-02-12 00:05:20.435643'
+  updated_at: '2015-02-15 13:43:10.715406'
+  instruction_group_id: '35'
+instructions_391:
+  step_number: '1'
+  details: Melt the butter in a pan over medium heat.
+  created_at: '2015-02-25 22:55:28.52862'
+  updated_at: '2015-02-25 22:55:28.52862'
+  instruction_group_id: '69'
+instructions_392:
+  step_number: '2'
+  details: Add the onion, saute until soft and translucent - about 10 minutes.
+  created_at: '2015-02-25 22:55:28.53031'
+  updated_at: '2015-02-25 22:55:28.53031'
+  instruction_group_id: '69'
+instructions_393:
+  step_number: '3'
+  details: Add the jalapeno, garlic, cumin, oregano, oxo cube. Saute a few more minutes.
+  created_at: '2015-02-25 22:55:28.531598'
+  updated_at: '2015-02-25 22:55:28.531598'
+  instruction_group_id: '69'
+instructions_394:
+  step_number: '4'
+  details: Add the beans, allow to cook for another few minutes.
+  created_at: '2015-02-25 22:55:28.53285'
+  updated_at: '2015-02-25 22:55:28.53285'
+  instruction_group_id: '69'
+instructions_395:
+  step_number: '5'
+  details: Add the sugar and hot sauce, mix well.
+  created_at: '2015-02-25 22:55:28.534039'
+  updated_at: '2015-02-25 22:55:28.534039'
+  instruction_group_id: '69'
+instructions_396:
+  step_number: '6'
+  details: Add everything to the food processor and add the coffee.
+  created_at: '2015-02-25 22:55:28.535249'
+  updated_at: '2015-02-25 22:55:28.535249'
+  instruction_group_id: '69'
+instructions_397:
+  step_number: '7'
+  details: Blend until smooth.
+  created_at: '2015-02-25 22:55:28.536426'
+  updated_at: '2015-02-25 22:55:28.536426'
+  instruction_group_id: '69'
+instructions_398:
+  step_number: '8'
+  details: Set aside for at least 2 hours for the flavours to come together.
+  created_at: '2015-02-25 22:55:28.537749'
+  updated_at: '2015-02-25 22:55:28.537749'
+  instruction_group_id: '69'
+instructions_399:
+  step_number: '1'
+  details: Beat the butter and sugar together until pale and whipped.
+  created_at: '2015-02-25 23:01:21.564113'
+  updated_at: '2015-02-25 23:01:21.564113'
+  instruction_group_id: '70'
+instructions_400:
+  step_number: '2'
+  details: Mix together the almonds, polenta and baking powder.
+  created_at: '2015-02-25 23:01:21.565444'
+  updated_at: '2015-02-25 23:01:21.565444'
+  instruction_group_id: '70'
+instructions_401:
+  step_number: '3'
+  details: Gradually add, alternately, the dry mix and the eggs to the butter-sugar
+    mixture, beating continuously.
+  created_at: '2015-02-25 23:01:21.56674'
+  updated_at: '2015-02-25 23:01:21.56674'
+  instruction_group_id: '70'
+instructions_402:
+  step_number: '4'
+  details: Beat in the lemon zest
+  created_at: '2015-02-25 23:01:21.568026'
+  updated_at: '2015-02-25 23:01:21.568026'
+  instruction_group_id: '70'
+instructions_403:
+  step_number: '5'
+  details: Bake for 40 minutes at 180C - until the cake tester comes out cleanish,
+    but the cake may still be a bit wibbly.
+  created_at: '2015-02-25 23:01:21.56925'
+  updated_at: '2015-02-25 23:01:21.56925'
+  instruction_group_id: '70'
+instructions_404:
+  step_number: '1'
+  details: Boil together the lemon juice and icing sugar, until the sugar is dissolved.
+  created_at: '2015-02-25 23:01:21.571875'
+  updated_at: '2015-02-25 23:01:21.571875'
+  instruction_group_id: '71'
+instructions_405:
+  step_number: '2'
+  details: Prick the top of the cake all over, then pour the warm syrup over the top
+    in batches allowing soakage time between batches.
+  created_at: '2015-02-25 23:01:21.573252'
+  updated_at: '2015-02-25 23:01:21.573252'
+  instruction_group_id: '71'
+instructions_406:
+  step_number: '2'
+  details: Combine the filling ingredients in a bowl - making sure the breadcrumbs
+    are one of the final additions so that they don't clump.
+  created_at: '2015-02-25 23:09:38.671471'
+  updated_at: '2015-02-25 23:09:38.671471'
+  instruction_group_id: '72'
+instructions_407:
+  step_number: '3'
+  details: Make the marinara sauce - simmer for 40 minutes.
+  created_at: '2015-02-25 23:09:38.672949'
+  updated_at: '2015-02-25 23:09:38.672949'
+  instruction_group_id: '72'
+instructions_408:
+  step_number: '1'
+  details: Cook the rice.
+  created_at: '2015-02-25 23:09:38.674193'
+  updated_at: '2015-02-25 23:09:38.674193'
+  instruction_group_id: '72'
+instructions_409:
+  step_number: '4'
+  details: Mix it all together.
+  created_at: '2015-02-25 23:09:38.675544'
+  updated_at: '2015-02-25 23:09:38.675544'
+  instruction_group_id: '72'
+instructions_410:
+  step_number: '1'
+  details: Get the coating ready - flour, then eggs, then breadcrumbs.
+  created_at: '2015-02-25 23:09:38.677997'
+  updated_at: '2015-02-25 23:09:38.677997'
+  instruction_group_id: '73'
+instructions_411:
+  step_number: '2'
+  details: Create balls, do the coating.
+  created_at: '2015-02-25 23:09:38.679224'
+  updated_at: '2015-02-25 23:09:38.679224'
+  instruction_group_id: '73'
+instructions_412:
+  step_number: '3'
+  details: Bake at 200C for 18 minutes.
+  created_at: '2015-02-25 23:09:38.680438'
+  updated_at: '2015-02-25 23:09:38.680438'
+  instruction_group_id: '73'

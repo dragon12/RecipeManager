@@ -1,0 +1,21 @@
+---
+measurement_types_001:
+  measurement_type: By Quantity
+  created_at: '2015-02-04 23:17:10.175206'
+  updated_at: '2015-02-04 23:17:10.175206'
+  measurement_name: ''
+measurement_types_002:
+  measurement_type: By Volume (tsp)
+  created_at: '2015-02-05 00:21:13.671341'
+  updated_at: '2015-02-05 00:21:13.671341'
+  measurement_name: tsp
+measurement_types_003:
+  measurement_type: By Volume (ml)
+  created_at: '2015-02-04 23:17:10.109544'
+  updated_at: '2015-02-04 23:17:10.109544'
+  measurement_name: ml
+measurement_types_004:
+  measurement_type: By Weight (g)
+  created_at: '2015-02-04 23:17:10.167172'
+  updated_at: '2015-02-04 23:17:10.167172'
+  measurement_name: g

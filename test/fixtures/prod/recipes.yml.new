@@ -1,0 +1,666 @@
+---
+recipes_001:
+  name: Pesto-Baked Courgette
+  created_at: '2015-02-05 20:57:12.69589'
+  updated_at: '2015-02-05 20:57:12.69589'
+  description: Sliced courgette tossed with a basil pesto sauce and topped with breadcrumbs
+    and parmesan.
+  comments: Quite nice, although nothing special. Might be better if I was able to
+    make real pesto - can use more basil leaves and pine nuts in exchange for the
+    store-bought pesto, as in the source recipe.
+  category_id: '11'
+  total_time: ''
+  active_time: ''
+  cooking_time: ''
+  rating: '6.00'
+  portion_count: '12'
+recipes_002:
+  name: Fava Bean Dip
+  created_at: '2015-02-05 20:59:58.138411'
+  updated_at: '2015-02-05 21:12:13.665483'
+  description: A hummus-like dip made from fava beans.
+  comments: Was ok but Erin wasn't a huge fan. However, I can't remember if I actually
+    followed the above instructions correctly!
+  category_id: '2'
+  total_time: 20m
+  active_time: 20m
+  cooking_time: 0m
+  rating: '5.00'
+  portion_count: '10'
+recipes_003:
+  name: Focaccia
+  created_at: '2015-02-05 21:15:37.975952'
+  updated_at: '2015-02-05 21:21:38.951047'
+  description: Savoury flatbread which goes delicious with any of various toppings.
+  comments: Some issues with it sticking sometimes. Definitely delicious.
+  category_id: '12'
+  total_time: 5 hours
+  active_time: 30 minutes
+  cooking_time: 15-18 minutes
+  rating: '8.00'
+  portion_count: '4'
+recipes_004:
+  name: Vegetarian Stuffing
+  created_at: '2015-02-05 21:54:19.843657'
+  updated_at: '2015-02-05 21:54:19.843657'
+  description: Stuffing made from mushrooms, home-made breadcrumbs, herbs.
+  comments: Excellent, can be used as a side or to make burgers etc.
+  category_id: '13'
+  total_time: 2 hours
+  active_time: 30 minutes
+  cooking_time: 30 minutes
+  rating: '8.00'
+  portion_count: '10'
+recipes_005:
+  name: Saffron Mashed Potatoes
+  created_at: '2015-02-05 22:11:44.400749'
+  updated_at: '2015-02-05 22:15:08.764244'
+  description: Creamy saffron-flavoured mashed potato side dish.
+  comments: Easy, and decent portion size for such a delicious side!
+  category_id: '11'
+  total_time: 45 minutes
+  active_time: 45 minutes
+  cooking_time: 20 minutes
+  rating: '7.00'
+  portion_count: '2'
+recipes_006:
+  name: Salted Caramel Souffle
+  created_at: '2015-02-05 21:40:25.453784'
+  updated_at: '2015-02-05 22:23:07.349534'
+  description: A dark salted caramel-flavoured souffle.
+  comments: ! "Really really good!\r\n\r\nImportant not to open the oven door until
+    happy that it's done, will cause it to sink."
+  category_id: '14'
+  total_time: 2 hours
+  active_time: 1 hour
+  cooking_time: 25 minutes
+  rating: '8.00'
+  portion_count: '8'
+recipes_007:
+  name: Parmesan-Crusted Butternut Squash
+  created_at: '2015-02-05 22:28:41.765282'
+  updated_at: '2015-02-05 22:28:41.765282'
+  description: Roasted butternut squash covered with garlicky breadcrumbs and parmesan.
+  comments: Nice and garlicky.
+  category_id: '11'
+  total_time: 1 hour
+  active_time: 20 minutes
+  cooking_time: 40 minutes
+  rating: '7.00'
+  portion_count: '8'
+recipes_008:
+  name: Mediterranean 7-layer dip
+  created_at: '2015-02-05 22:01:54.416385'
+  updated_at: '2015-02-07 18:49:23.558752'
+  description: Deep layered dish of Mediterranean flavours, perfect for dipping flatbread
+    into.
+  comments: Excellent.
+  category_id: '2'
+  total_time: 2 hours
+  active_time: 2 hours
+  cooking_time: ''
+  rating: '8.00'
+  portion_count: '10'
+recipes_009:
+  name: Herb-Roasted Onions
+  created_at: '2015-02-07 20:47:49.467601'
+  updated_at: '2015-02-07 20:47:49.467601'
+  description: Onions chopped into segments and roasted with a mustard and lemon dressing.
+  comments: Quite nice, and adding some more mustard at the end is a good idea too!
+  category_id: '11'
+  total_time: 35 minutes
+  active_time: 5 minutes
+  cooking_time: 25 minutes
+  rating: '7.00'
+  portion_count: '1'
+recipes_010:
+  name: Potato and Chorizo Fritatta
+  created_at: '2015-02-08 08:25:21.051806'
+  updated_at: '2015-02-08 10:47:12.103951'
+  description: Pan-made fritatta, finished under the grill.
+  comments: ''
+  category_id: '4'
+  total_time: 1 hour
+  active_time: 50 minutes
+  cooking_time: 15 minutes
+  rating: '7.00'
+  portion_count: '6'
+recipes_011:
+  name: Gooey Honey Blondies
+  created_at: '2015-02-07 20:36:44.308991'
+  updated_at: '2015-02-07 20:36:44.308991'
+  description: Dense salty honey-flavoured blondies with chopped nuts.
+  comments: ! "- I added extra salt from the original, reduce the salt to 3 tsp I
+    think.\r\n- I doubled the original recipe but I think I ended up with slightly
+    too much batter for the tin. Reduce given amounts by 1/3rd."
+  category_id: '15'
+  total_time: 2 hours
+  active_time: 1 hour
+  cooking_time: 50 minutes
+  rating: '5.00'
+  portion_count: '27'
+recipes_012:
+  name: Spicy Coriander Hummus
+  created_at: '2015-01-31 16:03:19.596894'
+  updated_at: '2015-02-08 11:07:35.062348'
+  description: Spicy hummus.
+  comments: Delicious!
+  category_id: '2'
+  total_time: 30 minutes
+  active_time: ''
+  cooking_time: ''
+  rating: '9.00'
+  portion_count: '3'
+recipes_013:
+  name: Spicy Jalapeno and Lime Hummus
+  created_at: '2015-01-31 16:26:58.731145'
+  updated_at: '2015-02-08 11:17:08.051746'
+  description: Spicy hummus.
+  comments: Very nice.
+  category_id: '2'
+  total_time: 30 minutes
+  active_time: ''
+  cooking_time: ''
+  rating: '7.50'
+  portion_count: '6'
+recipes_014:
+  name: Spinach and Bacon-Stuffed Mushrooms
+  created_at: '2015-01-31 16:38:59.132114'
+  updated_at: '2015-02-08 11:17:33.235284'
+  description: Mushrooms stuffed with a spinach and mushroom mix
+  comments: ''
+  category_id: '9'
+  total_time: ''
+  active_time: ''
+  cooking_time: ''
+  rating: '9.00'
+  portion_count: '10'
+recipes_015:
+  name: Mini Egg and Bacon Pies
+  created_at: '2015-01-31 16:46:02.799625'
+  updated_at: '2015-02-08 11:17:43.987'
+  description: Little savoury brunch pies.
+  comments: ! "Makes quite a lot?\r\n\r\nWould also work with feta or tomatoes added."
+  category_id: '9'
+  total_time: ''
+  active_time: ''
+  cooking_time: ''
+  rating: '8.00'
+  portion_count: '30'
+recipes_016:
+  name: Irish Potato Farls
+  created_at: '2015-01-31 16:51:22.920371'
+  updated_at: '2015-02-08 11:17:53.628428'
+  description: Irish potato pancakes.
+  comments: Delicious.
+  category_id: '9'
+  total_time: ''
+  active_time: ''
+  cooking_time: ''
+  rating: '7.50'
+  portion_count: '15'
+recipes_017:
+  name: Goat's Cheese Polenta Squares
+  created_at: '2015-01-31 16:58:05.861456'
+  updated_at: '2015-02-08 11:18:00.146702'
+  description: Breadcrumb-coated squares of double-cooked polenta mixed with goat's
+    cheese.
+  comments: ! "Definitely make again, the goat’s cheese was excellent. Possibly can
+    have them even a little thinner?\r\n\r\nMakes 20 squares\r\n"
+  category_id: '9'
+  total_time: ''
+  active_time: ''
+  cooking_time: ''
+  rating: '8.50'
+  portion_count: '20'
+recipes_018:
+  name: Spinach and Feta Pie
+  created_at: '2015-01-31 17:09:35.823487'
+  updated_at: '2015-02-08 11:18:23.898886'
+  description: A breakfast pie with a spinach/egg/feta base topped with a flour mix.
+  comments: ! "Quite nice.\r\n\r\n2 portions, 365 per.\r\n\r\nCould reduce the eggs.\r\nCould
+    sprinkle parmesan on top."
+  category_id: '4'
+  total_time: ''
+  active_time: ''
+  cooking_time: ''
+  rating: '6.50'
+  portion_count: '3'
+recipes_019:
+  name: Overnight Egg and Hash Brown Casserole
+  created_at: '2015-01-31 17:11:54.519275'
+  updated_at: '2015-02-08 11:18:39.507658'
+  description: Two-layer casserole with grated potatoes as the base and topped with
+    an egg mix.
+  comments: ! "Delicious.\r\n\r\n2 portions."
+  category_id: '4'
+  total_time: ''
+  active_time: ''
+  cooking_time: ''
+  rating: '7.50'
+  portion_count: '2'
+recipes_020:
+  name: Chickpea, Spinach and Chorizo Fritatta
+  created_at: '2015-01-31 17:24:07.05829'
+  updated_at: '2015-02-08 11:19:02.638351'
+  description: A delicious smoky fritatta.
+  comments: ! "Very nice.\r\n\r\n5 portions, 350 per."
+  category_id: '4'
+  total_time: ''
+  active_time: ''
+  cooking_time: ''
+  rating: '8.50'
+  portion_count: '5'
+recipes_021:
+  name: Baked Oatmeal
+  created_at: '2015-01-31 17:28:41.575438'
+  updated_at: '2015-02-08 11:19:09.726092'
+  description: Breakfast cake!
+  comments: ! "Very good!\r\n\r\n8 portions, 330 per."
+  category_id: '4'
+  total_time: ''
+  active_time: ''
+  cooking_time: ''
+  rating: '8.50'
+  portion_count: '8'
+recipes_022:
+  name: Lentil Burgers
+  created_at: '2015-01-31 17:35:55.473381'
+  updated_at: '2015-02-08 11:19:18.777602'
+  description: Lentil patties.
+  comments: ! "Delicious.\r\n\r\n6 portions (although need to check size)."
+  category_id: '5'
+  total_time: ''
+  active_time: ''
+  cooking_time: ''
+  rating: '8.50'
+  portion_count: '6'
+recipes_023:
+  name: Chickpea and Sweet Potato Burgers
+  created_at: '2015-01-31 17:40:32.07038'
+  updated_at: '2015-02-08 11:19:41.106964'
+  description: Patties made from chickpea and sweet potatoes.
+  comments: ! "Delicious.\r\n\r\n9 portions."
+  category_id: '5'
+  total_time: ''
+  active_time: ''
+  cooking_time: ''
+  rating: '8.00'
+  portion_count: '9'
+recipes_024:
+  name: Crispy Red Lentil and Chickpea Burgers
+  created_at: '2015-01-31 17:48:40.466237'
+  updated_at: '2015-02-08 11:19:53.282587'
+  description: Lentil and chickpea patties with a crispy breadcrumb crust.
+  comments: ! "Delicious.\r\n\r\n6 portions, 300 per."
+  category_id: '5'
+  total_time: ''
+  active_time: ''
+  cooking_time: ''
+  rating: '8.50'
+  portion_count: '6'
+recipes_025:
+  name: Lemon Drizzle Cake
+  created_at: '2015-01-31 17:59:16.647741'
+  updated_at: '2015-02-08 11:20:03.967705'
+  description: White lemon-flavoured cake with a lemony syrup drizzled on top.
+  comments: Delicious, and excellently lemony!
+  category_id: '6'
+  total_time: ''
+  active_time: ''
+  cooking_time: ''
+  rating: '8.00'
+  portion_count: '20'
+recipes_026:
+  name: Sweet Potato and Feta Tart
+  created_at: '2015-02-03 21:47:16.983386'
+  updated_at: '2015-02-08 11:20:19.83425'
+  description: Savoury tart filled with sweet potato and feta.
+  comments: ! "Quite nice. \r\nDefinitely serve hot.\r\nAbout 8 portions."
+  category_id: '10'
+  total_time: ''
+  active_time: ''
+  cooking_time: ''
+  rating: '7.50'
+  portion_count: '12'
+recipes_027:
+  name: Mustard Aioli Potatoes
+  created_at: '2015-02-05 21:45:30.932272'
+  updated_at: '2015-02-08 19:41:05.169017'
+  description: Side dish of roast potatoes marinated in a mustard aioli.
+  comments: ! "Really good.\r\n\r\nNot as good using yoghurt instead of mayo."
+  category_id: '11'
+  total_time: 3 hours
+  active_time: 1.5 hours
+  cooking_time: 20 minutes
+  rating: '8.00'
+  portion_count: '10'
+recipes_028:
+  name: Aubergine Parmigiana with Beef
+  created_at: '2015-02-08 19:46:36.992141'
+  updated_at: '2015-02-08 21:52:59.824226'
+  description: Layered parmigiana of breadcrumb-coated aubergine slices and beef mince
+    with a marinara sauce.
+  comments: ! "Using homemade breadcrumbs makes a big difference, they're fluffier.\r\nMaybe
+    could do with less mince, the aubergine didn't stand out as much as in the non-meat
+    version."
+  category_id: '5'
+  total_time: 3h 30 min
+  active_time: 3h
+  cooking_time: 40 min
+  rating: '8.00'
+  portion_count: '14'
+recipes_029:
+  name: Pork and Cream Cheese Meatballs
+  created_at: '2015-02-09 22:12:21.166803'
+  updated_at: '2015-02-09 22:17:57.610683'
+  description: Moist and tasty pork meatballs.
+  comments: ''
+  category_id: '5'
+  total_time: 2h
+  active_time: ''
+  cooking_time: 20m
+  rating: '8.00'
+  portion_count: '46'
+recipes_030:
+  name: Oven-Roasted Leeks
+  created_at: '2015-02-07 20:42:14.986636'
+  updated_at: '2015-02-08 21:54:29.489748'
+  description: Whole leeks roasted with some pepper and stock.
+  comments: ! "Very nice.\r\nErin likes the leeks done this way, they're softer than
+    when fried."
+  category_id: '11'
+  total_time: 45 minutes
+  active_time: 10 minutes
+  cooking_time: 35 minutes
+  rating: '6.50'
+  portion_count: '1'
+recipes_031:
+  name: Roasted Herbed Mushrooms
+  created_at: '2015-02-10 23:35:37.130901'
+  updated_at: '2015-02-10 23:35:37.130901'
+  description: Mushrooms quartered, seasoned and baked.
+  comments: ''
+  category_id: '11'
+  total_time: 40 minutes
+  active_time: 10 minutes
+  cooking_time: 35 minutes
+  rating: '7.50'
+  portion_count: '2'
+recipes_032:
+  name: Lentil, Mushroom and Sweet Potato "Shepherd's Pie"
+  created_at: '2015-02-11 23:50:57.724055'
+  updated_at: '2015-02-12 00:05:20.402905'
+  description: A vegetarian shepherd's pie with a lentil and mushroom filling and
+    a sweet potato and butternut squash topping.
+  comments: The texture of the carrots brought this one down overall.
+  category_id: '5'
+  total_time: 2h
+  active_time: 90 minutes
+  cooking_time: 30 minutes
+  rating: '7.00'
+  portion_count: '14'
+recipes_033:
+  name: Chicken and Bean Chili
+  created_at: '2015-02-14 19:51:18.154873'
+  updated_at: '2015-02-14 22:13:39.510205'
+  description: Bean and chicken with a homemade chili paste and cheese.
+  comments: ! '- very nice, but needs more heat'
+  category_id: '5'
+  total_time: 3h
+  active_time: 2h
+  cooking_time: 1h
+  rating: '7.50'
+  portion_count: '17'
+recipes_034:
+  name: Spinach and Ricotta Pie
+  created_at: '2015-02-14 11:53:14.193299'
+  updated_at: '2015-02-15 21:30:29.312533'
+  description: Savoury shortbread pie crust filled with a spinach and ricotta mix.
+  comments: ! 'Erin: really liked the pastry, but filling maybe a little bit bland'
+  category_id: '10'
+  total_time: 2h
+  active_time: 1h
+  cooking_time: 50 minutes
+  rating: '6.50'
+  portion_count: '10'
+recipes_035:
+  name: Boiled potato salad with aioli and pesto
+  created_at: '2015-02-27 00:02:41.572174'
+  updated_at: '2015-02-27 23:38:53.859917'
+  description: Boiled potatoes dressed with a garlic aioli and basil pesto, then topped
+    with some parmesan. Can be served as a hot side or a cold salad.
+  comments: ''
+  category_id: '11'
+  total_time: 45m
+  active_time: 20m
+  cooking_time: 20m
+  rating: '8.00'
+  portion_count: '16'
+recipes_036:
+  name: Chili relanos
+  created_at: '2015-02-15 21:16:22.673848'
+  updated_at: '2015-02-25 22:30:15.698422'
+  description: Chili relanos - two medium pyrex dishes of it!
+  comments: Yum!
+  category_id: '5'
+  total_time: 3h
+  active_time: 2h
+  cooking_time: '65'
+  rating: '9.50'
+  portion_count: '18'
+recipes_037:
+  name: Chickpea Bread Pudding
+  created_at: '2015-02-22 21:50:02.542311'
+  updated_at: '2015-02-25 22:31:50.344547'
+  description: Fattet hummus is a creamy, pine-nutty concoction - layered toasted
+    pita bread, yogurt and chickpeas with a pine nut topping.
+  comments: ! "I found it a bit plain but others liked it quite a bit.\r\nProbably
+    better at room temperature.\r\n\r\nErin says maybe add more yoghurt on subsequent
+    eats, if heating it up."
+  category_id: '4'
+  total_time: 90m
+  active_time: 90m
+  cooking_time: 0h
+  rating: '7.00'
+  portion_count: '12'
+recipes_038:
+  name: Butternut Squash and Roasted Garlic Galette
+  created_at: '2015-02-22 21:58:56.739104'
+  updated_at: '2015-02-25 22:38:59.012336'
+  description: Galette filled with well-garlic'd butternut squash and topped with
+    cheese
+  comments: The base can be made with maybe 1/4 more dough for the same filling -
+    was quite thin and small in the end.
+  category_id: '10'
+  total_time: 2h
+  active_time: 1h
+  cooking_time: 1h
+  rating: '6.00'
+  portion_count: '6'
+recipes_039:
+  name: Roasted Potatoes with Mustard Vinaigrette
+  created_at: '2015-02-23 23:26:57.903561'
+  updated_at: '2015-02-25 22:43:26.794135'
+  description: Roasted potatoes marinated in a vinaigrette, can be served as a cold
+    salad as well.
+  comments: ''
+  category_id: '11'
+  total_time: 1h
+  active_time: 20m
+  cooking_time: 40m
+  rating: '8.00'
+  portion_count: '12'
+recipes_040:
+  name: Chocolate Cobbler
+  created_at: '2015-02-22 22:57:08.049014'
+  updated_at: '2015-02-25 22:49:31.009446'
+  description: Decadent hot chocolate pudding, like a brownie with a molten chocolate
+    topping.
+  comments: Goes very well with icecream!
+  category_id: '14'
+  total_time: 80m
+  active_time: 40m
+  cooking_time: 40m
+  rating: '9.00'
+  portion_count: '12'
+recipes_041:
+  name: Mexican Black Bean Dip
+  created_at: '2015-02-25 22:55:28.499633'
+  updated_at: '2015-02-25 22:55:28.499633'
+  description: Mildly spicy and smoky cooked dip made from black beans.
+  comments: ! "Erin not a fan.\r\nDon't be too eager on the salt."
+  category_id: '2'
+  total_time: 45m
+  active_time: 45m
+  cooking_time: 15m
+  rating: '6.50'
+  portion_count: '10'
+recipes_042:
+  name: Lemon Polenta Cake
+  created_at: '2015-02-25 23:01:21.546011'
+  updated_at: '2015-02-25 23:02:24.437549'
+  description: Deliciously lemony cake made from polenta flour. Is gluten-free.
+  comments: ''
+  category_id: '6'
+  total_time: 100m
+  active_time: 60m
+  cooking_time: 40m
+  rating: '8.50'
+  portion_count: '20'
+recipes_043:
+  name: Mexican Tamales Pie
+  created_at: '2015-02-15 01:57:59.439502'
+  updated_at: '2015-02-15 21:56:48.587454'
+  description: Spicy meat and beans filling with a cornbread crust topping.
+  comments: ! "Quite nice.\r\nWould do the top layer of cornbread thinner next time,
+    perhaps having the bulk as a bottom layer instead.\r\n\r\nThe greek yoghurt, milk
+    and flour were as a substitute for buttermilk."
+  category_id: '5'
+  total_time: 2h
+  active_time: 1h 40 min
+  cooking_time: 20 min
+  rating: '6.50'
+  portion_count: '20'
+recipes_044:
+  name: Turkey Arancini
+  created_at: '2015-02-25 23:09:38.646176'
+  updated_at: '2015-02-25 23:09:38.646176'
+  description: Tender baked balls of turkey and rice with a breadcrumb coating
+  comments: ''
+  category_id: '5'
+  total_time: ''
+  active_time: ''
+  cooking_time: ''
+  rating: '7.00'
+  portion_count: '110'
+recipes_045:
+  name: Molten Chocolate Cakes
+  created_at: '2015-02-26 10:06:21.827718'
+  updated_at: '2015-02-26 10:06:21.827718'
+  description: Ramekin-sized chocolate pots with a molten center.
+  comments: ''
+  category_id: '14'
+  total_time: 40m
+  active_time: 30m
+  cooking_time: 14m
+  rating: '9.00'
+  portion_count: '4'
+recipes_046:
+  name: Crispy Baked Pasta with Mushroom and Chorizo
+  created_at: '2015-02-15 14:49:11.285965'
+  updated_at: '2015-02-16 21:24:17.655174'
+  description: A pasta bake with a bechamel sauce base topped with parmesan and breadcrumbs.
+  comments: ''
+  category_id: '5'
+  total_time: 2h
+  active_time: 2h
+  cooking_time: 20m
+  rating: '8.50'
+  portion_count: '14'
+recipes_047:
+  name: Red Lentil and Sweet Potato Curry
+  created_at: '2015-02-15 14:37:09.828923'
+  updated_at: '2015-02-16 21:24:41.010573'
+  description: Thick red lentil and sweet potato curry with spinach and home-made
+    curry powder.
+  comments: Fills the 5L saucepan.
+  category_id: '5'
+  total_time: 2.5h
+  active_time: 2h
+  cooking_time: 40m
+  rating: '8.00'
+  portion_count: '16'
+recipes_048:
+  name: Saffron and Butternut Baked Risotto
+  created_at: '2015-02-16 21:32:14.430207'
+  updated_at: '2015-02-16 21:38:46.109751'
+  description: Baked risotto with excellent flavours of butternut and saffron topped
+    with a breadcrumb and parmesan mix.
+  comments: ''
+  category_id: '5'
+  total_time: 2h
+  active_time: 1h 30m
+  cooking_time: 30m
+  rating: '8.00'
+  portion_count: '9'
+recipes_049:
+  name: Remoulade Sauce
+  created_at: '2015-02-27 00:31:56.493018'
+  updated_at: '2015-02-27 23:36:52.717967'
+  description: .
+  comments: ''
+  category_id: '17'
+  total_time: ''
+  active_time: ''
+  cooking_time: ''
+  rating: '6.00'
+  portion_count: '8'
+recipes_050:
+  name: Buttermilk Hush Puppies
+  created_at: '2015-02-27 00:20:47.113607'
+  updated_at: '2015-02-27 23:37:16.544331'
+  description: Baked savoury bites moist from the buttermilk and spicy from the jalapenos.
+  comments: ''
+  category_id: '9'
+  total_time: 1h
+  active_time: 40m
+  cooking_time: 20m
+  rating: '7.00'
+  portion_count: '17'
+recipes_051:
+  name: Flourless double chocolate-chip cookies
+  created_at: '2015-02-27 00:28:45.363005'
+  updated_at: '2015-02-27 23:37:50.438832'
+  description: Delicious cookies.
+  comments: Milk/dark/white chocolate ratio can be as desired.
+  category_id: '15'
+  total_time: 1h
+  active_time: 40m
+  cooking_time: 12m
+  rating: '8.00'
+  portion_count: '29'
+recipes_052:
+  name: Mushroom, spinach and cream gratin
+  created_at: '2015-02-27 00:15:04.49835'
+  updated_at: '2015-02-27 23:38:14.204645'
+  description: Creamy mushroomy mix with spinach topped with parmesan.
+  comments: ''
+  category_id: '11'
+  total_time: 1h
+  active_time: 40m
+  cooking_time: 30m
+  rating: '7.00'
+  portion_count: '12'
+recipes_053:
+  name: Key Lime Pie
+  created_at: '2015-02-27 00:06:48.521641'
+  updated_at: '2015-02-27 23:38:32.277748'
+  description: Soft digestive biscuit crust with a deliciously tangy limey filling.
+  comments: ''
+  category_id: '12'
+  total_time: 1h
+  active_time: 45m
+  cooking_time: 25m
+  rating: '8.50'
+  portion_count: '12'

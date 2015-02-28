@@ -1,0 +1,371 @@
+---
+ingredient_quantity_groups_001:
+  name: Ingredients
+  recipe_id: '19'
+  created_at: '2015-02-14 19:15:21.880067'
+  updated_at: '2015-02-14 19:15:21.880067'
+ingredient_quantity_groups_002:
+  name: Ingredients
+  recipe_id: '20'
+  created_at: '2015-02-14 19:15:21.891915'
+  updated_at: '2015-02-14 19:15:21.891915'
+ingredient_quantity_groups_003:
+  name: Ingredients
+  recipe_id: '21'
+  created_at: '2015-02-14 19:15:21.900102'
+  updated_at: '2015-02-14 19:15:21.900102'
+ingredient_quantity_groups_004:
+  name: Ingredients
+  recipe_id: '24'
+  created_at: '2015-02-14 19:15:21.914786'
+  updated_at: '2015-02-14 19:15:21.914786'
+ingredient_quantity_groups_005:
+  name: Ingredients
+  recipe_id: '26'
+  created_at: '2015-02-14 19:15:21.923715'
+  updated_at: '2015-02-14 19:15:21.923715'
+ingredient_quantity_groups_006:
+  name: Ingredients
+  recipe_id: '22'
+  created_at: '2015-02-14 19:15:21.930754'
+  updated_at: '2015-02-14 19:15:21.930754'
+ingredient_quantity_groups_007:
+  name: Ingredients
+  recipe_id: '27'
+  created_at: '2015-02-14 19:15:21.938573'
+  updated_at: '2015-02-14 19:15:21.938573'
+ingredient_quantity_groups_008:
+  name: Ingredients
+  recipe_id: '25'
+  created_at: '2015-02-14 19:15:21.946477'
+  updated_at: '2015-02-14 19:15:21.946477'
+ingredient_quantity_groups_009:
+  name: Ingredients
+  recipe_id: '30'
+  created_at: '2015-02-14 19:15:21.962445'
+  updated_at: '2015-02-14 19:15:21.962445'
+ingredient_quantity_groups_010:
+  name: Ingredients
+  recipe_id: '31'
+  created_at: '2015-02-14 19:15:21.974323'
+  updated_at: '2015-02-14 19:15:21.974323'
+ingredient_quantity_groups_011:
+  name: Ingredients
+  recipe_id: '28'
+  created_at: '2015-02-14 19:15:21.981489'
+  updated_at: '2015-02-14 19:15:21.981489'
+ingredient_quantity_groups_012:
+  name: Ingredients
+  recipe_id: '3'
+  created_at: '2015-02-14 19:15:21.989255'
+  updated_at: '2015-02-14 19:15:21.989255'
+ingredient_quantity_groups_013:
+  name: Ingredients
+  recipe_id: '4'
+  created_at: '2015-02-14 19:15:21.995971'
+  updated_at: '2015-02-14 19:15:21.995971'
+ingredient_quantity_groups_014:
+  name: Ingredients
+  recipe_id: '5'
+  created_at: '2015-02-14 19:15:22.01017'
+  updated_at: '2015-02-14 19:15:22.01017'
+ingredient_quantity_groups_015:
+  name: Ingredients
+  recipe_id: '6'
+  created_at: '2015-02-14 19:15:22.017458'
+  updated_at: '2015-02-14 19:15:22.017458'
+ingredient_quantity_groups_016:
+  name: Ingredients
+  recipe_id: '7'
+  created_at: '2015-02-14 19:15:22.024153'
+  updated_at: '2015-02-14 19:15:22.024153'
+ingredient_quantity_groups_017:
+  name: Ingredients
+  recipe_id: '8'
+  created_at: '2015-02-14 19:15:22.030862'
+  updated_at: '2015-02-14 19:15:22.030862'
+ingredient_quantity_groups_018:
+  name: Ingredients
+  recipe_id: '9'
+  created_at: '2015-02-14 19:15:22.038314'
+  updated_at: '2015-02-14 19:15:22.038314'
+ingredient_quantity_groups_019:
+  name: Ingredients
+  recipe_id: '10'
+  created_at: '2015-02-14 19:15:22.048562'
+  updated_at: '2015-02-14 19:15:22.048562'
+ingredient_quantity_groups_020:
+  name: Ingredients
+  recipe_id: '11'
+  created_at: '2015-02-14 19:15:22.065276'
+  updated_at: '2015-02-14 19:15:22.065276'
+ingredient_quantity_groups_021:
+  name: Ingredients
+  recipe_id: '12'
+  created_at: '2015-02-14 19:15:22.075836'
+  updated_at: '2015-02-14 19:15:22.075836'
+ingredient_quantity_groups_022:
+  name: Ingredients
+  recipe_id: '13'
+  created_at: '2015-02-14 19:15:22.083992'
+  updated_at: '2015-02-14 19:15:22.083992'
+ingredient_quantity_groups_023:
+  name: Ingredients
+  recipe_id: '14'
+  created_at: '2015-02-14 19:15:22.11351'
+  updated_at: '2015-02-14 19:15:22.11351'
+ingredient_quantity_groups_024:
+  name: Ingredients
+  recipe_id: '15'
+  created_at: '2015-02-14 19:15:22.126502'
+  updated_at: '2015-02-14 19:15:22.126502'
+ingredient_quantity_groups_025:
+  name: Ingredients
+  recipe_id: '16'
+  created_at: '2015-02-14 19:15:22.150388'
+  updated_at: '2015-02-14 19:15:22.150388'
+ingredient_quantity_groups_026:
+  name: Ingredients
+  recipe_id: '17'
+  created_at: '2015-02-14 19:15:22.177816'
+  updated_at: '2015-02-14 19:15:22.177816'
+ingredient_quantity_groups_027:
+  name: Ingredients
+  recipe_id: '23'
+  created_at: '2015-02-14 19:15:22.186403'
+  updated_at: '2015-02-14 19:15:22.186403'
+ingredient_quantity_groups_028:
+  name: Ingredients
+  recipe_id: '32'
+  created_at: '2015-02-14 19:15:22.19402'
+  updated_at: '2015-02-14 19:15:22.19402'
+ingredient_quantity_groups_029:
+  name: Ingredients
+  recipe_id: '33'
+  created_at: '2015-02-14 19:15:22.202636'
+  updated_at: '2015-02-14 19:15:22.202636'
+ingredient_quantity_groups_030:
+  name: Ingredients
+  recipe_id: '29'
+  created_at: '2015-02-14 19:15:22.214'
+  updated_at: '2015-02-14 19:15:22.214'
+ingredient_quantity_groups_031:
+  name: Ingredients
+  recipe_id: '34'
+  created_at: '2015-02-14 19:15:22.220017'
+  updated_at: '2015-02-14 19:15:22.220017'
+ingredient_quantity_groups_032:
+  name: Ingredients
+  recipe_id: '35'
+  created_at: '2015-02-14 19:15:22.226441'
+  updated_at: '2015-02-14 19:15:22.226441'
+ingredient_quantity_groups_033:
+  name: Ingredients
+  recipe_id: '36'
+  created_at: '2015-02-14 19:15:22.235156'
+  updated_at: '2015-02-14 19:15:22.235156'
+ingredient_quantity_groups_034:
+  name: Chili Paste
+  recipe_id: '37'
+  created_at: '2015-02-14 19:51:18.161126'
+  updated_at: '2015-02-14 19:51:18.161126'
+ingredient_quantity_groups_035:
+  name: Default
+  recipe_id: '40'
+  created_at: '2015-02-15 01:57:59.441537'
+  updated_at: '2015-02-15 01:57:59.441537'
+ingredient_quantity_groups_036:
+  name: Lentils
+  recipe_id: '41'
+  created_at: '2015-02-15 14:37:09.836033'
+  updated_at: '2015-02-15 14:37:09.836033'
+ingredient_quantity_groups_037:
+  name: Sweet Potato
+  recipe_id: '41'
+  created_at: '2015-02-15 14:37:09.84664'
+  updated_at: '2015-02-15 14:37:09.84664'
+ingredient_quantity_groups_038:
+  name: Curry Powder
+  recipe_id: '41'
+  created_at: '2015-02-15 14:37:09.853294'
+  updated_at: '2015-02-15 14:37:09.853294'
+ingredient_quantity_groups_039:
+  name: Remainder
+  recipe_id: '41'
+  created_at: '2015-02-15 14:37:09.860219'
+  updated_at: '2015-02-15 14:37:09.860219'
+ingredient_quantity_groups_040:
+  name: Topping
+  recipe_id: '42'
+  created_at: '2015-02-15 14:49:11.288655'
+  updated_at: '2015-02-15 14:49:11.288655'
+ingredient_quantity_groups_041:
+  name: Base
+  recipe_id: '42'
+  created_at: '2015-02-15 14:49:11.308438'
+  updated_at: '2015-02-15 14:49:11.308438'
+ingredient_quantity_groups_042:
+  name: Base
+  recipe_id: '44'
+  created_at: '2015-02-15 21:16:22.67571'
+  updated_at: '2015-02-15 21:16:22.67571'
+ingredient_quantity_groups_043:
+  name: Topping
+  recipe_id: '44'
+  created_at: '2015-02-15 21:16:22.694591'
+  updated_at: '2015-02-15 21:16:22.694591'
+ingredient_quantity_groups_044:
+  name: Chili
+  recipe_id: '37'
+  created_at: '2015-02-14 19:51:18.182231'
+  updated_at: '2015-02-15 21:47:02.971464'
+ingredient_quantity_groups_045:
+  name: Risotto
+  recipe_id: '45'
+  created_at: '2015-02-16 21:32:14.436234'
+  updated_at: '2015-02-16 21:32:14.436234'
+ingredient_quantity_groups_046:
+  name: Bechamel Sauce
+  recipe_id: '45'
+  created_at: '2015-02-16 21:32:14.471673'
+  updated_at: '2015-02-16 21:32:14.471673'
+ingredient_quantity_groups_047:
+  name: Topping
+  recipe_id: '45'
+  created_at: '2015-02-16 21:32:14.490233'
+  updated_at: '2015-02-16 21:32:14.490233'
+ingredient_quantity_groups_048:
+  name: Default
+  recipe_id: '46'
+  created_at: '2015-02-22 21:50:02.556449'
+  updated_at: '2015-02-22 21:50:02.556449'
+ingredient_quantity_groups_049:
+  name: Bread
+  recipe_id: '47'
+  created_at: '2015-02-22 21:58:56.741837'
+  updated_at: '2015-02-22 21:58:56.741837'
+ingredient_quantity_groups_050:
+  name: Filling
+  recipe_id: '47'
+  created_at: '2015-02-22 21:58:56.756118'
+  updated_at: '2015-02-22 21:58:56.756118'
+ingredient_quantity_groups_051:
+  name: Default
+  recipe_id: '47'
+  created_at: '2015-02-22 21:58:56.773494'
+  updated_at: '2015-02-22 21:58:56.773494'
+ingredient_quantity_groups_052:
+  name: Default
+  recipe_id: '47'
+  created_at: '2015-02-22 21:58:56.778108'
+  updated_at: '2015-02-22 21:58:56.778108'
+ingredient_quantity_groups_053:
+  name: Filling
+  recipe_id: '48'
+  created_at: '2015-02-22 22:57:08.051622'
+  updated_at: '2015-02-22 22:57:08.051622'
+ingredient_quantity_groups_054:
+  name: Default
+  recipe_id: '49'
+  created_at: '2015-02-23 23:26:57.909202'
+  updated_at: '2015-02-23 23:26:57.909202'
+ingredient_quantity_groups_055:
+  name: Default
+  recipe_id: '51'
+  created_at: '2015-02-25 22:55:28.503038'
+  updated_at: '2015-02-25 22:55:28.503038'
+ingredient_quantity_groups_056:
+  name: Cake
+  recipe_id: '52'
+  created_at: '2015-02-25 23:01:21.548009'
+  updated_at: '2015-02-25 23:01:21.548009'
+ingredient_quantity_groups_057:
+  name: Syrup
+  recipe_id: '52'
+  created_at: '2015-02-25 23:01:21.558511'
+  updated_at: '2015-02-25 23:01:21.558511'
+ingredient_quantity_groups_058:
+  name: Filling
+  recipe_id: '53'
+  created_at: '2015-02-25 23:09:38.648214'
+  updated_at: '2015-02-25 23:09:38.648214'
+ingredient_quantity_groups_059:
+  name: Marinara Sauce
+  recipe_id: '53'
+  created_at: '2015-02-25 23:15:59.99287'
+  updated_at: '2015-02-25 23:15:59.99287'
+ingredient_quantity_groups_060:
+  name: Coating
+  recipe_id: '53'
+  created_at: '2015-02-25 23:16:00.002936'
+  updated_at: '2015-02-25 23:16:00.002936'
+ingredient_quantity_groups_061:
+  name: Default
+  recipe_id: '54'
+  created_at: '2015-02-26 10:06:21.837808'
+  updated_at: '2015-02-26 10:06:21.837808'
+ingredient_quantity_groups_062:
+  name: Potatoes
+  recipe_id: '55'
+  created_at: '2015-02-27 00:02:41.575692'
+  updated_at: '2015-02-27 00:02:41.575692'
+ingredient_quantity_groups_063:
+  name: Aioli
+  recipe_id: '55'
+  created_at: '2015-02-27 00:02:41.585131'
+  updated_at: '2015-02-27 00:02:41.585131'
+ingredient_quantity_groups_064:
+  name: Pesto
+  recipe_id: '55'
+  created_at: '2015-02-27 00:02:41.594588'
+  updated_at: '2015-02-27 00:02:41.594588'
+ingredient_quantity_groups_065:
+  name: Crust
+  recipe_id: '56'
+  created_at: '2015-02-27 00:06:48.523395'
+  updated_at: '2015-02-27 00:06:48.523395'
+ingredient_quantity_groups_066:
+  name: Filling
+  recipe_id: '56'
+  created_at: '2015-02-27 00:06:48.529986'
+  updated_at: '2015-02-27 00:06:48.529986'
+ingredient_quantity_groups_067:
+  name: Creamy Mushroom Mix
+  recipe_id: '57'
+  created_at: '2015-02-27 00:15:04.500171'
+  updated_at: '2015-02-27 00:15:04.500171'
+ingredient_quantity_groups_068:
+  name: Spinach
+  recipe_id: '57'
+  created_at: '2015-02-27 00:15:04.508648'
+  updated_at: '2015-02-27 00:15:04.508648'
+ingredient_quantity_groups_069:
+  name: Topping
+  recipe_id: '57'
+  created_at: '2015-02-27 00:15:04.514975'
+  updated_at: '2015-02-27 00:15:04.514975'
+ingredient_quantity_groups_070:
+  name: Default
+  recipe_id: '58'
+  created_at: '2015-02-27 00:20:47.115358'
+  updated_at: '2015-02-27 00:20:47.115358'
+ingredient_quantity_groups_071:
+  name: Wet
+  recipe_id: '59'
+  created_at: '2015-02-27 00:28:45.365553'
+  updated_at: '2015-02-27 00:28:45.365553'
+ingredient_quantity_groups_072:
+  name: Dry
+  recipe_id: '59'
+  created_at: '2015-02-27 00:28:45.372133'
+  updated_at: '2015-02-27 00:28:45.372133'
+ingredient_quantity_groups_073:
+  name: Chocolate
+  recipe_id: '59'
+  created_at: '2015-02-27 00:28:45.38017'
+  updated_at: '2015-02-27 00:28:45.38017'
+ingredient_quantity_groups_074:
+  name: Default
+  recipe_id: '60'
+  created_at: '2015-02-27 00:31:56.494693'
+  updated_at: '2015-02-27 00:31:56.494693'

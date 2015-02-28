@@ -1,0 +1,3 @@
+./bin/rake db:fixtures:dump RAILS_ENV=development
+sed -i -e '/ id:/d' *
+

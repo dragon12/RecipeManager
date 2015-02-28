@@ -1,0 +1,1772 @@
+---
+ingredients_001:
+  name: Aubergine
+  created_at: '2015-02-08 19:47:36.594813'
+  updated_at: '2015-02-08 19:47:36.594813'
+  measurement_type_id: '5'
+  cost_basis: '300'
+  cost: '0.75'
+  kcal: '25'
+  cost_note: Asda, assuming 10% wastage
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_002:
+  name: Beef Mince 5% fat
+  created_at: '2015-02-08 19:48:23.169222'
+  updated_at: '2015-02-08 19:48:23.169222'
+  measurement_type_id: '5'
+  cost_basis: '750'
+  cost: '6.00'
+  kcal: '147'
+  cost_note: Asda Butcher's Selection
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_003:
+  name: Refried Beans
+  created_at: '2015-02-11 21:39:38.866931'
+  updated_at: '2015-02-11 21:39:38.866931'
+  measurement_type_id: '5'
+  cost_basis: '435'
+  cost: '1.30'
+  kcal: '92'
+  cost_note: ''
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_004:
+  name: Anchovy Fillets
+  created_at: '2015-02-14 11:49:58.88819'
+  updated_at: '2015-02-14 11:49:58.88819'
+  measurement_type_id: '6'
+  cost_basis: '8'
+  cost: '0.70'
+  kcal: '12'
+  cost_note: Tesco, assuming 8 per pack
+  kcal_note: ''
+  kcal_basis: '1'
+ingredients_005:
+  name: Bacon
+  created_at: '2015-01-31 16:28:15.96705'
+  updated_at: '2015-02-08 10:33:54.904251'
+  measurement_type_id: '6'
+  cost_basis: '8'
+  cost: '2.55'
+  kcal: '32'
+  cost_note: Asda medallions
+  kcal_note: ''
+  kcal_basis: '1'
+ingredients_006:
+  name: Chopped Tomatos
+  created_at: '2015-02-05 20:46:14.236597'
+  updated_at: '2015-02-08 10:36:41.317495'
+  measurement_type_id: '5'
+  cost_basis: '400'
+  cost: '0.50'
+  kcal: '22'
+  cost_note: Napolina
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_007:
+  name: Cinnamon
+  created_at: '2015-01-31 17:24:41.336918'
+  updated_at: '2015-02-08 10:37:31.907205'
+  measurement_type_id: '7'
+  cost_basis: '20'
+  cost: '1.50'
+  kcal: '4'
+  cost_note: Refill pack
+  kcal_note: ''
+  kcal_basis: '1'
+ingredients_008:
+  name: Cream Cheese, light
+  created_at: '2015-02-09 22:17:33.155285'
+  updated_at: '2015-02-09 22:17:33.155285'
+  measurement_type_id: '5'
+  cost_basis: '280'
+  cost: '2.40'
+  kcal: '152'
+  cost_note: Philadelphia
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_009:
+  name: Pork Mince 5% Fat
+  created_at: '2015-02-09 22:16:26.563307'
+  updated_at: '2015-02-09 22:18:24.345218'
+  measurement_type_id: '5'
+  cost_basis: '500'
+  cost: '3.00'
+  kcal: '152'
+  cost_note: Tesco
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_010:
+  name: Carrots
+  created_at: '2015-02-11 23:52:23.941224'
+  updated_at: '2015-02-11 23:52:23.941224'
+  measurement_type_id: '5'
+  cost_basis: '1200'
+  cost: '0.60'
+  kcal: '24'
+  cost_note: Assuming 20% wastage
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_011:
+  name: Tamarind Paste
+  created_at: '2015-02-11 23:55:03.030825'
+  updated_at: '2015-02-11 23:55:37.007563'
+  measurement_type_id: '4'
+  cost_basis: '454'
+  cost: '1.99'
+  kcal: '225'
+  cost_note: ''
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_012:
+  name: Tomato Paste
+  created_at: '2015-02-11 23:54:17.102033'
+  updated_at: '2015-02-11 23:55:53.74942'
+  measurement_type_id: '4'
+  cost_basis: '200'
+  cost: '0.45'
+  kcal: '86'
+  cost_note: ''
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_013:
+  name: Bay Leaves
+  created_at: '2015-02-11 23:51:43.813861'
+  updated_at: '2015-02-12 00:02:36.03147'
+  measurement_type_id: '6'
+  cost_basis: '12'
+  cost: '0.70'
+  kcal: '0'
+  cost_note: Tesco, approx
+  kcal_note: ''
+  kcal_basis: '12'
+ingredients_014:
+  name: Almonds, ground
+  created_at: '2015-01-31 17:50:04.877573'
+  updated_at: '2015-02-07 14:47:52.872643'
+  measurement_type_id: '5'
+  cost_basis: '100'
+  cost: '1.00'
+  kcal: '575'
+  cost_note: 
+  kcal_note: 
+  kcal_basis: '100'
+ingredients_015:
+  name: Garlic Powder
+  created_at: '2015-02-11 23:58:28.072828'
+  updated_at: '2015-02-12 00:03:06.160072'
+  measurement_type_id: '7'
+  cost_basis: '120'
+  cost: '1.39'
+  kcal: '331'
+  cost_note: 400g pack, 5ml = 3.3g
+  kcal_note: 100g
+  kcal_basis: '30'
+ingredients_016:
+  name: Apple, chopped
+  created_at: '2015-01-31 17:24:55.571759'
+  updated_at: '2015-02-07 15:04:32.693454'
+  measurement_type_id: '5'
+  cost_basis: '100'
+  cost: '0.15'
+  kcal: '52'
+  cost_note: 
+  kcal_note: 
+  kcal_basis: '100'
+ingredients_017:
+  name: Apple Sauce
+  created_at: '2015-01-31 17:24:52.438271'
+  updated_at: '2015-02-07 15:06:24.397888'
+  measurement_type_id: '5'
+  cost_basis: '100'
+  cost: '0.29'
+  kcal: '111'
+  cost_note: 
+  kcal_note: 
+  kcal_basis: '100'
+ingredients_018:
+  name: Basil Leaves, dried
+  created_at: '2015-02-05 00:27:26.63947'
+  updated_at: '2015-02-07 17:08:35.905973'
+  measurement_type_id: '7'
+  cost_basis: '20'
+  cost: '0.80'
+  kcal: '0'
+  cost_note: refill pack
+  kcal_note: ''
+  kcal_basis: '20'
+ingredients_019:
+  name: Balsamic Vinegar
+  created_at: '2015-02-05 00:46:57.572332'
+  updated_at: '2015-02-07 15:10:43.518887'
+  measurement_type_id: '4'
+  cost_basis: '100'
+  cost: '0.86'
+  kcal: '100'
+  cost_note: 
+  kcal_note: 
+  kcal_basis: '100'
+ingredients_020:
+  name: Bread
+  created_at: '2015-02-05 21:49:37.396795'
+  updated_at: '2015-02-07 15:37:47.540863'
+  measurement_type_id: '5'
+  cost_basis: '100'
+  cost: '0.19'
+  kcal: '236'
+  cost_note: 
+  kcal_note: 
+  kcal_basis: '100'
+ingredients_021:
+  name: Butter
+  created_at: '2015-01-31 16:46:18.640648'
+  updated_at: '2015-02-07 17:10:58.995676'
+  measurement_type_id: '5'
+  cost_basis: '100'
+  cost: '0.68'
+  kcal: '717'
+  cost_note: lurpak
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_022:
+  name: Basil Pesto
+  created_at: '2015-02-05 20:45:29.792214'
+  updated_at: '2015-02-07 15:14:20.256626'
+  measurement_type_id: '5'
+  cost_basis: '100'
+  cost: '1.10'
+  kcal: '477'
+  cost_note: 
+  kcal_note: 
+  kcal_basis: '100'
+ingredients_023:
+  name: Chickpeas
+  created_at: '2015-01-31 15:53:58.229449'
+  updated_at: '2015-02-07 17:11:56.451257'
+  measurement_type_id: '5'
+  cost_basis: '100'
+  cost: '0.10'
+  kcal: '164'
+  cost_note: estimated
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_024:
+  name: Breadcrumbs
+  created_at: '2015-01-31 16:28:22.416521'
+  updated_at: '2015-02-07 15:16:52.885976'
+  measurement_type_id: '5'
+  cost_basis: '100'
+  cost: '0.22'
+  kcal: '395'
+  cost_note: 
+  kcal_note: 
+  kcal_basis: '100'
+ingredients_025:
+  name: Chicken Stock
+  created_at: '2015-01-31 17:12:18.591937'
+  updated_at: '2015-02-07 17:11:44.872566'
+  measurement_type_id: '4'
+  cost_basis: '200'
+  cost: '0.10'
+  kcal: '15'
+  cost_note: made from 1 cube
+  kcal_note: ''
+  kcal_basis: '200'
+ingredients_026:
+  name: Chili Powder
+  created_at: '2015-01-31 16:42:00.772495'
+  updated_at: '2015-02-07 17:13:23.999853'
+  measurement_type_id: '7'
+  cost_basis: '20'
+  cost: '2.65'
+  kcal: '0'
+  cost_note: ''
+  kcal_note: ''
+  kcal_basis: '20'
+ingredients_027:
+  name: Apple
+  created_at: '2015-02-07 15:04:56.949814'
+  updated_at: '2015-02-07 15:36:40.251159'
+  measurement_type_id: '6'
+  cost_basis: '1'
+  cost: '0.50'
+  kcal: '94'
+  cost_note: 
+  kcal_note: 
+  kcal_basis: '1'
+ingredients_028:
+  name: Baking Powder
+  created_at: '2015-01-31 16:46:30.340217'
+  updated_at: '2015-02-07 15:37:00.584679'
+  measurement_type_id: '7'
+  cost_basis: '20'
+  cost: '0.76'
+  kcal: '53'
+  cost_note: 
+  kcal_note: 
+  kcal_basis: '20'
+ingredients_029:
+  name: Chili Flakes
+  created_at: '2015-01-31 17:02:08.301565'
+  updated_at: '2015-02-07 15:40:48.300313'
+  measurement_type_id: '7'
+  cost_basis: '20'
+  cost: '2.20'
+  kcal: '0'
+  cost_note: 
+  kcal_note: 
+  kcal_basis: '20'
+ingredients_030:
+  name: Chives, fresh
+  created_at: '2015-01-31 16:51:50.384226'
+  updated_at: '2015-02-07 17:19:42.856101'
+  measurement_type_id: '4'
+  cost_basis: '125'
+  cost: '0.70'
+  kcal: '10'
+  cost_note: standard asda packet
+  kcal_note: ''
+  kcal_basis: '125'
+ingredients_031:
+  name: Chilis
+  created_at: '2015-01-31 17:29:54.998193'
+  updated_at: '2015-02-07 17:14:00.718469'
+  measurement_type_id: '6'
+  cost_basis: '1'
+  cost: '0.03'
+  kcal: '0'
+  cost_note: ''
+  kcal_note: ''
+  kcal_basis: '1'
+ingredients_032:
+  name: Coriander Leaves
+  created_at: '2015-01-31 15:54:08.731246'
+  updated_at: '2015-02-07 17:20:25.662877'
+  measurement_type_id: '4'
+  cost_basis: '125'
+  cost: '0.75'
+  kcal: '23'
+  cost_note: asda bunch
+  kcal_note: ''
+  kcal_basis: '125'
+ingredients_033:
+  name: Chorizo
+  created_at: '2015-01-31 17:19:52.672797'
+  updated_at: '2015-02-07 17:16:21.391017'
+  measurement_type_id: '5'
+  cost_basis: '100'
+  cost: '0.89'
+  kcal: '440'
+  cost_note: Asda Spanish
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_034:
+  name: Coriander, ground
+  created_at: '2015-01-31 15:55:57.71924'
+  updated_at: '2015-02-07 17:18:59.362368'
+  measurement_type_id: '7'
+  cost_basis: '20'
+  cost: '0.80'
+  kcal: '150'
+  cost_note: ''
+  kcal_note: ''
+  kcal_basis: '20'
+ingredients_035:
+  name: Cream of Tartar
+  created_at: '2015-02-05 21:40:49.823172'
+  updated_at: '2015-02-08 10:37:55.557901'
+  measurement_type_id: '7'
+  cost_basis: '9'
+  cost: '1.09'
+  kcal: '9'
+  cost_note: 30g pack
+  kcal_note: ''
+  kcal_basis: '1'
+ingredients_036:
+  name: Cornflour
+  created_at: '2015-02-05 21:26:46.718004'
+  updated_at: '2015-02-08 10:39:29.617025'
+  measurement_type_id: '7'
+  cost_basis: '20'
+  cost: '0.30'
+  kcal: '17'
+  cost_note: 100g
+  kcal_note: ''
+  kcal_basis: '1'
+ingredients_037:
+  name: Basil Leaves
+  created_at: '2015-01-31 17:12:25.949338'
+  updated_at: '2015-02-07 17:19:34.123414'
+  measurement_type_id: '4'
+  cost_basis: '125'
+  cost: '0.70'
+  kcal: '5'
+  cost_note: standard asda packet
+  kcal_note: ''
+  kcal_basis: '125'
+ingredients_038:
+  name: Coriander Leaves (dried)
+  created_at: '2015-02-05 00:27:15.10653'
+  updated_at: '2015-02-07 17:21:08.147297'
+  measurement_type_id: '7'
+  cost_basis: '20'
+  cost: '1.65'
+  kcal: '0'
+  cost_note: asda
+  kcal_note: ''
+  kcal_basis: '20'
+ingredients_039:
+  name: Cream, double
+  created_at: '2015-02-05 21:24:49.661231'
+  updated_at: '2015-02-07 17:23:38.868467'
+  measurement_type_id: '4'
+  cost_basis: '100'
+  cost: '0.28'
+  kcal: '350'
+  cost_note: Elmlea
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_040:
+  name: Courgette
+  created_at: '2015-01-31 17:00:51.633673'
+  updated_at: '2015-02-07 17:22:50.417313'
+  measurement_type_id: '5'
+  cost_basis: '100'
+  cost: '0.19'
+  kcal: '18'
+  cost_note: asda 20150207half a courgette
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_041:
+  name: Cucumber
+  created_at: '2015-02-05 22:02:33.223936'
+  updated_at: '2015-02-07 17:27:25.030669'
+  measurement_type_id: '6'
+  cost_basis: '1'
+  cost: '0.49'
+  kcal: '15'
+  cost_note: ''
+  kcal_note: ''
+  kcal_basis: '1'
+ingredients_042:
+  name: Cumin, ground
+  created_at: '2015-01-31 15:55:26.978718'
+  updated_at: '2015-02-07 17:28:18.5261'
+  measurement_type_id: '7'
+  cost_basis: '20'
+  cost: '0.60'
+  kcal: '160'
+  cost_note: refill pack
+  kcal_note: ''
+  kcal_basis: '20'
+ingredients_043:
+  name: Cumin seeds
+  created_at: '2015-02-05 21:08:19.040996'
+  updated_at: '2015-02-07 17:29:17.690022'
+  measurement_type_id: '7'
+  cost_basis: '20'
+  cost: '1.65'
+  kcal: '125'
+  cost_note: refill pack
+  kcal_note: ''
+  kcal_basis: '20'
+ingredients_044:
+  name: Currants
+  created_at: '2015-01-31 17:24:59.637425'
+  updated_at: '2015-02-07 17:30:06.761149'
+  measurement_type_id: '5'
+  cost_basis: '100'
+  cost: '0.31'
+  kcal: '287'
+  cost_note: asda
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_045:
+  name: Dill Leaves
+  created_at: '2015-01-31 17:01:47.239135'
+  updated_at: '2015-02-07 17:30:57.413389'
+  measurement_type_id: '4'
+  cost_basis: '125'
+  cost: '0.75'
+  kcal: '100'
+  cost_note: standard asda packet
+  kcal_note: ''
+  kcal_basis: '125'
+ingredients_046:
+  name: Egg
+  created_at: '2015-01-31 16:41:43.57345'
+  updated_at: '2015-02-07 17:32:32.784535'
+  measurement_type_id: '6'
+  cost_basis: '1'
+  cost: '0.32'
+  kcal: '85'
+  cost_note: Large Happy Egg
+  kcal_note: ''
+  kcal_basis: '1'
+ingredients_047:
+  name: Egg whites
+  created_at: '2015-02-05 21:40:56.56838'
+  updated_at: '2015-02-07 17:34:21.491554'
+  measurement_type_id: '6'
+  cost_basis: '1'
+  cost: '0.16'
+  kcal: '20'
+  cost_note: ''
+  kcal_note: ''
+  kcal_basis: '1'
+ingredients_048:
+  name: Egg yolks
+  created_at: '2015-02-05 21:24:59.500478'
+  updated_at: '2015-02-07 17:34:35.52975'
+  measurement_type_id: '6'
+  cost_basis: '1'
+  cost: '0.16'
+  kcal: '70'
+  cost_note: ''
+  kcal_note: ''
+  kcal_basis: '1'
+ingredients_049:
+  name: Fava beans
+  created_at: '2015-02-05 21:08:10.216392'
+  updated_at: '2015-02-07 17:36:00.204106'
+  measurement_type_id: '5'
+  cost_basis: '100'
+  cost: '0.40'
+  kcal: '110'
+  cost_note: asda tin, drained
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_050:
+  name: Feta
+  created_at: '2015-01-31 17:02:11.910559'
+  updated_at: '2015-02-07 17:36:52.703767'
+  measurement_type_id: '5'
+  cost_basis: '100'
+  cost: '0.90'
+  kcal: '321'
+  cost_note: Hotos Greek Feta
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_051:
+  name: Flour, wholegrain
+  created_at: '2015-01-31 17:02:23.33684'
+  updated_at: '2015-02-07 17:38:02.722902'
+  measurement_type_id: '5'
+  cost_basis: '100'
+  cost: '0.14'
+  kcal: '350'
+  cost_note: Allinson's
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_052:
+  name: Goat's Cheese
+  created_at: '2015-01-31 16:51:44.433855'
+  updated_at: '2015-02-07 17:40:13.989876'
+  measurement_type_id: '5'
+  cost_basis: '100'
+  cost: '1.10'
+  kcal: '300'
+  cost_note: Soignon
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_053:
+  name: Golden Syrup
+  created_at: '2015-02-05 21:24:34.258602'
+  updated_at: '2015-02-07 17:42:28.796962'
+  measurement_type_id: '4'
+  cost_basis: '71'
+  cost: '0.32'
+  kcal: '310'
+  cost_note: Lyle's bottle100g
+  kcal_note: ''
+  kcal_basis: '71'
+ingredients_054:
+  name: Honey
+  created_at: '2015-01-31 17:24:38.172559'
+  updated_at: '2015-02-07 17:43:38.479853'
+  measurement_type_id: '4'
+  cost_basis: '70'
+  cost: '0.34'
+  kcal: '341'
+  cost_note: Asda clear100g
+  kcal_note: ''
+  kcal_basis: '70'
+ingredients_055:
+  name: Jalapenos
+  created_at: '2015-01-31 15:54:43.724181'
+  updated_at: '2015-02-07 17:46:57.104358'
+  measurement_type_id: '5'
+  cost_basis: '100'
+  cost: '0.58'
+  kcal: '27'
+  cost_note: old el paso sliced
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_056:
+  name: Leek
+  created_at: '2015-02-05 21:50:12.34937'
+  updated_at: '2015-02-07 17:47:55.071456'
+  measurement_type_id: '6'
+  cost_basis: '1'
+  cost: '0.25'
+  kcal: '30'
+  cost_note: ''
+  kcal_note: ''
+  kcal_basis: '1'
+ingredients_057:
+  name: Lemon
+  created_at: '2015-01-31 17:40:38.747283'
+  updated_at: '2015-02-07 17:48:24.620903'
+  measurement_type_id: '6'
+  cost_basis: '1'
+  cost: '0.30'
+  kcal: '0'
+  cost_note: ''
+  kcal_note: ''
+  kcal_basis: '1'
+ingredients_058:
+  name: Lentils, green
+  created_at: '2015-01-31 17:29:24.99541'
+  updated_at: '2015-02-07 17:50:53.611234'
+  measurement_type_id: '5'
+  cost_basis: '100'
+  cost: '0.18'
+  kcal: '353'
+  cost_note: east end, 2kg
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_059:
+  name: Lime Juice, bottled
+  created_at: '2015-01-31 15:55:40.387857'
+  updated_at: '2015-02-07 17:52:15.352253'
+  measurement_type_id: '4'
+  cost_basis: '100'
+  cost: '0.24'
+  kcal: '22'
+  cost_note: asda
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_060:
+  name: Marjoram
+  created_at: '2015-01-31 17:29:34.581416'
+  updated_at: '2015-02-07 17:54:06.401959'
+  measurement_type_id: '7'
+  cost_basis: '20'
+  cost: '1.65'
+  kcal: '25'
+  cost_note: ''
+  kcal_note: ''
+  kcal_basis: '20'
+ingredients_061:
+  name: Milk, skimmed
+  created_at: '2015-01-31 16:46:23.723944'
+  updated_at: '2015-02-07 17:56:03.072794'
+  measurement_type_id: '4'
+  cost_basis: '100'
+  cost: '0.08'
+  kcal: '35'
+  cost_note: asda
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_062:
+  name: Flour, plain
+  created_at: '2015-01-31 16:46:40.593044'
+  updated_at: '2015-02-07 17:37:33.412834'
+  measurement_type_id: '5'
+  cost_basis: '100'
+  cost: '0.08'
+  kcal: '340'
+  cost_note: Allinson's
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_063:
+  name: Tarragon
+  created_at: '2015-02-05 21:45:50.150021'
+  updated_at: '2015-02-07 18:38:26.936341'
+  measurement_type_id: '7'
+  cost_basis: '20'
+  cost: '1.65'
+  kcal: '15'
+  cost_note: ''
+  kcal_note: ''
+  kcal_basis: '20'
+ingredients_064:
+  name: Nutmeg
+  created_at: '2015-02-05 22:28:50.139035'
+  updated_at: '2015-02-07 18:08:43.535854'
+  measurement_type_id: '7'
+  cost_basis: '20'
+  cost: '1.40'
+  kcal: '175'
+  cost_note: refill
+  kcal_note: ''
+  kcal_basis: '20'
+ingredients_065:
+  name: Olive
+  created_at: '2015-02-05 22:04:01.180133'
+  updated_at: '2015-02-07 18:12:28.540582'
+  measurement_type_id: '5'
+  cost_basis: '100'
+  cost: '0.22'
+  kcal: '115'
+  cost_note: Asda black pitted
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_066:
+  name: Oregano
+  created_at: '2015-01-31 16:28:37.588406'
+  updated_at: '2015-02-07 18:14:07.142664'
+  measurement_type_id: '7'
+  cost_basis: '20'
+  cost: '1.65'
+  kcal: '19'
+  cost_note: refill
+  kcal_note: ''
+  kcal_basis: '20'
+ingredients_067:
+  name: Paprika
+  created_at: '2015-01-31 17:19:56.566059'
+  updated_at: '2015-02-07 18:15:12.742394'
+  measurement_type_id: '7'
+  cost_basis: '20'
+  cost: '1.65'
+  kcal: '98'
+  cost_note: refill
+  kcal_note: ''
+  kcal_basis: '20'
+ingredients_068:
+  name: Parsley Leaves
+  created_at: '2015-01-31 16:28:30.770542'
+  updated_at: '2015-02-07 18:18:24.108419'
+  measurement_type_id: '4'
+  cost_basis: '125'
+  cost: '0.70'
+  kcal: '12'
+  cost_note: standard asda packet
+  kcal_note: ''
+  kcal_basis: '125'
+ingredients_069:
+  name: Pepper
+  created_at: '2015-01-31 16:28:52.557514'
+  updated_at: '2015-02-07 18:20:35.511273'
+  measurement_type_id: '7'
+  cost_basis: '40'
+  cost: '0.11'
+  kcal: '251'
+  cost_note: TRS 400g200ml = 100g
+  kcal_note: ''
+  kcal_basis: '40'
+ingredients_070:
+  name: Pine nuts
+  created_at: '2015-02-05 20:45:40.627492'
+  updated_at: '2015-02-07 18:21:10.159842'
+  measurement_type_id: '5'
+  cost_basis: '100'
+  cost: '2.50'
+  kcal: '693'
+  cost_note: asda
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_071:
+  name: Tahini
+  created_at: '2015-01-31 15:55:46.234474'
+  updated_at: '2015-02-07 18:37:54.087793'
+  measurement_type_id: '5'
+  cost_basis: '100'
+  cost: '0.66'
+  kcal: '660'
+  cost_note: macedonian
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_072:
+  name: ! 'Recipe: Hummus'
+  created_at: '2015-02-05 22:02:08.670075'
+  updated_at: '2015-02-07 18:25:50.630702'
+  measurement_type_id: '5'
+  cost_basis: '100'
+  cost: '0.30'
+  kcal: '320'
+  cost_note: estimate
+  kcal_note: estimate
+  kcal_basis: '100'
+ingredients_073:
+  name: Saffron Thread
+  created_at: '2015-02-05 22:11:54.034091'
+  updated_at: '2015-02-07 18:27:01.083703'
+  measurement_type_id: '6'
+  cost_basis: '1'
+  cost: '0.00'
+  kcal: '0'
+  cost_note: ''
+  kcal_note: ''
+  kcal_basis: '1'
+ingredients_074:
+  name: Sage Leaves
+  created_at: '2015-02-05 21:49:57.883322'
+  updated_at: '2015-02-07 18:28:19.151952'
+  measurement_type_id: '4'
+  cost_basis: '125'
+  cost: '0.70'
+  kcal: '100'
+  cost_note: asda packet
+  kcal_note: ''
+  kcal_basis: '125'
+ingredients_075:
+  name: Scallions
+  created_at: '2015-01-31 17:00:56.68522'
+  updated_at: '2015-02-07 18:31:08.854207'
+  measurement_type_id: '4'
+  cost_basis: '125'
+  cost: '0.49'
+  kcal: '23'
+  cost_note: ''
+  kcal_note: ''
+  kcal_basis: '125'
+ingredients_076:
+  name: Salt
+  created_at: '2015-01-31 15:55:32.236238'
+  updated_at: '2015-02-07 18:30:39.005545'
+  measurement_type_id: '7'
+  cost_basis: '19'
+  cost: '0.11'
+  kcal: '0'
+  cost_note: =100g
+  kcal_note: ''
+  kcal_basis: '19'
+ingredients_077:
+  name: Cheese, Ricotta
+  created_at: '2015-02-14 11:48:26.196556'
+  updated_at: '2015-02-22 21:59:48.445414'
+  measurement_type_id: '5'
+  cost_basis: '250'
+  cost: '1.00'
+  kcal: '125'
+  cost_note: Tesco
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_078:
+  name: Polenta
+  created_at: '2015-01-31 16:51:37.680465'
+  updated_at: '2015-02-27 00:22:03.601241'
+  measurement_type_id: '5'
+  cost_basis: '100'
+  cost: '0.12'
+  kcal: '370'
+  cost_note: TRS
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_079:
+  name: Shallot
+  created_at: '2015-01-31 17:43:03.082413'
+  updated_at: '2015-02-07 18:33:18.541006'
+  measurement_type_id: '6'
+  cost_basis: '15'
+  cost: '1.47'
+  kcal: '72'
+  cost_note: asda1 pack
+  kcal_note: '22'
+  kcal_basis: '15'
+ingredients_080:
+  name: Spinach
+  created_at: '2015-01-31 16:28:08.380326'
+  updated_at: '2015-02-07 18:33:58.057927'
+  measurement_type_id: '5'
+  cost_basis: '100'
+  cost: '0.22'
+  kcal: '23'
+  cost_note: asda frozen chopped
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_081:
+  name: Sugar, Caster
+  created_at: '2015-01-31 17:49:49.785251'
+  updated_at: '2015-02-07 18:35:16.613552'
+  measurement_type_id: '5'
+  cost_basis: '100'
+  cost: '0.15'
+  kcal: '400'
+  cost_note: whitworths 1kg
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_082:
+  name: Sugar, demerara
+  created_at: '2015-01-31 17:50:13.099136'
+  updated_at: '2015-02-07 18:35:45.446715'
+  measurement_type_id: '5'
+  cost_basis: '100'
+  cost: '0.19'
+  kcal: '400'
+  cost_note: whitworths 1kg
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_083:
+  name: Sweet Potato
+  created_at: '2015-01-31 17:29:29.365355'
+  updated_at: '2015-02-07 18:37:09.138935'
+  measurement_type_id: '5'
+  cost_basis: '100'
+  cost: '0.17'
+  kcal: '86'
+  cost_note: peeled
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_084:
+  name: Potato
+  created_at: '2015-01-31 16:46:15.86766'
+  updated_at: '2015-02-07 18:37:19.288975'
+  measurement_type_id: '5'
+  cost_basis: '100'
+  cost: '0.12'
+  kcal: '80'
+  cost_note: peeled
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_085:
+  name: Thyme
+  created_at: '2015-01-31 16:51:55.051066'
+  updated_at: '2015-02-07 18:38:50.472893'
+  measurement_type_id: '7'
+  cost_basis: '20'
+  cost: '1.65'
+  kcal: '11'
+  cost_note: ''
+  kcal_note: ''
+  kcal_basis: '20'
+ingredients_086:
+  name: Tomato
+  created_at: '2015-02-05 22:02:38.95364'
+  updated_at: '2015-02-07 18:39:35.134746'
+  measurement_type_id: '6'
+  cost_basis: '1'
+  cost: '0.12'
+  kcal: '22'
+  cost_note: asda
+  kcal_note: 125g
+  kcal_basis: '1'
+ingredients_087:
+  name: Water
+  created_at: '2015-01-31 16:51:33.600708'
+  updated_at: '2015-02-07 18:40:58.22221'
+  measurement_type_id: '4'
+  cost_basis: '100'
+  cost: '0.00'
+  kcal: '0'
+  cost_note: ''
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_088:
+  name: Yeast
+  created_at: '2015-02-05 21:15:48.232587'
+  updated_at: '2015-02-07 18:43:16.619266'
+  measurement_type_id: '7'
+  cost_basis: '35'
+  cost: '0.99'
+  kcal: '325'
+  cost_note: allinson=100g
+  kcal_note: ''
+  kcal_basis: '35'
+ingredients_089:
+  name: Yoghurt, Greek
+  created_at: '2015-02-05 22:02:59.216078'
+  updated_at: '2015-02-07 18:44:55.466909'
+  measurement_type_id: '4'
+  cost_basis: '80'
+  cost: '0.20'
+  kcal: '143'
+  cost_note: =100g
+  kcal_note: ''
+  kcal_basis: '80'
+ingredients_090:
+  name: Garlic Clove
+  created_at: '2015-01-31 15:55:14.360419'
+  updated_at: '2015-02-07 17:39:07.378229'
+  measurement_type_id: '6'
+  cost_basis: '15'
+  cost: '0.25'
+  kcal: '75'
+  cost_note: Asda, loosecloves in a bulb
+  kcal_note: ''
+  kcal_basis: '15'
+ingredients_091:
+  name: Hot sauce
+  created_at: '2015-01-31 17:43:10.726284'
+  updated_at: '2015-02-07 17:45:36.351776'
+  measurement_type_id: '7'
+  cost_basis: '20'
+  cost: '0.33'
+  kcal: '10'
+  cost_note: asda tabasco
+  kcal_note: ''
+  kcal_basis: '20'
+ingredients_092:
+  name: Lemon Juice, bottled
+  created_at: '2015-01-31 15:54:27.987801'
+  updated_at: '2015-02-07 17:49:13.077956'
+  measurement_type_id: '4'
+  cost_basis: '100'
+  cost: '0.24'
+  kcal: '22'
+  cost_note: asda
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_093:
+  name: Lentils, red
+  created_at: '2015-01-31 17:42:59.13507'
+  updated_at: '2015-02-07 17:51:48.607867'
+  measurement_type_id: '5'
+  cost_basis: '100'
+  cost: '0.13'
+  kcal: '353'
+  cost_note: TRS split
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_094:
+  name: Mayonnaise, light
+  created_at: '2015-02-05 21:46:02.127685'
+  updated_at: '2015-02-07 17:55:03.898473'
+  measurement_type_id: '4'
+  cost_basis: '100'
+  cost: '0.58'
+  kcal: '271'
+  cost_note: Hellman's Light Mayo
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_095:
+  name: Olive Oil
+  created_at: '2015-01-31 15:55:05.716328'
+  updated_at: '2015-02-07 18:10:38.589345'
+  measurement_type_id: '4'
+  cost_basis: '100'
+  cost: '0.40'
+  kcal: '823'
+  cost_note: Napolina extra virgin 1L
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_096:
+  name: Puff Pastry
+  created_at: '2015-01-31 16:41:54.110053'
+  updated_at: '2015-02-07 18:24:01.81938'
+  measurement_type_id: '5'
+  cost_basis: '100'
+  cost: '0.25'
+  kcal: '376'
+  cost_note: Jus Rol Puff Pastry Block
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_097:
+  name: ! 'Recipe: Tahini Sauce'
+  created_at: '2015-02-05 22:02:16.87201'
+  updated_at: '2015-02-07 18:26:40.332116'
+  measurement_type_id: '5'
+  cost_basis: '100'
+  cost: '0.66'
+  kcal: '660'
+  cost_note: assuming cost of tahini
+  kcal_note: assuming all tahini
+  kcal_basis: '100'
+ingredients_098:
+  name: Sesame Seeds
+  created_at: '2015-01-31 17:29:42.653317'
+  updated_at: '2015-02-07 18:31:51.96472'
+  measurement_type_id: '5'
+  cost_basis: '100'
+  cost: '0.44'
+  kcal: '588'
+  cost_note: cypress 250g
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_099:
+  name: Sugar, Brown, Light
+  created_at: '2015-01-31 17:25:28.524784'
+  updated_at: '2015-02-07 18:34:38.290255'
+  measurement_type_id: '5'
+  cost_basis: '100'
+  cost: '0.25'
+  kcal: '385'
+  cost_note: whitworths 1kg
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_100:
+  name: Sugar, white
+  created_at: '2015-02-05 21:15:55.350103'
+  updated_at: '2015-02-07 18:36:27.934164'
+  measurement_type_id: '5'
+  cost_basis: '100'
+  cost: '0.08'
+  kcal: '400'
+  cost_note: whitworths 2kg
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_101:
+  name: Butternut Squash
+  created_at: '2015-02-07 18:51:17.065638'
+  updated_at: '2015-02-07 18:51:17.065638'
+  measurement_type_id: '5'
+  cost_basis: '100'
+  cost: '0.17'
+  kcal: '34'
+  cost_note: assumed 1/3 wastage
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_102:
+  name: Chocolate, dark
+  created_at: '2015-02-07 20:37:47.959715'
+  updated_at: '2015-02-07 20:37:47.959715'
+  measurement_type_id: '5'
+  cost_basis: '100'
+  cost: '0.60'
+  kcal: '515'
+  cost_note: Asda dark chocolate
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_103:
+  name: Almonds, whole
+  created_at: '2015-02-07 20:38:40.779068'
+  updated_at: '2015-02-07 20:38:40.779068'
+  measurement_type_id: '5'
+  cost_basis: '100'
+  cost: '1.00'
+  kcal: '612'
+  cost_note: Cypressa
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_104:
+  name: Lime Juice, fresh
+  created_at: '2015-02-07 17:53:05.542149'
+  updated_at: '2015-02-08 10:40:06.298348'
+  measurement_type_id: '4'
+  cost_basis: '25'
+  cost: '0.30'
+  kcal: '5'
+  cost_note: one lime
+  kcal_note: ''
+  kcal_basis: '25'
+ingredients_105:
+  name: Lemon Juice, fresh
+  created_at: '2015-02-07 17:49:52.429214'
+  updated_at: '2015-02-08 10:40:18.79665'
+  measurement_type_id: '4'
+  cost_basis: '25'
+  cost: '0.30'
+  kcal: '5'
+  cost_note: one lemon
+  kcal_note: ''
+  kcal_basis: '25'
+ingredients_106:
+  name: Mushrooms
+  created_at: '2015-01-31 16:28:01.325942'
+  updated_at: '2015-02-08 10:41:02.192098'
+  measurement_type_id: '5'
+  cost_basis: '400'
+  cost: '1.18'
+  kcal: '20'
+  cost_note: asda white
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_107:
+  name: Mustard, dijon
+  created_at: '2015-01-31 17:43:16.865506'
+  updated_at: '2015-02-08 10:41:45.562596'
+  measurement_type_id: '4'
+  cost_basis: '210'
+  cost: '1.55'
+  kcal: '151'
+  cost_note: Maille, assuming 100ml=100g
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_108:
+  name: Mustard, seeded
+  created_at: '2015-01-31 17:29:48.781411'
+  updated_at: '2015-02-08 10:42:17.023798'
+  measurement_type_id: '4'
+  cost_basis: '215'
+  cost: '1.55'
+  kcal: '150'
+  cost_note: Maille, assuming 100g=100ml
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_109:
+  name: Oats
+  created_at: '2015-01-31 17:25:18.071033'
+  updated_at: '2015-02-08 10:42:54.294773'
+  measurement_type_id: '5'
+  cost_basis: '1500'
+  cost: '2.20'
+  kcal: '374'
+  cost_note: Flahavans
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_110:
+  name: Onion
+  created_at: '2015-01-31 17:19:48.706779'
+  updated_at: '2015-02-08 10:43:47.866963'
+  measurement_type_id: '6'
+  cost_basis: '4'
+  cost: '0.83'
+  kcal: '60'
+  cost_note: Asda
+  kcal_note: Large
+  kcal_basis: '1'
+ingredients_111:
+  name: Parsley Leaves, dried
+  created_at: '2015-02-05 00:28:31.677785'
+  updated_at: '2015-02-08 10:44:03.760642'
+  measurement_type_id: '7'
+  cost_basis: '20'
+  cost: '1.40'
+  kcal: '1'
+  cost_note: refill
+  kcal_note: ''
+  kcal_basis: '1'
+ingredients_112:
+  name: Vegetable Stock
+  created_at: '2015-02-07 20:42:58.814413'
+  updated_at: '2015-02-08 10:44:53.319327'
+  measurement_type_id: '4'
+  cost_basis: '200'
+  cost: '0.10'
+  kcal: '15'
+  cost_note: 1 cube
+  kcal_note: 1 cube
+  kcal_basis: '200'
+ingredients_113:
+  name: Vanilla Essence
+  created_at: '2015-01-31 17:24:47.855169'
+  updated_at: '2015-02-08 10:45:10.862362'
+  measurement_type_id: '7'
+  cost_basis: '20'
+  cost: '4.80'
+  kcal: '12'
+  cost_note: pure vanilla extract
+  kcal_note: ''
+  kcal_basis: '1'
+ingredients_114:
+  name: Ancho Chili, Dried
+  created_at: '2015-02-14 19:38:21.57764'
+  updated_at: '2015-02-14 19:38:21.57764'
+  measurement_type_id: '6'
+  cost_basis: '1'
+  cost: '0.20'
+  kcal: '5'
+  cost_note: Estimate
+  kcal_note: Estimate
+  kcal_basis: '1'
+ingredients_115:
+  name: Guajillo Chili, Dried
+  created_at: '2015-02-14 19:38:51.588629'
+  updated_at: '2015-02-14 19:38:51.588629'
+  measurement_type_id: '6'
+  cost_basis: '1'
+  cost: '0.20'
+  kcal: '5'
+  cost_note: Estimate
+  kcal_note: Estimate
+  kcal_basis: '1'
+ingredients_116:
+  name: Chipotle Chili, Dried
+  created_at: '2015-02-14 19:39:06.376225'
+  updated_at: '2015-02-14 19:39:06.376225'
+  measurement_type_id: '6'
+  cost_basis: '1'
+  cost: '0.50'
+  kcal: '5'
+  cost_note: Estimate
+  kcal_note: Estimate
+  kcal_basis: '1'
+ingredients_117:
+  name: Pinto Beans, Cooked
+  created_at: '2015-02-14 19:41:16.833561'
+  updated_at: '2015-02-14 19:41:16.833561'
+  measurement_type_id: '5'
+  cost_basis: '1200'
+  cost: '1.15'
+  kcal: '143'
+  cost_note: Tesco, 2.2x weight when boiled
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_118:
+  name: White Beans, Boiled
+  created_at: '2015-02-14 19:42:24.191954'
+  updated_at: '2015-02-14 19:42:24.191954'
+  measurement_type_id: '5'
+  cost_basis: '2200'
+  cost: '3.75'
+  kcal: '139'
+  cost_note: Tesco, x2.2 for boiled weight
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_119:
+  name: Chicken Breast, Frozen
+  created_at: '2015-02-14 19:44:25.822519'
+  updated_at: '2015-02-14 19:44:25.822519'
+  measurement_type_id: '5'
+  cost_basis: '700'
+  cost: '3.00'
+  kcal: '170'
+  cost_note: Tesco halal
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_120:
+  name: Coriander Seeds
+  created_at: '2015-02-14 19:53:09.844731'
+  updated_at: '2015-02-14 19:53:09.844731'
+  measurement_type_id: '7'
+  cost_basis: '20'
+  cost: '1.65'
+  kcal: '125'
+  cost_note: ''
+  kcal_note: ''
+  kcal_basis: '20'
+ingredients_121:
+  name: Black Beans, Boiled
+  created_at: '2015-02-15 02:05:59.293201'
+  updated_at: '2015-02-15 02:05:59.293201'
+  measurement_type_id: '5'
+  cost_basis: '1100'
+  cost: '1.10'
+  kcal: '130'
+  cost_note: Waitrose
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_122:
+  name: Baking Soda
+  created_at: '2015-02-15 02:06:32.146703'
+  updated_at: '2015-02-15 02:06:32.146703'
+  measurement_type_id: '7'
+  cost_basis: '20'
+  cost: '0.76'
+  kcal: '53'
+  cost_note: ''
+  kcal_note: ''
+  kcal_basis: '20'
+ingredients_123:
+  name: Sour Cream
+  created_at: '2015-02-15 02:07:08.382968'
+  updated_at: '2015-02-15 02:07:08.382968'
+  measurement_type_id: '4'
+  cost_basis: '150'
+  cost: '0.60'
+  kcal: '195'
+  cost_note: Tesco
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_124:
+  name: Worcester Sauce
+  created_at: '2015-02-15 02:08:18.313178'
+  updated_at: '2015-02-15 02:08:18.313178'
+  measurement_type_id: '4'
+  cost_basis: '150'
+  cost: '1.19'
+  kcal: '78'
+  cost_note: ''
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_125:
+  name: Turmeric
+  created_at: '2015-02-15 14:37:53.629361'
+  updated_at: '2015-02-15 14:37:53.629361'
+  measurement_type_id: '7'
+  cost_basis: '20'
+  cost: '1.65'
+  kcal: '98'
+  cost_note: ''
+  kcal_note: ''
+  kcal_basis: '20'
+ingredients_126:
+  name: Ginger, ground
+  created_at: '2015-02-15 14:38:41.350972'
+  updated_at: '2015-02-15 14:38:41.350972'
+  measurement_type_id: '7'
+  cost_basis: '20'
+  cost: '1.65'
+  kcal: '85'
+  cost_note: ''
+  kcal_note: ''
+  kcal_basis: '20'
+ingredients_127:
+  name: Coconut Milk
+  created_at: '2015-02-15 14:40:50.448815'
+  updated_at: '2015-02-15 14:40:50.448815'
+  measurement_type_id: '4'
+  cost_basis: '400'
+  cost: '0.95'
+  kcal: '190'
+  cost_note: ''
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_128:
+  name: Cream, Double Light
+  created_at: '2015-02-15 14:49:55.994968'
+  updated_at: '2015-02-15 14:49:55.994968'
+  measurement_type_id: '4'
+  cost_basis: '284'
+  cost: '0.75'
+  kcal: '247'
+  cost_note: ''
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_129:
+  name: Wholewheat Fusilli Pasta, Dry
+  created_at: '2015-02-15 14:52:11.219678'
+  updated_at: '2015-02-15 14:52:11.219678'
+  measurement_type_id: '5'
+  cost_basis: '1000'
+  cost: '0.98'
+  kcal: '355'
+  cost_note: ''
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_130:
+  name: Turkey mince
+  created_at: '2015-02-15 21:04:46.060492'
+  updated_at: '2015-02-15 21:04:46.060492'
+  measurement_type_id: '5'
+  cost_basis: '500'
+  cost: '3.50'
+  kcal: '100'
+  cost_note: ''
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_131:
+  name: Sweetcorn
+  created_at: '2015-02-15 02:04:17.581161'
+  updated_at: '2015-02-15 21:20:08.024067'
+  measurement_type_id: '5'
+  cost_basis: '1000'
+  cost: '1.17'
+  kcal: '120'
+  cost_note: ''
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_132:
+  name: Gelatin pack
+  created_at: '2015-02-16 21:33:25.570631'
+  updated_at: '2015-02-16 21:33:25.570631'
+  measurement_type_id: '6'
+  cost_basis: '3'
+  cost: '1.09'
+  kcal: '20'
+  cost_note: ''
+  kcal_note: ''
+  kcal_basis: '3'
+ingredients_133:
+  name: Wine, Red
+  created_at: '2015-02-11 23:53:20.865383'
+  updated_at: '2015-02-16 21:33:41.208504'
+  measurement_type_id: '4'
+  cost_basis: '750'
+  cost: '3.50'
+  kcal: '85'
+  cost_note: misc cooking wine
+  kcal_note: ''
+  kcal_basis: '125'
+ingredients_134:
+  name: Wine, white
+  created_at: '2015-02-16 21:34:14.833448'
+  updated_at: '2015-02-16 21:34:14.833448'
+  measurement_type_id: '4'
+  cost_basis: '700'
+  cost: '4.00'
+  kcal: '77'
+  cost_note: Misc cooking wine
+  kcal_note: ''
+  kcal_basis: '120'
+ingredients_135:
+  name: Rice, Arborio
+  created_at: '2015-02-16 21:35:07.472916'
+  updated_at: '2015-02-16 21:35:07.472916'
+  measurement_type_id: '5'
+  cost_basis: '500'
+  cost: '1.10'
+  kcal: '344'
+  cost_note: ''
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_136:
+  name: Milk, Semi-Skimmed
+  created_at: '2015-02-16 21:37:53.469717'
+  updated_at: '2015-02-16 21:37:53.469717'
+  measurement_type_id: '4'
+  cost_basis: '568'
+  cost: '0.45'
+  kcal: '50'
+  cost_note: ''
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_137:
+  name: Yogurt, Natural, Low Fat
+  created_at: '2015-02-22 21:51:19.583907'
+  updated_at: '2015-02-22 21:51:19.583907'
+  measurement_type_id: '5'
+  cost_basis: '500'
+  cost: '0.75'
+  kcal: '65'
+  cost_note: Asda
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_138:
+  name: Pitta Bread, White
+  created_at: '2015-02-22 21:52:26.543608'
+  updated_at: '2015-02-22 21:52:26.543608'
+  measurement_type_id: '6'
+  cost_basis: '6'
+  cost: '0.49'
+  kcal: '149'
+  cost_note: Asda
+  kcal_note: ''
+  kcal_basis: '1'
+ingredients_139:
+  name: Cheese, Edam
+  created_at: '2015-02-22 21:59:33.827325'
+  updated_at: '2015-02-22 21:59:33.827325'
+  measurement_type_id: '5'
+  cost_basis: '250'
+  cost: '2.00'
+  kcal: '316'
+  cost_note: Asda, grated
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_140:
+  name: Cheese, Cheddar
+  created_at: '2015-01-31 17:12:02.142745'
+  updated_at: '2015-02-22 21:59:59.736101'
+  measurement_type_id: '5'
+  cost_basis: '100'
+  cost: '0.86'
+  kcal: '416'
+  cost_note: Cathedral
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_141:
+  name: Cheese, Parmesan
+  created_at: '2015-01-31 16:28:58.079647'
+  updated_at: '2015-02-22 22:00:10.4952'
+  measurement_type_id: '5'
+  cost_basis: '100'
+  cost: '1.25'
+  kcal: '430'
+  cost_note: asda pecorino romano
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_142:
+  name: Cocoa
+  created_at: '2015-02-22 22:57:44.90302'
+  updated_at: '2015-02-22 22:57:44.90302'
+  measurement_type_id: '5'
+  cost_basis: '250'
+  cost: '2.50'
+  kcal: '415'
+  cost_note: ''
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_143:
+  name: Coffee powder
+  created_at: '2015-02-22 22:59:28.319225'
+  updated_at: '2015-02-22 22:59:28.319225'
+  measurement_type_id: '5'
+  cost_basis: '450'
+  cost: '5.00'
+  kcal: '0'
+  cost_note: ''
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_144:
+  name: Sugar, brown, dark
+  created_at: '2015-02-22 23:00:12.724623'
+  updated_at: '2015-02-22 23:00:12.724623'
+  measurement_type_id: '5'
+  cost_basis: '1000'
+  cost: '2.50'
+  kcal: '385'
+  cost_note: ''
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_145:
+  name: Milo
+  created_at: '2015-02-22 22:58:16.048586'
+  updated_at: '2015-02-22 23:01:40.006106'
+  measurement_type_id: '5'
+  cost_basis: '400'
+  cost: '3.58'
+  kcal: '380'
+  cost_note: ''
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_146:
+  name: Vinegar, Red Wine
+  created_at: '2015-02-23 23:28:12.259329'
+  updated_at: '2015-02-23 23:28:12.259329'
+  measurement_type_id: '4'
+  cost_basis: '500'
+  cost: '1.15'
+  kcal: '22'
+  cost_note: Waitrose
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_147:
+  name: Enchilada Sauce
+  created_at: '2015-02-25 19:30:58.280641'
+  updated_at: '2015-02-25 19:30:58.280641'
+  measurement_type_id: '5'
+  cost_basis: '395'
+  cost: '1.88'
+  kcal: '70'
+  cost_note: Tesco
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_148:
+  name: Sugar, Icing
+  created_at: '2015-02-25 23:02:08.212033'
+  updated_at: '2015-02-25 23:02:08.212033'
+  measurement_type_id: '5'
+  cost_basis: '1000'
+  cost: '1.80'
+  kcal: '400'
+  cost_note: ''
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_149:
+  name: Cheese, Mozzarella, grated
+  created_at: '2015-02-16 21:36:03.488008'
+  updated_at: '2015-02-25 23:10:01.420168'
+  measurement_type_id: '5'
+  cost_basis: '500'
+  cost: '3.50'
+  kcal: '290'
+  cost_note: Tesco
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_150:
+  name: Cheese, Emmental,
+  created_at: '2015-02-25 23:10:56.956392'
+  updated_at: '2015-02-25 23:10:56.956392'
+  measurement_type_id: '5'
+  cost_basis: '200'
+  cost: '2.14'
+  kcal: '368'
+  cost_note: Asda
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_151:
+  name: Rice, Brown, Uncooked
+  created_at: '2015-02-25 23:12:29.131096'
+  updated_at: '2015-02-25 23:12:29.131096'
+  measurement_type_id: '5'
+  cost_basis: '1000'
+  cost: '1.78'
+  kcal: '350'
+  cost_note: Basmati Brown Rice
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_152:
+  name: Thyme Leaves
+  created_at: '2015-02-25 23:13:00.531747'
+  updated_at: '2015-02-25 23:13:00.531747'
+  measurement_type_id: '4'
+  cost_basis: '125'
+  cost: '0.80'
+  kcal: '5'
+  cost_note: ''
+  kcal_note: ''
+  kcal_basis: '125'
+ingredients_153:
+  name: Sage, dried
+  created_at: '2015-02-25 23:13:29.05469'
+  updated_at: '2015-02-25 23:13:29.05469'
+  measurement_type_id: '7'
+  cost_basis: '20'
+  cost: '0.80'
+  kcal: '0'
+  cost_note: ''
+  kcal_note: ''
+  kcal_basis: '20'
+ingredients_154:
+  name: Rosemary
+  created_at: '2015-02-25 23:14:49.05391'
+  updated_at: '2015-02-25 23:14:49.05391'
+  measurement_type_id: '7'
+  cost_basis: '20'
+  cost: '1.65'
+  kcal: '0'
+  cost_note: ''
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_155:
+  name: Oil, Grapeseed
+  created_at: '2015-02-27 00:00:15.274147'
+  updated_at: '2015-02-27 00:00:15.274147'
+  measurement_type_id: '4'
+  cost_basis: '500'
+  cost: '2.28'
+  kcal: '125'
+  cost_note: ''
+  kcal_note: ''
+  kcal_basis: '15'
+ingredients_156:
+  name: Digestive Biscuits
+  created_at: '2015-02-27 00:07:42.810236'
+  updated_at: '2015-02-27 00:07:42.810236'
+  measurement_type_id: '5'
+  cost_basis: '500'
+  cost: '1.00'
+  kcal: '481'
+  cost_note: ''
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_157:
+  name: Condensed Milk, Light
+  created_at: '2015-02-27 00:08:25.383504'
+  updated_at: '2015-02-27 00:08:25.383504'
+  measurement_type_id: '5'
+  cost_basis: '405'
+  cost: '1.25'
+  kcal: '277'
+  cost_note: ''
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_158:
+  name: Lime Zest
+  created_at: '2015-02-27 00:08:48.880115'
+  updated_at: '2015-02-27 00:08:48.880115'
+  measurement_type_id: '7'
+  cost_basis: '100'
+  cost: '0.00'
+  kcal: '0'
+  cost_note: ''
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_159:
+  name: Cayenne Pepper
+  created_at: '2015-02-27 00:18:45.992542'
+  updated_at: '2015-02-27 00:18:45.992542'
+  measurement_type_id: '7'
+  cost_basis: '20'
+  cost: '1.65'
+  kcal: '100'
+  cost_note: ''
+  kcal_note: ''
+  kcal_basis: '20'
+ingredients_160:
+  name: Buttermilk
+  created_at: '2015-02-27 00:20:07.474735'
+  updated_at: '2015-02-27 00:20:07.474735'
+  measurement_type_id: '4'
+  cost_basis: '250'
+  cost: '0.52'
+  kcal: '44'
+  cost_note: ''
+  kcal_note: ''
+  kcal_basis: '100'
+ingredients_161:
+  name: Chocolate, Milk
+  created_at: '2015-02-27 00:28:38.039814'
+  updated_at: '2015-02-27 00:28:38.039814'
+  measurement_type_id: '5'
+  cost_basis: '200'
+  cost: '1.00'
+  kcal: '551'
+  cost_note: ''
+  kcal_note: ''
+  kcal_basis: '100'

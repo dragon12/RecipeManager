@@ -1,0 +1,376 @@
+---
+instruction_groups_001:
+  name: Instructions
+  recipe_id: '19'
+  created_at: '2015-02-15 13:43:10.96597'
+  updated_at: '2015-02-15 13:43:10.96597'
+instruction_groups_002:
+  name: Instructions
+  recipe_id: '20'
+  created_at: '2015-02-15 13:43:10.990624'
+  updated_at: '2015-02-15 13:43:10.990624'
+instruction_groups_003:
+  name: Instructions
+  recipe_id: '21'
+  created_at: '2015-02-15 13:43:11.016537'
+  updated_at: '2015-02-15 13:43:11.016537'
+instruction_groups_004:
+  name: Instructions
+  recipe_id: '24'
+  created_at: '2015-02-15 13:43:11.040175'
+  updated_at: '2015-02-15 13:43:11.040175'
+instruction_groups_005:
+  name: Instructions
+  recipe_id: '26'
+  created_at: '2015-02-15 13:43:11.059755'
+  updated_at: '2015-02-15 13:43:11.059755'
+instruction_groups_006:
+  name: Instructions
+  recipe_id: '22'
+  created_at: '2015-02-15 13:43:11.080776'
+  updated_at: '2015-02-15 13:43:11.080776'
+instruction_groups_007:
+  name: Instructions
+  recipe_id: '27'
+  created_at: '2015-02-15 13:43:11.094293'
+  updated_at: '2015-02-15 13:43:11.094293'
+instruction_groups_008:
+  name: Instructions
+  recipe_id: '25'
+  created_at: '2015-02-15 13:43:11.104485'
+  updated_at: '2015-02-15 13:43:11.104485'
+instruction_groups_009:
+  name: Instructions
+  recipe_id: '30'
+  created_at: '2015-02-15 13:43:11.116433'
+  updated_at: '2015-02-15 13:43:11.116433'
+instruction_groups_010:
+  name: Instructions
+  recipe_id: '31'
+  created_at: '2015-02-15 13:43:11.126902'
+  updated_at: '2015-02-15 13:43:11.126902'
+instruction_groups_011:
+  name: Instructions
+  recipe_id: '28'
+  created_at: '2015-02-15 13:43:11.142566'
+  updated_at: '2015-02-15 13:43:11.142566'
+instruction_groups_012:
+  name: Instructions
+  recipe_id: '3'
+  created_at: '2015-02-15 13:43:11.153516'
+  updated_at: '2015-02-15 13:43:11.153516'
+instruction_groups_013:
+  name: Instructions
+  recipe_id: '4'
+  created_at: '2015-02-15 13:43:11.160708'
+  updated_at: '2015-02-15 13:43:11.160708'
+instruction_groups_014:
+  name: Instructions
+  recipe_id: '5'
+  created_at: '2015-02-15 13:43:11.183305'
+  updated_at: '2015-02-15 13:43:11.183305'
+instruction_groups_015:
+  name: Instructions
+  recipe_id: '6'
+  created_at: '2015-02-15 13:43:11.199934'
+  updated_at: '2015-02-15 13:43:11.199934'
+instruction_groups_016:
+  name: Instructions
+  recipe_id: '7'
+  created_at: '2015-02-15 13:43:11.213912'
+  updated_at: '2015-02-15 13:43:11.213912'
+instruction_groups_017:
+  name: Instructions
+  recipe_id: '8'
+  created_at: '2015-02-15 13:43:11.229708'
+  updated_at: '2015-02-15 13:43:11.229708'
+instruction_groups_018:
+  name: Instructions
+  recipe_id: '9'
+  created_at: '2015-02-15 13:43:11.245852'
+  updated_at: '2015-02-15 13:43:11.245852'
+instruction_groups_019:
+  name: Instructions
+  recipe_id: '10'
+  created_at: '2015-02-15 13:43:11.27015'
+  updated_at: '2015-02-15 13:43:11.27015'
+instruction_groups_020:
+  name: Instructions
+  recipe_id: '11'
+  created_at: '2015-02-15 13:43:11.295614'
+  updated_at: '2015-02-15 13:43:11.295614'
+instruction_groups_021:
+  name: Instructions
+  recipe_id: '12'
+  created_at: '2015-02-15 13:43:11.312283'
+  updated_at: '2015-02-15 13:43:11.312283'
+instruction_groups_022:
+  name: Instructions
+  recipe_id: '13'
+  created_at: '2015-02-15 13:43:11.33097'
+  updated_at: '2015-02-15 13:43:11.33097'
+instruction_groups_023:
+  name: Instructions
+  recipe_id: '14'
+  created_at: '2015-02-15 13:43:11.345324'
+  updated_at: '2015-02-15 13:43:11.345324'
+instruction_groups_024:
+  name: Instructions
+  recipe_id: '15'
+  created_at: '2015-02-15 13:43:11.359653'
+  updated_at: '2015-02-15 13:43:11.359653'
+instruction_groups_025:
+  name: Instructions
+  recipe_id: '16'
+  created_at: '2015-02-15 13:43:11.371716'
+  updated_at: '2015-02-15 13:43:11.371716'
+instruction_groups_026:
+  name: Instructions
+  recipe_id: '17'
+  created_at: '2015-02-15 13:43:11.40396'
+  updated_at: '2015-02-15 13:43:11.40396'
+instruction_groups_027:
+  name: Instructions
+  recipe_id: '23'
+  created_at: '2015-02-15 13:43:11.416914'
+  updated_at: '2015-02-15 13:43:11.416914'
+instruction_groups_028:
+  name: Instructions
+  recipe_id: '32'
+  created_at: '2015-02-15 13:43:11.431875'
+  updated_at: '2015-02-15 13:43:11.431875'
+instruction_groups_029:
+  name: Instructions
+  recipe_id: '33'
+  created_at: '2015-02-15 13:43:11.468553'
+  updated_at: '2015-02-15 13:43:11.468553'
+instruction_groups_030:
+  name: Instructions
+  recipe_id: '29'
+  created_at: '2015-02-15 13:43:11.48075'
+  updated_at: '2015-02-15 13:43:11.48075'
+instruction_groups_031:
+  name: Instructions
+  recipe_id: '34'
+  created_at: '2015-02-15 13:43:11.495233'
+  updated_at: '2015-02-15 13:43:11.495233'
+instruction_groups_032:
+  name: Instructions
+  recipe_id: '35'
+  created_at: '2015-02-15 13:43:11.519648'
+  updated_at: '2015-02-15 13:43:11.519648'
+instruction_groups_033:
+  name: Instruction
+  recipe_id: '44'
+  created_at: '2015-02-15 21:16:22.703631'
+  updated_at: '2015-02-15 21:16:22.703631'
+instruction_groups_034:
+  name: Base
+  recipe_id: '36'
+  created_at: '2015-02-15 21:33:05.749439'
+  updated_at: '2015-02-15 21:33:05.749439'
+instruction_groups_035:
+  name: Cooked Filling
+  recipe_id: '36'
+  created_at: '2015-02-15 21:40:02.930823'
+  updated_at: '2015-02-15 21:40:02.930823'
+instruction_groups_036:
+  name: Combining
+  recipe_id: '36'
+  created_at: '2015-02-15 21:40:02.934599'
+  updated_at: '2015-02-15 21:40:02.934599'
+instruction_groups_037:
+  name: Chili Paste
+  recipe_id: '37'
+  created_at: '2015-02-15 21:47:02.977594'
+  updated_at: '2015-02-15 21:47:02.977594'
+instruction_groups_038:
+  name: Spices
+  recipe_id: '37'
+  created_at: '2015-02-15 21:47:02.993084'
+  updated_at: '2015-02-15 21:47:02.993084'
+instruction_groups_039:
+  name: Chili
+  recipe_id: '37'
+  created_at: '2015-02-15 21:47:03.000183'
+  updated_at: '2015-02-15 21:47:03.000183'
+instruction_groups_040:
+  name: Chili Paste
+  recipe_id: '40'
+  created_at: '2015-02-15 21:56:48.590387'
+  updated_at: '2015-02-15 21:56:48.590387'
+instruction_groups_041:
+  name: Spices
+  recipe_id: '40'
+  created_at: '2015-02-15 21:56:48.5962'
+  updated_at: '2015-02-15 21:56:48.5962'
+instruction_groups_042:
+  name: Base
+  recipe_id: '40'
+  created_at: '2015-02-15 21:56:48.598764'
+  updated_at: '2015-02-15 21:56:48.598764'
+instruction_groups_043:
+  name: Cornbread Topping
+  recipe_id: '40'
+  created_at: '2015-02-15 21:56:48.608471'
+  updated_at: '2015-02-15 21:56:48.608471'
+instruction_groups_044:
+  name: Assembly
+  recipe_id: '40'
+  created_at: '2015-02-15 21:56:48.616596'
+  updated_at: '2015-02-15 21:56:48.616596'
+instruction_groups_045:
+  name: Instructions
+  recipe_id: '41'
+  created_at: '2015-02-15 22:30:19.199546'
+  updated_at: '2015-02-15 22:30:19.199546'
+instruction_groups_046:
+  name: Filling
+  recipe_id: '42'
+  created_at: '2015-02-16 21:24:17.659743'
+  updated_at: '2015-02-16 21:24:17.659743'
+instruction_groups_047:
+  name: Topping
+  recipe_id: '42'
+  created_at: '2015-02-16 21:24:17.694027'
+  updated_at: '2015-02-16 21:24:17.694027'
+instruction_groups_048:
+  name: Putting it all together
+  recipe_id: '42'
+  created_at: '2015-02-16 21:24:17.697896'
+  updated_at: '2015-02-16 21:24:17.697896'
+instruction_groups_049:
+  name: Initial Prep
+  recipe_id: '45'
+  created_at: '2015-02-16 21:45:50.682623'
+  updated_at: '2015-02-16 21:45:50.682623'
+instruction_groups_050:
+  name: Risotto
+  recipe_id: '45'
+  created_at: '2015-02-16 21:45:50.693045'
+  updated_at: '2015-02-16 21:45:50.693045'
+instruction_groups_051:
+  name: Bechamel
+  recipe_id: '45'
+  created_at: '2015-02-16 21:45:50.707638'
+  updated_at: '2015-02-16 21:45:50.707638'
+instruction_groups_052:
+  name: Topping
+  recipe_id: '45'
+  created_at: '2015-02-16 21:45:50.73374'
+  updated_at: '2015-02-16 21:45:50.73374'
+instruction_groups_053:
+  name: Combining and Assembly
+  recipe_id: '45'
+  created_at: '2015-02-16 21:45:50.742759'
+  updated_at: '2015-02-16 21:45:50.742759'
+instruction_groups_054:
+  name: Base
+  recipe_id: '47'
+  created_at: '2015-02-22 21:58:56.783253'
+  updated_at: '2015-02-22 21:58:56.783253'
+instruction_groups_055:
+  name: Chickpeas
+  recipe_id: '46'
+  created_at: '2015-02-22 21:50:02.592624'
+  updated_at: '2015-02-23 22:36:48.513283'
+instruction_groups_056:
+  name: Filling
+  recipe_id: '46'
+  created_at: '2015-02-23 22:36:48.515671'
+  updated_at: '2015-02-23 22:36:48.515671'
+instruction_groups_057:
+  name: Bread
+  recipe_id: '46'
+  created_at: '2015-02-23 22:36:48.526356'
+  updated_at: '2015-02-23 22:36:48.526356'
+instruction_groups_058:
+  name: Assembly
+  recipe_id: '46'
+  created_at: '2015-02-23 22:36:48.531502'
+  updated_at: '2015-02-23 22:36:48.531502'
+instruction_groups_059:
+  name: Filling and Assembly
+  recipe_id: '47'
+  created_at: '2015-02-25 22:38:59.026998'
+  updated_at: '2015-02-25 22:38:59.026998'
+instruction_groups_060:
+  name: Potatoes
+  recipe_id: '49'
+  created_at: '2015-02-23 23:26:57.944274'
+  updated_at: '2015-02-25 22:43:26.799816'
+instruction_groups_061:
+  name: Vinaigrette
+  recipe_id: '49'
+  created_at: '2015-02-25 22:43:26.806675'
+  updated_at: '2015-02-25 22:43:26.806675'
+instruction_groups_062:
+  name: Combination
+  recipe_id: '49'
+  created_at: '2015-02-25 22:43:26.813101'
+  updated_at: '2015-02-25 22:43:26.813101'
+instruction_groups_063:
+  name: Base
+  recipe_id: '48'
+  created_at: '2015-02-22 22:57:08.085384'
+  updated_at: '2015-02-25 22:49:31.01724'
+instruction_groups_064:
+  name: Topping and Cooking
+  recipe_id: '48'
+  created_at: '2015-02-25 22:49:31.032273'
+  updated_at: '2015-02-25 22:49:31.032273'
+instruction_groups_065:
+  name: Default
+  recipe_id: '51'
+  created_at: '2015-02-25 22:55:28.527137'
+  updated_at: '2015-02-25 22:55:28.527137'
+instruction_groups_066:
+  name: Cake
+  recipe_id: '52'
+  created_at: '2015-02-25 23:01:21.562669'
+  updated_at: '2015-02-25 23:01:21.562669'
+instruction_groups_067:
+  name: Syrup
+  recipe_id: '52'
+  created_at: '2015-02-25 23:01:21.570678'
+  updated_at: '2015-02-25 23:01:21.570678'
+instruction_groups_068:
+  name: Filling And Sauce
+  recipe_id: '53'
+  created_at: '2015-02-25 23:09:38.669885'
+  updated_at: '2015-02-25 23:09:38.669885'
+instruction_groups_069:
+  name: Assembly
+  recipe_id: '53'
+  created_at: '2015-02-25 23:09:38.676835'
+  updated_at: '2015-02-25 23:09:38.676835'
+instruction_groups_070:
+  name: Default
+  recipe_id: '54'
+  created_at: '2015-02-26 10:06:21.900488'
+  updated_at: '2015-02-26 10:06:21.900488'
+instruction_groups_071:
+  name: Potatoes
+  recipe_id: '55'
+  created_at: '2015-02-27 00:02:41.605143'
+  updated_at: '2015-02-27 00:02:41.605143'
+instruction_groups_072:
+  name: Default
+  recipe_id: '56'
+  created_at: '2015-02-27 00:06:48.536441'
+  updated_at: '2015-02-27 00:06:48.536441'
+instruction_groups_073:
+  name: Default
+  recipe_id: '57'
+  created_at: '2015-02-27 00:15:04.517533'
+  updated_at: '2015-02-27 00:15:04.517533'
+instruction_groups_074:
+  name: Default
+  recipe_id: '58'
+  created_at: '2015-02-27 00:20:47.133581'
+  updated_at: '2015-02-27 00:20:47.133581'
+instruction_groups_075:
+  name: Default
+  recipe_id: '59'
+  created_at: '2015-02-27 00:28:45.384292'
+  updated_at: '2015-02-27 00:28:45.384292'
