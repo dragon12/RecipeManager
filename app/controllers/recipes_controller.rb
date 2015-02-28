@@ -131,7 +131,6 @@ class RecipesController < ApplicationController
          groups = Recipe.filter_blank_instructions_from_groups(groups)
        end
 
-      logger.info ("after")
       logger.info(ret_params)
       return ret_params
       

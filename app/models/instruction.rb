@@ -16,12 +16,35 @@ class Instruction < ActiveRecord::Base
   after_destroy :release_empty_parent
 
    
+  
+  def self.filter_blank_from_instructions(insts)
+    #strip any that are not real and are blank
+    insts.reject! {|unused2, inst| 
+      is_params_empty(inst) && inst["id"].blank?
+      }
+    
+    empty = true
+    insts.each do |unused2, inst|
+      empty = false
+      
+      logger.info("    RECIPE_FILTER: looking at instruction #{inst}")
+      if Instruction.is_params_empty(inst)
+        logger.info("    RECIPE_FILTER: Is empty, marking for destruction")
+        inst[:_destroy] = "1"
+      end
+    end
+    
+    return empty, insts
+  end
+  
+private
+
   def self.is_params_empty(params)
     logger.info("Checking params for emptiness: #{params}")
     return params[:step_number].blank? && params[:details].blank?
   end
   
-private
+  
   def on_destroy
     logger.info("Starting destruction of instruction with parent #{instruction_group.name}")  
   end

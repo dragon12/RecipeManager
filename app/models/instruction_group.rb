@@ -15,6 +15,23 @@ class InstructionGroup < ActiveRecord::Base
     name.blank? ? "<Enter Group Name>" : name
   end
   
+  def self.filter_blank_instructions_from_group(group)
+    #the hash has each key/val be an instruction group
+    
+    empty = true
+      
+    if (group.has_key?("instructions_attributes"))
+      empty, insts = Instruction.filter_blank_from_instructions(group["instructions_attributes"])
+    end
+    
+    if empty
+      logger.info("  RECIPE_FILTER: group #{group[:name]} is empty, marking for destruction")
+      group[:_destroy] = "1"
+    end
+    
+    return group
+  end
+  
 private
  
 end
