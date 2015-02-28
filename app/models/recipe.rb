@@ -41,9 +41,16 @@ class Recipe < ActiveRecord::Base
     logger.info "in validate now"
   end
   
+  def rating_for_chef
+    if rating.blank?
+      return "N/A"
+    end
+    return "%g" % rating.to_s
+  end
+  
   def rating_for_user(user)
     r = user_rating(user)
-    if r.blank?
+    if r.blank? || r.rating.blank?
       return "N/A"
     end
     return "%g" % r.rating.to_s

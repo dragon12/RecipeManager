@@ -41,9 +41,12 @@ Cooking Time: <%= @recipe.cooking_time || "N/A" %><br/>
 	Chef's Rating: <%= @recipe.rating || "N/A" %>
 	
 	<%if @current_user%><br/>
-		<%= form_for @recipe.user_rating(@current_user) do |f| %>
-		Your Rating: <%= f.text_field :rating , size:"3", :autocomplete => :off %>
-		<%= f.submit %>
+		<%= form_for @user_rating, :url => user_rating_path, :html => {:method => :patch} do |f| %>
+			<%= f.hidden_field :user_id, :value => @current_user.id%>
+			<%= f.hidden_field :recipe_id, :value => @recipe.id%>
+			
+			Your Rating: <%= f.text_field :rating , size:"3", :autocomplete => :off %>
+			<%= f.submit %>
 		<%end%>
 	<%end%>
 </p>

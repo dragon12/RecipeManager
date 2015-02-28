@@ -3,9 +3,21 @@ class UserRatingsController < ApplicationController
   before_action :logged_in_user
 
   def create
+    @user_rating = UserRating.new(user_ratings_params)
+    
+    unless @user_rating.save
+      flash[:danger] = "Failed to save rating: #{user_rating.errors.full_messages}"
+    end
+    redirect_to @recipe
   end
 
   def update
+    @user_rating = UserRating.find_or_create_by(id: params[:id])
+    @user_rating.update(user_ratings_params)
+    unless @user_rating.save
+      flash[:danger] = "Failed to save rating: #{user_rating.errors.full_messages}"
+    end
+    redirect_to @recipe
   end
   
 private

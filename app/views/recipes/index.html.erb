@@ -98,7 +98,7 @@ All Recipes
       		<%= link_to recipe.category.name, recipes_path(:search_by_category_id => recipe.category.id)  %>
           <%end%>
       </td>
-      <td><%= recipe.rating %></td>
+      <td><%= recipe.rating_for_chef %></td>
       <% if @current_user %>
       <td><%= recipe.rating_for_user(@current_user)%></td>
       <%end%>
