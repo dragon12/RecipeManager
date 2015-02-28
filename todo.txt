@@ -1,10 +1,6 @@
-User stuff:
-    user-specific ratings
-        user_ratings
-            rating
-            has_one user
-            has_one recipe
+ratings:    
     submit rating from box on recipe page
+    ratings appear on user's page
 
 
 Minor feature updates:
@@ -19,8 +15,6 @@ More significant features
     tab when adding ingredients should add a new row
     auto-numbering of instructions (on submit if all blank)
 
-known bugs:
-	doesn't correctly strip empty ingredient quantities
 
 Model:
 
