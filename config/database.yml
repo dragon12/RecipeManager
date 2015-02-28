@@ -14,7 +14,7 @@ default: &default
 
 development:
   <<: *default
-  database: latest
+  database: dev
   username: ger
   password:
 
