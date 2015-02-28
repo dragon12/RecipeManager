@@ -83,6 +83,9 @@ All Recipes
     <th style='width:40%'>Description</th>
     <th style='width:10%'>Category</th>
     <th style='width:5%'>Chef's Rating</th>
+    <% if @current_user %>
+    <th style='width:5%'>Your Rating</th>
+    <%end%>
     <th style='width:5%'>Total Time</th>
     <th style='width:5%'>Cost Per Portion</th>
   </tr>
@@ -96,6 +99,9 @@ All Recipes
           <%end%>
       </td>
       <td><%= recipe.rating %></td>
+      <% if @current_user %>
+      <td><%= recipe.rating_for_user(@current_user)%></td>
+      <%end%>
       <td><%= recipe.total_time %></td>
       <td><%= recipe.cost_per_portion %></td>
     <% if @is_admin %>

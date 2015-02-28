@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'user_ratings/create'
+
+  get 'user_ratings/update'
+
   get 'password_resets/new'
 
   get 'password_resets/edit'

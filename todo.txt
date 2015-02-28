@@ -1,6 +1,10 @@
 User stuff:
-    ingredients page: top box should only be visible to admin user
-    edit/create/destroy only allowable to admin user
+    user-specific ratings
+        user_ratings
+            rating
+            has_one user
+            has_one recipe
+    submit rating from box on recipe page
 
 
 Minor feature updates:

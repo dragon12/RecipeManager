@@ -32,10 +32,12 @@ class RecipesController < ApplicationController
   
   def show
     @recipe = Recipe.find(params[:id])
+    setup_empty_user_rating
   end
   
   def edit
     @recipe = Recipe.find(params[:id])
+    setup_empty_user_rating
   end
   
   def update
@@ -60,7 +62,7 @@ class RecipesController < ApplicationController
   def new
     #we create an empty recipe here so that there is always a 'recipe' variable available to the template
     @recipe = Recipe.new
-    
+    setup_empty_user_rating
     ingredient_group = @recipe.ingredient_quantity_groups.build(name: "Default")
     ingredient_group.ingredient_quantities << IngredientQuantity.new
     
@@ -138,7 +140,19 @@ class RecipesController < ApplicationController
   def setup_vars
     @is_admin = current_user && current_user.is_admin?
   end
-     
+  
+  def setup_empty_user_rating
+    return unless current_user
+    logger.info("USER_RATING: doing user rating stuff")
+    @user_rating = @recipe.user_rating(current_user)
+    return unless @user_rating.blank?
+    
+    logger.info("USER_RATING: creating new empty rating")
+    @user_rating = UserRating.new(user: current_user, recipe: @recipe)
+    @recipe.user_ratings << @user_rating
+    logger.info("USER_RATING: created #{@recipe.user_rating(current_user).inspect}")
+  end
+  
   # Confirms an admin user.
   def admin_user
     unless @is_admin

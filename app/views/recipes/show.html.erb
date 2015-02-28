@@ -38,7 +38,14 @@ Cooking Time: <%= @recipe.cooking_time || "N/A" %><br/>
 </p>
 
 <p>
-	Rating: <%= @recipe.rating || "N/A" %>
+	Chef's Rating: <%= @recipe.rating || "N/A" %>
+	
+	<%if @current_user%><br/>
+		<%= form_for @recipe.user_rating(@current_user) do |f| %>
+		Your Rating: <%= f.text_field :rating , size:"3", :autocomplete => :off %>
+		<%= f.submit %>
+		<%end%>
+	<%end%>
 </p>
 
 <p>

@@ -3,8 +3,14 @@ require 'test_helper'
 
 class RecipeTest < ActiveSupport::TestCase
   def setup
+    @r1 = recipes(:recipe1)
+    @r2 = recipes(:recipe2)
+    @r3 = recipes(:recipe3)
     @recipe_one_group = recipes(:recipe2)
     @recipe_two_groups = recipes(:recipe1)
+    @admin_user = users(:michael)
+    @nonadmin_user = users(:archer)
+    
   end
   
   test "recipe cost single group" do
@@ -400,5 +406,22 @@ class RecipeTest < ActiveSupport::TestCase
     
     assert groups_expected.with_indifferent_access == groups_after.with_indifferent_access, 
         "\nEXPECTED: #{groups_expected.inspect}\nSEEN: #{groups_after.inspect}"
+  end
+  
+  
+  test "get user rating that doesn't exist in recipe with no rating" do
+    assert_equal "N/A", @r1.rating_for_user(users(:michael))
+  end
+  
+  test "get user rating that doesn't exist in recipe with rating" do
+    assert_equal "N/A", @r2.rating_for_user(users(:michael))
+  end
+  
+  test "get user rating that does exist in recipe with single rating" do
+    assert_equal "10", @r2.rating_for_user(users(:archer))
+  end
+  
+  test "get user rating that does exist in recipe with multiple ratings" do
+    assert_equal "5", @r3.rating_for_user(users(:archer))
   end
 end

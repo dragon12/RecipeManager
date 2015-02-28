@@ -34,11 +34,25 @@ class Recipe < ActiveRecord::Base
   validates :rating, :numericality => true, :allow_nil => true
   validates :portion_count, :numericality =>true, :allow_nil => true
 
+  has_many :user_ratings
+  has_many :users, through: :user_ratings
 
   validate do
     logger.info "in validate now"
   end
   
+  def rating_for_user(user)
+    r = user_rating(user)
+    if r.blank?
+      return "N/A"
+    end
+    return "%g" % r.rating.to_s
+  end
+  
+  def user_rating(user)
+    logger.info("USER_RATING: looking for rating for user #{user.name}")
+    user_ratings.where(user_id: user.id).first
+  end
   
   def cost_per_portion
     total = calculate_total_cost

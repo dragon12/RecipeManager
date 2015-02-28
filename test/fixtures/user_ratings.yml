@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+user1_recipe2:
+  rating: 10
+  user: archer
+  recipe: recipe2
+
+user1_recipe3:
+  rating: 5
+  user: archer
+  recipe: recipe3
+  
+user2_recipe3:
+  rating: 7
+  user: michael
+  recipe: recipe3
+  
