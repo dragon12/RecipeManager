@@ -18,7 +18,7 @@ class Instruction < ActiveRecord::Base
    
   def self.is_params_empty(params)
     logger.info("Checking params for emptiness: #{params}")
-    params[:step_number].blank? && params[:details].blank?
+    return params[:step_number].blank? && params[:details].blank?
   end
   
 private

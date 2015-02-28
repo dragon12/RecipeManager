@@ -23,4 +23,6 @@ class CategoryTest < ActiveSupport::TestCase
       @cat.destroy
     end
   end
+  
+  
 end

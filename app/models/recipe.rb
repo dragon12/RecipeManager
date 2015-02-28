@@ -96,10 +96,41 @@ class Recipe < ActiveRecord::Base
       .where("categories.id= ?", "#{query}")
   end
   
-#  def ingredient_quantity_groups_attributes=(hash)
-#    logger.info "setting iq groups"
-#  end
-#  
+  def self.filter_blank_instructions_from_groups(hash)
+    hash = hash.with_indifferent_access
+    logger.info("\n\nRECIPE_FILTER_START")
+    logger.info ("RECIPE_FILTER: working on #{hash.inspect}")
+    #the hash has each key/val be an instruction group
+    hash.each do |group_key, group|
+      logger.info("  RECIPE_FILTER: looking at group #{group.inspect}")
+      empty = true
+      
+      if (group.has_key?("instructions_attributes"))
+        
+        insts = group["instructions_attributes"]
+             
+        #strip any that are not real and are blank
+        insts.reject! {|unused2, inst| Instruction.is_params_empty(inst) && inst["id"].blank?}
+        insts.each do |unused2, inst|
+          empty = false
+          
+          logger.info("    RECIPE_FILTER: looking at instruction #{inst}")
+          if Instruction.is_params_empty(inst)
+            logger.info("    RECIPE_FILTER: Is empty, marking for destruction")
+            inst[:_destroy] = "1"
+          end
+        end
+      end
+      if empty
+        logger.info("  RECIPE_FILTER: group #{group[:name]} is empty, marking for destruction")
+        group[:_destroy] = "1"
+      end
+    end
+    logger.info ("RECIPE_FILTER: returning #{hash.inspect}")
+    
+    return hash
+  end
+  
 #  def ingredient_quantity_groups_attributes=(hash)
 #    logger.info "setting iqd attributes: #{hash.inspect}"
 #    hash.each do |seq, iqd_values|
