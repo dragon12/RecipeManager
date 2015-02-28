@@ -1,9 +1,8 @@
 require 'test_helper'
 
 class UsersLoginTest < ActionDispatch::IntegrationTest
-  .
-  .
-  .
+  
+    
   test "login with valid information followed by logout" do
     get login_path
     post login_path, session: { email: @user.email, password: 'password' }
