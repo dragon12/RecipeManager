@@ -18,3 +18,19 @@ salt_g1_r2:
   quantity: 5
   ingredient: salt
   ingredient_quantity_group: group1_recipe2
+
+rot_g1_r3:
+  quantity: 10
+  ingredient: rotted_thing
+  ingredient_quantity_group: group1_recipe3
+  
+carrot_g1_r3:
+  quantity: 1
+  ingredient: carrot
+  ingredient_quantity_group: group1_recipe3
+  
+rot_g1_r4:
+  quantity: 10
+  ingredient: rotted_thing
+  ingredient_quantity_group: group1_recipe4
+  

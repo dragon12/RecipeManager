@@ -9,3 +9,15 @@ recipe2:
   description: The second recipe
   comments: Bad recipe
   category: wine
+  
+recipe3:
+  name: Recipe Three
+  description: The third recipe
+  comments: Good recipe 2
+  category: food
+  
+recipe4:
+  name: Side dish
+  description: The fourth recipe
+  comments: Good recipe 3
+  category: wine

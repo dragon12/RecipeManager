@@ -1,4 +1,12 @@
 
+unused_ingredient:
+  name: "Unused"
+  cost_basis: 100
+  cost: 2.0
+  kcal_basis: 500
+  kcal: 1000
+  measurement_type: weight
+  
 salt:
   name: "Salt"
   cost_basis: 100

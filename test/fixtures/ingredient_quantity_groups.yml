@@ -10,3 +10,11 @@ group2_recipe1:
 group1_recipe2:
   name: Group1R2
   recipe: recipe2
+
+group1_recipe3:
+  name: Group1R3
+  recipe: recipe3
+  
+group1_recipe4:
+  name: Group1R4
+  recipe: recipe4
