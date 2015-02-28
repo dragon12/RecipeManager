@@ -1,0 +1,12 @@
+
+group1_recipe1:
+  name: Group1R1
+  recipe: recipe1
+  
+group2_recipe1:
+  name: Group2R1
+  recipe: recipe1
+  
+group1_recipe2:
+  name: Group1R2
+  recipe: recipe2

@@ -7,3 +7,26 @@ salt:
   kcal: 50
   measurement_type: weight
   
+pepper:
+  name: "Pepper"
+  cost_basis: 100
+  cost: 1.0
+  kcal_basis: 100
+  kcal: 50
+  measurement_type: weight
+
+carrot:
+  name: "Carrot"
+  cost_basis: 100
+  cost: 2.0
+  kcal_basis: 10
+  kcal: 50
+  measurement_type: weight
+
+rotted_thing:
+  name: "Rot"
+  cost_basis: 100
+  cost: 1.0
+  kcal_basis: 100
+  kcal: 50
+  measurement_type: weight

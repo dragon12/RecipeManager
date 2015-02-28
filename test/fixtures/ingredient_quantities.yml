@@ -1,0 +1,20 @@
+salt_g1_r1:
+  quantity: '3.000'
+  ingredient: salt
+  ingredient_quantity_group: group1_recipe1
+
+carrot_g1_r1:
+  quantity: '3.000'
+  ingredient: carrot
+  ingredient_quantity_group: group1_recipe1
+
+carrot_g2_r1:
+  quantity: '5.000'
+  ingredient: carrot
+  ingredient_quantity_group: group2_recipe1
+
+
+salt_g1_r2:
+  quantity: 5
+  ingredient: salt
+  ingredient_quantity_group: group1_recipe2

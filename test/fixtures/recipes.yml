@@ -1,0 +1,11 @@
+recipe1:
+  name: Recipe One
+  description: The first recipe
+  comments: Good recipe
+  category: food
+
+recipe2:
+  name: Recipe Two
+  description: The second recipe
+  comments: Bad recipe
+  category: wine
