@@ -28,7 +28,7 @@ class Instruction < ActiveRecord::Base
       empty = false
       
       logger.info("    RECIPE_FILTER: looking at instruction #{inst}")
-      if Instruction.is_params_empty(inst)
+      if is_params_empty(inst)
         logger.info("    RECIPE_FILTER: Is empty, marking for destruction")
         inst[:_destroy] = "1"
       end

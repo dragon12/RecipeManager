@@ -14,6 +14,25 @@ class IngredientQuantityGroup < ActiveRecord::Base
 
   validates :name, presence: true, length: {minimum: 2}
   
+  
+  def self.filter_blank_ingredient_quantities_from_group(group)
+    #the hash has each key/val be an iq group
+    
+    empty = true
+      
+    if (group.has_key?("ingredient_quantities_attributes"))
+      empty, insts = IngredientQuantity.filter_blank_from_ingredient_quantities(group["ingredient_quantities_attributes"])
+    end
+    
+    if empty
+      logger.info("  RECIPE_FILTER: group #{group[:name]} is empty, marking for destruction")
+      group[:_destroy] = "1"
+    end
+    
+    return group
+  end
+  
+  
   def name_or_default
     name.blank? ? "<Enter Group Name>" : name
   end

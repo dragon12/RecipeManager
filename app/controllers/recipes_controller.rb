@@ -125,11 +125,21 @@ class RecipesController < ApplicationController
                     }
                   ]
                 )
-       if ret_params.has_key?("instruction_groups_attributes")
-         groups = ret_params["instruction_groups_attributes"]
-         
-         groups = Recipe.filter_blank_instructions_from_groups(groups)
-       end
+      if ret_params.has_key?("instruction_groups_attributes")
+        instruction_groups = ret_params["instruction_groups_attributes"]
+        
+        instruction_groups = Recipe.filter_blank_instructions_from_groups(instruction_groups)
+        
+        ret_params["instruction_groups_attributes"] = instruction_groups;
+      end
+
+      if ret_params.has_key?("ingredient_quantity_groups_attributes")
+        iq_groups = ret_params["ingredient_quantity_groups_attributes"]
+        
+        iq_groups = Recipe.filter_blank_ingredient_quantities_from_groups(iq_groups)
+        
+        ret_params["ingredient_quantity_groups_attributes"] = iq_groups
+      end
 
       logger.info(ret_params)
       return ret_params

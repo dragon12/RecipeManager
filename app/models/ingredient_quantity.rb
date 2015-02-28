@@ -9,6 +9,27 @@ class IngredientQuantity < ActiveRecord::Base
   
   #validates :ingredient, :presence => true
   #validates :recipe, :presence => true
+
+  def self.filter_blank_from_ingredient_quantities(iqs)
+    #strip any that are not real and are blank
+    iqs.reject! {|unused2, iq| 
+      is_params_empty(iq) && iq["id"].blank?
+      }
+    
+    empty = true
+    iqs.each do |unused2, iq|
+      empty = false
+      
+      logger.info("    RECIPE_INGREDIENT_FILTER: looking at iq #{iq}")
+      if is_params_empty(iq)
+        logger.info("    RECIPE_INGREDIENT_FILTER: Is empty, marking for destruction")
+        iq[:_destroy] = "1"
+      end
+    end
+    
+    return empty, iqs
+  end
+
   @cost_for_qty = nil
   
   def cost_for_qty
@@ -90,4 +111,12 @@ class IngredientQuantity < ActiveRecord::Base
   end
 
   validates :quantity, presence: true, numericality: true
+  
+  
+private
+  def self.is_params_empty(params)
+    logger.info("Checking params for emptiness: #{params}")
+    return params[:quantity].blank? && params[:preparation].blank? && params[:ingredient_id].blank?
+  end
+  
 end

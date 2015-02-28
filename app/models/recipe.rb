@@ -111,6 +111,22 @@ class Recipe < ActiveRecord::Base
     
     return hash
   end
+  
+  def self.filter_blank_ingredient_quantities_from_groups(hash)
+    hash = hash.with_indifferent_access
+    logger.info("\n\nRECIPE_FILTER_START")
+    logger.info ("RECIPE_FILTER: working on #{hash.inspect}")
+    #the hash has each key/val be an iq group
+    hash.each do |group_key, group|
+      logger.info("  RECIPE_FILTER: looking at group #{group.inspect}")
+      
+      group = IngredientQuantityGroup.filter_blank_ingredient_quantities_from_group(group)
+    end
+    
+    logger.info ("RECIPE_FILTER: returning #{hash.inspect}")
+    
+    return hash
+  end
     
 private
   
