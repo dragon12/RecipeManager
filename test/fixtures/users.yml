@@ -11,3 +11,8 @@ one:
   password_digest: MyString
   is_admin: 
   remember_digest: MyString
+  
+archer:
+  name: Sterling Archer
+  email: duchess@example.gov
+  password_digest: <%= User.digest('password') %>
