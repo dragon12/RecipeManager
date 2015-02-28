@@ -5,4 +5,5 @@ salt:
   cost: 1.0
   kcal_basis: 100
   kcal: 50
+  measurement_type: weight
   

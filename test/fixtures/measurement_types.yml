@@ -2,3 +2,7 @@
 weight:
   measurement_type: "Weight"
   measurement_name: "By Weight"
+
+weight_without_ingredients:
+  measurement_type: "woi"
+  measurement_name: "bwoi"
