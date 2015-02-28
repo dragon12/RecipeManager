@@ -59,4 +59,8 @@ class UserTest < ActiveSupport::TestCase
   test "authticate fails with incorrect password" do
     assert_not @user.authenticate("12345")
   end
+  
+  test "authenticated? should return false for a user with nil digest" do
+    assert_not @user.authenticated?('')
+  end
 end

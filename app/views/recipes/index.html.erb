@@ -8,7 +8,7 @@ All Recipes
  <%= form_tag(recipes_path, :method => "get", id: "search-form") do %>
  
  <div class='boxed_table'>
-  <table >
+  <table>
  	<tr>
  		<td>
  			Filter by Name:
@@ -64,10 +64,10 @@ All Recipes
 		</td>
  	</tr>
  </table>
-<%end%>
  
  <%= link_to 'Clear Filters', recipes_path %>
  </div>
+<%end%>
  
   <p>
  <%= link_to 'Add recipe', new_recipe_path %>
