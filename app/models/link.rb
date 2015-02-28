@@ -3,6 +3,7 @@ class Link < ActiveRecord::Base
   
   validates :description, presence: true
   
-  validates :url, presence: true, :format => URI::regexp(%w(http https))
+  validates :url, presence: true, 
+            :format => URI::regexp(%w(http https))
                       
 end
