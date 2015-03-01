@@ -1,7 +1,13 @@
-ratings:    
-    submit rating from box on recipe page
-    ratings appear on user's page
 
+
+ratings:    
+    ratings appear on user's page
+	average rating instead of chef's rating
+	submit rating from box on recipe page
+    tests for submission of ratings from recipes show page
+   
+recipes as ingredients:
+	recipe has a checkbox to say that it can be used as a component
 
 Minor feature updates:
 	recipe in progress - not displayed on main screen

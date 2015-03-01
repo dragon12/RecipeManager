@@ -40,7 +40,7 @@ class RecipeTest < ActiveSupport::TestCase
   
   test "filter by name" do
     #first three recipes are named 'Recipe %'
-    filtered = Recipe.search_by_name("recipe")
+    filtered = Recipe.search_by_name("terrecipe")
     
     assert_equal 3, filtered.count
   end
@@ -423,5 +423,22 @@ class RecipeTest < ActiveSupport::TestCase
   
   test "get user rating that does exist in recipe with multiple ratings" do
     assert_equal "5", @r3.rating_for_user(users(:archer))
+  end
+  
+  test "get average rating that doesn't exist" do
+    r = recipes(:unrated_recipe)
+    assert_equal "N/A", r.average_rating
+  end
+  
+  test "get average rating for single rating" do
+    #recipe2 has a single rating of 10
+    r = recipes(:recipe2)
+    assert_equal "10", r.average_rating
+  end
+  
+  test "get average rating for multiple ratings" do
+    #recipe3 has ratings of 5 and 7
+    r = recipes(:recipe3)
+    assert_equal "6", r.average_rating
   end
 end

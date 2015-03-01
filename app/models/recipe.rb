@@ -41,6 +41,28 @@ class Recipe < ActiveRecord::Base
     logger.info "in validate now"
   end
   
+  def format_double(input)
+    if input.blank?
+      return "N/A"
+    end
+    return "%g" % input.to_s
+  end
+  
+  def average_rating
+    sum = 0.0
+    count = 0
+    user_ratings.each do |ur|
+      sum = sum + ur.rating
+      count = count + 1
+    end
+    
+    if count == 0
+      return "N/A"
+    end
+    
+    return format_double(sum / count)
+  end
+  
   def rating_for_chef
     if rating.blank?
       return "N/A"
