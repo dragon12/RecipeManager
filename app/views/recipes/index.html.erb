@@ -83,7 +83,7 @@ All Recipes
     								recipes_path(:sort_by => 'name')%></th>
     <th style='width:40%'>Description</th>
     <th style='width:10%'><%= link_to 'Category',
-    								recipes_path(:sort_by => 'category')%></th>
+    								recipes_path(:sort_by => 'sortable_category')%></th>
     <th style='width:5%'><%= link_to 'Average Rating',
     								recipes_path(:sort_by => 'sortable_average_rating', :descending => '1')%></th>
     <% if @current_user %>

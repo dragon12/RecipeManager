@@ -49,6 +49,10 @@ class Recipe < ActiveRecord::Base
     return format_double(avg)
   end
   
+  def sortable_category
+    return category.name
+  end
+  
   def sortable_average_rating
     avg = calc_average_rating
     if avg.nil?
