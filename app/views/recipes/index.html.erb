@@ -82,7 +82,7 @@ All Recipes
     <th style='width:20%'>Name</th>
     <th style='width:40%'>Description</th>
     <th style='width:10%'>Category</th>
-    <th style='width:5%'>Chef's Rating</th>
+    <th style='width:5%'>Average Rating</th>
     <% if @current_user %>
     <th style='width:5%'>Your Rating</th>
     <%end%>
@@ -98,7 +98,7 @@ All Recipes
       		<%= link_to recipe.category.name, recipes_path(:search_by_category_id => recipe.category.id)  %>
           <%end%>
       </td>
-      <td><%= recipe.rating_for_chef %></td>
+      <td><%= recipe.average_rating %></td>
       <% if @current_user %>
       <td><%= recipe.rating_for_user(@current_user)%></td>
       <%end%>

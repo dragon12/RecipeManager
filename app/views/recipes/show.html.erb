@@ -38,7 +38,7 @@ Cooking Time: <%= @recipe.cooking_time || "N/A" %><br/>
 </p>
 
 <p>
-	Chef's Rating: <%= @recipe.rating || "N/A" %>
+	Average Rating: <%= @recipe.average_rating %>
 	
 	<%if @current_user%><br/>
 		<%= form_for @user_rating, :url => user_rating_path, :html => {:method => :patch} do |f| %>

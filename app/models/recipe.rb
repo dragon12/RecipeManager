@@ -31,7 +31,6 @@ class Recipe < ActiveRecord::Base
 
 
 
-  validates :rating, :numericality => true, :allow_nil => true
   validates :portion_count, :numericality =>true, :allow_nil => true
 
   has_many :user_ratings
@@ -40,14 +39,7 @@ class Recipe < ActiveRecord::Base
   validate do
     logger.info "in validate now"
   end
-  
-  def format_double(input)
-    if input.blank?
-      return "N/A"
-    end
-    return "%g" % input.to_s
-  end
-  
+
   def average_rating
     sum = 0.0
     count = 0
@@ -63,13 +55,6 @@ class Recipe < ActiveRecord::Base
     return format_double(sum / count)
   end
   
-  def rating_for_chef
-    if rating.blank?
-      return "N/A"
-    end
-    return "%g" % rating.to_s
-  end
-  
   def rating_for_user(user)
     r = user_rating(user)
     if r.blank? || r.rating.blank?
@@ -79,7 +64,7 @@ class Recipe < ActiveRecord::Base
   end
   
   def user_rating(user)
-    logger.info("USER_RATING: looking for rating for user #{user.name}")
+    logger.debug("USER_RATING: looking for rating for user #{user.name}")
     user_ratings.where(user_id: user.id).first
   end
   
@@ -172,6 +157,14 @@ class Recipe < ActiveRecord::Base
   end
     
 private
+  
+  
+  def format_double(input)
+    if input.blank?
+      return "N/A"
+    end
+    return "%g" % input.to_s
+  end
   
   def calculate_total_cost
     cumulative = 0.0

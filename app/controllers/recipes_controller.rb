@@ -87,7 +87,7 @@ class RecipesController < ApplicationController
     def recipe_params
       ret_params = params.require(:recipe)
         .permit(:name, :description, :comments, :category_id, :total_time, :active_time, 
-                  :cooking_time, :rating, :portion_count, :_destroy,
+                  :cooking_time, :portion_count, :_destroy,
                 links_attributes: [:id, :description, :url, :_destroy],
                 instruction_groups_attributes: [
                   :id,
