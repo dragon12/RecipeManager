@@ -86,7 +86,9 @@ class RecipesController < ApplicationController
   def new
     #we create an empty recipe here so that there is always a 'recipe' variable available to the template
     @recipe = Recipe.new
-    setup_empty_user_rating
+    
+    ur = @recipe.user_ratings.build(user_id: current_user.id)
+    
     ingredient_group = @recipe.ingredient_quantity_groups.build(name: "Default")
     ingredient_group.ingredient_quantities << IngredientQuantity.new
     
