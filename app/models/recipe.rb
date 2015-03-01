@@ -41,18 +41,29 @@ class Recipe < ActiveRecord::Base
   end
 
   def average_rating
-    sum = 0.0
-    count = 0
-    user_ratings.each do |ur|
-      sum = sum + ur.rating
-      count = count + 1
-    end
-    
-    if count == 0
+    avg = calc_average_rating
+    if avg.nil?
       return "N/A"
     end
     
-    return format_double(sum / count)
+    return format_double(avg)
+  end
+  
+  def sortable_average_rating
+    avg = calc_average_rating
+    if avg.nil?
+      return -1
+    end
+    
+    return avg
+  end
+  
+  def sortable_rating_for_user(user)
+    r = user_rating(user)
+    if r.blank? || r.rating.blank?
+      return -1
+    end
+    return r.rating
   end
   
   def rating_for_user(user)
@@ -182,5 +193,17 @@ private
     end
     return cumulative
   end
+  
+  
+  def calc_average_rating
+    sum = 0.0
+    count = 0
+    user_ratings.each do |ur|
+      sum = sum + ur.rating
+      count = count + 1
+    end
+    return count == 0 ? nil : (sum / count)
+  end
+  
   
 end

@@ -79,12 +79,16 @@ All Recipes
 
 <table class='gridtable'>
   <tr>
-    <th style='width:20%'>Name</th>
+    <th style='width:20%'><%= link_to 'Name',
+    								recipes_path(:sort_by => 'name')%></th>
     <th style='width:40%'>Description</th>
-    <th style='width:10%'>Category</th>
-    <th style='width:5%'>Average Rating</th>
+    <th style='width:10%'><%= link_to 'Category',
+    								recipes_path(:sort_by => 'category')%></th>
+    <th style='width:5%'><%= link_to 'Average Rating',
+    								recipes_path(:sort_by => 'sortable_average_rating', :descending => '1')%></th>
     <% if @current_user %>
-    <th style='width:5%'>Your Rating</th>
+    <th style='width:5%'><%= link_to 'User Rating',
+    								recipes_path(:sort_by => 'sortable_rating_for_user', :descending => '1')%></th>
     <%end%>
     <th style='width:5%'>Total Time</th>
     <th style='width:5%'>Cost Per Portion</th>

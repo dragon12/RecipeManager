@@ -1,3 +1,5 @@
+require 'will_paginate/array'
+
 class RecipesController < ApplicationController
   before_action :setup_vars
   before_action :admin_user, only: [:new, :create, :edit, :update, :destroy]
@@ -26,8 +28,30 @@ class RecipesController < ApplicationController
       #@recipes = Recipe.joins(:category).order('categories.name asc, name asc')
       @recipes = Recipe.order(:created_at)
     end
+    @recipes = sort_by(params[:sort_by], @recipes)
+    unless params[:descending].blank?
+      @recipes = @recipes.reverse
+    end
     @recipes = @recipes.paginate(page: params[:page])
     render 'index'
+  end
+  
+  def sort_by(sort_field, hash)
+    if sort_field.blank?
+      return hash.order("created_at DESC")
+    end
+    #if (sort_field == "user_rating")
+    #  return 
+    #end
+    logger.info("SORTING ARITY: #{Recipe.instance_method(sort_field).arity}")
+    arity = Recipe.instance_method(sort_field).arity
+    return hash.sort_by{|item|
+        if arity == 0
+          item.send sort_field
+        else
+          item.send sort_field, current_user
+        end
+      }
   end
   
   def show

@@ -1,14 +1,20 @@
 
+sortable headings on recipes index
 
 ratings:    
-    ratings appear on user's page
-	average rating instead of chef's rating
+    ratings appear on user's page, viewable to all
 	submit rating from box on recipe page
-    tests for submission of ratings from recipes show page
-   
+    
+	
 recipes as ingredients:
 	recipe has a checkbox to say that it can be used as a component
-
+	recipe portion count can't be modified if it is used
+	show page displays recipes used in
+	recipes used as a component link through ingredients table but can't be edited from there
+	recipe show page makes ingredient a link if it's tagged as such in the ingredients table
+	ingredients model changes so that ingredient can be simple or complex
+	
+	
 Minor feature updates:
 	recipe in progress - not displayed on main screen
 	

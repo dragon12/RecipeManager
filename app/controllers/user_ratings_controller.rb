@@ -6,7 +6,7 @@ class UserRatingsController < ApplicationController
     @user_rating = UserRating.new(user_ratings_params)
     
     unless @user_rating.save
-      flash[:danger] = "Failed to save rating: #{user_rating.errors.full_messages}"
+      flash[:danger] = "Failed to save rating: #{@user_rating.errors.full_messages}"
     end
     redirect_to @recipe
   end
@@ -15,7 +15,7 @@ class UserRatingsController < ApplicationController
     @user_rating = UserRating.find_or_create_by(id: params[:id])
     @user_rating.update(user_ratings_params)
     unless @user_rating.save
-      flash[:danger] = "Failed to save rating: #{user_rating.errors.full_messages}"
+      flash[:danger] = "Failed to save rating: #{@user_rating.errors.full_messages}"
     end
     redirect_to @recipe
   end
