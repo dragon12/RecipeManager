@@ -15,14 +15,14 @@ class UserRatingsControllerTest < ActionController::TestCase
   end
   
   test "should redirect update when not logged in" do
-    patch :update, id: @rating, 
-                    user_rating: { rating: 5.5, recipe_id: @recipe.id }
+    patch :update, id: @rating, recipe_id: @recipe.id,
+                    user_rating: { rating: 5.5 }
     assert_not flash.empty?, "#{flash.inspect}"
     assert_redirected_to @rating.recipe
   end
   
   test "should redirect create when not logged in" do
-    put :create, user_rating: { rating: 5.5, recipe_id: @recipe.id }
+    put :create, recipe_id: @recipe.id, user_rating: { rating: 5.5 }
     assert_not flash.empty?, "#{flash.inspect}"
     assert_redirected_to @rating.recipe
   end
@@ -30,7 +30,7 @@ class UserRatingsControllerTest < ActionController::TestCase
   test "should create rating when logged in" do
     log_in_as(@user)
     assert_difference 'UserRating.count', 1 do
-      put :create, user_rating: { rating: 5.5, recipe_id: @recipe.id, user_id: @user.id }
+      post :create, recipe_id: @recipe.id, user_rating: { rating: 5.5, user_id: @user.id }
     end
     
     assert flash.empty?, "#{flash.inspect}"
@@ -39,8 +39,11 @@ class UserRatingsControllerTest < ActionController::TestCase
   
   test "should update rating when logged in" do
     log_in_as(@user)
-    patch :update, id: @rating, 
-                    user_rating: { rating: 5.5, recipe_id: @recipe.id }
+    
+    assert_no_difference 'UserRating.count' do
+      patch :update, id: @rating, recipe_id: @recipe.id, 
+                    user_rating: { rating: 5.5 }
+    end
                     
     assert flash.empty?, "#{flash.inspect}"
     #assert_match 'boohooo', @response.body

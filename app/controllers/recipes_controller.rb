@@ -171,6 +171,7 @@ class RecipesController < ApplicationController
     return unless current_user
     logger.info("USER_RATING: doing user rating stuff")
     @user_rating = @recipe.user_rating(current_user)
+    logger.info("USER_RATING: found #{@user_rating.inspect}")
     return unless @user_rating.blank?
     
     logger.info("USER_RATING: creating new empty rating")

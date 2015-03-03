@@ -1,5 +1,5 @@
 
-sortable headings on recipes index
+Change 'User' to 'Your' on recipes index and show
 
 ratings:    
     ratings appear on user's page, viewable to all

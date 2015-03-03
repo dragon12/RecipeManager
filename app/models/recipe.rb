@@ -80,7 +80,9 @@ class Recipe < ActiveRecord::Base
   
   def user_rating(user)
     logger.debug("USER_RATING: looking for rating for user #{user.name}")
-    user_ratings.where(user_id: user.id).first
+    rating = user_ratings.where(user_id: user.id).first
+    logger.debug("USER_RATING: found #{rating.inspect})")
+    return rating
   end
   
   def cost_per_portion

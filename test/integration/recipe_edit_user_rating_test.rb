@@ -16,7 +16,7 @@ class RecipeEditUserRatingTest < ActionDispatch::IntegrationTest
     
     #create a new user rating
     assert_no_difference 'UserRating.count' do
-      post user_ratings_path, user_rating: {rating: nil, user_id: @user.id, recipe_id: r.id}
+      post recipe_user_ratings_path(r, user_rating: {rating: nil, user_id: @user.id})
     end
     assert_not flash.empty?
     assert_redirected_to r
@@ -29,10 +29,10 @@ class RecipeEditUserRatingTest < ActionDispatch::IntegrationTest
     get recipe_path(r)
     
     assert_template 'recipes/show'
-    
+   
     #create a new user rating
     assert_no_difference 'UserRating.count' do
-      post user_ratings_path, user_rating: {rating: 12, user_id: @user.id, recipe_id: r.id}
+      post recipe_user_ratings_path(r, user_rating: {rating: 12, user_id: @user.id})
     end
     assert_not flash.empty?
     assert_redirected_to r
@@ -48,7 +48,7 @@ class RecipeEditUserRatingTest < ActionDispatch::IntegrationTest
     
     #create a new user rating
     assert_difference 'UserRating.count', 1 do
-      post user_ratings_path, user_rating: {rating: 5, user_id: @user.id, recipe_id: r.id}
+      post recipe_user_ratings_path(r, user_rating: {rating: 5, user_id: @user.id})
     end
     assert flash.empty?
     assert_redirected_to r
@@ -69,8 +69,8 @@ class RecipeEditUserRatingTest < ActionDispatch::IntegrationTest
     #update the existing rating
     @ur = UserRating.find_by!(user_id: @user.id, recipe_id: r.id)
     assert_no_difference 'UserRating.count' do
-      patch user_rating_path(@ur), 
-              user_rating: {rating: 7, user_id: @user.id, recipe_id: r.id}
+      patch recipe_user_rating_path(r, @ur), 
+              user_rating: {rating: 7, user_id: @user.id}
     end
     
     assert flash.empty?
@@ -92,8 +92,8 @@ class RecipeEditUserRatingTest < ActionDispatch::IntegrationTest
     #update the existing rating
     @ur = UserRating.find_by!(user_id: @user.id, recipe_id: r.id)
     assert_no_difference 'UserRating.count' do
-      patch user_rating_path(@ur), 
-              user_rating: {rating: -1, user_id: @user.id, recipe_id: r.id}
+      patch recipe_user_rating_path(r, @ur), 
+              user_rating: {rating: -1, user_id: @user.id}
     end
     
     assert_not flash.empty?

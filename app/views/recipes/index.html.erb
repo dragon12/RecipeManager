@@ -87,7 +87,7 @@ All Recipes
     <th style='width:5%'><%= link_to 'Average Rating',
     								recipes_path(:sort_by => 'sortable_average_rating', :descending => '1')%></th>
     <% if @current_user %>
-    <th style='width:5%'><%= link_to 'User Rating',
+    <th style='width:5%'><%= link_to 'Your Rating',
     								recipes_path(:sort_by => 'sortable_rating_for_user', :descending => '1')%></th>
     <%end%>
     <th style='width:5%'>Total Time</th>
