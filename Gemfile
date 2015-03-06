@@ -57,7 +57,6 @@ group :development do
 end
 
 gem 'pg'
-gem 'google-analytics-turbolinks'
 
 # for heroku
 gem 'puma'
