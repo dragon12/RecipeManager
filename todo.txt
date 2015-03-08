@@ -1,7 +1,11 @@
+be able to tie different types of measurement to the same ingredient
 
-Change 'User' to 'Your' on recipes index and show
+issue with which user rating id is picked...
+
+definitely a bug or race condition around creating of user ratings
 
 ratings:    
+    should be able to delete ratings
     ratings appear on user's page, viewable to all
 	submit rating from box on recipe page
     
@@ -21,7 +25,6 @@ Minor feature updates:
 
 
 More significant features
-    Headings on index should be click-to-sort
     appropriate pluralisation of ingredients
     linking to specific other recipes as an ingredient
     tab when adding ingredients should add a new row
