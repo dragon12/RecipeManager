@@ -4,11 +4,15 @@ class UserRatingsController < ApplicationController
 
   def create
     logger.info("USER_RATING: creating from params: #{params.inspect}")
-    @user_rating = @recipe.user_ratings.build(user_ratings_params)
+    #ur = @recipe.user_ratings.build(user_ratings_params)
     
-    unless @user_rating.save
-      flash[:danger] = "Failed to save rating: #{@user_rating.errors.full_messages}"
+    ur = UserRating.new(user_ratings_params)
+    ur.recipe_id = @recipe.id
+    @recipe.user_ratings << ur
+    unless ur.save
+     flash[:danger] = "Failed to save rating: #{ur.errors.full_messages}"
     end
+    @recipe.reload
     redirect_to @recipe
   end
 
@@ -19,6 +23,18 @@ class UserRatingsController < ApplicationController
     @user_rating.update(user_ratings_params)
     unless @user_rating.save
       flash[:danger] = "Failed to save rating: #{@user_rating.errors.full_messages}"
+    end
+    redirect_to @recipe
+  end
+  
+  def destroy
+    logger.info("USER_RATING: destroy; params in: #{params.inspect}")
+    @user_rating = UserRating.find_or_create_by(id: params[:id])
+    logger.info("USER_RATING: Found user rating: #{@user_rating.inspect}")
+    if @user_rating.destroy
+      flash[:info] = "Successfully deleted rating"
+    else
+      flash[:danger] = "Failed to delete rating: #{@user_rating.errors.full_messages}"
     end
     redirect_to @recipe
   end

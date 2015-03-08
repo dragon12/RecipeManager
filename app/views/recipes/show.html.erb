@@ -36,19 +36,25 @@ Active Time: <%= @recipe.active_time || "N/A" %><br/>
 Cooking Time: <%= @recipe.cooking_time || "N/A" %><br/>
 	<%end%>
 </p>
-
+</br>
 <p>
 	Average Rating: <%= @recipe.average_rating %>
-	
+</p>	
 	<%if @current_user%><br/>
 		<%= form_for ([@recipe, @user_rating]) do |f| %>
 			<%= f.hidden_field :user_id, :value => @current_user.id%>
 			
-			Your Rating: <%= f.text_field :rating , size:"3", :autocomplete => :off %>
-			<%= f.submit %>
+			Your Rating: <%= f.text_field :rating , size:"3", :autocomplete => :off %></br>
+			<%= f.submit "Update Rating" %>
+		<%end%>
+		
+		<%if !@user_rating.rating.blank?%>
+			<%= form_for ([@recipe, @user_rating]), method: :delete do |f| %>
+				<%= f.submit "Delete Rating" %>
+			<%end%>
 		<%end%>
 	<%end%>
-</p>
+</br>
 
 <p>
 	Number of Portions: <%= @recipe.portion_count || "N/A" %>

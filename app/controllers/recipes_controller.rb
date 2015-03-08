@@ -177,9 +177,9 @@ class RecipesController < ApplicationController
     logger.info("USER_RATING: creating new empty rating")
     @user_rating = UserRating.new(user: current_user, recipe: @recipe)
     logger.info("USER_RATING: created #{@user_rating}")
-    @recipe.user_ratings << @user_rating
-    @recipe.reload
-    logger.info("USER_RATING: created #{@recipe.user_rating(current_user).inspect}")
+    #@recipe.user_ratings << @user_rating
+    #@recipe.reload
+    #logger.info("USER_RATING: created #{@recipe.user_rating(current_user).inspect}")
   end
   
   # Confirms an admin user.

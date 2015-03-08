@@ -56,6 +56,25 @@ class RecipeEditUserRatingTest < ActionDispatch::IntegrationTest
     assert_equal "5", r.rating_for_user(@user)
   end
   
+  test "successful creation of second rating" do
+    u = users(:michael)
+    log_in_as(u)
+    #michael has not rated recipe 2, archer has
+    r = recipes(:recipe2)
+    get recipe_path(r)
+    
+    assert_template 'recipes/show'
+    
+    #create a new user rating
+    assert_difference 'UserRating.count', 1 do
+      post recipe_user_ratings_path(r, user_rating: {rating: 5, user_id: u.id})
+    end
+    assert flash.empty?
+    assert_redirected_to r
+    r.reload
+    assert_equal "5", r.rating_for_user(u)
+  end
+  
   
   test "successful update of rating" do
     log_in_as(@user)
@@ -77,6 +96,28 @@ class RecipeEditUserRatingTest < ActionDispatch::IntegrationTest
     assert_redirected_to r
     r.reload
     assert_equal "7", r.rating_for_user(@user)
+  end
+  
+  
+  test "successful deletion of rating" do
+    log_in_as(@user)
+    #archer has previously rated recipe 2 a 10
+    r = recipes(:recipe2)
+    get recipe_path(r)
+    
+    assert_template 'recipes/show'
+    assert_equal "10", r.rating_for_user(@user)
+    
+    ur = r.user_rating(@user)
+    #delete the existing rating
+    assert_difference 'UserRating.count', -1 do
+      delete recipe_user_rating_path(r, ur)
+    end
+    
+    assert_not flash.empty?
+    assert_redirected_to r
+    r.reload
+    assert r.user_rating(@user).blank?
   end
   
   

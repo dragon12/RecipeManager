@@ -1,8 +1,4 @@
 Rails.application.routes.draw do
-  get 'user_ratings/create'
-
-  get 'user_ratings/update'
-
   get 'password_resets/new'
 
   get 'password_resets/edit'
@@ -37,7 +33,7 @@ Rails.application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   resources :recipes do
-      resources :user_ratings, only: [:new, :create, :update]
+      resources :user_ratings, only: [:new, :create, :update, :destroy]
   end
 
   resources :ingredients

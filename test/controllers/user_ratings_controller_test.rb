@@ -7,13 +7,6 @@ class UserRatingsControllerTest < ActionController::TestCase
     @rating = user_ratings(:user1_recipe2)
   end
   
-  test "should redirect update to recipes when no recipe" do
-    patch :update, id: @rating, 
-                    user_rating: { rating: 5.5 }
-    assert_not flash.empty?, "#{flash.inspect}"
-    assert_redirected_to recipes_url
-  end
-  
   test "should redirect update when not logged in" do
     patch :update, id: @rating, recipe_id: @recipe.id,
                     user_rating: { rating: 5.5 }
@@ -23,6 +16,12 @@ class UserRatingsControllerTest < ActionController::TestCase
   
   test "should redirect create when not logged in" do
     put :create, recipe_id: @recipe.id, user_rating: { rating: 5.5 }
+    assert_not flash.empty?, "#{flash.inspect}"
+    assert_redirected_to @rating.recipe
+  end
+  
+  test "should redirect destroy when not logged in" do
+    delete :destroy, recipe_id: @recipe.id, id: @rating.id
     assert_not flash.empty?, "#{flash.inspect}"
     assert_redirected_to @rating.recipe
   end
