@@ -1,0 +1,15 @@
+unused_ingredient:
+    recipe_component: unused_ingredient (Ingredient)
+
+salt:
+    recipe_component: salt (Ingredient)
+
+pepper:
+    recipe_component: pepper (Ingredient)
+
+carrot:
+    recipe_component: carrot (Ingredient)
+
+rotted_thing:
+    recipe_component: rotted_thing (Ingredient)
+
