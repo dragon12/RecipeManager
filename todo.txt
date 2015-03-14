@@ -1,11 +1,11 @@
 be able to tie different types of measurement to the same ingredient
 
-issue with which user rating id is picked...
+Front page should have new recipes since last visit
 
-definitely a bug or race condition around creating of user ratings
+[10/03 23:46] Anne-Marie Sweeney: On the recipes pages everything is squished way over to the left hand side with no margin and the centre/right of the page is blank
+[11/03 00:03] Anne-Marie Sweeney: And free space at the end of each recipe would be great, just a small amount of space, hate reading things in the very very bottom left corner :p
 
 ratings:    
-    should be able to delete ratings
     ratings appear on user's page, viewable to all
 	submit rating from box on recipe page
     
