@@ -47,19 +47,19 @@ class RecipeTest < ActiveSupport::TestCase
   
   test "filter by ingredient id" do
     #carrot appears twice in recipe1 and once in recipe 3
-    carrot = ingredients(:carrot)
-    filtered = Recipe.search_by_ingredient_id(carrot.id)
+    carrot = ingredient_links(:carrot)
+    filtered = Recipe.search_by_ingredient_link_id(carrot.id)
     assert_equal 2, filtered.count
   end
   
   test "filter by an unused ingredient id" do
-    unused_ing = ingredients(:unused_ingredient)
-    assert_equal 0, Recipe.search_by_ingredient_id(unused_ing.id).count
+    unused_ing = ingredient_links(:unused_ingredient)
+    assert_equal 0, Recipe.search_by_ingredient_link_id(unused_ing.id).count
   end
   
   test "filter by ingredient name (full, unique)" do
     #carrot appears twice in recipe1 and once in recipe 3
-    carrot = ingredients(:carrot)
+    carrot = ingredient_links(:carrot)
     filtered = Recipe.search_by_ingredient(carrot.name)
     assert_equal 2, filtered.count
   end
@@ -87,7 +87,7 @@ class RecipeTest < ActiveSupport::TestCase
     assert_equal 3, filtered.count, "#{filtered.inspect}"
   end
   
-  test "strip blank ingredients no stripping" do
+  test "strip blank ingredient_links no stripping" do
     groups_before = {
       "0" => {"id"=>"", 
               "name"=>"Default",
@@ -95,7 +95,7 @@ class RecipeTest < ActiveSupport::TestCase
                   "0"=>{
                       "id"=>"1", 
                       "quantity"=>"1", 
-                      "ingredient_id"=>"1", 
+                      "ingredient_link_id"=>"1", 
                       "preparation"=>"", 
                       "_destroy"=>"false"
       }}}}
@@ -108,7 +108,7 @@ class RecipeTest < ActiveSupport::TestCase
   end
   
   
-  test "strip blank ingredients one empty ingredient" do
+  test "strip blank ingredient_links one empty ingredient" do
     groups = {
       "0" => {:id =>"", 
               :name=>"Default",
@@ -117,14 +117,14 @@ class RecipeTest < ActiveSupport::TestCase
                       :id=>"1", 
                       :quantity=>"", 
                       :preparation=>"my_details",
-                      :ingredient_id=>"1",
+                      :ingredient_link_id=>"1",
                       :_destroy=>"false"
                       },
                   "1"=>{
                       :id=>"", 
                       :quantity=>"", 
                       :preparation=>"",
-                      :ingredient_id=>"",
+                      :ingredient_link_id=>"",
                       :_destroy=>"false"
                       },
       }}}
@@ -136,7 +136,7 @@ class RecipeTest < ActiveSupport::TestCase
                       :id=>"1", 
                       :quantity=>"", 
                       :preparation=>"my_details",
-                      :ingredient_id=>"1",
+                      :ingredient_link_id=>"1",
                       :_destroy=>"false"
                       }
       }}}
@@ -157,14 +157,14 @@ class RecipeTest < ActiveSupport::TestCase
                       :id=>"", 
                       :quantity=>"", 
                       :preparation=>"",
-                      :ingredient_id=>"",
+                      :ingredient_link_id=>"",
                       :_destroy=>"false"
                       },
                   "1"=>{
                       :id=>"", 
                       :quantity=>"", 
                       :preparation=>"",
-                      :ingredient_id=>"",
+                      :ingredient_link_id=>"",
                       :_destroy=>"false"
                       },
       }}}
@@ -193,14 +193,14 @@ class RecipeTest < ActiveSupport::TestCase
                       :id=>"", 
                       :quantity=>"", 
                       :preparation=>"",
-                      :ingredient_id=>"",
+                      :ingredient_link_id=>"",
                       :_destroy=>"false"
                       },
                   "1"=>{
                       :id=>"1", 
                       :quantity=>"2", 
                       :preparation=>"prepared",
-                      :ingredient_id=>"4",
+                      :ingredient_link_id=>"4",
                       :_destroy=>"false"
                       },
                     },
@@ -212,14 +212,14 @@ class RecipeTest < ActiveSupport::TestCase
                       :id=>"", 
                       :quantity=>"", 
                       :preparation=>"",
-                      :ingredient_id=>"",
+                      :ingredient_link_id=>"",
                       :_destroy=>"false"
                       },
                   "1"=>{
                       :id=>"", 
                       :quantity=>"", 
                       :preparation=>"",
-                      :ingredient_id=>"",
+                      :ingredient_link_id=>"",
                       :_destroy=>"false"
                       },
                   },
@@ -235,7 +235,7 @@ class RecipeTest < ActiveSupport::TestCase
                       :id=>"1", 
                       :quantity=>"2", 
                       :preparation=>"prepared",
-                      :ingredient_id=>"4",
+                      :ingredient_link_id=>"4",
                       :_destroy=>"false"
                       },
                     },

@@ -1,36 +1,36 @@
 salt_g1_r1:
   quantity: '3.000'
-  ingredient: salt
+  ingredient_link: salt
   ingredient_quantity_group: group1_recipe1
 
 carrot_g1_r1:
   quantity: '3.000'
-  ingredient: carrot
+  ingredient_link: carrot
   ingredient_quantity_group: group1_recipe1
 
 carrot_g2_r1:
   quantity: '5.000'
-  ingredient: carrot
+  ingredient_link: carrot
   ingredient_quantity_group: group2_recipe1
 
 
 salt_g1_r2:
   quantity: 5
-  ingredient: salt
+  ingredient_link: salt
   ingredient_quantity_group: group1_recipe2
 
 rot_g1_r3:
   quantity: 10
-  ingredient: rotted_thing
+  ingredient_link: rotted_thing
   ingredient_quantity_group: group1_recipe3
   
 carrot_g1_r3:
   quantity: 1
-  ingredient: carrot
+  ingredient_link: carrot
   ingredient_quantity_group: group1_recipe3
   
 rot_g1_r4:
   quantity: 10
-  ingredient: rotted_thing
+  ingredient_link: rotted_thing
   ingredient_quantity_group: group1_recipe4
   

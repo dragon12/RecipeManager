@@ -1,6 +1,8 @@
 #coding: utf-8
 class IngredientQuantity < ActiveRecord::Base
   belongs_to :ingredient, :inverse_of => :ingredient_quantities
+  belongs_to :ingredient_link, :inverse_of => :ingredient_quantities
+  
   belongs_to :ingredient_quantity_group, :inverse_of => :ingredient_quantities
   
   
@@ -52,7 +54,7 @@ class IngredientQuantity < ActiveRecord::Base
   
   def cost
     if cost_for_qty.nil?
-      cost_for_qty = ingredient.cost_for_quantity(quantity)
+      cost_for_qty = ingredient_link.cost_for_quantity(quantity)
     end
     
     return cost_for_qty
@@ -60,7 +62,7 @@ class IngredientQuantity < ActiveRecord::Base
   
   def kcal
     if kcal_for_qty.nil?
-      kcal_for_qty = ingredient.kcal_for_quantity(quantity)
+      kcal_for_qty = ingredient_link.kcal_for_quantity(quantity)
     end
     
     return kcal_for_qty
@@ -89,7 +91,7 @@ class IngredientQuantity < ActiveRecord::Base
   end
   
   def quantity_description
-    measurement = self.ingredient.measurement_type.measurement_name
+    measurement = self.ingredient_link.measurement_type.measurement_name
     if measurement.blank?
       "#{quantity_as_string}"
     else

@@ -1,5 +1,7 @@
 #coding: utf-8
 class Ingredient < ActiveRecord::Base
+  has_one :ingredient_link, as: :recipe_component
+  
   belongs_to :measurement_type
   validates :measurement_type, presence: true
   
@@ -101,12 +103,5 @@ class Ingredient < ActiveRecord::Base
       "#{name}"
     end
   end
-private
 
-  def check_for_recipes
-    if recipes.count > 0
-      errors.add(:base, "Cannot delete ingredient while present in any recipes")
-      return false
-    end
-  end
 end

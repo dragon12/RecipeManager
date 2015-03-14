@@ -9,8 +9,11 @@ class Recipe < ActiveRecord::Base
                     reject_if: lambda { |a| a[:name].blank? }
   
   has_many :ingredient_quantities, through: :ingredient_quantity_groups
-  has_many :ingredients, through: :ingredient_quantities
-  
+  has_many :ingredient_links, through: :ingredient_quantities
+  has_many :simple_ingredients, through: :ingredient_links, 
+                                source: :recipe_component, source_type: "Ingredient"
+                                
+
   has_many :instruction_groups, -> {order(:created_at) }, dependent: :destroy
   accepts_nested_attributes_for :instruction_groups, allow_destroy: true
   
@@ -125,14 +128,14 @@ class Recipe < ActiveRecord::Base
   
   def self.search_by_ingredient(query)
     select("DISTINCT recipes.*")
-      .joins(:ingredients)
+      .joins(:simple_ingredients)
       .where("lower(ingredients.name) like lower(?)", "%#{query}%")
   end
   
-  def self.search_by_ingredient_id(query)
+  def self.search_by_ingredient_link_id(query)
     select("DISTINCT recipes.*")
-      .joins(:ingredients)
-      .where("ingredients.id= ?", "#{query}")
+      .joins(:ingredient_links)
+      .where("ingredient_links.id= ?", "#{query}")
   end
 
   def self.search_by_category_id(query)
