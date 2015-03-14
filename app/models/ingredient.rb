@@ -33,7 +33,7 @@ class Ingredient < ActiveRecord::Base
       end
       
       logger.info "CALC_COST: ingredient #{name}, unit #{cost_basis}, cost #{cost}"
-      units_used = qty / cost_basis
+      units_used = qty / cost_basis.to_f
       
       return units_used * cost
   end
@@ -45,8 +45,7 @@ class Ingredient < ActiveRecord::Base
       end
       
       logger.info "CALC_KCAL: ingredient #{name}, unit #{kcal_basis}, kcal #{kcal}"
-      units_used = qty / kcal_basis
-      
+      units_used = qty / kcal_basis.to_f
       return units_used * kcal
   end
   

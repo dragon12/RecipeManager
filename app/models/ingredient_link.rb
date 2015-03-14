@@ -1,7 +1,9 @@
 class IngredientLink < ActiveRecord::Base
   belongs_to :recipe_component, polymorphic: true
 
-  delegate :name, :cost_for_quantity, :to => :recipe_component
+  delegate :name, :cost_for_quantity,
+                  :kcal_for_quantity,
+              :to => :recipe_component
 
   has_many :ingredient_quantities
   has_many :ingredient_quantity_groups, through: :ingredient_quantities
