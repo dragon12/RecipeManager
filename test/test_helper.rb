@@ -31,6 +31,14 @@ class ActiveSupport::TestCase
     !session[:user_id].nil?
   end
 
+  def capy_login_as_admin
+    visit login_path
+    fill_in('Email', :with => 'michael@example.com')
+    fill_in('Password', :with => 'password')
+    click_button('Log in')
+  end
+    
+    
   # Logs in a test user.
   def log_in_as(user, options = {})
     password    = options[:password]    || 'password'

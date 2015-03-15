@@ -62,17 +62,18 @@
     <th># Recipes</th>
   </tr>
  
-  <% @ingredients.each do |ingredient| %>
+  <% @ingredient_links.each do |ingredient_link| %>
     <tr>
-      <td><%= ingredient.name %></td>
-      <td><%= ingredient.measurement_type_str %></td>
-      <td><%= ingredient.cost_str %></td>
-      <td><%= ingredient.kcal_str %></td>
-      <td><%= link_to ingredient.recipes_count,
-      			recipes_path(:search_by_ingredient_id => ingredient.id)%></td>
-<%if @is_admin %>
-      <td><%= link_to 'Edit', ingredient_path(ingredient) %></td>
-      <td><%= link_to 'Delete', ingredient_path(ingredient),
+      <td><%= ingredient_link.name %></td>
+      <td><%= ingredient_link.measurement_type_str %></td>
+      <td><%= ingredient_link.cost_str %></td>
+      <td><%= ingredient_link.kcal_str %></td>
+      <td><%= link_to ingredient_link.recipes_count,
+      			recipes_path(:search_by_ingredient_link_id => ingredient_link.id)%></td>
+
+<%if @is_admin && ingredient_link.is_editable? %>
+      <td><%= link_to 'Edit', ingredient_path(ingredient_link.ingredient) %></td>
+      <td><%= link_to 'Delete', ingredient_path(ingredient_link.ingredient),
                     method: :delete, data: { confirm: 'Are you sure?' } %></td>
 <%end%>
     </tr>

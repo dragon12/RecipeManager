@@ -1,11 +1,12 @@
 #coding: utf-8
 class Ingredient < ActiveRecord::Base
-  has_one :ingredient_link, as: :recipe_component
+  has_one :ingredient_link, as: :recipe_component, dependent: :destroy
+  validates :ingredient_link, presence: true
   
   belongs_to :measurement_type
   validates :measurement_type, presence: true
   
-  has_many :ingredient_quantities
+  has_many :ingredient_quantities, through: :ingredient_link
   has_many :ingredient_quantity_groups, through: :ingredient_quantities
   has_many :recipes, through: :ingredient_quantity_groups
   
@@ -19,13 +20,7 @@ class Ingredient < ActiveRecord::Base
   validates :cost, presence: true, numericality: { greater_than_or_equal_to: 0 }
   validates :kcal, presence: true, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
   
-  
-  before_destroy :check_for_recipes
 
-  def recipes_count
-    recipes.distinct.count
-  end
-  
   def cost_for_quantity(qty)
     if cost_basis.to_i == 0 || cost.nil?
         logger.error "CALC_COST: ingredient #{name} has zero values"

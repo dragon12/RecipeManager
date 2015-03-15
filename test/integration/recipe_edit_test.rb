@@ -7,10 +7,7 @@ class RecipeEditTest < ActionDispatch::IntegrationTest
   end
   
   test "add ingredient to existing recipe" do
-    visit login_path
-    fill_in('Email', :with => 'michael@example.com')
-    fill_in('Password', :with => 'password')
-    click_button('Log in')
+    capy_login_as_admin
     
     num_ingredients_before = @r.ingredient_quantities.count
     

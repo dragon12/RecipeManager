@@ -5,26 +5,29 @@ class IngredientsController < ApplicationController
   
   def index
     setup_vars
-    @ingredients = Ingredient.order(:name)
+    @ingredient_links = IngredientLink.order_by_name
     @ingredient = Ingredient.new
   end  
   
   def create
     #render plain: params[:recipe].inspect
+    logger.info("params: #{params.inspect}")
     setup_vars
+    #il = IngredientLink.new
     @ingredient = Ingredient.new(ingredient_params)
+    il = @ingredient.build_ingredient_link
  
     if @ingredient.save
       redirect_to action: "index"
     else
-      @ingredients = Ingredient.order(:name)
+      @ingredient_links = IngredientLink.order_by_name
       render 'index'
     end
   end
   
   def show
     setup_vars
-    @ingredients = Ingredient.order(:name)
+    @ingredient_links = IngredientLink.order_by_name
     @ingredient = Ingredient.find(params[:id])
     render 'index'
   end
@@ -38,7 +41,7 @@ class IngredientsController < ApplicationController
     if @ingredient.update(ingredient_params)
       redirect_to ingredients_path
     else
-      @ingredients = Ingredient.order(:name)
+      @ingredient_links = IngredientLink.order_by_name
       render 'index'
     end
   end
@@ -51,7 +54,7 @@ class IngredientsController < ApplicationController
       message = @deleted_ingredient.name + " deleted successfully"
       redirect_to ingredients_path, :notice => message
     else
-      message = @deleted_ingredient.name + " couldn't be deleted: #{@deleted_ingredient.errors[:base].first.to_s}"
+      message = @deleted_ingredient.name + " couldn't be deleted; it still has recipes"
       redirect_to ingredients_path, :alert => message
       #@ingredients = Ingredient.order(:name)
       #@ingredient = Ingredient.new

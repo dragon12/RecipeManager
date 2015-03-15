@@ -15,6 +15,11 @@ class IngredientTest < ActiveSupport::TestCase
     assert_not @full_ing.valid?
   end
   
+  test "no ingredient link" do
+    @full_ing.ingredient_link = nil
+    assert_not @full_ing.valid?
+  end
+    
   test "name too short" do
     i = @full_ing
     i.name = "t"
@@ -36,3 +41,4 @@ class IngredientTest < ActiveSupport::TestCase
     assert_equal 500, i.kcal_for_quantity(100)
   end
 end
+  
