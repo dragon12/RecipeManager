@@ -13,12 +13,12 @@ class RecipesController < ApplicationController
     if !params[:search_by_name].blank?
       @recipes = Recipe.search_by_name(params[:search_by_name]).order("created_at DESC")
       @filtered_text = "name like '%s'" % params[:search_by_name]
-    elsif !params[:search_by_ingredient].blank?
-      @recipes = Recipe.search_by_ingredient(params[:search_by_ingredient]).order("created_at DESC")
-      @filtered_text = "containing ingredients like '%s'" % params[:search_by_ingredient]
-    elsif !params[:search_by_ingredient_id].blank?
-      @recipes = Recipe.search_by_ingredient_id(params[:search_by_ingredient_id]).order("created_at DESC")
-      @search_ingredient = Ingredient.find(params[:search_by_ingredient_id])
+    elsif !params[:search_by_ingredient_name].blank?
+      @recipes = Recipe.search_by_ingredient_name(params[:search_by_ingredient_name]).order("created_at DESC")
+      @filtered_text = "containing ingredients like '%s'" % params[:search_by_ingredient_name]
+    elsif !params[:search_by_ingredient_link_id].blank?
+      @recipes = Recipe.search_by_ingredient_link_id(params[:search_by_ingredient_link_id]).order("created_at DESC")
+      @search_ingredient = Ingredient.find(params[:search_by_ingredient_link_id])
       @filtered_text = "containing '%s'" % @search_ingredient.name
     elsif !params[:search_by_category_id].blank?
       @recipes = Recipe.search_by_category_id(params[:search_by_category_id]).order("created_at DESC")

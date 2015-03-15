@@ -126,7 +126,7 @@ class Recipe < ActiveRecord::Base
     where("lower(name) like lower(?)", "%#{query}%") 
   end
   
-  def self.search_by_ingredient(query)
+  def self.search_by_ingredient_name(query)
     select("DISTINCT recipes.*")
       .joins(:simple_ingredients)
       .where("lower(ingredients.name) like lower(?)", "%#{query}%")

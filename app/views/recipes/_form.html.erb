@@ -105,9 +105,9 @@
 				<%= iq_fields.text_field :quantity, :value => iq_fields.object.quantity_as_string, :autocomplete => :off %>
 			</div>
 			<div class='table-col table-col-2-4'>
-				<%= iq_fields.collection_select(:ingredient_id,
-        Ingredient.order("name"),
-        :id, :description_in_recipe, :prompt => '
+				<%= iq_fields.collection_select(:ingredient_link_id,
+						IngredientLink.order_by_name,
+        				:id, :description_in_recipe, :prompt => '
 				<Select an Ingredient>
 					') %>
 			</div>

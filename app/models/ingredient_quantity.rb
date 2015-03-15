@@ -7,7 +7,7 @@ class IngredientQuantity < ActiveRecord::Base
   
   
   #this is needed so that it can do fields_for on the nested ingredient
-  accepts_nested_attributes_for :ingredient
+  accepts_nested_attributes_for :ingredient_link
   
   #validates :ingredient, :presence => true
   #validates :recipe, :presence => true
@@ -101,11 +101,11 @@ class IngredientQuantity < ActiveRecord::Base
   
   def prepared_ingredient_description
     prep = preparation.blank? ? "" : ", #{preparation}"
-    return "#{ingredient.name}#{prep}"
+    return "#{ingredient_link.name}#{prep}"
   end
   
   def ingredient_name
-    ingredient.try(:name)
+    ingredient_link.try(:name)
   end
  
   def ingredient_name=(name)

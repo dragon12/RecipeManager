@@ -60,13 +60,13 @@ class RecipeTest < ActiveSupport::TestCase
   test "filter by ingredient name (full, unique)" do
     #carrot appears twice in recipe1 and once in recipe 3
     carrot = ingredient_links(:carrot)
-    filtered = Recipe.search_by_ingredient(carrot.name)
+    filtered = Recipe.search_by_ingredient_name(carrot.name)
     assert_equal 2, filtered.count
   end
   
   test "filter by ingredient name (partial, unique)" do
     #carrot appears twice in recipe1 and once in recipe 3
-    filtered = Recipe.search_by_ingredient("Carr")
+    filtered = Recipe.search_by_ingredient_name("Carr")
     assert_equal 2, filtered.count
   end
   
@@ -74,7 +74,7 @@ class RecipeTest < ActiveSupport::TestCase
     #carrot appears twice in recipe1 and once in recipe 3
     #rotted thing appears once in recipe 3 and once in recipe 4
     # - total of 3 appearences, therefore
-    filtered = Recipe.search_by_ingredient("ot")
+    filtered = Recipe.search_by_ingredient_name("ot")
     assert_equal 3, filtered.count, "#{filtered.inspect}"
   end
   
@@ -83,7 +83,7 @@ class RecipeTest < ActiveSupport::TestCase
     #carrot appears twice in recipe1 and once in recipe 3
     #rotted thing appears once in recipe 3 and once in recipe 4
     # - total of 3 appearences, therefore
-    filtered = Recipe.search_by_ingredient("Rot")
+    filtered = Recipe.search_by_ingredient_name("Rot")
     assert_equal 3, filtered.count, "#{filtered.inspect}"
   end
   

@@ -1,8 +1,11 @@
 class IngredientLink < ActiveRecord::Base
   belongs_to :recipe_component, polymorphic: true
-
+  belongs_to :ingredient, -> { where(ingredient_links: {recipe_component_type: 'Ingredient'}) }, 
+                              foreign_key: 'recipe_component_id'
+  
   delegate :name, :cost_for_quantity,
                   :kcal_for_quantity,
+                  :measurement_type,
               :to => :recipe_component
 
   has_many :ingredient_quantities
@@ -12,7 +15,11 @@ class IngredientLink < ActiveRecord::Base
   validates :recipe_component, presence: true
   
   before_destroy :check_for_recipes
-
+  
+  def self.order_by_name
+    IngredientLink.joins(:ingredient).order("ingredients.name")
+  end
+                
 private
 
   def check_for_recipes

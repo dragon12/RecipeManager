@@ -36,9 +36,9 @@ All Recipes
  	<tr>
  		<td align='right'>Or Exact:</td>
  		<td align='right'>
-		<%= select_tag(:search_by_ingredient_id, 
+		<%= select_tag(:search_by_ingredient_link_id, 
 							options_from_collection_for_select(
-								Ingredient.order("name"), 
+								IngredientLink.order_by_name, 
 								:id, :name, @search_ingredient.id),
 							:prompt => '<Select an Ingredient>'
 							) %>
