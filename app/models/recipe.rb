@@ -88,6 +88,14 @@ class Recipe < ActiveRecord::Base
     return rating
   end
   
+  def total_cost
+    calculate_total_cost
+  end
+  
+  def total_kcal
+    calculate_total_kcal
+  end
+  
   def cost_per_portion
     total = calculate_total_cost
     if portion_count.to_i == 0 || total == 0
@@ -106,7 +114,7 @@ class Recipe < ActiveRecord::Base
     return "%.0f" % (total / portion_count)
   end
   
-  def total_cost
+  def total_cost_str
     total = calculate_total_cost
     if (total == 0)
       return "N/A"
@@ -114,7 +122,7 @@ class Recipe < ActiveRecord::Base
     return "£%.2f" % total
   end
   
-  def total_kcal
+  def total_kcal_str
     total = calculate_total_kcal
     if (total == 0)
       return "N/A"

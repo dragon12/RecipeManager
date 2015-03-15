@@ -6,3 +6,7 @@ weight:
 weight_without_ingredients:
   measurement_type: "woi"
   measurement_name: "bwoi"
+
+quantity:
+  measurement_type: "By Quantity"
+  measurement_name: ""

@@ -18,7 +18,7 @@ class RecipeTest < ActiveSupport::TestCase
     cost = ingredient_quantity_groups(:group1_recipe2).cost;
     
     cost_str = "£%.2f" % cost
-    assert_equal cost_str, @recipe_one_group.total_cost
+    assert_equal cost_str, @recipe_one_group.total_cost_str
   end
   
   test "recipe cost multiple groups" do
@@ -27,7 +27,7 @@ class RecipeTest < ActiveSupport::TestCase
             ingredient_quantity_groups(:group2_recipe1).cost 
     
     cost_str = "£%.2f" % cost
-    assert_equal cost_str, @recipe_two_groups.total_cost
+    assert_equal cost_str, @recipe_two_groups.total_cost_str
   end
   
   test "filter by category" do

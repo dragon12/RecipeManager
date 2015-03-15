@@ -71,12 +71,12 @@ Cooking Time: <%= @recipe.cooking_time || "N/A" %><br/>
 	</thead>
 	<tr>
 		<td>Cost</td>
-		<td><%= @recipe.total_cost %></td>
+		<td><%= @recipe.total_cost_str %></td>
 		<td><%= @recipe.cost_per_portion %></td>
 	</tr>
 	<tr>
 		<td>KCal</td>
-		<td><%= @recipe.total_kcal %></td>
+		<td><%= @recipe.total_kcal_str %></td>
 		<td><%= @recipe.kcal_per_portion %></td>
 	</tr>
 </table>

@@ -8,6 +8,10 @@ class MeasurementType < ActiveRecord::Base
   validates :measurement_name, presence: true,
                                uniqueness: { case_sensitive: false}
  
+  def self.QuantityType
+    return MeasurementType.find_by(measurement_type: 'By Quantity')
+  end
+  
 private
 
   def check_for_ingredients

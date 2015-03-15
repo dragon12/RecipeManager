@@ -2,6 +2,9 @@ class IngredientLink < ActiveRecord::Base
   belongs_to :recipe_component, polymorphic: true
   belongs_to :ingredient, -> { joins(:ingredient_link).where(ingredient_links: {recipe_component_type: 'Ingredient'}) }, 
                               foreign_key: 'recipe_component_id'
+
+  belongs_to :complex_ingredient, -> { joins(:ingredient_link).where(ingredient_links: {recipe_component_type: 'ComplexIngredient'}) }, 
+                              foreign_key: 'recipe_component_id'
   
   delegate :name, :cost_for_quantity,
                   :kcal_for_quantity,
@@ -21,7 +24,8 @@ class IngredientLink < ActiveRecord::Base
   before_destroy :check_for_recipes
   
   def self.order_by_name
-    IngredientLink.joins(:ingredient).order("ingredients.name")
+    IngredientLink.joins(:ingredient).order("ingredients.name") +
+      IngredientLink.joins(complex_ingredient: :recipe).order("recipes.name")
   end
   
   def recipes_count
