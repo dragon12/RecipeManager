@@ -1,6 +1,6 @@
 #coding: utf-8
 class Ingredient < ActiveRecord::Base
-  has_one :ingredient_link, as: :recipe_component, dependent: :destroy
+  has_one :ingredient_link, as: :recipe_component, dependent: :destroy, autosave: true
   validates :ingredient_link, presence: true
   
   belongs_to :measurement_type
@@ -20,7 +20,12 @@ class Ingredient < ActiveRecord::Base
   validates :cost, presence: true, numericality: { greater_than_or_equal_to: 0 }
   validates :kcal, presence: true, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
   
-
+  def editable?
+    true
+  end
+  def linkable?
+    false
+  end
   def cost_for_quantity(qty)
     if cost_basis.to_i == 0 || cost.nil?
         logger.error "CALC_COST: ingredient #{name} has zero values"

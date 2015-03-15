@@ -86,6 +86,7 @@ class RecipesController < ApplicationController
   def new
     #we create an empty recipe here so that there is always a 'recipe' variable available to the template
     @recipe = Recipe.new
+    @is_component = false
     
     ur = @recipe.user_ratings.build(user_id: current_user.id)
     
@@ -98,12 +99,20 @@ class RecipesController < ApplicationController
   
   def create
     #render plain: params[:recipe].inspect
-    
-    @recipe = Recipe.new(recipe_params)
  
+    p = recipe_params
+    @recipe = Recipe.new(p)
+ 
+    #if @is_component
+    #  ci = @recipe.build_complex_ingredient
+    #  ci.build_ingredient_link
+    #  logger.info("COMPLEX: built complex: #{@recipe.complex_ingredient.inspect}")
+    #end 
+    
     if @recipe.save
       redirect_to @recipe
     else
+      logger.info("COMPLEX: redirect, is_component = #{@is_component}")
       render 'new'
     end
     
@@ -113,7 +122,7 @@ class RecipesController < ApplicationController
     def recipe_params
       ret_params = params.require(:recipe)
         .permit(:name, :description, :comments, :category_id, :total_time, :active_time, 
-                  :cooking_time, :portion_count, :_destroy,
+                  :is_recipe_component, :cooking_time, :portion_count, :_destroy,
                 links_attributes: [:id, :description, :url, :_destroy],
                 instruction_groups_attributes: [
                   :id,

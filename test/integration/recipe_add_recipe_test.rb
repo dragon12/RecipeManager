@@ -5,11 +5,10 @@ class RecipeAddRecipeTest < ActionDispatch::IntegrationTest
     @admin = users(:michael)
   end
   
-  test "go to add recipe page" do
-    log_in_as(@admin)
-    get new_recipe_path
-    
-    assert_template 'recipes/new'
+  test "add recipe" do
+    capy_login_as_admin
+    visit(new_recipe_path)
+    assert_equal current_path, new_recipe_path
   end
   
 end

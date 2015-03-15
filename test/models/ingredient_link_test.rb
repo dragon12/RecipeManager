@@ -8,11 +8,15 @@ class IngredientLinkTest < ActiveSupport::TestCase
   
   test "should be valid" do
     assert @ingredient_link.valid?, "#{@ingredient_link.errors.full_messages}"
+    assert @ingredient_link.editable?
+    assert_not @ingredient_link.linkable?
   end
   
   
   test "complex should be valid" do
     assert @complex_link.valid?, "#{@complex_link.errors.full_messages}"
+    assert_not @complex_link.editable?
+    assert @complex_link.linkable?
   end
   
   

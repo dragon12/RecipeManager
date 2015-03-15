@@ -2,7 +2,7 @@ require 'test_helper'
 
 class IngredientsIndexTest < ActionDispatch::IntegrationTest
   def setup
-    
+    @admin = users(:michael)
   end
   
   test "ingredients index" do
@@ -38,4 +38,26 @@ class IngredientsIndexTest < ActionDispatch::IntegrationTest
     assert_equal num_ingredients_before + 1, Ingredient.count
     assert_equal num_ingredient_links_before + 1, IngredientLink.count
   end
+  
+  test "ingredient index has edit and delete for admin" do
+    log_in_as(@admin)
+    get ingredients_path
+    assert_template 'ingredients/index'
+    #assert_match 'boohooo', @response.body
+    #puts "TEST: starting test"
+    IngredientLink.all.each do |ing|
+      #puts "TEST: looking at ing #{ing.inspect}"
+      #assert_select "a", :href => /search_by_ingredient_link_id=
+      assert_match(/href="\/recipes\?search_by_ingredient_link_id=#{ing.id}/, response.body)
+      
+      #assert_select 'a[href=/recipes\?search_by_ingredient_link_id=?]', ing.id, text: ing.recipes_count, count: 1
+      if ing.recipe_component_type == 'Ingredient'
+        assert_select 'a[href=?]', ingredient_path(ing.ingredient), text: 'Edit', count: 1
+        assert_select 'a[href=?]', ingredient_path(ing.ingredient), text: 'Delete', method: :delete, count: 1
+      else
+        assert_select 'a[href=?]', recipe_path(ing.complex_ingredient.recipe), text: ing.name, count: 1
+      end
+    end
+  end
+  
 end

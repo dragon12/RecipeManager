@@ -5,6 +5,16 @@ class ComplexIngredient < ActiveRecord::Base
   belongs_to :recipe
   validates :recipe, presence: true
   
+  def editable?
+    false
+  end
+  def linkable?
+    true
+  end
+  def description_in_recipe
+    name
+  end
+  
   def name
     return "Recipe: #{recipe.name}"
   end

@@ -13,6 +13,8 @@ class IngredientLink < ActiveRecord::Base
                   :cost_str,
                   :kcal_str,
                   :description_in_recipe,
+                  :editable?,
+                  :linkable?,
               :to => :recipe_component
 
   has_many :ingredient_quantities
@@ -32,10 +34,6 @@ class IngredientLink < ActiveRecord::Base
     recipes.distinct.count
   end
         
-  def is_editable?
-    recipe_component_type == 'Ingredient'
-  end
-  
 private
 
   def check_for_recipes

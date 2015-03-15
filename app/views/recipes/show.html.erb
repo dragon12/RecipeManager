@@ -14,6 +14,16 @@
   <%= @recipe.description %>
 </p>
 
+<%if @recipe.is_recipe_component%>
+<p>
+This recipe is a component recipe and is used in 
+		<%= link_to @recipe.complex_ingredient.ingredient_link.recipes_count,
+      			recipes_path(:search_by_ingredient_link_id => @recipe.complex_ingredient.ingredient_link.id)
+     	%>
+     	other recipes.
+</p>
+<%end%>
+
 <% if @recipe.links.any? %>
 <div id="related_links">
 	<strong>Links:</strong><br/>

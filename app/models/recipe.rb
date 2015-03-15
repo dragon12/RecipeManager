@@ -1,7 +1,11 @@
 #coding: utf-8
 class Recipe < ActiveRecord::Base
+  attr_accessor :is_recipe_component
+  
   belongs_to :category
   validates :category, presence: true
+  
+  has_one :complex_ingredient, dependent: :destroy
   
   has_many :ingredient_quantity_groups, -> {order(:created_at) }, dependent: :destroy
   accepts_nested_attributes_for :ingredient_quantity_groups, 
@@ -50,6 +54,23 @@ class Recipe < ActiveRecord::Base
     end
     
     return format_double(avg)
+  end
+  
+  def is_recipe_component
+    !complex_ingredient.nil?
+  end
+  
+  def is_recipe_component=(value)
+    logger.info("COMPLEX: YES? value = #{value}, complex = #{complex_ingredient.inspect}")
+    if value == '1' && complex_ingredient.nil?
+      ci = build_complex_ingredient
+      ci.build_ingredient_link
+      logger.info ("COMPLEX: Built complex: #{ci.inspect}")
+    else
+      if value == '0' && !complex_ingredient.blank?
+        raise "Don't support this yet"
+      end
+    end 
   end
   
   def sortable_category
