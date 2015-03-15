@@ -5,16 +5,16 @@ class PortIngredientsToIngredientLinks < ActiveRecord::Migration
     ings = Ingredient.all
     ings.each do |i|
       
-      print "looking at ingredient #{i.inspect}"
+      #print "looking at ingredient #{i.inspect}"
     
       il = IngredientLink.new(recipe_component_id: i.id, recipe_component_type: 'Ingredient')
       il.save!
       
-      print "saved il: #{il.inspect}"
+      #print "saved il: #{il.inspect}"
       
-      iqs = i.ingredient_quantities
+      iqs = IngredientQuantity.where(ingredient_id: i.id)
       iqs.each do |iq|
-        print " IQ: #{iq.inspect}"
+        #print " IQ: #{iq.inspect}"
         iq.ingredient_link = il
         iq.save!
       end
