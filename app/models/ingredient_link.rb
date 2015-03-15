@@ -6,6 +6,7 @@ class IngredientLink < ActiveRecord::Base
   delegate :name, :cost_for_quantity,
                   :kcal_for_quantity,
                   :measurement_type,
+                  :description_in_recipe,
               :to => :recipe_component
 
   has_many :ingredient_quantities

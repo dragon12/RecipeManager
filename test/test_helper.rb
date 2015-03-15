@@ -4,12 +4,23 @@ require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
 require 'minitest/spec'
 require "minitest/reporters"
+require 'capybara/rails'
 Minitest::Reporters.use!
 Minitest::Reporters.use!(
   Minitest::Reporters::DefaultReporter.new,
   ENV,
   Minitest.backtrace_filter
 )
+
+class ActionDispatch::IntegrationTest
+  # Make the Capybara DSL available in all integration tests
+  include Capybara::DSL
+
+  setup do
+    Capybara.current_driver = :webkit
+    page.driver.block_url("secure.gravatar.com")
+  end
+end
 
 class ActiveSupport::TestCase
 

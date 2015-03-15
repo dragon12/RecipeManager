@@ -74,7 +74,7 @@
 </div>
 <br/>
 
-<div class='global-container'>
+<div class='global-container' id='ingredients_table'>
 	<div class='container'>
 		<div class='table-caption'>
 			Ingredients
@@ -92,7 +92,7 @@
 			<div class='table-col table-col-4-4 table-col-heading'></div>
 		</div>
 	</div>
-	<div class='container'>
+	<div class='container' id='ingredient_group_table'>
 		<%= f.fields_for :ingredient_quantity_groups do |iqd_fields| %>
 		<div class='table-subcaption'>
 			<%= iqd_fields.hidden_field :id%>

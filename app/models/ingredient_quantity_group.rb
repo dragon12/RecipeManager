@@ -5,7 +5,7 @@ class IngredientQuantityGroup < ActiveRecord::Base
   has_many :ingredient_quantities, -> {order(:created_at) }, dependent: :destroy
   accepts_nested_attributes_for :ingredient_quantities,
                       allow_destroy: true,
-                      reject_if: lambda { |a| a[:quantity].blank? or (a[:ingredient].blank? and a[:ingredient_id].blank?) }
+                      reject_if: lambda { |a| a[:quantity].blank? or (a[:ingredient].blank? and a[:ingredient_link_id].blank?) }
   
   #has_many :ingredients, through: :ingredient_quantities
   #accepts_nested_attributes_for :ingredients               

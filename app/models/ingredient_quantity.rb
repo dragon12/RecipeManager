@@ -118,7 +118,7 @@ class IngredientQuantity < ActiveRecord::Base
 private
   def self.is_params_empty(params)
     logger.info("Checking params for emptiness: #{params}")
-    return params[:quantity].blank? && params[:preparation].blank? && params[:ingredient_id].blank?
+    return params[:quantity].blank? && params[:preparation].blank? && params[:ingredient_link_id].blank?
   end
   
 end
