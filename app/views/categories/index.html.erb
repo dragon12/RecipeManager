@@ -35,7 +35,9 @@
  
   <% @categories.each do |category| %>
     <tr>
-      <td><%= category.name %></td>
+      <td><%= link_to category.name,
+      			recipes_path(:search_by_category_id => category.id)%></td>
+      			
       <td><%= link_to category.recipes.count,
       			recipes_path(:search_by_category_id => category.id)%></td>
 <%if @is_admin %>
