@@ -7,7 +7,7 @@ class RecipesController < ApplicationController
   @is_admin = false
   
   def index
-    @search_ingredient = Ingredient.new
+    @search_ingredient_link = IngredientLink.new
     @search_category = Category.new
     
     if !params[:search_by_name].blank?
@@ -18,8 +18,8 @@ class RecipesController < ApplicationController
       @filtered_text = "containing ingredients like '%s'" % params[:search_by_ingredient_name]
     elsif !params[:search_by_ingredient_link_id].blank?
       @recipes = Recipe.search_by_ingredient_link_id(params[:search_by_ingredient_link_id]).order("created_at DESC")
-      @search_ingredient = Ingredient.find(params[:search_by_ingredient_link_id])
-      @filtered_text = "containing '%s'" % @search_ingredient.name
+      @search_ingredient_link = IngredientLink.find(params[:search_by_ingredient_link_id])
+      @filtered_text = "containing '%s'" % @search_ingredient_link.name
     elsif !params[:search_by_category_id].blank?
       @recipes = Recipe.search_by_category_id(params[:search_by_category_id]).order("created_at DESC")
       @search_category = Category.find(params[:search_by_category_id])

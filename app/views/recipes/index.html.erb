@@ -39,7 +39,7 @@ All Recipes
 		<%= select_tag(:search_by_ingredient_link_id, 
 							options_from_collection_for_select(
 								IngredientLink.order_by_name, 
-								:id, :name, @search_ingredient.id),
+								:id, :name, @search_ingredient_link.id),
 							:prompt => '<Select an Ingredient>'
 							) %>
 		</td>
