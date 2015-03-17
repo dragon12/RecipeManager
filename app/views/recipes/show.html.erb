@@ -112,7 +112,14 @@ Cooking Time: <%= @recipe.cooking_time || "N/A" %><br/>
 		<% iqd.ingredient_quantities.each do |ingredient_quantity| %>
 		<tr>
 			<td><%= ingredient_quantity.quantity_description %></td>
+			
+			<% if ingredient_quantity.ingredient_link.linkable? %>
+			    <td><%= link_to ingredient_quantity.prepared_ingredient_description, recipe_path(ingredient_quantity.ingredient_link.complex_ingredient.recipe) 
+			    	%></td>
+			<%else%>
 			<td><%= ingredient_quantity.prepared_ingredient_description %></td>
+			<%end%>
+			
 			<td><%= ingredient_quantity.cost_as_str %></td>
 			<td><%= ingredient_quantity.kcal_as_str %></td>
 		</tr>
