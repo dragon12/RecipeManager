@@ -16,6 +16,7 @@ class IngredientsController < ApplicationController
     #il = IngredientLink.new
     @ingredient = Ingredient.new(ingredient_params)
     il = @ingredient.build_ingredient_link
+    il.recipe_component = @ingredient
  
     if @ingredient.save
       redirect_to action: "index"

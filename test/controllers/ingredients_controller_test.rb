@@ -41,9 +41,6 @@ class IngredientsControllerTest < ActionController::TestCase
     num_ingredients_before = Ingredient.count
     num_ingredient_links_before = IngredientLink.count
     
-    newIng = @ing.dup
-    newIng.name = 'New ingredient'
-    newIng.ingredient_link = nil
     post :create, ingredient: {name: 'new ingredient', 
                                 measurement_type_id: measurement_types(:weight).id,
                                 cost_basis: 100, cost: 1,

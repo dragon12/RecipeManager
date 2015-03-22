@@ -1,9 +1,10 @@
+search by ingredient name not working
+
+search filtering submitting all params no matter which button pressed
+
 be able to tie different types of measurement to the same ingredient
 
 Front page should have new recipes since last visit
-
-[10/03 23:46] Anne-Marie Sweeney: On the recipes pages everything is squished way over to the left hand side with no margin and the centre/right of the page is blank
-[11/03 00:03] Anne-Marie Sweeney: And free space at the end of each recipe would be great, just a small amount of space, hate reading things in the very very bottom left corner :p
 
 ratings:    
     ratings appear on user's page, viewable to all
