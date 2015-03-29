@@ -34,7 +34,8 @@ class RecipesIndexTest < ActionDispatch::IntegrationTest
   test "search by ingredient id" do
     log_in_as(@non_admin)
     salt_link = ingredient_links(:salt)
-    get recipes_path, :search_by_ingredient_link_id => salt_link.id
+    get recipes_path, :search_by_ingredient_link_id => salt_link.id, 
+                      :submit_search_by_ingredient_link_id => 'Search'
     Recipe.all.each do |recipe|
       if recipe.ingredient_links.exists?(salt_link.id)
         assert_select 'a[href=?]', recipe_path(recipe), text: recipe.name, count: 1
@@ -55,9 +56,7 @@ class RecipesIndexTest < ActionDispatch::IntegrationTest
     
     assert_equal current_path, recipes_path
     
-    save_and_open_page
     Recipe.all.each do |recipe|
-      recipe.inspect
       if recipe.ingredient_links.any? {|il| il.name =~ /salt/i }
         assert_select 'a[href=?]', recipe_path(recipe), text: recipe.name, count: 1
       else

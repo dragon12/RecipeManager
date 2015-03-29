@@ -212,7 +212,7 @@ private
     if input.blank?
       return "N/A"
     end
-    return "%g" % input.to_s
+    return "%g" % ("%.2f" % input.to_s)
   end
   
   def calculate_total_cost

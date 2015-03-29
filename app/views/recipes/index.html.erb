@@ -6,7 +6,6 @@ All Recipes
 <%end%>
 	</h1>
  <%= form_tag(recipes_path, :method => "get", id: "search-form") do %>
- 
  <div class='boxed_table'>
   <table>
  	<tr>
@@ -48,7 +47,7 @@ All Recipes
 							) %>
 		</td>
 		<td>
-			<%= submit_tag "Search", :name => 'submit_search_by_ingredient_id' %>
+			<%= submit_tag "Search", :name => 'submit_search_by_ingredient_link_id' %>
 		</td>
  	</tr>
  	 <tr>
@@ -64,7 +63,7 @@ All Recipes
 							) %>
 		</td>
 		<td>
-			<%= submit_tag "Search", :name => 'submit_search_by_category' %>
+			<%= submit_tag "Search", :name => 'submit_search_by_category_id' %>
 		</td>
  	</tr>
  </table>
