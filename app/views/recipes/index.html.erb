@@ -102,7 +102,9 @@ All Recipes
       <td><%= link_to recipe.name, recipe_path(recipe) %></td>
       <td><%= recipe.description %></td>
       <td><%if recipe.category%>
-      		<%= link_to recipe.category.name, recipes_path(:search_by_category_id => recipe.category.id)  %>
+      		<%= link_to recipe.category.name, 
+      					recipes_path(:search_by_category_id => recipe.category.id,
+      								 :submit_search_by_category_id => '1')  %>
           <%end%>
       </td>
       <td><%= recipe.average_rating %></td>
