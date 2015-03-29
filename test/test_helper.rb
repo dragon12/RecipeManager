@@ -5,6 +5,7 @@ require 'rails/test_help'
 require 'minitest/spec'
 require "minitest/reporters"
 require 'capybara/rails'
+require "active_support"
 Minitest::Reporters.use!
 Minitest::Reporters.use!(
   Minitest::Reporters::DefaultReporter.new,
@@ -20,7 +21,18 @@ class ActionDispatch::IntegrationTest
     Capybara.current_driver = :webkit
     page.driver.block_url("secure.gravatar.com")
   end
+  
 end
+
+class ActionDispatch::IntegrationTest
+  def html_document_with_capybara
+    return html_document_without_capybara if response
+    xml = page.response_headers['Content-Type'] =~ /\bxml\b/
+    HTML::Document.new(page.body, false, xml)
+  end
+alias_method_chain :html_document, :capybara
+end
+
 
 class ActiveSupport::TestCase
 

@@ -45,9 +45,19 @@ class RecipesIndexTest < ActionDispatch::IntegrationTest
   end
 
   test "search by ingredient name" do
-    log_in_as(@non_admin)
-    get recipes_path, :search_by_ingredient_name => "salt"
+    capy_login_as_admin
+    visit recipes_path
+    fill_in('search_by_ingredient_name', :with => 'salt')
+    
+    #capybara can't find by 'name' attribute properly
+    #click_button('submit_search_by_ingredient_name')
+    find(:xpath, "//input[contains(@name, 'submit_search_by_ingredient_name')]").click()
+    
+    assert_equal current_path, recipes_path
+    
+    save_and_open_page
     Recipe.all.each do |recipe|
+      recipe.inspect
       if recipe.ingredient_links.any? {|il| il.name =~ /salt/i }
         assert_select 'a[href=?]', recipe_path(recipe), text: recipe.name, count: 1
       else

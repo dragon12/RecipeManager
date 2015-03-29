@@ -14,10 +14,13 @@ All Recipes
  			Filter by Name:
  		</td>
 		<td>
- 			<%= text_field_tag :search_by_name, params[:search_by_name], placeholder: "Search Recipes by Name", :autocomplete => :off %>
+ 			<%= text_field_tag :search_by_recipe_name, 
+ 							params[:search_by_recipe_name], 
+ 							placeholder: "Search Recipes by Name", 
+ 							:autocomplete => :off %>
 		</td>
 		<td>
-			<%= submit_tag "Search", :name => nil %>
+			<%= submit_tag "Search", :name => 'submit_search_by_recipe_name' %>
 		</td>
  	</tr>
  	<tr>
@@ -25,12 +28,13 @@ All Recipes
  			Filter by Ingredient:
  		</td>
 		<td>
-			<%= text_field_tag :search_by_ingredient, 
-								params[:search_by_ingredient], 
-								placeholder: "Search Recipes by Ingredient", :autocomplete => :off %>
+			<%= text_field_tag :search_by_ingredient_name, 
+								params[:search_by_ingredient_name], 
+								placeholder: "Search Recipes by Ingredient", 
+								:autocomplete => :off %>
 		</td>
 		<td>
-			<%= submit_tag "Search", :name => nil %>
+			<%= submit_tag "Search", :name => 'submit_search_by_ingredient_name' %>
 		</td>
  	</tr>
  	<tr>
@@ -44,7 +48,7 @@ All Recipes
 							) %>
 		</td>
 		<td>
-			<%= submit_tag "Search", :name => nil %>
+			<%= submit_tag "Search", :name => 'submit_search_by_ingredient_id' %>
 		</td>
  	</tr>
  	 <tr>
@@ -60,7 +64,7 @@ All Recipes
 							) %>
 		</td>
 		<td>
-			<%= submit_tag "Search", :name => nil %>
+			<%= submit_tag "Search", :name => 'submit_search_by_category' %>
 		</td>
  	</tr>
  </table>

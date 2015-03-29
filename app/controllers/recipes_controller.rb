@@ -10,9 +10,9 @@ class RecipesController < ApplicationController
     @search_ingredient_link = IngredientLink.new
     @search_category = Category.new
     
-    if !params[:search_by_name].blank?
-      @recipes = Recipe.search_by_name(params[:search_by_name]).order("created_at DESC")
-      @filtered_text = "name like '%s'" % params[:search_by_name]
+    if !params[:search_by_recipe_name].blank?
+      @recipes = Recipe.search_by_name(params[:search_by_recipe_name]).order("created_at DESC")
+      @filtered_text = "name like '%s'" % params[:search_by_recipe_name]
     elsif !params[:search_by_ingredient_name].blank?
       @recipes = Recipe.search_by_ingredient_name(params[:search_by_ingredient_name]).order("created_at DESC")
       @filtered_text = "containing ingredients like '%s'" % params[:search_by_ingredient_name]
