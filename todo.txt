@@ -1,13 +1,6 @@
 Decimal places - only allow whole numbers and 0.5s
-  (currently ratings show too much precision)
-  
-can't remove group
 
 single group should not display name
-
-search by ingredient name not working
-
-search filtering submitting all params no matter which button pressed
 
 be able to tie different types of measurement to the same ingredient
 

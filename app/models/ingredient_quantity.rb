@@ -20,12 +20,15 @@ class IngredientQuantity < ActiveRecord::Base
     
     empty = true
     iqs.each do |unused2, iq|
-      empty = false
       
       logger.info("    RECIPE_INGREDIENT_FILTER: looking at iq #{iq}")
       if is_params_empty(iq)
         logger.info("    RECIPE_INGREDIENT_FILTER: Is empty, marking for destruction")
         iq[:_destroy] = "1"
+      end
+      
+      if iq[:_destroy] != "1"
+        empty = false
       end
     end
     
