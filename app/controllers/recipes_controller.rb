@@ -63,6 +63,9 @@ class RecipesController < ApplicationController
   def show
     @recipe = Recipe.find(params[:id])
     setup_empty_user_rating
+    if !@recipe.images.empty?
+      @image_to_display = @recipe.images.first
+    end
   end
   
   def edit
@@ -130,6 +133,7 @@ class RecipesController < ApplicationController
         .permit(:name, :description, :comments, :category_id, :total_time, :active_time, 
                   :is_recipe_component, :cooking_time, :portion_count, :_destroy,
                 links_attributes: [:id, :description, :url, :_destroy],
+                images_attributes: [:id, :description, :url, :_destroy],
                 instruction_groups_attributes: [
                   :id,
                   :name,

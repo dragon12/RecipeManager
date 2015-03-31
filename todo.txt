@@ -1,5 +1,7 @@
 Decimal places - only allow whole numbers and 0.5s
 
+browse by image
+
 single group should not display name
 
 pictures attribute
@@ -9,6 +11,8 @@ be able to tie different types of measurement to the same ingredient
 variations in base ingredient
 
 Front page should have new recipes since last visit
+
+styling: will be useful: http://selectorgadget.com/
 
 ratings:    
     ratings appear on user's page, viewable to all

@@ -29,6 +29,11 @@ class Recipe < ActiveRecord::Base
                     #reject_if: lambda { |a| a[:url].blank? && a[:name].blank? },
                     allow_destroy: true
   
+  has_many :images, dependent: :destroy
+  accepts_nested_attributes_for :images,
+                            allow_destroy: true
+  
+  
   validates_presence_of :description
   
   validates_presence_of :ingredient_quantity_groups
