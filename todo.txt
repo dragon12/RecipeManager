@@ -5,6 +5,9 @@ browse by image
 single group should not display name
 
 pictures attribute
+- from flickr:
+    - key: 0019143d4cb19c8ed16b72ae326f0b20
+    - secret: a27892db0fe1eef5
 
 be able to tie different types of measurement to the same ingredient
 
