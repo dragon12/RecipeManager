@@ -2,6 +2,11 @@ Decimal places - only allow whole numbers and 0.5s
 
 browse by image
 
+base ingredient
+	- optionally add:
+		- types (e.g. ground, flaked)
+		- weight types (e.g. gram, item)
+		
 single group should not display name
 
 pictures attribute
