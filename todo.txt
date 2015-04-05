@@ -1,4 +1,4 @@
-Decimal places - only allow whole numbers and 0.5s
+Optional sort by newest/oldest
 
 browse by image
 
