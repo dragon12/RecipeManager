@@ -27,15 +27,6 @@ ratings:
 	submit rating from box on recipe page
     
 	
-recipes as ingredients:
-	recipe has a checkbox to say that it can be used as a component
-	recipe portion count can't be modified if it is used
-	show page displays recipes used in
-	recipes used as a component link through ingredients table but can't be edited from there
-	recipe show page makes ingredient a link if it's tagged as such in the ingredients table
-	ingredients model changes so that ingredient can be simple or complex
-	
-	
 Minor feature updates:
 	recipe in progress - not displayed on main screen
 	
@@ -43,22 +34,14 @@ Minor feature updates:
 
 More significant features
     appropriate pluralisation of ingredients
-    linking to specific other recipes as an ingredient
     tab when adding ingredients should add a new row
     auto-numbering of instructions (on submit if all blank)
 
-
-Model:
 
 COMPLEX STUFF
     Model
         tags
         sections of ingredients/method - i.e subrecipes?
-
-    More advanced user authentication for modifications!
-        either:
-            https://github.com/binarylogic/authlogic
-            devise
 
     Edit recipe:
         - step number should auto-populate

@@ -110,7 +110,7 @@ Cooking Time: <%= @recipe.cooking_time || "N/A" %><br/>
 		</thead>
 			
     <% @recipe.ingredient_quantity_groups.each do |iqd| %>
-        <%if @recipe.ingredient_quantity_groups.count > 1 || iqd.name != "Ingredients" %>
+        <%if @recipe.ingredient_quantity_groups.count > 1 %>
         	<tr>
         		<td colspan="4" class='bold_centered'><%= iqd.name %></td>
       		</tr>
@@ -144,7 +144,7 @@ Cooking Time: <%= @recipe.cooking_time || "N/A" %><br/>
 		<tr>
 	</thead>
 	<% @recipe.instruction_groups.each do |ig| %>
-        <%if @recipe.instruction_groups.count > 1 || ig.name != "Instructions" %>
+        <%if @recipe.instruction_groups.count > 1 %>
     	<tr>
     		<td colspan="3" class='bold_centered'><%= ig.name %></td>
   		</tr>
