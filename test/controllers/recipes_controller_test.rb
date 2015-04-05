@@ -33,4 +33,11 @@ class RecipesControllerTest < ActionController::TestCase
     assert_redirected_to @rec1
     assert_equal "New Name", @rec1.reload.name
   end
+  
+  test "should sort by name when told" do
+    get :index, :sort_by => "name"
+    #assert_match 'boohooo', @response.body
+    
+    assert_equal "AAAAfirst", assigns(:recipes).first.name
+  end
 end

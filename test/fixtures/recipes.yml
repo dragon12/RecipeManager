@@ -26,3 +26,9 @@ unrated_recipe:
   name: Unrated Recipe
   description: Who cares
   category: wine
+
+first_sorted_recipe:
+  name: AAAAfirst
+  description: none
+  category: wine
+  

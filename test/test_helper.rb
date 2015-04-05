@@ -20,6 +20,7 @@ class ActionDispatch::IntegrationTest
   setup do
     Capybara.current_driver = :webkit
     page.driver.block_url("secure.gravatar.com")
+    page.driver.block_url("www.test.image.com")
   end
   
 end

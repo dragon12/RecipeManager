@@ -82,6 +82,8 @@ All Recipes
 
 <table class='gridtable'>
   <tr>
+  	<th style='width:10%'><%= link_to 'Created',
+  									recipes_path(:sort_by => 'created_at', :descending => '1')%></th>
     <th style='width:20%'><%= link_to 'Name',
     								recipes_path(:sort_by => 'name')%></th>
     <th style='width:40%'>Description</th>
@@ -99,6 +101,7 @@ All Recipes
  
   <% @recipes.each do |recipe| %>
     <tr>
+   	  <td><%= recipe.created_at.strftime("%F") %></td>
       <td><%= link_to recipe.name, recipe_path(recipe) %></td>
       <td><%= recipe.description %></td>
       <td><%if recipe.category%>

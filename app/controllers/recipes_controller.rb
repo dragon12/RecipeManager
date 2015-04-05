@@ -44,11 +44,8 @@ class RecipesController < ApplicationController
   
   def sort_by(sort_field, hash)
     if sort_field.blank?
-      return hash.order("created_at DESC")
+      return hash
     end
-    #if (sort_field == "user_rating")
-    #  return 
-    #end
     logger.info("SORTING ARITY: #{Recipe.instance_method(sort_field).arity}")
     arity = Recipe.instance_method(sort_field).arity
     return hash.sort_by{|item|

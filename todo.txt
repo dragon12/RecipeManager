@@ -1,6 +1,10 @@
 Optional sort by newest/oldest
 
+Toggle sort direction
+	may require refactoring search/sort in controller to use a gem?
+
 browse by image
+
 
 base ingredient
 	- optionally add:
