@@ -40,8 +40,5 @@ class IngredientLinkTest < ActiveSupport::TestCase
     assert_equal 125, i.kcal_for_quantity(250)
   end
   
-  test "order_by_returns_right_number" do
-    assert_equal 6, IngredientLink.order_by_name.count
-  end
   
 end
