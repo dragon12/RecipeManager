@@ -1,4 +1,5 @@
 Optional sort by newest/oldest
+	- and sorting should remember filters
 
 Toggle sort direction
 	may require refactoring search/sort in controller to use a gem?

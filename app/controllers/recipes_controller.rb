@@ -46,6 +46,13 @@ class RecipesController < ApplicationController
     if sort_field.blank?
       return hash
     end
+    
+    #logger.info("instance methods of recipe: #{Recipe.instance_methods(true).inspect}")
+    if !Recipe.instance_methods(true).include?(sort_field)
+      logger.info("Couldn't find instance method: #{sort_field}")
+      return hash
+    end
+    
     logger.info("SORTING ARITY: #{Recipe.instance_method(sort_field).arity}")
     arity = Recipe.instance_method(sort_field).arity
     return hash.sort_by{|item|
