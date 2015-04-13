@@ -1,3 +1,9 @@
+tags
+
+front page should have
+    - recent updates
+    - recently modified recipes
+
 Optional sort by newest/oldest
 	- and sorting should remember filters
 

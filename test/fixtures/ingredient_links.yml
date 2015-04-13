@@ -13,5 +13,8 @@ carrot:
 rotted_thing:
     recipe_component: rotted_thing (Ingredient)
 
+TESTADDING:
+    recipe_component: test_adding (Ingredient)
+    
 complex_link_1:
   recipe_component: complex_component1 (ComplexIngredient)

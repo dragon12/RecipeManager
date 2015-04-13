@@ -10,14 +10,14 @@ class RecipeEditTest < ActionDispatch::IntegrationTest
     capy_login_as_admin
     
     num_ingredients_before = @r.ingredient_quantities.count
-    
     visit(edit_recipe_path(@r))
     click_link('Add Ingredient')
+    #save_and_open_page
     
     within all('#ingredient_group_table').last do
       within all('.table-row').last do
         find('.table-col-1-4').all('input').last.set('6')
-        find('.table-col-2-4').find('select').select('Rot (By Weight)')
+        find('.table-col-2-4').find('select').select('TESTADDING (By Weight)')
         find('.table-col-3-4').find('input').set('good prep')
       end
     end

@@ -78,52 +78,5 @@ All Recipes
  </p>
 <% end %>
 
-<%= will_paginate %>
+<%= render 'table' %>
 
-<table class='gridtable'>
-  <tr>
-  	<th style='width:10%'><%= link_to 'Created',
-  									recipes_path(:sort_by => 'created_at', :descending => '1')%></th>
-    <th style='width:20%'><%= link_to 'Name',
-    								recipes_path(:sort_by => 'name')%></th>
-    <th style='width:40%'>Description</th>
-    <th style='width:10%'><%= link_to 'Category',
-    								recipes_path(:sort_by => 'sortable_category')%></th>
-    <th style='width:5%'><%= link_to 'Average Rating',
-    								recipes_path(:sort_by => 'sortable_average_rating', :descending => '1')%></th>
-    <% if @current_user %>
-    <th style='width:5%'><%= link_to 'Your Rating',
-    								recipes_path(:sort_by => 'sortable_rating_for_user', :descending => '1')%></th>
-    <%end%>
-    <th style='width:5%'>Total Time</th>
-    <th style='width:5%'>Cost Per Portion</th>
-  </tr>
- 
-  <% @recipes.each do |recipe| %>
-    <tr>
-   	  <td><%= recipe.created_at.strftime("%F") %></td>
-      <td><%= link_to recipe.name, recipe_path(recipe) %></td>
-      <td><%= recipe.description %></td>
-      <td><%if recipe.category%>
-      		<%= link_to recipe.category.name, 
-      					recipes_path(:search_by_category_id => recipe.category.id,
-      								 :submit_search_by_category_id => '1')  %>
-          <%end%>
-      </td>
-      <td><%= recipe.average_rating %></td>
-      <% if @current_user %>
-      <td><%= recipe.rating_for_user(@current_user)%></td>
-      <%end%>
-      <td><%= recipe.total_time %></td>
-      <td><%= recipe.cost_per_portion %></td>
-    <% if @is_admin %>
-      <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
-      <td><%= link_to 'Delete', recipe_path(recipe),
-                    method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    <% end %>
-    </tr>
-  <% end %>
-</table>
-
-
-<%= will_paginate %>

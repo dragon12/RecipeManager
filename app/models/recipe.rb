@@ -52,6 +52,14 @@ class Recipe < ActiveRecord::Base
     logger.info "in validate now"
   end
 
+  def sortable_name
+    return name
+  end
+  
+  def sortable_created_at
+    return created_at
+  end
+  
   def average_rating
     avg = calc_average_rating
     if avg.nil?
@@ -177,6 +185,11 @@ class Recipe < ActiveRecord::Base
       .joins(:category)
       .where("categories.id= ?", "#{query}")
   end
+  
+  def self.search_by_updated_since(d)
+    Recipe.where("updated_at > ?", d)
+  end
+  
   
   def self.filter_blank_instructions_from_groups(hash)
     hash = hash.with_indifferent_access

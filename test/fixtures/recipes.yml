@@ -3,32 +3,37 @@ recipe1:
   description: The first recipe
   comments: Good recipe
   category: food
+  updated_at: 2015-04-13
 
 recipe2:
   name: FilterRecipe Two
   description: The second recipe
   comments: Bad recipe
   category: wine
+  updated_at: 2015-04-12
   
 recipe3:
   name: FilterRecipe Three
   description: The third recipe
   comments: Good recipe 2
   category: food
+  updated_at: 2015-03-01
   
 recipe4:
   name: Side dish
   description: The fourth recipe
   comments: Good recipe 3
   category: wine
+  updated_at: 2015-02-01
   
 unrated_recipe:
   name: Unrated Recipe
   description: Who cares
   category: wine
+  updated_at: 2015-01-31
 
 first_sorted_recipe:
   name: AAAAfirst
   description: none
   category: wine
-  
+  updated_at: 2015-01-01

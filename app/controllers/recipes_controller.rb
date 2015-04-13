@@ -47,14 +47,15 @@ class RecipesController < ApplicationController
       return hash
     end
     
-    #logger.info("instance methods of recipe: #{Recipe.instance_methods(true).inspect}")
-    if !Recipe.instance_methods(true).include?(sort_field)
+    symbol_sort_field = sort_field.intern
+    logger.info("instance methods of recipe: #{Recipe.instance_methods(true).inspect}")
+    if !Recipe.instance_methods(true).include?(symbol_sort_field)
       logger.info("Couldn't find instance method: #{sort_field}")
       return hash
     end
     
-    logger.info("SORTING ARITY: #{Recipe.instance_method(sort_field).arity}")
-    arity = Recipe.instance_method(sort_field).arity
+    logger.info("SORTING ARITY: #{Recipe.instance_method(symbol_sort_field).arity}")
+    arity = Recipe.instance_method(symbol_sort_field).arity
     return hash.sort_by{|item|
         if arity == 0
           item.send sort_field
@@ -187,6 +188,7 @@ class RecipesController < ApplicationController
     end
     
   def setup_vars
+    @sortable_table = 1
     @is_admin = current_user && current_user.is_admin?
   end
   

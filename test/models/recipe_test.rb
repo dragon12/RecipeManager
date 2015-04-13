@@ -87,6 +87,11 @@ class RecipeTest < ActiveSupport::TestCase
     assert_equal 3, filtered.count, "#{filtered.inspect}"
   end
   
+  test "filter by updated since" do
+    filtered = Recipe.search_by_updated_since("2015-02-28")
+    assert_equal 3, filtered.count
+  end
+  
   test "strip blank ingredient_links no stripping" do
     groups_before = {
       "0" => {"id"=>"", 
