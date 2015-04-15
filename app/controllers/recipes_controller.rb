@@ -31,7 +31,7 @@ class RecipesController < ApplicationController
       @filtered_text = "in category '%s'" % @search_category.name
     else
       #@recipes = Recipe.joins(:category).order('categories.name asc, name asc')
-      @recipes = Recipe.order(:created_at)
+      @recipes = Recipe.order(:created_at).reverse
     end
 
     @recipes = sort_by(params[:sort_by], @recipes)
