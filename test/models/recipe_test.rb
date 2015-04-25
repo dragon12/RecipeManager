@@ -383,7 +383,24 @@ class RecipeTest < ActiveSupport::TestCase
                       :_destroy=>"false"
                       },
                   },
-              }
+              },
+      "2" => {:id =>"", 
+              :name=>"Default3",
+                :instructions_attributes=>{
+                    "0"=>{
+                        :id=>"1", 
+                        :step_number=>"2", 
+                        :details=>"test",
+                        :_destroy=>"true"
+                        },
+                    "1"=>{
+                        :id=>"2", 
+                        :step_number=>"3", 
+                        :details=>"test2",
+                        :_destroy=>"true"
+                        },
+                    },
+                }
       }
     
       
@@ -404,7 +421,25 @@ class RecipeTest < ActiveSupport::TestCase
               :instructions_attributes=>{},
               :_destroy=>"1"
              },
-          }
+      "2" => {:id =>"", 
+              :name=>"Default3",
+              :instructions_attributes=>{
+                    "0"=>{
+                        :id=>"1", 
+                        :step_number=>"2", 
+                        :details=>"test",
+                        :_destroy=>"1"
+                        },
+                    "1"=>{
+                        :id=>"2", 
+                        :step_number=>"3", 
+                        :details=>"test2",
+                        :_destroy=>"1"
+                        },
+                    },
+              :_destroy=>"1"
+         },
+      }
     
     
     groups_after = Recipe.filter_blank_instructions_from_groups(groups)

@@ -25,12 +25,15 @@ class Instruction < ActiveRecord::Base
     
     empty = true
     insts.each do |unused2, inst|
-      empty = false
       
       logger.info("    RECIPE_FILTER: looking at instruction #{inst}")
       if is_params_empty(inst)
         logger.info("    RECIPE_FILTER: Is empty, marking for destruction")
         inst[:_destroy] = "1"
+      end
+      
+      if inst[:_destroy] != "1"
+        empty = false
       end
     end
     
@@ -40,8 +43,9 @@ class Instruction < ActiveRecord::Base
 private
 
   def self.is_params_empty(params)
-    logger.info("Checking params for emptiness: #{params}")
-    return params[:step_number].blank? && params[:details].blank?
+    logger.info("instruction Checking params for emptiness: #{params}")
+    return (params[:_destroy]== "1" || params[:_destroy] == "true") ||
+           (params[:step_number].blank? && params[:details].blank?)
   end
   
   
