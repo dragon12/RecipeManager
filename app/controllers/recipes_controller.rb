@@ -48,7 +48,7 @@ class RecipesController < ApplicationController
     end
     
     symbol_sort_field = sort_field.intern
-    logger.info("instance methods of recipe: #{Recipe.instance_methods(true).inspect}")
+    #logger.info("instance methods of recipe: #{Recipe.instance_methods(true).inspect}")
     if !Recipe.instance_methods(true).include?(symbol_sort_field)
       logger.info("Couldn't find instance method: #{sort_field}")
       return hash

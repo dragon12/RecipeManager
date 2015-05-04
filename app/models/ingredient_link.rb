@@ -9,7 +9,7 @@ class IngredientLink < ActiveRecord::Base
   belongs_to :ingredient_base
   validates :ingredient_base, presence: true
 
-  delegate :name, :cost_for_quantity,
+  delegate        :cost_for_quantity,
                   :kcal_for_quantity,
                   :measurement_type,
                   :measurement_type_str,
@@ -20,6 +20,7 @@ class IngredientLink < ActiveRecord::Base
                   :linkable?,
               :to => :recipe_component
 
+  delegate :name, :to => :ingredient_base
   has_many :ingredient_quantities
   has_many :ingredient_quantity_groups, through: :ingredient_quantities
   has_many :recipes, through: :ingredient_quantity_groups
@@ -30,8 +31,8 @@ class IngredientLink < ActiveRecord::Base
   after_destroy :release_unused_base
   
   def self.order_by_name
-    IngredientLink.joins(:ingredient).order("ingredients.name") +
-      IngredientLink.joins(complex_ingredient: :recipe).order("recipes.name")
+    IngredientLink.joins(:ingredient_base).joins(:ingredient).order("ingredient_bases.name") +
+      IngredientLink.joins(:ingredient_base).joins(complex_ingredient: :recipe).order("ingredient_bases.name")
   end
   
   def recipes_count

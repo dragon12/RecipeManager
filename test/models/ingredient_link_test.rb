@@ -10,6 +10,8 @@ class IngredientLinkTest < ActiveSupport::TestCase
     assert @ingredient_link.valid?, "#{@ingredient_link.errors.full_messages}"
     assert @ingredient_link.editable?
     assert_not @ingredient_link.linkable?
+    
+    assert @complex_link.valid?, "#{@complex_link.errors.full_messages}"
   end
   
   
@@ -27,6 +29,7 @@ class IngredientLinkTest < ActiveSupport::TestCase
   
   test "name is right" do
     assert_equal "Salt", @ingredient_link.name
+    assert_equal "Recipe Complex Component1", @complex_link.name
   end
   
   
