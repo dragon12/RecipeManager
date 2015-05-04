@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150331194901) do
+ActiveRecord::Schema.define(version: 20150504171004) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,13 +40,21 @@ ActiveRecord::Schema.define(version: 20150331194901) do
 
   add_index "images", ["recipe_id"], name: "index_images_on_recipe_id", using: :btree
 
+  create_table "ingredient_bases", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "ingredient_links", force: true do |t|
     t.integer  "recipe_component_id"
     t.string   "recipe_component_type"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "ingredient_base_id"
   end
 
+  add_index "ingredient_links", ["ingredient_base_id"], name: "index_ingredient_links_on_ingredient_base_id", using: :btree
   add_index "ingredient_links", ["recipe_component_id", "recipe_component_type"], name: "ingredient_links_link_index", unique: true, using: :btree
 
   create_table "ingredient_quantities", force: true do |t|
@@ -71,7 +79,6 @@ ActiveRecord::Schema.define(version: 20150331194901) do
   add_index "ingredient_quantity_groups", ["recipe_id"], name: "index_ingredient_quantity_groups_on_recipe_id", using: :btree
 
   create_table "ingredients", force: true do |t|
-    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "measurement_type_id"

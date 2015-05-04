@@ -6,6 +6,8 @@ class IngredientLink < ActiveRecord::Base
   belongs_to :complex_ingredient, -> { joins(:ingredient_link).where(ingredient_links: {recipe_component_type: 'ComplexIngredient'}) }, 
                               foreign_key: 'recipe_component_id'
   
+  belongs_to :ingredient_base
+  
   delegate :name, :cost_for_quantity,
                   :kcal_for_quantity,
                   :measurement_type,
