@@ -11,9 +11,7 @@ class Ingredient < ActiveRecord::Base
   has_many :ingredient_quantities, through: :ingredient_link
   has_many :ingredient_quantity_groups, through: :ingredient_quantities
   has_many :recipes, through: :ingredient_quantity_groups
-  
-  after_destroy :release_unused_base
-                    
+                      
                    
   validates :cost_basis, presence: true, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
   validates :kcal_basis, presence: true, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
@@ -30,7 +28,13 @@ class Ingredient < ActiveRecord::Base
   #used during construction - map to the ingredient base
   def name=(n)
     logger.info "HELLO"
-    self.ingredient_base = IngredientBase.find_or_create_by!(name: n)
+ 
+    if ingredient_link.nil?
+      self.build_ingredient_link
+      ingredient_link.recipe_component = self
+    end
+    ingredient_link.ingredient_base = IngredientBase.find_or_create_by!(name: n)
+ 
     logger.info "ingredient base is now #{ingredient_base.inspect}"
   end
   
@@ -118,12 +122,4 @@ class Ingredient < ActiveRecord::Base
 
 private
     
-  def release_unused_base
-    logger.info("After ingredient destroy")
-    if ingredient_base.ingredients.count.zero?
-      logger.warn("base ingredient is now unused, destroying")
-      ingredient_base.destroy
-    end
-  end            
-  
 end

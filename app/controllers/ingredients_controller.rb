@@ -13,11 +13,11 @@ class IngredientsController < ApplicationController
     #render plain: params[:recipe].inspect
     logger.info("params: #{params.inspect}")
     setup_vars
-    #il = IngredientLink.new
+
+    name = params[:name]
+    
     @ingredient = Ingredient.new(ingredient_params)
-    il = @ingredient.build_ingredient_link
-    il.recipe_component = @ingredient
- 
+    
     if @ingredient.save
       redirect_to action: "index"
     else
@@ -50,12 +50,13 @@ class IngredientsController < ApplicationController
   def destroy
     setup_vars
     @deleted_ingredient = Ingredient.find(params[:id])
+    name = @deleted_ingredient.name
     if @deleted_ingredient.destroy
       #redirect_to ingredients_path
-      message = @deleted_ingredient.name + " deleted successfully"
+      message = name + " deleted successfully"
       redirect_to ingredients_path, :notice => message
     else
-      message = @deleted_ingredient.name + " couldn't be deleted; it still has recipes"
+      message = name + " couldn't be deleted; it still has recipes"
       redirect_to ingredients_path, :alert => message
       #@ingredients = Ingredient.order(:name)
       #@ingredient = Ingredient.new

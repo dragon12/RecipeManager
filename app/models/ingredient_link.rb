@@ -27,6 +27,7 @@ class IngredientLink < ActiveRecord::Base
   validates :recipe_component, presence: true
   
   before_destroy :check_for_recipes
+  after_destroy :release_unused_base
   
   def self.order_by_name
     IngredientLink.joins(:ingredient).order("ingredients.name") +
@@ -45,4 +46,14 @@ private
       return false
     end
   end
+  
+  
+  def release_unused_base
+    logger.info("After ingredient link destroy")
+    if ingredient_base.ingredient_links.count.zero?
+      logger.warn("base ingredient is now unused, destroying")
+      ingredient_base.destroy
+    end
+  end            
+  
 end
