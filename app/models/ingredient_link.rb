@@ -7,7 +7,8 @@ class IngredientLink < ActiveRecord::Base
                               foreign_key: 'recipe_component_id'
   
   belongs_to :ingredient_base
-  
+  validates :ingredient_base, presence: true
+
   delegate :name, :cost_for_quantity,
                   :kcal_for_quantity,
                   :measurement_type,

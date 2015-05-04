@@ -28,11 +28,6 @@ class IngredientTest < ActiveSupport::TestCase
     assert_not @full_ing.valid?
   end
     
-  test "no ingredient base" do
-    @full_ing.ingredient_base = nil
-    assert_not @full_ing.valid?
-  end
-  
   test "cost for quantity" do
     i = @full_ing
     i.cost_basis = 100

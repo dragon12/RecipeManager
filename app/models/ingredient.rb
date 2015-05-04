@@ -6,14 +6,14 @@ class Ingredient < ActiveRecord::Base
   belongs_to :measurement_type
   validates :measurement_type, presence: true
   
+  has_one :ingredient_base, through: :ingredient_link
+  
   has_many :ingredient_quantities, through: :ingredient_link
   has_many :ingredient_quantity_groups, through: :ingredient_quantities
   has_many :recipes, through: :ingredient_quantity_groups
   
-  validates :name, presence: true,
-                   length: { minimum: 3 },
-                   uniqueness: { case_sensitive: false }
-                   
+  after_destroy :release_unused_base
+                    
                    
   validates :cost_basis, presence: true, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
   validates :kcal_basis, presence: true, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
@@ -26,6 +26,19 @@ class Ingredient < ActiveRecord::Base
   def linkable?
     false
   end
+  
+  #used during construction - map to the ingredient base
+  def name=(n)
+    logger.info "HELLO"
+    self.ingredient_base = IngredientBase.find_or_create_by!(name: n)
+    logger.info "ingredient base is now #{ingredient_base.inspect}"
+  end
+  
+  def name
+    logger.info "ingredient base getter is now #{ingredient_base.inspect}"
+    return self.ingredient_base.name
+  end
+  
   def cost_for_quantity(qty)
     if cost_basis.to_i == 0 || cost.nil?
         logger.error "CALC_COST: ingredient #{name} has zero values"
@@ -103,4 +116,14 @@ class Ingredient < ActiveRecord::Base
     end
   end
 
+private
+    
+  def release_unused_base
+    logger.info("After ingredient destroy")
+    if ingredient_base.ingredients.count.zero?
+      logger.warn("base ingredient is now unused, destroying")
+      ingredient_base.destroy
+    end
+  end            
+  
 end
