@@ -16,6 +16,7 @@ class Recipe < ActiveRecord::Base
   has_many :ingredient_links, through: :ingredient_quantities
   has_many :simple_ingredients, through: :ingredient_links, 
                                 source: :recipe_component, source_type: "Ingredient"
+  has_many :ingredient_bases, through: :ingredient_links, source: :ingredient_base
                                 
 
   has_many :instruction_groups, -> {order(:created_at) }, dependent: :destroy
@@ -170,8 +171,8 @@ class Recipe < ActiveRecord::Base
   
   def self.search_by_ingredient_name(query)
     select("DISTINCT recipes.*")
-      .joins(:simple_ingredients)
-      .where("lower(ingredients.name) like lower(?)", "%#{query}%")
+      .joins(:ingredient_bases)
+      .where("lower(ingredient_bases.name) like lower(?)", "%#{query}%")
   end
   
   def self.search_by_ingredient_link_id(query)
