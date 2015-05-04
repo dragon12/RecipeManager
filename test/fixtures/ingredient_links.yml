@@ -16,5 +16,8 @@ rotted_thing:
 TESTADDING:
     recipe_component: test_adding (Ingredient)
     
+TESTADDING2:
+    recipe_component: test_adding2 (Ingredient)
+    
 complex_link_1:
   recipe_component: complex_component1 (ComplexIngredient)

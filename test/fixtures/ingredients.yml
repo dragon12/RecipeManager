@@ -1,6 +1,6 @@
 
 unused_ingredient:
-  name: "Unused"
+  ingredient_base: unused
   cost_basis: 100
   cost: 2.0
   kcal_basis: 500
@@ -8,15 +8,23 @@ unused_ingredient:
   measurement_type: weight
   
 salt:
-  name: "Salt"
+  ingredient_base: salt
   cost_basis: 100
   cost: 1.0
   kcal_basis: 100
   kcal: 50
   measurement_type: weight
   
+ing_reusing_base:
+  ingredient_base: salt
+  cost_basis: 200
+  cost: 2.0
+  kcal_basis: 100
+  kcal: 100
+  measurement_type: quantity
+  
 pepper:
-  name: "Pepper"
+  ingredient_base: pepper
   cost_basis: 100
   cost: 1.0
   kcal_basis: 100
@@ -24,7 +32,7 @@ pepper:
   measurement_type: weight
 
 carrot:
-  name: "Carrot"
+  ingredient_base: carrot
   cost_basis: 100
   cost: 2.0
   kcal_basis: 10
@@ -32,7 +40,7 @@ carrot:
   measurement_type: weight
 
 rotted_thing:
-  name: "Rot"
+  ingredient_base: rot
   cost_basis: 100
   cost: 1.0
   kcal_basis: 100
@@ -40,9 +48,18 @@ rotted_thing:
   measurement_type: weight
 
 test_adding:
-  name: "TESTADDING"
+  ingredient_base: testadding
   cost_basis: 100
   cost: 1.0
   kcal_basis: 100
   kcal: 50
   measurement_type: weight
+
+test_adding2:
+  ingredient_base: testadding
+  cost_basis: 100
+  cost: 1.0
+  kcal_basis: 100
+  kcal: 50
+  measurement_type: quantity
+  
