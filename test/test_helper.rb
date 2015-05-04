@@ -36,7 +36,7 @@ end
 
 
 class ActiveSupport::TestCase
-
+  set_fixture_class :ingredient_bases => IngredientBase
   fixtures :all
 
   # Returns true if a test user is logged in.
