@@ -6,8 +6,16 @@ class IngredientTest < ActiveSupport::TestCase
     @full_ing = ingredients(:salt)
   end
   
+  test "name should be good" do
+    assert_equal "Salt", @full_ing.name
+  end
+  
   test "should be valid" do
     assert @full_ing.valid?, "#{@full_ing.errors.full_messages}"
+  end
+  
+  test "can't add duplicate" do
+    assert_not @full_ing.dup.valid?
   end
   
   test "no measurement type" do
@@ -20,10 +28,9 @@ class IngredientTest < ActiveSupport::TestCase
     assert_not @full_ing.valid?
   end
     
-  test "name too short" do
-    i = @full_ing
-    i.name = "t"
-    assert_not i.valid?
+  test "no ingredient base" do
+    @full_ing.ingredient_base = nil
+    assert_not @full_ing.valid?
   end
   
   test "cost for quantity" do
