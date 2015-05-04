@@ -15,3 +15,7 @@ rot:
 
 testadding:
     name: TESTADDING
+
+complex_component1:
+    name: Recipe Complex Component1
+    

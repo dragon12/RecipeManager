@@ -1,23 +1,32 @@
 unused_ingredient:
     recipe_component: unused_ingredient (Ingredient)
+    ingredient_base: unused
 
 salt:
     recipe_component: salt (Ingredient)
-
+    ingredient_base: salt
+    
 pepper:
     recipe_component: pepper (Ingredient)
-
+    ingredient_base: pepper
+    
 carrot:
     recipe_component: carrot (Ingredient)
-
+    ingredient_base: carrot
+    
 rotted_thing:
     recipe_component: rotted_thing (Ingredient)
-
+    ingredient_base: rotted_thing
+    
 TESTADDING:
     recipe_component: test_adding (Ingredient)
+    ingredient_base: test_adding
     
 TESTADDING2:
     recipe_component: test_adding2 (Ingredient)
+    ingredient_base: test_adding2
     
 complex_link_1:
   recipe_component: complex_component1 (ComplexIngredient)
+  ingredient_base: complex_component1
+  
