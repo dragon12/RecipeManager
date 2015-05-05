@@ -13,8 +13,9 @@ carrot:
 rotted_thing:
     name: Rot
 
-testadding:
+test_adding:
     name: TESTADDING
+
 
 complex_component1:
     name: Recipe Complex Component1

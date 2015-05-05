@@ -24,7 +24,7 @@ TESTADDING:
     
 TESTADDING2:
     recipe_component: test_adding2 (Ingredient)
-    ingredient_base: test_adding2
+    ingredient_base: test_adding
     
 complex_link_1:
   recipe_component: complex_component1 (ComplexIngredient)

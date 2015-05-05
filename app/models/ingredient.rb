@@ -40,7 +40,7 @@ class Ingredient < ActiveRecord::Base
   
   def name
     logger.info "ingredient base getter is now #{ingredient_base.inspect}"
-    return self.ingredient_base.name
+    return ingredient_base.name
   end
   
   def cost_for_quantity(qty)
