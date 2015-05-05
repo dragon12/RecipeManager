@@ -6,6 +6,8 @@ class IngredientsController < ApplicationController
   def index
     setup_vars
     @ingredient_links = IngredientLink.order_by_name
+    @simple_ingredient_bases = IngredientBase.simples_ordered_by_name
+    @complex_ingredient_bases = IngredientBase.complex_ordered_by_name
     @ingredient = Ingredient.new
   end  
   

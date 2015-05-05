@@ -61,25 +61,47 @@
     <th>KCal</th>
     <th># Recipes</th>
   </tr>
- 
-  <% @ingredient_links.each do |ingredient_link| %>
+  
+  <% @simple_ingredient_bases.each do |ib|%>
+  <%first = 0%>
+  
+  	<% ib.ingredient_links.each do |ingredient_link| %>
+  <tr>
+  	<%if first == 1%>
+	  <%first = 1%>
+ 	<td rowspan='<%=ib.ingredient_links.count %>'>
+ 		<%= ib.name%> 
+ 	</td>
+ 	<%end%>
+
+    <td><%= ingredient_link.measurement_type_str %></td>
+    <td><%= ingredient_link.cost_str %></td>
+    <td><%= ingredient_link.kcal_str %></td>
+    <td><%= link_to ingredient_link.recipes_count,
+      			recipes_path(:search_by_ingredient_link_id => ingredient_link.id)%></td>
+
+	<%if @is_admin %>
+      <td><%= link_to 'Edit', ingredient_path(ingredient_link.ingredient) %></td>
+      <td><%= link_to 'Delete', ingredient_path(ingredient_link.ingredient),
+                    method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	<%end%>
+  </tr>
+  <% end %>
+  <%end%>
+
+  <% @complex_ingredient_bases.each do |ib| %>
+  	<% ib.ingredient_links.each do |ingredient_link| %>
     <tr>
-    	<%if ingredient_link.linkable? %>
-    		<td><%= link_to ingredient_link.name, recipe_path(ingredient_link.complex_ingredient.recipe)%></td>
-  		<%else%>
-	      <td><%= ingredient_link.name %></td>
-	    <%end%>
+      <td><%= link_to ingredient_link.name, recipe_path(ingredient_link.complex_ingredient.recipe)%></td>
       <td><%= ingredient_link.measurement_type_str %></td>
       <td><%= ingredient_link.cost_str %></td>
       <td><%= ingredient_link.kcal_str %></td>
       <td><%= link_to ingredient_link.recipes_count,
       			recipes_path(:search_by_ingredient_link_id => ingredient_link.id)%></td>
 
-<%if @is_admin && ingredient_link.editable? %>
-      <td><%= link_to 'Edit', ingredient_path(ingredient_link.ingredient) %></td>
-      <td><%= link_to 'Delete', ingredient_path(ingredient_link.ingredient),
-                    method: :delete, data: { confirm: 'Are you sure?' } %></td>
-<%end%>
+      <td></td>
+      <td></td>
     </tr>
+    <%end%>
   <% end %>
 </table>

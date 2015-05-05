@@ -7,6 +7,17 @@ class IngredientBase < ActiveRecord::Base
                    
   before_destroy :check_for_ingredient_links
   
+  def self.simples_ordered_by_name
+    select("distinct ingredient_bases.*").joins(:ingredient_links).
+            where("ingredient_links.recipe_component_type = 'Ingredient'").
+            order("ingredient_bases.name")
+  end
+  
+  def self.complex_ordered_by_name
+    select("distinct ingredient_bases.*").joins(:ingredient_links).
+            where("ingredient_links.recipe_component_type = 'ComplexIngredient'").
+            order("ingredient_bases.name")
+  end
 private
   def check_for_ingredient_links
     if ingredient_links.count > 0
