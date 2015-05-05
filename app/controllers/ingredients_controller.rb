@@ -5,10 +5,14 @@ class IngredientsController < ApplicationController
   
   def index
     setup_vars
-    @ingredient_links = IngredientLink.order_by_name
     @simple_ingredient_bases = IngredientBase.simples_ordered_by_name
     @complex_ingredient_bases = IngredientBase.complex_ordered_by_name
+    
     @ingredient = Ingredient.new
+    @ingredient.ingredient_link = IngredientLink.new
+    @ingredient.ingredient_link.ingredient_base = IngredientBase.new
+    
+    logger.info "Created ingredient, looks like #{@ingredient.inspect}"
   end  
   
   def create
@@ -23,14 +27,16 @@ class IngredientsController < ApplicationController
     if @ingredient.save
       redirect_to action: "index"
     else
-      @ingredient_links = IngredientLink.order_by_name
+      @simple_ingredient_bases = IngredientBase.simples_ordered_by_name
+      @complex_ingredient_bases = IngredientBase.complex_ordered_by_name
       render 'index'
     end
   end
   
   def show
     setup_vars
-    @ingredient_links = IngredientLink.order_by_name
+    @simple_ingredient_bases = IngredientBase.simples_ordered_by_name
+    @complex_ingredient_bases = IngredientBase.complex_ordered_by_name
     @ingredient = Ingredient.find(params[:id])
     render 'index'
   end
@@ -44,7 +50,8 @@ class IngredientsController < ApplicationController
     if @ingredient.update(ingredient_params)
       redirect_to ingredients_path
     else
-      @ingredient_links = IngredientLink.order_by_name
+      @simple_ingredient_bases = IngredientBase.simples_ordered_by_name
+      @complex_ingredient_bases = IngredientBase.complex_ordered_by_name
       render 'index'
     end
   end

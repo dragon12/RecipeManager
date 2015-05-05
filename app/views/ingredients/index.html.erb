@@ -63,12 +63,12 @@
   </tr>
   
   <% @simple_ingredient_bases.each do |ib|%>
-  <%first = 0%>
+  <%first = 1%>
   
   	<% ib.ingredient_links.each do |ingredient_link| %>
   <tr>
   	<%if first == 1%>
-	  <%first = 1%>
+	  <%first = 0%>
  	<td rowspan='<%=ib.ingredient_links.count %>'>
  		<%= ib.name%> 
  	</td>
