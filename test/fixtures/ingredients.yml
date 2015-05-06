@@ -55,3 +55,16 @@ test_adding2:
   kcal: 50
   measurement_type: quantity
   
+test_deleting:
+  cost_basis: 100
+  cost: 1.0
+  kcal_basis: 100
+  kcal: 50
+  measurement_type: weight
+
+test_deleting2:
+  cost_basis: 100
+  cost: 1.0
+  kcal_basis: 100
+  kcal: 50
+  measurement_type: quantity

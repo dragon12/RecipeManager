@@ -101,7 +101,7 @@
       <td><%= ingredient_link.cost_str %></td>
       <td><%= ingredient_link.kcal_str %></td>
       <td><%= link_to ingredient_link.recipes_count,
-      			recipes_path(:search_by_ingredient_link_id => ingredient_link.id)%></td>
+      			recipes_path(:search_by_ingredient_base_id => ib.id)%></td>
 
       <td></td>
       <td></td>

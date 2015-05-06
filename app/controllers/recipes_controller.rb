@@ -159,7 +159,7 @@ class RecipesController < ApplicationController
                       :quantity, 
                       :preparation,
                       :ingredient_name,
-                      :ingredient_base_id,
+                      :ingredient_link_id,
                       {:ingredient => [:name, :id]},
                       {:ingredient_attributes => [:name, :id]},
                       :_destroy]

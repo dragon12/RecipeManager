@@ -21,13 +21,12 @@ class RecipeEditTest < ActionDispatch::IntegrationTest
         find('.table-col-3-4').find('input').set('good prep')
       end
     end
+    #save_and_open_page
     click_button('Update Recipe', match: :first)
     
     #this forces waiting for the page to load so that the model will be updated
     assert_equal current_path, recipe_path(@r)
 
-    #save_and_open_page
-    
     @r.reload
     assert_equal num_ingredients_before + 1, @r.ingredient_quantities.count
     

@@ -139,7 +139,7 @@ class IngredientsControllerTest < ActionController::TestCase
     num_ingredient_bases_before = IngredientBase.count
     
     #both test_adding and test_adding2 point to the same base
-    ing = ingredients(:test_adding)
+    ing = ingredients(:test_deleting)
     post :destroy, id: ing.id
     
     assert_redirected_to ingredients_path
@@ -147,7 +147,7 @@ class IngredientsControllerTest < ActionController::TestCase
     assert_equal num_ingredients_before - 1, Ingredient.count
     assert_equal num_ingredient_bases_before, IngredientBase.count
     
-    ing2 = ingredients(:test_adding2)
+    ing2 = ingredients(:test_deleting2)
     post :destroy, id: ing2.id
 
     assert_redirected_to ingredients_path

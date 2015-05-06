@@ -17,6 +17,9 @@ test_adding:
     name: TESTADDING
 
 
+test_deleting:
+    name: TESTDELETING
+    
 complex_component1:
-    name: Recipe Complex Component1
+    name: "Recipe: FilterRecipe Three"
     

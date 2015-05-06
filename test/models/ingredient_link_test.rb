@@ -29,7 +29,7 @@ class IngredientLinkTest < ActiveSupport::TestCase
   
   test "name is right" do
     assert_equal "Salt", @ingredient_link.name
-    assert_equal "Recipe Complex Component1", @complex_link.name
+    assert_equal "Recipe: FilterRecipe Three", @complex_link.name
   end
   
   

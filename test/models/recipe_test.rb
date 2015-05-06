@@ -47,14 +47,14 @@ class RecipeTest < ActiveSupport::TestCase
   
   test "filter by ingredient id" do
     #carrot appears twice in recipe1 and once in recipe 3
-    carrot = ingredient_links(:carrot)
-    filtered = Recipe.search_by_ingredient_link_id(carrot.id)
+    carrot = ingredient_bases(:carrot)
+    filtered = Recipe.search_by_ingredient_base_id(carrot.id)
     assert_equal 2, filtered.count
   end
   
   test "filter by an unused ingredient id" do
-    unused_ing = ingredient_links(:unused_ingredient)
-    assert_equal 0, Recipe.search_by_ingredient_link_id(unused_ing.id).count
+    unused_ing = ingredient_bases(:unused)
+    assert_equal 0, Recipe.search_by_ingredient_base_id(unused_ing.id).count
   end
   
   test "filter by ingredient name (full, unique)" do

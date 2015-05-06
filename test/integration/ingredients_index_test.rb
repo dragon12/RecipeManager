@@ -48,7 +48,7 @@ class IngredientsIndexTest < ActionDispatch::IntegrationTest
     IngredientLink.all.each do |ing|
       #puts "TEST: looking at ing #{ing.inspect}"
       #assert_select "a", :href => /search_by_ingredient_link_id=
-      assert_match(/href="\/recipes\?search_by_ingredient_link_id=#{ing.id}/, response.body)
+      assert_match(/href="\/recipes\?search_by_ingredient_base_id=#{ing.ingredient_base.id}/, response.body)
       
       #assert_select 'a[href=/recipes\?search_by_ingredient_link_id=?]', ing.id, text: ing.recipes_count, count: 1
       if ing.recipe_component_type == 'Ingredient'
