@@ -1,11 +1,20 @@
 class IngredientBase < ActiveRecord::Base
   has_many :ingredient_links
+  has_many :recipes, through: :ingredient_links
   
   validates :name, presence: true,
                    length: { minimum: 3 },
                    uniqueness: { case_sensitive: false }
                    
   before_destroy :check_for_ingredient_links
+  
+  def recipes_count
+    recipes.distinct.count
+  end
+  
+  def self.order_by_name
+    simples_ordered_by_name + complex_ordered_by_name
+  end
   
   def self.simples_ordered_by_name
     select("distinct ingredient_bases.*").joins(:ingredient_links).

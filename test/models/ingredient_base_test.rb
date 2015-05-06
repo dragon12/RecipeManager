@@ -28,4 +28,8 @@ class IngredientBaseTest < ActiveSupport::TestCase
     end
   end
   
+  test "recipes count" do
+    testadding = ingredient_bases(:test_adding)
+    assert_equal 2, testadding.recipes_count
+  end
 end

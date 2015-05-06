@@ -175,10 +175,10 @@ class Recipe < ActiveRecord::Base
       .where("lower(ingredient_bases.name) like lower(?)", "%#{query}%")
   end
   
-  def self.search_by_ingredient_link_id(query)
+  def self.search_by_ingredient_base_id(query)
     select("DISTINCT recipes.*")
-      .joins(:ingredient_links)
-      .where("ingredient_links.id= ?", "#{query}")
+      .joins(:ingredient_bases)
+      .where("ingredient_bases.id= ?", "#{query}")
   end
 
   def self.search_by_category_id(query)

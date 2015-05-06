@@ -31,20 +31,25 @@ class RecipesIndexTest < ActionDispatch::IntegrationTest
     end
   end
   
-  test "search by ingredient id" do
+  test "search by ingredient base" do
     log_in_as(@non_admin)
-    salt_link = ingredient_links(:salt)
-    get recipes_path, :search_by_ingredient_link_id => salt_link.id, 
-                      :submit_search_by_ingredient_link_id => 'Search'
+    test_adding_base = ingredient_bases(:test_adding)
+    get recipes_path, :search_by_ingredient_base_id => test_adding_base.id, 
+                      :submit_search_by_ingredient_base_id => 'Search'
+    assert_template 'recipes/index'
+    
+    #assert_match 'boohooo', @response.body
+
+    
     Recipe.all.each do |recipe|
-      if recipe.ingredient_links.exists?(salt_link.id)
+      if recipe.ingredient_bases.exists?(test_adding_base.id)
         assert_select 'a[href=?]', recipe_path(recipe), text: recipe.name, count: 1
       else
         assert_select 'a[href=?]', recipe_path(recipe), text: recipe.name, count: 0
       end
     end
   end
-
+  
   test "search by ingredient name" do
     capy_login_as_admin
     visit recipes_path

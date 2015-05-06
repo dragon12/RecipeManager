@@ -28,9 +28,19 @@ carrot_g1_r3:
   quantity: 1
   ingredient_link: carrot
   ingredient_quantity_group: group1_recipe3
+
+testadding2_g1_r3:
+  quantity: 1
+  ingredient_link: TESTADDING2
+  ingredient_quantity_group: group1_recipe3
   
 rot_g1_r4:
   quantity: 10
   ingredient_link: rotted_thing
+  ingredient_quantity_group: group1_recipe4
+
+testadding_g1_r4:
+  quantity: 1
+  ingredient_link: TESTADDING
   ingredient_quantity_group: group1_recipe4
   

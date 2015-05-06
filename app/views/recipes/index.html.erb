@@ -39,15 +39,15 @@ All Recipes
  	<tr>
  		<td align='right'>Or Exact:</td>
  		<td align='right'>
-		<%= select_tag(:search_by_ingredient_link_id, 
+		<%= select_tag(:search_by_ingredient_base_id, 
 							options_from_collection_for_select(
-								IngredientLink.order_by_name, 
-								:id, :name, @search_ingredient_link.id),
+								IngredientBase.order_by_name, 
+								:id, :name, @search_ingredient_base.id),
 							:prompt => '<Select an Ingredient>'
 							) %>
 		</td>
 		<td>
-			<%= submit_tag "Search", :name => 'submit_search_by_ingredient_link_id' %>
+			<%= submit_tag "Search", :name => 'submit_search_by_ingredient_base_id' %>
 		</td>
  	</tr>
  	 <tr>

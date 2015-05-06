@@ -1,3 +1,4 @@
+#coding: utf-8
 class ComplexIngredient < ActiveRecord::Base
   has_one :ingredient_link, as: :recipe_component, dependent: :destroy
   validates :ingredient_link, presence: true
@@ -36,10 +37,11 @@ class ComplexIngredient < ActiveRecord::Base
   end
   
   def cost_str
-    "%.2f" % recipe.total_cost
+    formatted_cost = "%.2f" % recipe.total_cost
+    return "£#{formatted_cost}"
   end
   
   def kcal_str
-    recipe.total_kcal
+    "%d" % recipe.total_kcal
   end
 end
