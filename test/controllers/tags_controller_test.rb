@@ -1,29 +1,70 @@
 require 'test_helper'
 
 class TagsControllerTest < ActionController::TestCase
-  test "should get index" do
-    get :index
-    assert_response :success
+  def setup
+    @admin_user = users(:michael)
+    @other_user = users(:archer)
+    
+    @tag_hard = tags(:hard)
   end
-
-  test "should get create" do
-    get :create
-    assert_response :success
+  
+  
+  test "should redirect update when not logged in" do
+    patch :update, id: @tag_hard, 
+                    tag: { name: "New Name" }
+    assert_not flash.empty?, "#{flash.inspect}"
+    assert_redirected_to tags_url
   end
-
-  test "should get show" do
-    get :show
-    assert_response :success
+  
+  
+  test "should redirect update when not admin" do
+    log_in_as(@other_user)
+    patch :update, id: @tag_hard, 
+                    tag: { name: "New Name" }
+    assert_not flash.empty?, "#{flash.inspect}"
+    assert_redirected_to tags_url
   end
-
-  test "should get update" do
-    get :update
-    assert_response :success
+  
+  
+  test "should allow update when admin" do
+    log_in_as(@admin_user)
+    patch :update, id: @tag_hard, 
+                    tag: { name: "New Name" }
+    #assert_match 'boohooo', @response.body
+    assert flash.empty?
+    assert_redirected_to tags_path
+    @tag_hard.reload
+    assert_equal "New Name", @tag_hard.name
   end
+  
+  
+  test "delete tag fails when has recipe" do
+    log_in_as(@admin_user)
+    
+    num_tags_before = Tag.count
+    
+    tag_wine = tags(:easy)
+    post :destroy, id: tag_wine.id
+    
+    assert_redirected_to tags_path
 
-  test "should get destroy" do
-    get :destroy
-    assert_response :success
+    assert_equal num_tags_before, Tag.count
   end
+  
+  
+  test "delete tag succeeds when has no recipe" do
+    log_in_as(@admin_user)
+    
+    num_tags_before = Tag.count
+    
+    tag_unused = tags(:unused)
+    post :destroy, id: tag_unused.id
+    
+    assert_redirected_to tags_path
 
+    assert_equal num_tags_before - 1, Tag.count
+  end
+  
+  
+  
 end
