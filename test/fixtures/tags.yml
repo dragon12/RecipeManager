@@ -1,0 +1,12 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+hard:
+  name: Hard Tag
+  recipes: recipe1, recipe2
+
+easy:
+  name: Easy Tag
+  recipes: recipe2, recipe3
+  
+unused:
+  name: Unused Tag

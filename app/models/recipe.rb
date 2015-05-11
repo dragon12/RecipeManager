@@ -5,6 +5,8 @@ class Recipe < ActiveRecord::Base
   belongs_to :category
   validates :category, presence: true
   
+  has_and_belongs_to_many :tags
+  
   has_one :complex_ingredient, dependent: :destroy
   
   has_many :ingredient_quantity_groups, -> {order(:created_at) }, dependent: :destroy
@@ -23,7 +25,6 @@ class Recipe < ActiveRecord::Base
   accepts_nested_attributes_for :instruction_groups, allow_destroy: true
   
   has_many :instructions, through: :instruction_groups
-  
   
   has_many :links, dependent: :destroy
   accepts_nested_attributes_for :links, 

@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  get 'tags/index'
+
+  get 'tags/create'
+
+  get 'tags/show'
+
+  get 'tags/update'
+
+  get 'tags/destroy'
+
   get 'password_resets/new'
 
   get 'password_resets/edit'
@@ -40,6 +50,7 @@ Rails.application.routes.draw do
 
   resources :ingredients
   resources :categories
+  resources :tags
   resources :users
   resources :account_activations, only: [:edit]
   resources :password_resets, only: [:new, :create,:edit, :update]

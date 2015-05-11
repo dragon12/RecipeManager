@@ -3,6 +3,7 @@ recipe1:
   description: The first recipe
   comments: Good recipe
   category: food
+  tags: hard
   updated_at: 2015-04-13
 
 recipe2:
@@ -10,6 +11,7 @@ recipe2:
   description: The second recipe
   comments: Bad recipe
   category: wine
+  tags: hard, easy
   updated_at: 2015-04-12
   
 recipe3:
@@ -17,6 +19,7 @@ recipe3:
   description: The third recipe
   comments: Good recipe 2
   category: food
+  tags: easy
   updated_at: 2015-03-01
   
 recipe4:
