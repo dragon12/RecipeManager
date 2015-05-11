@@ -3,7 +3,7 @@ require 'will_paginate/array'
 class WelcomeController < ApplicationController
   def index
     @recipes = Recipe
-                .search_by_updated_since(1.week.ago)
+                .all
                 .order("created_at DESC")
                 .take(5)
                 .paginate(page: params[:page])
