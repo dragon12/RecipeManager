@@ -24,7 +24,7 @@
 <p>
 This recipe is a component recipe and is used in 
 		<%= link_to @recipe.complex_ingredient.ingredient_link.recipes_count,
-      			recipes_path(:search_by_ingredient_link_id => @recipe.complex_ingredient.ingredient_link.id)
+      			recipes_path(:search_by_ingredient_base_id => @recipe.complex_ingredient.ingredient_link.ingredient_base.id)
      	%>
      	other recipes.
 </p>
