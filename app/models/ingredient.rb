@@ -34,12 +34,9 @@ class Ingredient < ActiveRecord::Base
       ingredient_link.recipe_component = self
     end
     ingredient_link.ingredient_base = IngredientBase.find_or_create_by!(name: n)
- 
-    logger.info "ingredient base is now #{ingredient_base.inspect}"
-  end
+   end
   
   def name
-    logger.info "ingredient base getter is now #{ingredient_base.inspect}"
     if ingredient_base.nil?
       ""
     else
@@ -53,7 +50,7 @@ class Ingredient < ActiveRecord::Base
         return 0
       end
       
-      logger.info "CALC_COST: ingredient #{name}, unit #{cost_basis}, cost #{cost}"
+      logger.debug "CALC_COST: ingredient #{name}, unit #{cost_basis}, cost #{cost}"
       units_used = qty / cost_basis.to_f
       
       return units_used * cost
@@ -65,7 +62,7 @@ class Ingredient < ActiveRecord::Base
         return 0
       end
       
-      logger.info "CALC_KCAL: ingredient #{name}, unit #{kcal_basis}, kcal #{kcal}"
+      logger.debug "CALC_KCAL: ingredient #{name}, unit #{kcal_basis}, kcal #{kcal}"
       units_used = qty / kcal_basis.to_f
       return units_used * kcal
   end

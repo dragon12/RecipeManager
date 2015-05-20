@@ -1,6 +1,9 @@
-tags
 
 ability to copy recipes
+Dinner party list
+Send email with one-time review links
+
+cache cost/kcal
 
 Optional sort by newest/oldest
 	- and sorting should remember filters
