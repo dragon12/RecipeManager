@@ -81,7 +81,6 @@ class Recipe < ActiveRecord::Base
       ci = build_complex_ingredient
       ci.build_ingredient_link
       logger.info ("COMPLEX: Built complex: #{ci.inspect}")
-      ci.name = "Recipe: #{name}"
     else
       if value == '0' && !complex_ingredient.blank?
         raise "Don't support this yet"
