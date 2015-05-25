@@ -79,7 +79,7 @@ class Recipe < ActiveRecord::Base
     logger.info("COMPLEX: YES? value = #{value}, complex = #{complex_ingredient.inspect}")
     if value == '1' && complex_ingredient.nil?
       ci = build_complex_ingredient
-      ci.build_ingredient_link
+      ci.do_init
       logger.info ("COMPLEX: Built complex: #{ci.inspect}")
     else
       if value == '0' && !complex_ingredient.blank?
