@@ -69,4 +69,45 @@ class RecipesIndexTest < ActionDispatch::IntegrationTest
       end
     end
   end
+  
+  test "search by recipe name" do
+    capy_login_as_admin
+    visit recipes_path
+    fill_in('search_by_recipe_name', :with => 'ecipe One')
+    
+    #capybara can't find by 'name' attribute properly
+    #click_button('submit_search_by_recipe_name')
+    find(:xpath, "//input[contains(@name, 'submit_search_by_recipe_name')]").click()
+    
+    assert_equal current_path, recipes_path
+    
+    Recipe.all.each do |recipe|
+      if recipe.name =~ /ecipe One/i
+        assert_select 'a[href=?]', recipe_path(recipe), text: recipe.name, count: 1
+      else
+        assert_select 'a[href=?]', recipe_path(recipe), text: recipe.name, count: 0
+      end
+    end
+  end
+  
+  #should strip trailing whitespace
+  test "search by recipe name whitespace" do
+    capy_login_as_admin
+    visit recipes_path
+    fill_in('search_by_recipe_name', :with => 'ecipe One ')
+    
+    #capybara can't find by 'name' attribute properly
+    #click_button('submit_search_by_recipe_name')
+    find(:xpath, "//input[contains(@name, 'submit_search_by_recipe_name')]").click()
+    
+    assert_equal current_path, recipes_path
+    
+    Recipe.all.each do |recipe|
+      if recipe.name =~ /ecipe One/i
+        assert_select 'a[href=?]', recipe_path(recipe), text: recipe.name, count: 1
+      else
+        assert_select 'a[href=?]', recipe_path(recipe), text: recipe.name, count: 0
+      end
+    end
+  end
 end
