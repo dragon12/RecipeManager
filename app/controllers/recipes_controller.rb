@@ -20,8 +20,9 @@ class RecipesController < ApplicationController
       @recipes = Recipe.search_by_name(name_stripped).order("created_at DESC")
       @filtered_text = "name like '%s'" % name_stripped
     elsif (no_search || !params[:submit_search_by_ingredient_name].blank?) && !params[:search_by_ingredient_name].blank?
-      @recipes = Recipe.search_by_ingredient_name(params[:search_by_ingredient_name]).order("created_at DESC")
-      @filtered_text = "containing ingredients like '%s'" % params[:search_by_ingredient_name]
+      name_stripped = params[:search_by_ingredient_name].strip
+      @recipes = Recipe.search_by_ingredient_name(name_stripped).order("created_at DESC")
+      @filtered_text = "containing ingredients like '%s'" % name_stripped
     elsif (no_search || !params[:submit_search_by_ingredient_base_id].blank?) && !params[:search_by_ingredient_base_id].blank?
       @recipes = Recipe.search_by_ingredient_base_id(params[:search_by_ingredient_base_id]).order("created_at DESC")
       @search_ingredient_base = IngredientBase.find(params[:search_by_ingredient_base_id])

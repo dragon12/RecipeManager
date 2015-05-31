@@ -70,6 +70,26 @@ class RecipesIndexTest < ActionDispatch::IntegrationTest
     end
   end
   
+    test "search by ingredient name with leading and trailing whitespace" do
+    capy_login_as_admin
+    visit recipes_path
+    fill_in('search_by_ingredient_name', :with => ' salt ')
+    
+    #capybara can't find by 'name' attribute properly
+    #click_button('submit_search_by_ingredient_name')
+    find(:xpath, "//input[contains(@name, 'submit_search_by_ingredient_name')]").click()
+    
+    assert_equal current_path, recipes_path
+    
+    Recipe.all.each do |recipe|
+      if recipe.ingredient_links.any? {|il| il.name =~ /salt/i }
+        assert_select 'a[href=?]', recipe_path(recipe), text: recipe.name, count: 1
+      else
+        assert_select 'a[href=?]', recipe_path(recipe), text: recipe.name, count: 0
+      end
+    end
+  end
+  
   test "search by recipe name" do
     capy_login_as_admin
     visit recipes_path
