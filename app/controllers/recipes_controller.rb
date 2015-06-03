@@ -9,11 +9,13 @@ class RecipesController < ApplicationController
   def index
     @search_ingredient_base = IngredientBase.new
     @search_category = Category.new
+    @search_tag = Tag.new
     
     no_search = params[:submit_search_by_recipe_name].blank? &&
                 params[:submit_search_by_ingredient_name].blank? &&
                 params[:submit_search_by_ingredient_base_id].blank? &&
-                params[:submit_search_by_category_id].blank?
+                params[:submit_search_by_category_id].blank? &&
+                params[:submit_search_by_tag_id].blank?
                 
     if (no_search || !params[:submit_search_by_recipe_name].blank?) && !params[:search_by_recipe_name].blank?
       name_stripped = params[:search_by_recipe_name].strip
@@ -31,6 +33,11 @@ class RecipesController < ApplicationController
       @recipes = Recipe.search_by_category_id(params[:search_by_category_id]).order("created_at DESC")
       @search_category = Category.find(params[:search_by_category_id])
       @filtered_text = "in category '%s'" % @search_category.name
+    elsif (no_search || !params[:submit_search_by_tag_id].blank?) && !params[:search_by_tag_id].blank?
+      #@recipes = Recipe.search_by_tag_id(params[:search_by_tag_id]).order("created_at DESC")
+      @search_tag = Tag.find(params[:search_by_tag_id])
+      @recipes = @search_tag.recipes
+      @filtered_text = "in tag '%s'" % @search_tag.name
     else
       #@recipes = Recipe.joins(:category).order('categories.name asc, name asc')
       @recipes = Recipe.order(:created_at).reverse
@@ -138,7 +145,7 @@ class RecipesController < ApplicationController
     def recipe_params
       ret_params = params.require(:recipe)
         .permit(:name, :description, :comments, :category_id, :total_time, :active_time, 
-                  :is_recipe_component, :cooking_time, :portion_count, :_destroy,
+                  :is_recipe_component, :cooking_time, :portion_count, { tag_ids:[] }, :_destroy,
                 links_attributes: [:id, :description, :url, :_destroy],
                 images_attributes: [:id, :description, :url, :_destroy],
                 instruction_groups_attributes: [

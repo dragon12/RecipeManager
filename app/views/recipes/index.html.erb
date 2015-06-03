@@ -66,6 +66,22 @@ All Recipes
 			<%= submit_tag "Search", :name => 'submit_search_by_category_id' %>
 		</td>
  	</tr>
+ 	<tr>
+ 		<td>
+ 			Filter by Tag
+ 		</td>
+		<td align='right'>
+			<%= select_tag(:search_by_tag_id, 
+							options_from_collection_for_select(
+								Tag.order("name"), 
+								:id, :name, @search_tag.id),
+							:prompt => '<Select a Tag>'
+							) %>
+		</td>
+		<td>
+			<%= submit_tag "Search", :name => 'submit_search_by_tag_id' %>
+		</td>
+ 	</tr>
  </table>
  
  <%= link_to 'Clear Filters', recipes_path %>

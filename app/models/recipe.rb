@@ -187,7 +187,7 @@ class Recipe < ActiveRecord::Base
       .joins(:category)
       .where("categories.id= ?", "#{query}")
   end
-  
+
   def self.search_by_updated_since(d)
     Recipe.where("updated_at > ?", d)
   end

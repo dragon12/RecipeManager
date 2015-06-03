@@ -7,7 +7,18 @@
 	<%= link_to @recipe.category.name,
       			recipes_path(:search_by_category_id => @recipe.category.id),
       			:class => 'category_tag'
+      			%><br/>
+<%end%>
+
+<% if @recipe.tags.count > 0%>
+<p>
+	<% @recipe.tags.each do |tag|%>
+		<%= link_to tag.name,
+      			recipes_path(:search_by_tag_id => tag.id),
+      			:class => 'tag_tag'
       			%>
+    <%end%>
+</p>
 <%end%>
 
 <p>
