@@ -160,7 +160,7 @@
 			<%= iqd_fields.link_to_add 'Add Ingredient', :ingredient_quantities, :class => 'link-button' %>
 		</div>
 		<%end%>
-		<%= f.link_to_add 'Add Group', :ingredient_quantity_groups %>
+		<%= f.link_to_add 'Add Ingredients Group', :ingredient_quantity_groups %>
 	</div>
 </div>
 <br/>
@@ -179,7 +179,7 @@
 			<div class='table-col instructions-table-col-3-3 table-col-heading'></div>
 		</div>
 	</div>
-	<div class='container'>
+	<div class='container' id='instruction_group_table'>
 		<%= f.fields_for :instruction_groups do |ig_fields| %>
 		<div class='table-subcaption'>
 			<%= ig_fields.hidden_field :id%>
@@ -202,7 +202,7 @@
 			<%= ig_fields.link_to_add "Add an instruction", :instructions, :class => "link-button" %>
 		</div>
 		<%end%>
-		<%= f.link_to_add 'Add Group', :instruction_groups %>
+		<%= f.link_to_add 'Add Instruction Group', :instruction_groups %>
 	</div>
 </div>
 <br/>

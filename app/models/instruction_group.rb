@@ -4,8 +4,9 @@ class InstructionGroup < ActiveRecord::Base
   has_many :instructions, -> {order(:step_number)}, dependent: :destroy
   
   accepts_nested_attributes_for :instructions, 
-                                  allow_destroy: true,
-                                  reject_if: lambda { |a| a[:step_number].blank? or a[:details].blank? }
+                                  allow_destroy: true
+                                  #,
+                                  #reject_if: lambda { |a| a[:step_number].blank? or a[:details].blank? }
   
 
   validates_presence_of :instructions
