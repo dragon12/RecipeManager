@@ -29,7 +29,6 @@ Minor feature updates:
 	recipe in progress - not displayed on main screen
 	
 
-
 More significant features
     appropriate pluralisation of ingredients
     tab when adding ingredients should add a new row
@@ -37,10 +36,6 @@ More significant features
 
 
 COMPLEX STUFF
-    Model
-        tags
-        sections of ingredients/method - i.e subrecipes?
-
     Edit recipe:
         - step number should auto-populate
             - ideally wouldn't be there at all and would be draggable, but
