@@ -1,12 +1,17 @@
 class Tag < ActiveRecord::Base
   has_and_belongs_to_many :recipes
+  has_and_belongs_to_many :future_links
   
-  before_destroy :check_for_recipes
+  before_destroy :check_for_dependants
 
 private
 
-  def check_for_recipes
+  def check_for_dependants
     if recipes.count > 0
+      errors.add(:base, "Cannot delete tag while used in any recipes")
+      return false
+    end
+    if future_links.count > 0
       errors.add(:base, "Cannot delete tag while used in any recipes")
       return false
     end

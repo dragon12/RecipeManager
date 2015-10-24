@@ -1,0 +1,32 @@
+<%= form_for(@future_link) do |f| %>
+  <% if @future_link.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@future_link.errors.count, "error") %> prohibited this future_link from being saved:</h2>
+
+      <ul>
+      <% @future_link.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name, :size => 50 %>
+  </div>
+  <div class="field">
+    <%= f.label :link %><br>
+    <%= f.text_field :link, :size => 100 %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description, :size => 100%>
+  </div>
+
+  <%= f.collection_check_boxes(:tag_ids, Tag.all, :id, :name) %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

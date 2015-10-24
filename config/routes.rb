@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :future_links
+
+  get 'future_links/add_or_update'
+
+
   get 'tags/index'
 
   get 'tags/create'
