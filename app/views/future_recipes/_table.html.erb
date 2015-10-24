@@ -1,0 +1,32 @@
+<%= will_paginate @future_recipes%>
+<table class='gridtable'>
+  <tr>
+    <th style='width:10%'>Last Modified</th>
+    <th style='width:20%'>Name</th>
+    <th style='width:50%'>Description</th>
+    <th style='width:10%'>Category</th>
+    <th style='width:10%'>Link</th>
+  </tr>
+ 
+  <% @future_recipes.each do |future| %>
+    <tr>
+   	  <td><%= future.updated_at.strftime("%F") %></td>
+      <td><%= link_to future.name, future_recipe_path(future) %></td>
+      <td><%= future.description %></td>
+      <td><%= link_to future.category.name, 
+  					future_recipes_path(:search_by_category_id => future.category.id,
+  								 :submit_search_by_category_id => '1')  %>
+      </td>
+
+      <td><%= link_to future.get_link_source, future.link %></td>
+    <% if @is_admin %>
+      <td><%= link_to 'Edit', edit_future_recipe_path(future) %></td>
+      <td><%= link_to 'Delete', future_recipe_path(future),
+                    method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <% end %>
+    </tr>
+  <% end %>
+</table>
+
+
+<%= will_paginate @future_recipes %>

@@ -1,2 +1,2 @@
-module FutureLinksHelper
+module FutureRecipesHelper
 end

@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class FutureLinkTest < ActiveSupport::TestCase
+class FutureRecipeTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

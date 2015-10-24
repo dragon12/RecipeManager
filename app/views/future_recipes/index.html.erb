@@ -1,28 +1,4 @@
-<h1>Listing future_recipes</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Link</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @future_recipes.each do |future_recipe| %>
-      <tr>
-        <td><%= future_recipe.name %></td>
-        <td><%= future_recipe.link %></td>
-        <td><%= future_recipe.description %></td>
-        <td><%= link_to 'Show', future_recipe %></td>
-        <td><%= link_to 'Edit', edit_future_recipe_path(future_recipe) %></td>
-        <td><%= link_to 'Destroy', future_recipe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<h1>Future Recipes</h1>
 
 <br>
 <%= form_tag({:controller => "future_recipes" , :action => "new"} , {:method => :get, id: "add-update-form"}) do %>
@@ -46,4 +22,6 @@
 </div>
 <%end%>
  							
-<%= link_to 'New Future link', new_future_recipe_path %>
+
+<%= render 'table' %>
+

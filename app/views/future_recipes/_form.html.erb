@@ -19,6 +19,11 @@
     <%= f.label :link %><br>
     <%= f.text_field :link, :size => 100 %>
   </div>
+  <p>
+	<%= f.label :category %>
+	<%= f.collection_select(:category_id, Category.order("name"), :id, :name, prompt: true) %>
+  </p>
+
   <div class="field">
     <%= f.label :description %><br>
     <%= f.text_field :description, :size => 100%>

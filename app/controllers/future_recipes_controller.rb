@@ -1,4 +1,5 @@
-class FutureLinksController < ApplicationController
+require 'will_paginate/array'
+class FutureRecipesController < ApplicationController
   before_action :setup_vars
   before_action :admin_user, only: [:new, :create, :edit, :update, :destroy]
   before_action :set_future_recipe, only: [:show, :edit, :update, :destroy]
@@ -8,7 +9,8 @@ class FutureLinksController < ApplicationController
   # GET /future_recipes
   # GET /future_recipes.json
   def index
-    @future_recipes = FutureLink.all
+    @future_recipes = FutureRecipe.all.paginate(page: params[:page])
+    render 'index'
   end
 
   # GET /future_recipes/1
@@ -26,13 +28,13 @@ class FutureLinksController < ApplicationController
     if !link.blank?
       #does it already exist?
       logger.info("checking if #{link} already exists")
-      existing = FutureLink.find_by_link(link)
+      existing = FutureRecipe.find_by_link(link)
       if existing
-        redirect_to future_recipe_edit_path(:id => existing)
+        redirect_to edit_future_recipe_path(:id => existing)
       end
     end
     
-    @future_recipe = FutureLink.new
+    @future_recipe = FutureRecipe.new
     @future_recipe.link = link
   end
 
@@ -43,7 +45,7 @@ class FutureLinksController < ApplicationController
   # POST /future_recipes
   # POST /future_recipes.json
   def create
-    @future_recipe = FutureLink.new(future_recipe_params)
+    @future_recipe = FutureRecipe.new(future_recipe_params)
 
     respond_to do |format|
       if @future_recipe.save
@@ -83,12 +85,12 @@ class FutureLinksController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_future_recipe
-      @future_recipe = FutureLink.find(params[:id])
+      @future_recipe = FutureRecipe.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def future_recipe_params
-      params.require(:future_recipe).permit(:name, :link, :description)
+      params.require(:future_recipe).permit(:name, :link, :description, :category_id, { tag_ids:[] })
     end
     
     def setup_vars

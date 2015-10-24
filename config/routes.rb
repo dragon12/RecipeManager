@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  resources :future_links
+  resources :future_recipes
 
-  get 'future_links/add_or_update'
+  get 'future_recipes/add_or_update'
 
 
   get 'tags/index'

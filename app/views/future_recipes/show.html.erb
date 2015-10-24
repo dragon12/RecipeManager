@@ -1,14 +1,15 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @future_recipe.name %>
-</p>
+<h1 class='h1-smaller-margin'><%= @future_recipe.name %> 
+	<%if @is_admin%>(<%= link_to 'Edit', edit_future_recipe_path(@future_recipe) %>)<%end%>
+	</h1>
 
-<p>
-  <strong>Link:</strong>
-  <%= @future_recipe.link %>
-</p>
+
+<% if @future_recipe.category %>
+	<%= link_to @future_recipe.category.name,
+      			future_recipes_path(:search_by_category_id => @future_recipe.category.id),
+      			:class => 'category_tag'
+      			%><br/>
+<%end%>
 
 <p>
   <strong>Description:</strong>
@@ -26,6 +27,14 @@
     <%end%>
 </p>
 <%end%>
+
+
+<div id="related_links">
+	<strong>Link:</strong><br/>
+	<ul >
+	 <li><%= link_to @future_recipe.link, :target=> '_blank' %></li>
+	</ul>
+</div>
 
 <%= link_to 'Edit', edit_future_recipe_path(@future_recipe) %> |
 <%= link_to 'Back', future_recipes_path %>

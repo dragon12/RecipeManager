@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151024185920) do
+ActiveRecord::Schema.define(version: 20151024200027) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,21 +30,24 @@ ActiveRecord::Schema.define(version: 20151024185920) do
 
   add_index "complex_ingredients", ["recipe_id"], name: "index_complex_ingredients_on_recipe_id", using: :btree
 
-  create_table "future_links_tags", id: false, force: true do |t|
-    t.integer "tag_id"
-    t.integer "future_link_id"
-  end
-
-  add_index "future_links_tags", ["future_link_id"], name: "index_future_links_tags_on_future_link_id", using: :btree
-  add_index "future_links_tags", ["tag_id"], name: "index_future_links_tags_on_tag_id", using: :btree
-
   create_table "future_recipes", force: true do |t|
     t.string   "name"
     t.string   "link"
     t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "category_id"
   end
+
+  add_index "future_recipes", ["category_id"], name: "index_future_recipes_on_category_id", using: :btree
+
+  create_table "future_recipes_tags", id: false, force: true do |t|
+    t.integer "tag_id"
+    t.integer "future_recipe_id"
+  end
+
+  add_index "future_recipes_tags", ["future_recipe_id"], name: "index_future_recipes_tags_on_future_recipe_id", using: :btree
+  add_index "future_recipes_tags", ["tag_id"], name: "index_future_recipes_tags_on_tag_id", using: :btree
 
   create_table "images", force: true do |t|
     t.string   "description"
