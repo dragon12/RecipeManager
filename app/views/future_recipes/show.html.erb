@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @future_recipe.name %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @future_recipe.link %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @future_recipe.description %>
+</p>
+
+
+<% if @future_recipe.tags.count > 0%>
+<p>
+	<% @future_recipe.tags.each do |tag|%>
+		<%= link_to tag.name,
+      			future_recipes_path(:search_by_tag_id => tag.id),
+      			:class => 'tag_tag'
+      			%><br/>
+    <%end%>
+</p>
+<%end%>
+
+<%= link_to 'Edit', edit_future_recipe_path(@future_recipe) %> |
+<%= link_to 'Back', future_recipes_path %>
