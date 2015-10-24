@@ -1,4 +1,4 @@
-class CreateFutureLinks < ActiveRecord::Migration
+class CreateFutureRecipes < ActiveRecord::Migration
   def change
     create_table :future_recipes do |t|
       t.string :name
