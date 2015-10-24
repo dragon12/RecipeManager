@@ -4,7 +4,7 @@ class CreateFutureRecipes < ActiveRecord::Migration
       t.string :name
       t.string :link, index: true
       t.string :description
-      t.int    :category_id
+      t.integer :category_id
       t.timestamps
     end
 
