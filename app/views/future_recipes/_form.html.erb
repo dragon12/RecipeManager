@@ -31,7 +31,7 @@
 
 <div class="checkboxes">
 <%c=0%>
-  <%= f.collection_check_boxes(:tag_ids, Tag.all, :id, :name) do |cb| %>
+  <%= f.collection_check_boxes(:tag_ids, Tag.order(:name), :id, :name) do |cb| %>
 	<%=cb.label class:"label-checkbox" do%>
          <%=cb.check_box + cb.text%>
         <%end%>
