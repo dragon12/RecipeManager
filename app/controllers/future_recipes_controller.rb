@@ -9,7 +9,7 @@ class FutureRecipesController < ApplicationController
   # GET /future_recipes
   # GET /future_recipes.json
   def index
-    @future_recipes = FutureRecipe.all.paginate(page: params[:page])
+    @future_recipes = FutureRecipe.all.paginate(page: params[:page], :per_page => 30)
     render 'index'
   end
 
@@ -49,8 +49,9 @@ class FutureRecipesController < ApplicationController
 
     respond_to do |format|
       if @future_recipe.save
-        format.html { redirect_to @future_recipe, notice: 'Future link was successfully created.' }
-        format.json { render :show, status: :created, location: @future_recipe }
+        
+        format.html { redirect_to future_recipes_path, notice: 'Future link was successfully created.' }
+        format.json { redirect_to future_recipes_path, status: :created, location: @future_recipe }
       else
         format.html { render :new }
         format.json { render json: @future_recipe.errors, status: :unprocessable_entity }
