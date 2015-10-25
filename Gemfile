@@ -43,6 +43,9 @@ gem 'will_paginate',           '3.0.7'
 gem 'bootstrap-will_paginate', '0.0.10'
 
 
+# arrange things in columns
+gem 'in_columns'
+
 # Use unicorn as the app server
 # gem 'unicorn'
 

@@ -29,7 +29,16 @@
     <%= f.text_field :description, :size => 100%>
   </div>
 
-  <%= f.collection_check_boxes(:tag_ids, Tag.all, :id, :name) %>
+<div class="checkboxes">
+<%c=0%>
+  <%= f.collection_check_boxes(:tag_ids, Tag.all, :id, :name) do |cb| %>
+	<%=cb.label class:"label-checkbox" do%>
+         <%=cb.check_box + cb.text%>
+        <%end%>
+        <%c=c+1%>
+        <%if c == 5%><br/><%end%>
+      <%end%>>
+</div>
 
   <div class="actions">
     <%= f.submit %>
