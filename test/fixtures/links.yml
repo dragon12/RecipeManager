@@ -1,8 +1,8 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  url: MyString
-  recipe_id: 1
+  url: http://www.MyString.com
+  recipe: recipe1
   description: MyString
 
 two:

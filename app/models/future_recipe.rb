@@ -3,7 +3,7 @@ class FutureRecipe < ActiveRecord::Base
   validates :name, presence: true
   validates :link, presence: true, uniqueness: true
   
-  validate :valid_url
+  validate :valid_url, :link_not_in_recipes
   
   belongs_to :category
   validates :category, presence: true
@@ -24,4 +24,12 @@ class FutureRecipe < ActiveRecord::Base
     errors.add(:link, "not valid")
   end
 
+  def link_not_in_recipes
+    links = Link.where("url = ?", link)
+    if not links.empty?
+      existing = links[0]
+      logger.info("LINK: Found link already exists in recipe: #{links[0].recipe.name}")
+      errors.add(:link, "Found link already exists in recipe: #{links[0].recipe.name}")
+    end
+  end
 end

@@ -43,4 +43,5 @@ class FutureRecipesControllerTest < ActionController::TestCase
 
     assert_redirected_to future_recipes_path
   end
+  
 end
