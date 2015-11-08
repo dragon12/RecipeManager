@@ -9,7 +9,7 @@ class FutureRecipesController < ApplicationController
   # GET /future_recipes
   # GET /future_recipes.json
   def index
-    @future_recipes = FutureRecipe.all.paginate(page: params[:page], :per_page => 30)
+    @future_recipes = FutureRecipe.all.order("updated_at DESC").paginate(page: params[:page], :per_page => 30)
     render 'index'
   end
 
