@@ -17,7 +17,7 @@ class RecipeEditTest < ActionDispatch::IntegrationTest
     within all('#ingredient_group_table').last do
       within all('.table-row').last do
         find('.table-col-1-4').all('input').last.set('6')
-        find('.table-col-2-4').find('select').select('Rot (By Weight)')
+        find('.table-col-2-4').find('select').select('TESTRECIPEADDING (By Weight)')
         find('.table-col-3-4').find('input').set('good prep')
       end
     end

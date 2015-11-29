@@ -10,3 +10,7 @@ easy:
   
 unused:
   name: Unused Tag
+
+fut_recipe_one:
+  name: Fut Recipe One
+  future_recipes: four

@@ -31,6 +31,7 @@
   <tr>
     <th>Name</th>
     <th>Recipes</th>
+    <th>Future Recipes</th>
   </tr>
  
   <% @categories.each do |category| %>
@@ -40,6 +41,8 @@
       			
       <td><%= link_to category.recipes.count,
       			recipes_path(:search_by_category_id => category.id)%></td>
+      <td><%= link_to category.future_recipes.count,
+      			future_recipes_path(:search_by_category_id => category.id)%></td>
 <%if @is_admin %>
       <td><%= link_to 'Edit', category_path(category) %></td>
       <td><%= link_to 'Delete', category_path(category),

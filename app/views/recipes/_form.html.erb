@@ -42,7 +42,16 @@
 	<%= f.label :portion_count %>: <%= f.text_field :portion_count, size:"3", :autocomplete => :off %>
 </p>
 
-<%= f.collection_check_boxes(:tag_ids, Tag.all, :id, :name) %>
+<div class="checkboxes">
+<%c=0%>
+  <%= f.collection_check_boxes(:tag_ids, Tag.order(:name), :id, :name) do |cb| %>
+	<%=cb.label class:"label-checkbox" do%>
+         <%=cb.check_box + cb.text%>
+        <%end%>
+        <%c=c+1%>
+        <%if c == 5%><br/><%c=0%><%end%>
+      <%end%>
+</div>
 
 <div class='global-container'>
 	<div class='container'>

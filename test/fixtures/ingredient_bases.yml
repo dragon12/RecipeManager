@@ -16,6 +16,8 @@ rotted_thing:
 test_adding:
     name: TESTADDING
 
+test_recipe_adding:
+    name: TESTRECIPEADDING
 
 test_deleting:
     name: TESTDELETING

@@ -22,6 +22,11 @@ TESTADDING:
     recipe_component: test_adding (Ingredient)
     ingredient_base: test_adding
     
+    
+TESTRECIPEADDING:
+    recipe_component: test_recipe_adding (Ingredient)
+    ingredient_base: test_recipe_adding
+    
 TESTADDING2:
     recipe_component: test_adding2 (Ingredient)
     ingredient_base: test_adding

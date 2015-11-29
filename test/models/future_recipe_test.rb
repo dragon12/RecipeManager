@@ -26,4 +26,27 @@ class FutureRecipeTest < ActiveSupport::TestCase
     fr3.link = existing_link.url
     assert_not fr3.valid?
   end
+  
+  
+  test "filter by category" do
+    cat = categories(:test_two_future_recipe_category)
+    
+    filtered = FutureRecipe.search_by_category_id(cat.id)
+    
+    assert_equal 2, filtered.count
+  end
+  
+  test "filter by name" do
+    #first three recipes are named 'FutRecipeTestFilter %'
+    filtered = FutureRecipe.search_by_name("FutRecipeTestFilter")
+    
+    assert_equal 3, filtered.count
+  end
+  test "filter by website" do
+    filtered = FutureRecipe.search_by_website("tes")
+    
+    assert_equal 1, filtered.count
+  end
+  
+  
 end

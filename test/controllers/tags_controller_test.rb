@@ -51,6 +51,18 @@ class TagsControllerTest < ActionController::TestCase
     assert_equal num_tags_before, Tag.count
   end
   
+  test "delete tag fails when has future recipe" do
+    log_in_as(@admin_user)
+    
+    num_tags_before = Tag.count
+    
+    tag_fut_recipe = tags(:fut_recipe_one)
+    post :destroy, id: tag_fut_recipe.id
+    
+    assert_redirected_to tags_path
+
+    assert_equal num_tags_before, Tag.count
+  end
   
   test "delete tag succeeds when has no recipe" do
     log_in_as(@admin_user)

@@ -8,3 +8,6 @@ wine:
 
 unused_category:
   name: Unused
+  
+test_two_future_recipe_category:
+  name: Test Two

@@ -9,8 +9,64 @@ class FutureRecipesController < ApplicationController
   # GET /future_recipes
   # GET /future_recipes.json
   def index
-    @future_recipes = FutureRecipe.all.order("updated_at DESC").paginate(page: params[:page], :per_page => 30)
+    @search_category = Category.new
+    @search_tag = Tag.new
+    
+    no_search = params[:submit_search_by_future_recipe_name].blank? &&
+                params[:submit_search_by_website].blank? &&
+                params[:submit_search_by_category_id].blank? &&
+                params[:submit_search_by_tag_id].blank?
+    
+    if (no_search || !params[:submit_search_by_future_recipe_name].blank?) && !params[:search_by_future_recipe_name].blank?
+      name_stripped = params[:search_by_future_recipe_name].strip
+      @future_recipes = FutureRecipe.search_by_name(name_stripped).order("updated_at DESC")
+      @filtered_text = "name like '%s'" % name_stripped
+    elsif (no_search || !params[:submit_search_by_website].blank?) && !params[:search_by_website].blank?
+      name_stripped = params[:search_by_website].strip
+      @future_recipes = FutureRecipe.search_by_website(name_stripped)
+      @filtered_text = "website like '%s'" % name_stripped
+
+    elsif (no_search || !params[:submit_search_by_category_id].blank?) && !params[:search_by_category_id].blank?
+      @future_recipes = FutureRecipe.search_by_category_id(params[:search_by_category_id]).order("updated_at DESC")
+      @search_category = Category.find(params[:search_by_category_id])
+      @filtered_text = "in category '%s'" % @search_category.name
+    elsif (no_search || !params[:submit_search_by_tag_id].blank?) && !params[:search_by_tag_id].blank?
+      @search_tag = Tag.find(params[:search_by_tag_id])
+      @future_recipes = @search_tag.future_recipes
+      @filtered_text = "in tag '%s'" % @search_tag.name
+    else
+      @future_recipes = FutureRecipe.order(:updated_at).reverse
+    end
+
+    @future_recipes = sort_by(params[:sort_by], @future_recipes)
+    unless params[:descending].blank?
+      @future_recipes = @future_recipes.reverse
+    end
+    @future_recipes = @future_recipes.paginate(page: params[:page])
     render 'index'
+  end
+
+  def sort_by(sort_field, hash)
+    if sort_field.blank?
+      return hash
+    end
+    
+    symbol_sort_field = sort_field.intern
+    #logger.info("instance methods of recipe: #{Recipe.instance_methods(true).inspect}")
+    if !FutureRecipe.instance_methods(true).include?(symbol_sort_field)
+      logger.info("Couldn't find instance method: #{sort_field}")
+      return hash
+    end
+    
+    logger.info("SORTING ARITY: #{FutureRecipe.instance_method(symbol_sort_field).arity}")
+    arity = FutureRecipe.instance_method(symbol_sort_field).arity
+    return hash.sort_by{|item|
+        if arity == 0
+          item.send sort_field
+        else
+          item.send sort_field, current_user
+        end
+      }
   end
 
   # GET /future_recipes/1
@@ -91,7 +147,8 @@ class FutureRecipesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def future_recipe_params
-      params.require(:future_recipe).permit(:name, :link, :description, :category_id, { tag_ids:[] })
+      params.require(:future_recipe)
+            .permit(:name, :link, :description, :category_id, { tag_ids:[] })
     end
     
     def setup_vars

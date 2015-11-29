@@ -16,11 +16,15 @@ Minitest::Reporters.use!(
 class ActionDispatch::IntegrationTest
   # Make the Capybara DSL available in all integration tests
   include Capybara::DSL
+    Capybara::Webkit.configure do |config|
+      config.block_unknown_urls
+    end
 
   setup do
     Capybara.current_driver = :webkit
-    page.driver.block_url("secure.gravatar.com")
-    page.driver.block_url("www.test.image.com")
+
+    #page.driver.block_url("secure.gravatar.com")
+    #page.driver.block_url("www.test.image.com")
   end
   
 end

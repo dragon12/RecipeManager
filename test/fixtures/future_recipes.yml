@@ -1,7 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
+  name: Future Recipe One
   link: http://www.google.com/1123
   description: MyString
   category: food
@@ -10,4 +10,25 @@ two:
   name: MyString2
   link: http://www.google.com/14123
   description: MyString
+  category: test_two_future_recipe_category
+  
+three:
+  name: FutRecipeTestFilter1
+  link: http://www.test.com/14123
+  description: MyString
+  category: test_two_future_recipe_category
+  
+
+four:
+  name: FutRecipeTestFilter2
+  link: http://www.google.com/test
+  description: MyString
   category: food
+
+
+five:
+  name: FutRecipeTestFilter3
+  link: http://www.google.com/15123
+  description: MyString
+  category: food
+
