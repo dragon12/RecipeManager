@@ -35,7 +35,7 @@ class RecipeTest < ActiveSupport::TestCase
     
     filtered = Recipe.search_by_category_id(cat.id)
     
-    assert_equal 2, filtered.count
+    assert_equal 3, filtered.count
   end
   
   test "filter by name" do
