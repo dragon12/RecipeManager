@@ -28,7 +28,7 @@
       <td><%= link_to future.get_link_source, future.link %></td>
       <td><%= future.rank %></td>
     <% if @is_admin %>
-      <td><%= link_to 'Uprank', uprank_future_recipe_path(future) %>
+      <td><%= link_to 'Uprank', uprank_future_recipe_path(future, @pass_on_sort_params.merge(@pass_on_search_params)) %>
       <td><%= link_to 'Downrank', downrank_future_recipe_path(future) %>
       <td><%= link_to 'Edit', edit_future_recipe_path(future) %></td>
       <td><%= link_to 'Delete', future_recipe_path(future),

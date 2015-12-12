@@ -152,29 +152,34 @@ class FutureRecipesController < ApplicationController
   def uprank
     @future_recipe.rank = @future_recipe.rank + 1
     
-    respond_to do |format|
       if @future_recipe.save
-        format.html { redirect_to future_recipes_url, notice: 'Future link was successfully upranked.' }
-        format.json { head :no_content }
+        redirect_to future_recipes_path(request.parameters)
       else
-        format.html { redirect_to future_recipes_url, notice: 'Couldnt uprank!' }
-        format.json { render json: @future_recipe.errors, status: :unprocessable_entity }
+        redirect_to future_recipes_url, notice: 'Couldnt uprank!'
       end
-    end
+
+    #respond_to do |format|
+     # if @future_recipe.save
+        #format.html { redirect_to future_recipes_url, notice: 'Future link was successfully upranked.' }
+    #    redirect_to future_recipes_path(request.parameters)
+
+        #format.html { redirect_to future_recipes_url, request.parameters, notice: 'Future link was successfully upranked.' }
+        #format.json { head :no_content }
+#      else
+ #       format.html { redirect_to future_recipes_url, notice: 'Couldnt uprank!' }
+  #      format.json { render json: @future_recipe.errors, status: :unprocessable_entity }
+   #   end
+    #end
   end
   
   def downrank
     @future_recipe.rank = @future_recipe.rank - 1
     
-    respond_to do |format|
-      if @future_recipe.save
-        format.html { redirect_to future_recipes_url, notice: 'Future link was successfully downranked.' }
-        format.json { head :no_content }
-      else
-        format.html { redirect_to future_recipes_url, notice: 'Couldnt downrank!' }
-        format.json { render json: @future_recipe.errors, status: :unprocessable_entity }
-      end
-    end
+    if @future_recipe.save
+      redirect_to future_recipes_path(request.parameters)
+    else
+      redirect_to future_recipes_url, notice: 'Couldnt downrank!'
+    end   
   end
   
   private
