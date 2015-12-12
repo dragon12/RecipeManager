@@ -2,14 +2,14 @@
 <table class='gridtable'>
   <tr>
   	<th style='width:10%'><%= link_to 'Last Modified',
-  									future_recipes_path(:sort_by => 'sortable_modified_at')%></th>
+  									future_recipes_path(@pass_on_search_params.merge(:sort_by => 'sortable_modified_at'))%></th>
     <th style='width:40%'><%= link_to 'Name',
-    								future_recipes_path(:sort_by => 'sortable_name')%></th>
+    								future_recipes_path(@pass_on_search_params.merge(:sort_by => 'sortable_name'))%></th>
 <!--    <th style='width:50%'>Description</th> -->
     <th style='width:20%'><%= link_to 'Category',
-    								future_recipes_path(:sort_by => 'sortable_category')%></th>
+    								future_recipes_path(@pass_on_search_params.merge(:sort_by => 'sortable_category'))%></th>
     <th style='width:20%'><%= link_to 'Link',
-    								future_recipes_path(:sort_by => 'sortable_website')%></th>
+    								future_recipes_path(@pass_on_search_params.merge(:sort_by => 'sortable_website'))%></th>
     
   </tr>
  

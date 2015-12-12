@@ -6,6 +6,8 @@ All Future Recipes
 <%end%>
 	</h1>
  <%= form_tag(future_recipes_path, :method => "get", id: "search-form") do %>
+ <%= hidden_field_tag :sort_by, params[:sort_by] %>
+
  <div class='boxed_table'>
   <table>
  	<tr>

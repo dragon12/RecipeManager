@@ -3,17 +3,17 @@
   <tr>
   	<%if @sortable_table%>
   	<th style='width:10%'><%= link_to 'Created',
-  									recipes_path(:sort_by => 'sortable_created_at')%></th>
+  									recipes_path(@pass_on_search_params.merge(:sort_by => 'sortable_created_at'))%></th>
     <th style='width:20%'><%= link_to 'Name',
-    								recipes_path(:sort_by => 'sortable_name')%></th>
+    								recipes_path(@pass_on_search_params.merge(:sort_by => 'sortable_name'))%></th>
     <th style='width:40%'>Description</th>
     <th style='width:10%'><%= link_to 'Category',
-    								recipes_path(:sort_by => 'sortable_category')%></th>
+    								recipes_path(@pass_on_search_params.merge(:sort_by => 'sortable_category'))%></th>
     <th style='width:5%'><%= link_to 'Average Rating',
-    								recipes_path(:sort_by => 'sortable_average_rating', :descending => '1')%></th>
+    								recipes_path(@pass_on_search_params.merge(:sort_by => 'sortable_average_rating', :descending => '1'))%></th>
     <% if @current_user %>
     <th style='width:5%'><%= link_to 'Your Rating',
-    								recipes_path(:sort_by => 'sortable_rating_for_user', :descending => '1')%></th>
+    								recipes_path(@pass_on_search_params.merge(:sort_by => 'sortable_rating_for_user', :descending => '1'))%></th>
     <%end%>
     <%else%>
     <th style='width:10%'><%=@time_type%></th>

@@ -40,3 +40,9 @@ first_sorted_recipe:
   description: none
   category: wine
   updated_at: 2015-01-01
+
+first_sorted_food_recipe:
+  name: AAAfirstfood
+  description: none
+  category: food
+  updated_at: 2015-01-01

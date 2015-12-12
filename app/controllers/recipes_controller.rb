@@ -10,6 +10,9 @@ class RecipesController < ApplicationController
     @search_ingredient_base = IngredientBase.new
     @search_category = Category.new
     @search_tag = Tag.new
+
+    @pass_on_search_params = Hash.new
+    @pass_on_sort_params = Hash.new
     
     no_search = params[:submit_search_by_recipe_name].blank? &&
                 params[:submit_search_by_ingredient_name].blank? &&
@@ -21,28 +24,34 @@ class RecipesController < ApplicationController
       name_stripped = params[:search_by_recipe_name].strip
       @recipes = Recipe.search_by_name(name_stripped).order("created_at DESC")
       @filtered_text = "name like '%s'" % name_stripped
+      @pass_on_search_params[:search_by_recipe_name] = params[:search_by_recipe_name]
     elsif (no_search || !params[:submit_search_by_ingredient_name].blank?) && !params[:search_by_ingredient_name].blank?
       name_stripped = params[:search_by_ingredient_name].strip
       @recipes = Recipe.search_by_ingredient_name(name_stripped).order("created_at DESC")
       @filtered_text = "containing ingredients like '%s'" % name_stripped
+      @pass_on_search_params[:search_by_ingredient_name] = params[:search_by_ingredient_name]
     elsif (no_search || !params[:submit_search_by_ingredient_base_id].blank?) && !params[:search_by_ingredient_base_id].blank?
       @recipes = Recipe.search_by_ingredient_base_id(params[:search_by_ingredient_base_id]).order("created_at DESC")
       @search_ingredient_base = IngredientBase.find(params[:search_by_ingredient_base_id])
       @filtered_text = "containing '%s'" % @search_ingredient_base.name
+      @pass_on_search_params[:search_by_ingredient_base_id] = params[:search_by_ingredient_base_id]
     elsif (no_search || !params[:submit_search_by_category_id].blank?) && !params[:search_by_category_id].blank?
       @recipes = Recipe.search_by_category_id(params[:search_by_category_id]).order("created_at DESC")
       @search_category = Category.find(params[:search_by_category_id])
       @filtered_text = "in category '%s'" % @search_category.name
+      @pass_on_search_params[:search_by_category_id] = params[:search_by_category_id]
     elsif (no_search || !params[:submit_search_by_tag_id].blank?) && !params[:search_by_tag_id].blank?
       #@recipes = Recipe.search_by_tag_id(params[:search_by_tag_id]).order("created_at DESC")
       @search_tag = Tag.find(params[:search_by_tag_id])
       @recipes = @search_tag.recipes
       @filtered_text = "in tag '%s'" % @search_tag.name
+      @pass_on_search_params[:search_by_tag_id] = params[:search_by_tag_id]
     else
       #@recipes = Recipe.joins(:category).order('categories.name asc, name asc')
       @recipes = Recipe.order(:created_at).reverse
     end
 
+    @pass_on_sort_params[:sort_by] = params[:sort_by]
     @recipes = sort_by(params[:sort_by], @recipes)
     unless params[:descending].blank?
       @recipes = @recipes.reverse

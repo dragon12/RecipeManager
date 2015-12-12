@@ -36,8 +36,13 @@ class RecipesControllerTest < ActionController::TestCase
   
   test "should sort by name when told" do
     get :index, :sort_by => "sortable_name"
-    #assert_match 'boohooo', @response.body
     
     assert_equal "AAAAfirst", assigns(:recipes).first.name
+  end
+
+  test "should sort by name when filtered" do
+    get :index, :sort_by => "sortable_name", :search_by_category_id => categories(:food).id
+    
+    assert_equal "AAAfirstfood", assigns(:recipes).first.name
   end
 end

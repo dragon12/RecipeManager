@@ -12,6 +12,9 @@ class FutureRecipesController < ApplicationController
     @search_category = Category.new
     @search_tag = Tag.new
     
+    @pass_on_search_params = Hash.new
+    @pass_on_sort_params = Hash.new
+
     no_search = params[:submit_search_by_future_recipe_name].blank? &&
                 params[:submit_search_by_website].blank? &&
                 params[:submit_search_by_category_id].blank? &&
@@ -21,23 +24,30 @@ class FutureRecipesController < ApplicationController
       name_stripped = params[:search_by_future_recipe_name].strip
       @future_recipes = FutureRecipe.search_by_name(name_stripped).order("updated_at DESC")
       @filtered_text = "name like '%s'" % name_stripped
+      @pass_on_search_params[:search_by_future_recipe_name] = params[:search_by_future_recipe_name]
     elsif (no_search || !params[:submit_search_by_website].blank?) && !params[:search_by_website].blank?
       name_stripped = params[:search_by_website].strip
       @future_recipes = FutureRecipe.search_by_website(name_stripped)
       @filtered_text = "website like '%s'" % name_stripped
+      @pass_on_search_params[:search_by_website] = params[:search_by_website]
 
     elsif (no_search || !params[:submit_search_by_category_id].blank?) && !params[:search_by_category_id].blank?
       @future_recipes = FutureRecipe.search_by_category_id(params[:search_by_category_id]).order("updated_at DESC")
       @search_category = Category.find(params[:search_by_category_id])
       @filtered_text = "in category '%s'" % @search_category.name
+      @pass_on_search_params[:search_by_category_id] = params[:search_by_category_id]
+
     elsif (no_search || !params[:submit_search_by_tag_id].blank?) && !params[:search_by_tag_id].blank?
       @search_tag = Tag.find(params[:search_by_tag_id])
       @future_recipes = @search_tag.future_recipes
       @filtered_text = "in tag '%s'" % @search_tag.name
+      @pass_on_search_params[:search_by_tag_id] = params[:search_by_tag_id]
+
     else
       @future_recipes = FutureRecipe.order(:updated_at).reverse
     end
 
+    @pass_on_sort_params[:sort_by] = params[:sort_by]
     @future_recipes = sort_by(params[:sort_by], @future_recipes)
     unless params[:descending].blank?
       @future_recipes = @future_recipes.reverse
