@@ -32,3 +32,17 @@ five:
   description: MyString
   category: food
 
+six_positive_rank:
+  name: FutRecipeTestPositiveRank1
+  link: http://www.google.com/15123
+  description: FutRecipeTestPositiveRank1Description
+  category: food
+  rank: 5
+
+seven_negative_rank:
+  name: FutRecipeTestNegativeRank1
+  link: http://www.google.com/15123
+  description: FutRecipeTestNegativeRank1Description
+  category: food
+  rank: -5
+  

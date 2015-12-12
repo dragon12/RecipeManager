@@ -42,11 +42,18 @@ class FutureRecipeTest < ActiveSupport::TestCase
     
     assert_equal 3, filtered.count
   end
+  
   test "filter by website" do
     filtered = FutureRecipe.search_by_website("tes")
     
     assert_equal 1, filtered.count
   end
   
+  test "check positive rank" do
+    assert_equal 5, future_recipes(:six_positive_rank).rank
+  end
   
+  test "check negative rank" do
+    assert_equal 5 * -1, future_recipes(:seven_negative_rank).rank
+  end
 end

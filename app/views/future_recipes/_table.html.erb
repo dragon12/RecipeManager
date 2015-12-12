@@ -6,10 +6,12 @@
     <th style='width:40%'><%= link_to 'Name',
     								future_recipes_path(@pass_on_search_params.merge(:sort_by => 'sortable_name'))%></th>
 <!--    <th style='width:50%'>Description</th> -->
-    <th style='width:20%'><%= link_to 'Category',
+    <th style='width:15%'><%= link_to 'Category',
     								future_recipes_path(@pass_on_search_params.merge(:sort_by => 'sortable_category'))%></th>
-    <th style='width:20%'><%= link_to 'Link',
+    <th style='width:15%'><%= link_to 'Link',
     								future_recipes_path(@pass_on_search_params.merge(:sort_by => 'sortable_website'))%></th>
+    <th style='width:10%'><%= link_to 'Rank',
+    								future_recipes_path(@pass_on_search_params.merge(:sort_by => 'sortable_rank'))%></th>
     
   </tr>
  
@@ -22,9 +24,12 @@
   					future_recipes_path(:search_by_category_id => future.category.id,
   								 :submit_search_by_category_id => '1')  %>
       </td>
-
+      
       <td><%= link_to future.get_link_source, future.link %></td>
+      <td><%= future.rank %></td>
     <% if @is_admin %>
+      <td><%= link_to 'Uprank', uprank_future_recipe_path(future) %>
+      <td><%= link_to 'Downrank', downrank_future_recipe_path(future) %>
       <td><%= link_to 'Edit', edit_future_recipe_path(future) %></td>
       <td><%= link_to 'Delete', future_recipe_path(future),
                     method: :delete, data: { confirm: 'Are you sure?' } %></td>

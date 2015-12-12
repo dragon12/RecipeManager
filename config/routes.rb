@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
-  resources :future_recipes
+  resources :future_recipes do
+      member do
+        get 'uprank'
+        get'downrank'
+      end
+  end
+
 
   get 'future_recipes/add_or_update'
 

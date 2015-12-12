@@ -49,6 +49,10 @@ class FutureRecipe < ActiveRecord::Base
   def sortable_website
     return get_link_source()
   end
+
+  def sortable_rank
+    return rank
+  end
   
   def self.search_by_name(query)
     where("lower(name) like lower(?)", "%#{query}%") 
