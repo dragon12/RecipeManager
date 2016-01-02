@@ -28,11 +28,22 @@ test:
   password:
 
 production:
-  adapter: postgresql 
+  adapter: postgresql
   pool: 5
   timeout: 5000
   encoding: utf8
-  database: gerardsw_recipes
-  username: MYUSERNAME
-  password: MYPASSWORD
+  database: <%= ENV['RDS_DB_NAME'] %>
+  username: <%= ENV['RDS_USERNAME'] %>
+  password: <%= ENV['RDS_PASSWORD'] %>
+  host: <%= ENV['RDS_HOSTNAME'] %>
+  port: <%= ENV['RDS_PORT'] %>
+
+#production:
+#  adapter: postgresql 
+#  pool: 5
+#  timeout: 5000
+#  encoding: utf8
+#  database: gerardsw_recipes
+#  username: MYUSERNAME
+#  password: MYPASSWORD
 
