@@ -1,0 +1,3 @@
+correct way to deploy to heroku is:
+     git push heroku heroku_deploy:master
+
