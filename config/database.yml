@@ -12,11 +12,11 @@ default: &default
   username: ger
 
 
-#development:
-#  <<: *default
-#  database: latest 
-#  username: ger
-#  password:
+development:
+  <<: *default
+  database: latest 
+  username: ger
+  password:
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -27,7 +27,7 @@ test:
   username: ger
   password:
 
-development:
+development_aws:
   adapter: postgresql
   pool: 5
   timeout: 5000

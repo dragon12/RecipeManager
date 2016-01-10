@@ -87,4 +87,5 @@ end
 gem 'faker', '1.4.2'
 gem 'factory_girl_rails', '4.5.0'
 
+gem 'friendly_id', '~> 5.1.0'
 

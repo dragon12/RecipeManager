@@ -105,7 +105,7 @@ class RecipeEditTest < ActionDispatch::IntegrationTest
     click_button('Update Recipe', match: :first)
     
     #this forces waiting for the page to load so that the model will be updated
-    assert_equal current_path, recipe_path(@r)
+    assert_match /#{@r.slug}/, current_path
 
     #save_and_open_page
     

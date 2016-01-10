@@ -50,7 +50,7 @@ private
       flash[:danger] = "Must supply recipe id in the query!"
       redirect_to recipes_url
     else
-      @recipe = Recipe.find(recipe_id)
+      @recipe = Recipe.friendly.find(recipe_id)
     end
   end
   

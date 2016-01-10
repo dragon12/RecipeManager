@@ -1,5 +1,7 @@
 #coding: utf-8
 class Recipe < ActiveRecord::Base
+  extend FriendlyId
+ 
   attr_accessor :is_recipe_component
   
   belongs_to :category
@@ -49,6 +51,23 @@ class Recipe < ActiveRecord::Base
 
   has_many :user_ratings
   has_many :users, through: :user_ratings
+
+  friendly_id :slug_candidates, use: :slugged
+  validates_presence_of :slug
+
+  # Try building a slug based on the following fields in
+  # increasing order of specificity.
+  def slug_candidates
+    [
+      :name,
+      [:name, :category]
+    ]
+  end
+
+  def should_generate_new_friendly_id?
+    new_record? || slug.blank?
+  end
+
 
   validate do
     logger.info "in validate now"

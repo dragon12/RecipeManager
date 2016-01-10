@@ -84,7 +84,7 @@ class RecipesController < ApplicationController
   end
   
   def show
-    @recipe = Recipe.find(params[:id])
+    @recipe = Recipe.friendly.find(params[:id])
     setup_empty_user_rating
     if !@recipe.images.empty?
       @image_to_display = @recipe.images.first
@@ -92,14 +92,14 @@ class RecipesController < ApplicationController
   end
   
   def edit
-    @recipe = Recipe.find(params[:id])
+    @recipe = Recipe.friendly.find(params[:id])
     setup_empty_user_rating
   end
   
   def update
 #    render plain: params[:recipe].inspect
     
-    @recipe = Recipe.find(params[:id])
+    @recipe = Recipe.friendly.find(params[:id])
 # @recipe.update(recipe_params)
     if @recipe.update(recipe_params)
       redirect_to @recipe
@@ -109,7 +109,7 @@ class RecipesController < ApplicationController
   end
   
   def destroy
-    @recipe = Recipe.find(params[:id])
+    @recipe = Recipe.friendly.find(params[:id])
     @recipe.destroy
    
     redirect_to recipes_path

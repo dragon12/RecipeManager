@@ -30,7 +30,7 @@ class RecipesControllerTest < ActionController::TestCase
                     recipe: { name: "New Name" }
     #assert_match 'boohooo', @response.body
     assert flash.empty?
-    assert_redirected_to @rec1
+    assert_redirected_to /#{@rec1.slug}/
     assert_equal "New Name", @rec1.reload.name
   end
   
