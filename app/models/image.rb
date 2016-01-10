@@ -6,4 +6,5 @@ class Image < ActiveRecord::Base
   validates :url, presence: true, 
             :format => URI::regexp(%w(http https))
                       
+  auto_strip_attributes :description, :url, :nullify => false, :squish => true
 end

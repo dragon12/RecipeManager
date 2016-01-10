@@ -1,6 +1,8 @@
 class Category < ActiveRecord::Base
   has_many :recipes
   has_many :future_recipes
+
+  auto_strip_attributes :name, :nullify => false, :squish => true
   
   before_destroy :check_for_dependants
 

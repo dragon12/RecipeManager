@@ -18,6 +18,8 @@ class Ingredient < ActiveRecord::Base
   validates :cost, presence: true, numericality: { greater_than_or_equal_to: 0 }
   validates :kcal, presence: true, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
   
+  auto_strip_attributes :cost_note, :kcal_note, :nullify => false, :squish => true
+
   def editable?
     true
   end

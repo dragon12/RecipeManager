@@ -14,6 +14,7 @@ class IngredientQuantityGroup < ActiveRecord::Base
 
   validates :name, presence: true, length: {minimum: 2}
   
+  auto_strip_attributes :name, :nullify => false, :squish => true
   
   def self.filter_blank_ingredient_quantities_from_group(group)
     #the hash has each key/val be an iq group

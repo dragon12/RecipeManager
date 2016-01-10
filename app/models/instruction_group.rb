@@ -12,6 +12,8 @@ class InstructionGroup < ActiveRecord::Base
   validates_presence_of :instructions
   validates :name, presence: true, length: {minimum: 2}
 
+  auto_strip_attributes :name, :nullify => false, :squish => true
+
   def name_or_default
     name.blank? ? "<Enter Group Name>" : name
   end

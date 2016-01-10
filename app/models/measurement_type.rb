@@ -8,6 +8,7 @@ class MeasurementType < ActiveRecord::Base
   validates :measurement_name, presence: true,
                                uniqueness: { case_sensitive: false}
  
+  auto_strip_attributes :measurement_name, :measurement_type, :nullify => false, :squish => true
   def self.QuantityType
     return MeasurementType.find_by(measurement_type: 'By Quantity')
   end

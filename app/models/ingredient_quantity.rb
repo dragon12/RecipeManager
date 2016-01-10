@@ -5,6 +5,7 @@ class IngredientQuantity < ActiveRecord::Base
   
   belongs_to :ingredient_quantity_group, :inverse_of => :ingredient_quantities
   
+  auto_strip_attributes :preparation, :nullify => false, :squish => true
   
   #this is needed so that it can do fields_for on the nested ingredient
   accepts_nested_attributes_for :ingredient_link

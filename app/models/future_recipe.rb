@@ -11,6 +11,8 @@ class FutureRecipe < ActiveRecord::Base
       
   has_and_belongs_to_many :tags
 
+  auto_strip_attributes :name, :link, :description, :nullify => false, :squish => true
+
 
   def get_link_source
     return URI.parse(link).host.sub(/\Awww\./, '')

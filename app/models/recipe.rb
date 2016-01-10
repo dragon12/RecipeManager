@@ -52,6 +52,8 @@ class Recipe < ActiveRecord::Base
   has_many :user_ratings
   has_many :users, through: :user_ratings
 
+  auto_strip_attributes :name, :description, :comments, :nullify => false, :squish => true
+
   friendly_id :slug_candidates, use: :slugged
   validates_presence_of :slug
 

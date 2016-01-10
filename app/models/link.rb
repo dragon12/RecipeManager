@@ -6,4 +6,5 @@ class Link < ActiveRecord::Base
   validates :url, presence: true, 
             :format => URI::regexp(%w(http https))
                       
+  auto_strip_attributes :url, :description, :nullify => false, :squish => true
 end

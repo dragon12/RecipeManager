@@ -89,3 +89,5 @@ gem 'factory_girl_rails', '4.5.0'
 
 gem 'friendly_id', '~> 5.1.0'
 
+gem "auto_strip_attributes", "~> 2.0"
+

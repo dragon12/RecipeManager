@@ -7,6 +7,7 @@ class IngredientBase < ActiveRecord::Base
                    uniqueness: { case_sensitive: false }
                    
   before_destroy :check_for_ingredient_links
+  auto_strip_attributes :name, :nullify => false, :squish => true
   
   def recipes_count
     recipes.distinct.count

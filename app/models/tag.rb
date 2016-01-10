@@ -4,6 +4,7 @@ class Tag < ActiveRecord::Base
   
   before_destroy :check_for_dependants
 
+  auto_strip_attributes :name, :nullify => false, :squish => true
 private
 
   def check_for_dependants

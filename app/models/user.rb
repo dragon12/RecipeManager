@@ -15,6 +15,8 @@ class User < ActiveRecord::Base
   has_secure_password
   validates :password, length: { minimum: 4 }, allow_blank: true
 
+  auto_strip_attributes :name, :email, :nullify => false, :squish => true
+
   has_many :user_ratings
   
   # Returns the hash digest of the given string.
