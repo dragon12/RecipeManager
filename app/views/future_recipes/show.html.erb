@@ -13,15 +13,13 @@
 <br />
 <p>
 	<strong>Rank:</strong> <%= @future_recipe.rank%><br/><br/>
-	<strong>State:</strong> <%= @future_recipe.state.capitalize%><br/>
+	<strong>State:</strong> <%= @future_recipe.get_state.capitalize%><br/>
 	<strong>
 <%if @future_recipe.state == "pending"%>
-  <%= button_to 'Mark as Done', set_state_future_recipe_path(@future_recipe, :state => :done, :method => :get)%><br/>
-  <%= button_to 'Mark as Discarded', set_state_future_recipe_path(@future_recipe, :state => :discarded, :method => :get)%>
-<%end%>
-
-<%if @future_recipe.state == "done" or @future_recipe.state == "discarded"%>
-  <%= button_to 'Reset', set_state_future_recipe_path(@future_recipe, :state => :reset, :method => :get)%>
+  <%= link_to 'Mark as Done', set_state_future_recipe_path(@future_recipe, :state => :done) %><br/>
+  <%= link_to 'Mark as Discarded', set_state_future_recipe_path(@future_recipe, :state => :discarded) %>
+<%else%>
+  <%= link_to 'Reset', set_state_future_recipe_path(@future_recipe, :state => :reset) %>
 <%end%>
 </strong>
 </p>

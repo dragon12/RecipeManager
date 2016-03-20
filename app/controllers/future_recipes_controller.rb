@@ -160,6 +160,9 @@ class FutureRecipesController < ApplicationController
       new_state = "discarded"
     elsif incoming_state == "reset"
       new_state = "pending"
+    else
+      redirect_to future_recipes_url, notice: 'Couldnt change state!'
+      return
     end
     logger.info("SET_STATE: setting to new state #{new_state}")
     @future_recipe.state = new_state
@@ -167,6 +170,7 @@ class FutureRecipesController < ApplicationController
     if @future_recipe.save
       redirect_to future_recipes_path(request.parameters)
     else
+      @future_recipe.reset
       redirect_to future_recipes_url, notice: 'Couldnt change state!'
     end
   end
@@ -213,7 +217,7 @@ class FutureRecipesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def future_recipe_params
       params.require(:future_recipe)
-            .permit(:name, :link, :description, :category_id, :rank, { tag_ids:[] })
+            .permit(:name, :link, :description, :category_id, :rank, :state, { tag_ids:[] })
     end
     
     def setup_vars

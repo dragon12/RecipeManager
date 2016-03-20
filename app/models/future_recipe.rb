@@ -19,6 +19,10 @@ class FutureRecipe < ActiveRecord::Base
     return URI.parse(link).host.sub(/\Awww\./, '')
   end
   
+  def get_state
+    logger.info("state is now #{state}")
+    state or "UNKNOWN"
+  end
 
   def valid_url
     uri = URI.parse(link)
