@@ -191,7 +191,7 @@ class FutureRecipesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def future_recipe_params
       params.require(:future_recipe)
-            .permit(:name, :link, :description, :category_id, { tag_ids:[] })
+            .permit(:name, :link, :description, :category_id, :rank, { tag_ids:[] })
     end
     
     def setup_vars
