@@ -12,7 +12,18 @@
 <%end%>
 <br />
 <p>
-	<strong>Rank:</strong> <%= @future_recipe.rank%>
+	<strong>Rank:</strong> <%= @future_recipe.rank%><br/><br/>
+	<strong>State:</strong> <%= @future_recipe.state.capitalize%><br/>
+	<strong>
+<%if @future_recipe.state == "pending"%>
+  <%= button_to 'Mark as Done', set_state_future_recipe_path(@future_recipe, :state => :done, :method => :get)%><br/>
+  <%= button_to 'Mark as Discarded', set_state_future_recipe_path(@future_recipe, :state => :discarded, :method => :get)%>
+<%end%>
+
+<%if @future_recipe.state == "done" or @future_recipe.state == "discarded"%>
+  <%= button_to 'Reset', set_state_future_recipe_path(@future_recipe, :state => :reset, :method => :get)%>
+<%end%>
+</strong>
 </p>
 <br />
 <p>
@@ -40,5 +51,7 @@
 	</ul>
 </div>
 
+<br/>
+<br/>
 <%= link_to 'Edit', edit_future_recipe_path(@future_recipe) %> |
 <%= link_to 'Back', future_recipes_path %>

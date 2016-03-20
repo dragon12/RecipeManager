@@ -2,7 +2,7 @@ require 'will_paginate/array'
 class FutureRecipesController < ApplicationController
   before_action :setup_vars
   before_action :admin_user, only: [:new, :create, :edit, :update, :destroy]
-  before_action :set_future_recipe, only: [:show, :edit, :update, :destroy, :uprank, :downrank]
+  before_action :set_future_recipe, only: [:show, :edit, :update, :destroy, :uprank, :downrank, :set_state]
 
   @is_admin = false
   
@@ -44,7 +44,7 @@ class FutureRecipesController < ApplicationController
       @pass_on_search_params[:search_by_tag_id] = params[:search_by_tag_id]
 
     else
-      @future_recipes = FutureRecipe.order(:updated_at).reverse
+      @future_recipes = FutureRecipe.order(:created_at).reverse
     end
 
     @pass_on_sort_params[:sort_by] = params[:sort_by]
@@ -149,6 +149,28 @@ class FutureRecipesController < ApplicationController
     end
   end
 
+  def set_state
+    logger.info("SET_STATE: parameters = #{request.parameters}")
+    
+    incoming_state = request.parameters[:state]
+    logger.info("SET_STATE: incoming_state = #{incoming_state}")
+    if incoming_state == "done"
+      new_state = "done"
+    elsif incoming_state == "discarded"
+      new_state = "discarded"
+    elsif incoming_state == "reset"
+      new_state = "pending"
+    end
+    logger.info("SET_STATE: setting to new state #{new_state}")
+    @future_recipe.state = new_state
+  
+    if @future_recipe.save
+      redirect_to future_recipes_path(request.parameters)
+    else
+      redirect_to future_recipes_url, notice: 'Couldnt change state!'
+    end
+  end
+  
   def uprank
     @future_recipe.rank = @future_recipe.rank + 1
     

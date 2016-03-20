@@ -13,6 +13,7 @@ class FutureRecipe < ActiveRecord::Base
 
   auto_strip_attributes :name, :link, :description, :nullify => false, :squish => true
 
+  enum state: [ :pending, :done, :discarded ]
 
   def get_link_source
     return URI.parse(link).host.sub(/\Awww\./, '')

@@ -3,6 +3,7 @@ Rails.application.routes.draw do
       member do
         get 'uprank'
         get'downrank'
+        get 'set_state'
       end
   end
 
