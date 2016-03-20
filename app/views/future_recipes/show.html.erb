@@ -16,10 +16,10 @@
 	<strong>State:</strong> <%= @future_recipe.get_state.capitalize%><br/>
 	<strong>
 <%if @future_recipe.state == "pending"%>
-  <%= link_to 'Mark as Done', set_state_future_recipe_path(@future_recipe, :state => :done) %><br/>
-  <%= link_to 'Mark as Discarded', set_state_future_recipe_path(@future_recipe, :state => :discarded) %>
+  <%= button_to 'Mark as Done', set_state_done_future_recipe_path(@future_recipe), :method => :get %><br/>
+  <%= button_to 'Mark as Discarded', set_state_discarded_future_recipe_path(@future_recipe), :method => :get %>
 <%else%>
-  <%= link_to 'Reset', set_state_future_recipe_path(@future_recipe, :state => :reset) %>
+  <%= button_to 'Reset', reset_state_future_recipe_path(@future_recipe), :method =>:get %>
 <%end%>
 </strong>
 </p>

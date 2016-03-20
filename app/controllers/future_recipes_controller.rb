@@ -2,7 +2,7 @@ require 'will_paginate/array'
 class FutureRecipesController < ApplicationController
   before_action :setup_vars
   before_action :admin_user, only: [:new, :create, :edit, :update, :destroy]
-  before_action :set_future_recipe, only: [:show, :edit, :update, :destroy, :uprank, :downrank, :set_state]
+  before_action :set_future_recipe, only: [:show, :edit, :update, :destroy, :uprank, :downrank, :set_state_done, :set_state_discarded, :reset_state]
 
   @is_admin = false
   
@@ -149,32 +149,18 @@ class FutureRecipesController < ApplicationController
     end
   end
 
-  def set_state
-    logger.info("SET_STATE: parameters = #{request.parameters}")
-    
-    incoming_state = request.parameters[:state]
-    logger.info("SET_STATE: incoming_state = #{incoming_state}")
-    if incoming_state == "done"
-      new_state = "done"
-    elsif incoming_state == "discarded"
-      new_state = "discarded"
-    elsif incoming_state == "reset"
-      new_state = "pending"
-    else
-      redirect_to future_recipes_url, notice: 'Couldnt change state!'
-      return
-    end
-    logger.info("SET_STATE: setting to new state #{new_state}")
-    @future_recipe.state = new_state
-  
-    if @future_recipe.save
-      redirect_to future_recipes_path(request.parameters)
-    else
-      @future_recipe.reset
-      redirect_to future_recipes_url, notice: 'Couldnt change state!'
-    end
+  def reset_state
+    set_state(:pending)
   end
-  
+
+  def set_state_done
+    set_state(:done)
+  end
+
+  def set_state_discarded
+    set_state(:discarded)
+  end
+
   def uprank
     @future_recipe.rank = @future_recipe.rank + 1
     
@@ -208,7 +194,31 @@ class FutureRecipesController < ApplicationController
     end   
   end
   
-  private
+private
+  def set_state(incoming_state)
+    logger.info("SET_STATE: incoming_state = #{incoming_state}")
+    if incoming_state == :done
+      new_state = "done"
+    elsif incoming_state == :discarded
+      new_state = "discarded"
+    elsif incoming_state == :pending
+      new_state = "pending"
+    else
+      redirect_to future_recipes_url, notice: 'Couldnt change state'
+      return
+    end
+    logger.info("SET_STATE: setting to new state #{new_state}")
+    @future_recipe.state = new_state
+  
+    if @future_recipe.save
+      redirect_to future_recipes_path(request.parameters)
+    else
+      redirect_to future_recipes_url, notice: 'Couldnt change state!'
+    end
+  end
+  
+
+
     # Use callbacks to share common setup or constraints between actions.
     def set_future_recipe
       @future_recipe = FutureRecipe.find(params[:id])

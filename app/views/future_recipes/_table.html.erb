@@ -39,10 +39,10 @@
       <td><%= link_to 'Uprank', uprank_future_recipe_path(future, @pass_on_sort_params.merge(@pass_on_search_params)) %></td>
       <td><%= link_to 'Downrank', downrank_future_recipe_path(future) %></td>
       <% if future.pending? %>
-        <td><%= link_to 'Mark Done', set_state_future_recipe_path(future, :state => :done)%></td>
-        <td><%= link_to 'Discard', set_state_future_recipe_path(future, :state => :discarded)%></td>
+        <td><%= link_to 'Mark Done', set_state_done_future_recipe_path(future)%></td>
+        <td><%= link_to 'Discard', set_state_discarded_future_recipe_path(future)%></td>
       <% else %>
-        <td><%= link_to 'Reset State', set_state_future_recipe_path(future, :state => :reset) %></td>
+        <td><%= link_to 'Reset State', reset_state_future_recipe_path(future) %></td>
         <td></td>
       <% end %>
       <td><%= link_to 'Edit', edit_future_recipe_path(future) %></td>

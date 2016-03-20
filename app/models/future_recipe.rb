@@ -32,6 +32,10 @@ class FutureRecipe < ActiveRecord::Base
   end
 
   def link_not_in_recipes
+    if self.persisted?
+      return
+    end
+    
     links = Link.where("url = ?", link)
     if not links.empty?
       existing = links[0]
