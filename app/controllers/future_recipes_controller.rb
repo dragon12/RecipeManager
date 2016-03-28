@@ -24,24 +24,24 @@ class FutureRecipesController < ApplicationController
     
     if (no_search || !params[:submit_search_by_future_recipe_name].blank?) && !params[:search_by_future_recipe_name].blank?
       name_stripped = params[:search_by_future_recipe_name].strip
-      @future_recipes = FutureRecipe.search_by_name(name_stripped).order("updated_at DESC")
+      @future_recipes = FutureRecipe.search_by_name(name_stripped).order("created_at DESC")
       @filtered_text = "name like '%s'" % name_stripped
       @pass_on_search_params[:search_by_future_recipe_name] = params[:search_by_future_recipe_name]
     elsif (no_search || !params[:submit_search_by_website].blank?) && !params[:search_by_website].blank?
       name_stripped = params[:search_by_website].strip
-      @future_recipes = FutureRecipe.search_by_website(name_stripped)
+      @future_recipes = FutureRecipe.search_by_website(name_stripped).order("created_at DESC")
       @filtered_text = "website like '%s'" % name_stripped
       @pass_on_search_params[:search_by_website] = params[:search_by_website]
 
     elsif (no_search || !params[:submit_search_by_category_id].blank?) && !params[:search_by_category_id].blank?
-      @future_recipes = FutureRecipe.search_by_category_id(params[:search_by_category_id]).order("updated_at DESC")
+      @future_recipes = FutureRecipe.search_by_category_id(params[:search_by_category_id]).order("created_at DESC")
       @search_category = Category.find(params[:search_by_category_id])
       @filtered_text = "in category '%s'" % @search_category.name
       @pass_on_search_params[:search_by_category_id] = params[:search_by_category_id]
 
     elsif (no_search || !params[:submit_search_by_tag_id].blank?) && !params[:search_by_tag_id].blank?
       @search_tag = Tag.find(params[:search_by_tag_id])
-      @future_recipes = @search_tag.future_recipes
+      @future_recipes = @search_tag.future_recipes.order(:created_at).reverse
       @filtered_text = "in tag '%s'" % @search_tag.name
       @pass_on_search_params[:search_by_tag_id] = params[:search_by_tag_id]
 
