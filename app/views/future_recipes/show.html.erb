@@ -12,8 +12,14 @@
 <%end%>
 <br />
 <p>
-	<strong>Rank:</strong> <%= @future_recipe.rank%><br/><br/>
+	<strong>Rank:</strong> <%= @future_recipe.rank%>    
+	<% if @is_admin %>
+      <%= button_to 'Uprank', uprank_future_recipe_path(@future_recipe), :method => :get %>
+      <%= button_to 'Downrank', downrank_future_recipe_path(@future_recipe), :method => :get %>
+    <% end %>
+  <br/><br/>
 	<strong>State:</strong> <%= @future_recipe.get_state.capitalize%><br/>
+	<% if @is_admin %>
 	<strong>
 <%if @future_recipe.state == "pending"%>
   <%= button_to 'Mark as Done', set_state_done_future_recipe_path(@future_recipe), :method => :get %><br/>
@@ -22,6 +28,7 @@
   <%= button_to 'Reset', reset_state_future_recipe_path(@future_recipe), :method =>:get %>
 <%end%>
 </strong>
+<%end%>
 </p>
 <br />
 <p>
