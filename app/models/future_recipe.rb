@@ -56,6 +56,10 @@ class FutureRecipe < ActiveRecord::Base
   def sortable_updated_at
     return updated_at
   end
+
+  def sortable_created_at
+    return created_at
+  end
   
   def sortable_website
     return get_link_source()
