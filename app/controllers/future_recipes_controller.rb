@@ -1,7 +1,7 @@
 require 'will_paginate/array'
 class FutureRecipesController < ApplicationController
   before_action :setup_vars
-  before_action :admin_user, only: [:new, :create, :edit, :update, :destroy]
+  before_action :admin_user, only: [:new, :create, :edit, :update, :destroy, :uprank, :downrank, :set_state_done, :set_state_discarded, :reset_state]
   before_action :set_future_recipe, only: [:show, :edit, :update, :destroy, :uprank, :downrank, :set_state_done, :set_state_discarded, :reset_state]
 
   @is_admin = false
