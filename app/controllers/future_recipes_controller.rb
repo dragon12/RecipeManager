@@ -24,9 +24,7 @@ class FutureRecipesController < ApplicationController
     
     include_done = params[:include_done] == "1"
     include_discarded = params[:include_discarded] == "1"
-    
-    logger.info("include_done = #{include_done}, include_discarded = #{include_discarded}")
-    
+        
     if (no_search || !params[:submit_search_by_future_recipe_name].blank?) && !params[:search_by_future_recipe_name].blank?
       name_stripped = params[:search_by_future_recipe_name].strip
       @future_recipes = FutureRecipe.search_by_name(name_stripped).order("created_at DESC")
@@ -55,7 +53,6 @@ class FutureRecipesController < ApplicationController
     end
 
     if not include_done or not include_discarded
-      logger.info("ok one of them not there")
       @future_recipes = @future_recipes.select{|fr| fr.state == "pending" || (include_done && fr.state == "done") || (include_discarded && fr.state == "discarded")}
 #      @future_recipes = @future_recipes.where("state =pending")
     end
