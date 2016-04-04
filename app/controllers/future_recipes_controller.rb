@@ -22,6 +22,11 @@ class FutureRecipesController < ApplicationController
                 params[:submit_search_by_category_id].blank? &&
                 params[:submit_search_by_tag_id].blank?
     
+    include_done = params[:include_done] == "1"
+    include_discarded = params[:include_discarded] == "1"
+    
+    logger.info("include_done = #{include_done}, include_discarded = #{include_discarded}")
+    
     if (no_search || !params[:submit_search_by_future_recipe_name].blank?) && !params[:search_by_future_recipe_name].blank?
       name_stripped = params[:search_by_future_recipe_name].strip
       @future_recipes = FutureRecipe.search_by_name(name_stripped).order("created_at DESC")
@@ -49,6 +54,12 @@ class FutureRecipesController < ApplicationController
       @future_recipes = FutureRecipe.order(:created_at).reverse
     end
 
+    if not include_done or not include_discarded
+      logger.info("ok one of them not there")
+      @future_recipes = @future_recipes.select{|fr| fr.state == "pending" || (include_done && fr.state == "done") || (include_discarded && fr.state == "discarded")}
+#      @future_recipes = @future_recipes.where("state =pending")
+    end
+    
     @pass_on_sort_params[:sort_by] = params[:sort_by]
     @future_recipes = sort_by(params[:sort_by], @future_recipes)
     unless params[:descending].blank?
