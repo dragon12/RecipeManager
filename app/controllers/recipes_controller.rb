@@ -100,7 +100,6 @@ class RecipesController < ApplicationController
 #    render plain: params[:recipe].inspect
     
     @recipe = Recipe.friendly.find(params[:id])
-# @recipe.update(recipe_params)
     if @recipe.update(recipe_params)
       redirect_to @recipe
     else
@@ -133,8 +132,14 @@ class RecipesController < ApplicationController
     #render plain: params[:recipe].inspect
  
     p = recipe_params
-    @recipe = Recipe.new(p)
- 
+    begin
+      @recipe = Recipe.new(p)
+    rescue
+      flash[:danger] = "Failed to create recipe"
+      @recipe = Recipe.new
+      render 'new'
+      return
+    end
     #if @is_component
     #  ci = @recipe.build_complex_ingredient
     #  ci.build_ingredient_link
