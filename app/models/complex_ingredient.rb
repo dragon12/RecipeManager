@@ -40,11 +40,11 @@ class ComplexIngredient < ActiveRecord::Base
   end
   
   def cost_for_quantity(qty)
-    return recipe.total_cost * qty.to_f
+    return recipe.total_cost / recipe.portion_count * qty.to_f
   end
   
   def kcal_for_quantity(qty)
-    return recipe.total_kcal * qty.to_f
+    return recipe.total_kcal / recipe.portion_count * qty.to_f
   end
   
   def measurement_type

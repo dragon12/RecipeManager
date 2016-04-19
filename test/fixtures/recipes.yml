@@ -20,6 +20,7 @@ recipe3:
   comments: Good recipe 2
   category: food
   tags: easy
+  portion_count: 2
   updated_at: 2015-03-01
   
 recipe4:
