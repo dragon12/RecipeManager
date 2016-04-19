@@ -33,4 +33,13 @@ class ComplexIngredientTest < ActiveSupport::TestCase
     assert_equal "£%.2f" % r.total_cost, cl.cost_str
     assert_equal "%d" % r.total_kcal, cl.kcal_str
   end
+
+  #the recipe has no defined portions, should default to 1
+  test "can query complex with no set portion count" do
+    ci = complex_ingredients(:complex_component2)
+    cl = ci.ingredient_link
+    r = recipes(:recipe4)
+    assert_equal (3*r.total_cost), cl.cost_for_quantity(3)
+    assert_equal (3.5*r.total_kcal), cl.kcal_for_quantity(3.5)
+  end
 end

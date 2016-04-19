@@ -2,3 +2,5 @@
 complex_component1:
   recipe: recipe3
   
+complex_component2:
+  recipe: recipe4

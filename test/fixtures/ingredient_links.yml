@@ -43,4 +43,8 @@ TESTDELETING2:
 complex_link_1:
   recipe_component: complex_component1 (ComplexIngredient)
   ingredient_base: complex_component1
+
+complex_link_2:
+  recipe_component: complex_component2 (ComplexIngredient)
+  ingredient_base: complex_component2
   

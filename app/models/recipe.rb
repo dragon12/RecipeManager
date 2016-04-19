@@ -153,9 +153,13 @@ class Recipe < ActiveRecord::Base
     calculate_total_kcal
   end
   
+  def portion_count
+    self[:portion_count] || 1
+  end
+  
   def cost_per_portion
     total = calculate_total_cost
-    if portion_count.to_i == 0 || total == 0
+    if self[:portion_count].to_i == 0 || total == 0
       return "N/A"
     end
     
@@ -165,7 +169,7 @@ class Recipe < ActiveRecord::Base
   
   def kcal_per_portion
     total = calculate_total_kcal
-    if portion_count.to_i == 0
+    if self[:portion_count].to_i == 0
       return "N/A"
     end
     return "%.0f" % (total / portion_count)

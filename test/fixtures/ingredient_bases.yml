@@ -25,3 +25,5 @@ test_deleting:
 complex_component1:
     name: "Recipe: FilterRecipe Three"
     
+complex_component2:
+    name: "Recipe: Side dish"
