@@ -80,8 +80,9 @@ class FutureRecipe < ActiveRecord::Base
   end
   
   def self.search_by_website(query)
-    initial = where("link like ?", "%#{query}%")
-    initial.select{|fr| fr.get_link_source =~ /#{query}/}
+    where("link like ?", "%#{query}%")
+    #initial = where("link like ?", "%#{query}%")
+    #initial.select{|fr| fr.get_link_source =~ /#{query}/}
   end
   
   
