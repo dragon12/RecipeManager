@@ -83,8 +83,8 @@ config.x.mail_from = %(RecipesManager <no-reply@gerardsweeney.com>)
 config.action_mailer.default_url_options = { host: 'gerardsweeney.com' }
 config.action_mailer.smtp_settings = {
       address: 'email-smtp.us-west-2.amazonaws.com',
-      user_name: <%= ENV["RAILS_SMTP_USERNAME"] %>
-      password: <%= ENV["RAILS_SMTP_PASSWORD"] %>
+      user_name: ENV["RAILS_SMTP_USERNAME"],
+      password: ENV["RAILS_SMTP_PASSWORD"]
 }
 
 config.action_mailer.raise_delivery_errors = true
