@@ -78,8 +78,6 @@ Rails.application.configure do
 #  :enable_starttls_auto => true
 #    }
 
-config.x.mail_from = %(RecipesManager <no-reply@gerardsweeney.com>)
-
 config.action_mailer.default_url_options = { host: 'gerardsweeney.com' }
 config.action_mailer.smtp_settings = {
       address: 'email-smtp.us-west-2.amazonaws.com',
