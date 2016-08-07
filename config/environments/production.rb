@@ -78,7 +78,7 @@ Rails.application.configure do
 #  :enable_starttls_auto => true
 #    }
 
-config.action_mailer.default_url_options = { host: 'gerardsweeney.com' }
+config.action_mailer.default_url_options = { host: 'recipes.gerardsweeney.com' }
 config.action_mailer.smtp_settings = {
       address: 'email-smtp.us-west-2.amazonaws.com',
       user_name: ENV["RAILS_SMTP_USERNAME"],
