@@ -236,7 +236,7 @@ table.gridtable select{
 }
 .table-col {
     display: table-cell;
-    height: 25px;
+    //height: 25px;
     border-width: 1px;
   	border-style: solid;
   	border-color: #666666;
