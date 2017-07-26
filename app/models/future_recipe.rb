@@ -16,7 +16,11 @@ class FutureRecipe < ActiveRecord::Base
   enum state: [ :pending, :done, :discarded ]
 
   def get_link_source
-    return URI.parse(link).host.sub(/\Awww\./, '')
+    #if the link doesn't have http:// in front then start it with that - deals with historic issues, validation stops/fixes it now
+    if not link.starts_with?('http')
+      link.insert(0, "http://")
+    end
+    URI.parse(link).host.sub(/\Awww\./, '')
   end
   
   def get_state
@@ -25,8 +29,13 @@ class FutureRecipe < ActiveRecord::Base
   end
 
   def valid_url
+    if not link.starts_with?('http')
+      link.insert(0, "http://")
+    end
     uri = URI.parse(link)
-    uri.kind_of?(URI::HTTP)
+    if not uri.kind_of?(URI::HTTP)
+      errors.add(:link, "Not a HTTP link")
+    end
   rescue URI::InvalidURIError
     errors.add(:link, "not valid")
   end
